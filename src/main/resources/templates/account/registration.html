@@ -1,5 +1,17 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://thyneleaf.org">
+<script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+<script type="text/javascript">
+	function checkUser() {
+		$.ajax({
+			url: "",
+			请求方式: "get",
+			success: function (result){
+				alert("注册成功！您的员工号为："+result);
+			}
+		});
+	}
+</script>
 <head>
 <title>Visitors an Admin Panel Category Bootstrap Responsive Website Template | Registration :: w3layouts</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,16 +38,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="w3layouts-main">
 	<h2>用户注册</h2>
 		<form action="#" method="post">
-			<input type="text" class="ggg" name="Username" placeholder="用户名" required="">
-			<input type="email" class="ggg" name="Email" placeholder="邮箱" required="">
-			<input type="text" class="ggg" name="Phone" placeholder="手机号" required="">
-			<input type="password" class="ggg" name="Password" placeholder="密码" required="">
+			<input type="text" class="ggg" id="Username" name="Username" placeholder="用户名" required="required">
+			<input type="password" class="ggg" id="Password" name="Password" placeholder="密码" required="required">
+			<input type="text" class="ggg" name="Sex" placeholder="性别" required="required">
+			<input type="email" class="ggg" name="Email" placeholder="邮箱" required="required">
+			<input type="text" class="ggg" name="Age" placeholder="年龄" required="required">
+			<input type="text" class="ggg" name="Phone" placeholder="手机号" required="required">
+			<input type="text" class="ggg" name="Role" placeholder="职称" required="required">
+
 			<h4><input type="checkbox" />我已同意服务条款和隐私政策</h4>
 			
 				<div class="clearfix"></div>
-				<input type="submit" value="注册" name="register">
+				<input type="button" value="注册" name="register" onclick="checkUser()">
 		</form>
-		<p>>>>>>>&emsp;若注册成功，请点击此处&emsp;&emsp;<a href="userLogin.html">登录</a><<<<<<</p>
+		<p> >>>>>>&emsp;若注册成功，请点击此处&emsp;&emsp;<a href="userLogin.html">登录</a><<<<<< </p>
 </div>
 </div>
 <script src="../../static/js/bootstrap.js"></script>
@@ -43,7 +59,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script src="../../static/js/scripts.js"></script>
 <script src="../../static/js/jquery.slimscroll.js"></script>
 <script src="../../static/js/jquery.nicescroll.js"></script>
-<!--[if lte IE 8]><script language="javascript" type="text/javascript" src="../../static/js/flot-chart/excanvas.min.js"></script><![endif]-->
+<script language="javascript" type="text/javascript" src="../../static/js/flot-chart/excanvas.min.js"></script><![endif]-->
 <script src="../../static/js/jquery.scrollTo.js"></script>
 </body>
 </html>
