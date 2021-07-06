@@ -4,11 +4,22 @@ public class User {
 
     private String userId;
     private String username;
+    private String password;
     private String sex;
     private String email;
     private int age;
     private String phoneNumber;
     private int role;
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+
 
     public String getUserId() {
         return userId;
