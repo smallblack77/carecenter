@@ -13,7 +13,7 @@ html, body{
 	font-family: 'Roboto', sans-serif;
     font-size: 100%;
     overflow-x: hidden;
-    background: url(../images/bg.jpg) no-repeat 0px 0px;
+    background: url(../images/oldold.jpg) no-repeat 0px 0px;
 	background-size:cover;
 }
 body a{
@@ -42,7 +42,7 @@ body a:hover{
     width:240px;
     height:100%;
     position:fixed;
-    background:rgba(52, 48, 48, 0.78);
+    background: rgba(52, 48, 48, 0.78);
     -webkit-transition:all .3s ease-in-out;
     -moz-transition:all .3s ease-in-out;
     -o-transition:all .3s ease-in-out;
@@ -142,7 +142,7 @@ ul.sidebar-menu li ul.sub li a:hover,ul.sidebar-menu li ul.sub li.active a {
     -ms-transition:all 0.3s ease;
     transition:all 0.3s ease;
     display:block;
-    background:rgba(40, 40, 46, 0.28);
+    background: rgba(40, 40, 46, 0.28);
 }
 ul.sidebar-menu li {
     border-bottom:1px solid rgba(255,255,255,0.05);
@@ -2355,7 +2355,7 @@ ul.inbox-pagination li {
 }
 /*-- gallery --*/
 .w3layouts-main h2 {
-	color: #8b5c7e;
+	color: #f0bcb4;
     font-size: 29px;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -2365,7 +2365,7 @@ ul.inbox-pagination li {
 .w3layouts-main {
     width: 30%;
     margin:5em auto;
-    background:rgba(171, 119, 157, 0.27);
+    background: rgba(142, 98, 130, 0.9);
     padding: 42px 35px;
 }
 /*--//header--*/
