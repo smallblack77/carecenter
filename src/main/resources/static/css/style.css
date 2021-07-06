@@ -13,7 +13,7 @@ html, body{
 	font-family: 'Roboto', sans-serif;
     font-size: 100%;
     overflow-x: hidden;
-    background: url(../images/oldold.jpg) no-repeat 0px 0px;
+    background: url(../images/old2.png) no-repeat 0px 0px;
 	background-size:cover;
 }
 #container {
@@ -2362,7 +2362,7 @@ ul.inbox-pagination li {
 }
 /*-- gallery --*/
 .w3layouts-main h2 {
-	color: #f0bcb4;
+	color: #FFFFFF;
     font-size: 29px;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -2372,7 +2372,7 @@ ul.inbox-pagination li {
 .w3layouts-main {
     width: 30%;
     margin:5em auto;
-    background: rgba(142, 98, 130, 0.9);
+    background: rgba(108, 142, 98,0.9);
     padding: 42px 35px;
 }
 /*--//header--*/
@@ -2412,7 +2412,7 @@ input.ggg{
 	-ms-transition:0.5s all;
 }
 .w3layouts-main a:hover{
-	color:#f0bcb4;
+	color: #ffffff;
 	transition:0.5s all;
 	-webkit-transition:0.5s all;
 	-o-transition:0.5s all;
@@ -2424,7 +2424,7 @@ input.ggg{
     font-size: 18px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    background: #f0bcb4;
+    background: #95af85;
     color: white;
     border: none;
     outline: none;
@@ -2438,7 +2438,7 @@ input.ggg{
     -ms-transition: 0.5s all;
 }
 .w3layouts-main input[type="submit"]:hover {
-	background:#8b5c7e;
+	background:#5FB878;
 	transition:0.5s all;
 	-webkit-transition:0.5s all;
 	-o-transition:0.5s all;
@@ -2446,7 +2446,7 @@ input.ggg{
 	-ms-transition:0.5s all;
 }
 .w3layouts-main p a {
-    color: #f0bcb4;
+    color: #ffffff;
     padding: 10px;
 }
 .w3layouts-main p a:hover {
