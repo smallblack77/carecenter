@@ -16,6 +16,13 @@ html, body{
     background: url(../images/oldold.jpg) no-repeat 0px 0px;
 	background-size:cover;
 }
+#container {
+    font-family: 'Roboto', sans-serif;
+    font-size: 100%;
+    overflow-x: hidden;
+    background: url(../images/bg.jpg) no-repeat 0px 0px;
+    background-size:cover;
+}
 body a{
 	transition: 0.5s all ease;
 	-webkit-transition: 0.5s all ease;
