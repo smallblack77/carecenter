@@ -5,7 +5,7 @@
 	function checkUser() {
 		$.ajax({
 			url: "",
-			请求方式: "get",
+			请求方式: "post",
 			success: function (result){
 				alert("注册成功！您的员工号为："+result);
 			}
@@ -49,7 +49,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<h4><input type="checkbox" />我已同意服务条款和隐私政策</h4>
 			
 				<div class="clearfix"></div>
-				<input type="button" value="注册" name="register" onclick="checkUser()">
+				<input type="button" value="注册" name="register" onclick="checkUser()" >
 		</form>
 		<p> >>>>>>&emsp;若注册成功，请点击此处&emsp;&emsp;<a href="userLogin.html">登录</a><<<<<< </p>
 </div>

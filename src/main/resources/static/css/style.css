@@ -1459,7 +1459,7 @@ section#tables  p {
 	padding: 15px!important;
 }
 .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
-	font-size: 0.9em;
+	font-size: 1.0em;
 	color: #999;
 	border-top: none !important;
 }
@@ -1652,10 +1652,10 @@ ul.bs-glyphicons-list {
     box-shadow: 0 1px 1px rgba(0,0,0,.05);
 }
 .panel-default>.panel-heading {
-    color: #000000 ! important;
+    font: bold 30px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+    color: #6f7f69 ! important;
     background-color: #ddede0 ! important;
     border-color: #ddede0 ! important;
-    font-size: 20px;
 }
 p.hd-title {
     color: #b64d99;
@@ -2437,6 +2437,7 @@ input.ggg{
     -moz-transition: 0.5s all;
     -ms-transition: 0.5s all;
 }
+
 .w3layouts-main input[type="submit"]:hover {
 	background:#5FB878;
 	transition:0.5s all;
@@ -2445,6 +2446,94 @@ input.ggg{
 	-moz-transition:0.5s all;
 	-ms-transition:0.5s all;
 }
+
+.w3layouts-main input[type="button"] {
+    padding: 12px 38px;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: #f0bcb4;
+    color: white;
+    border: none;
+    outline: none;
+    display: table;
+    cursor: pointer;
+    margin: 45px auto 31px;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+
+.w3layouts-main input[type="button"]:hover {
+    background:#8b5c7e;
+    transition:0.5s all;
+    -webkit-transition:0.5s all;
+    -o-transition:0.5s all;
+    -moz-transition:0.5s all;
+    -ms-transition:0.5s all;
+}
+
+.btn-group-1 input[type="submit"]{
+    padding: 12px 38px;
+    font-size: 18px;
+    color: #f2fcee;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: #82a584;
+    border-width: 0.3ex;
+    font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+    border-color: #cccccc;
+    outline: none;
+    display: table;
+    cursor: pointer;
+    margin: 30px auto;
+    border-radius: 40%;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+
+.btn-group-1 input[type="submit"]:hover {
+    background:#eef9f0;
+    transition:0.5s all;
+    -webkit-transition:0.5s all;
+    -o-transition:0.5s all;
+    -moz-transition:0.5s all;
+    -ms-transition:0.5s all;
+}
+
+.btn-group {
+    /*padding: 12px 38px;*/
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: #eef9f0;
+    /*color: white;*/
+    border: none;
+    outline: none;
+    display: table;
+    cursor: pointer;
+    margin: 5px 5px;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+
+.btn-group:hover {
+    background: #82a584;
+    transition:0.5s all;
+    -webkit-transition:0.5s all;
+    -o-transition:0.5s all;
+    -moz-transition:0.5s all;
+    -ms-transition:0.5s all;
+}
+
 .w3layouts-main p a {
     color: #ffffff;
     padding: 10px;
@@ -3107,7 +3196,8 @@ div#graph1, div#graph4, div#graph5, div#graph6, div#graph7, div#graph8, div#grap
     margin: 1em 0;
 }
 .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
-    font-size: 0.75em;
+    font-size: 1.2em;
+    text-align: center;
 }
 #drop {
     padding: 50px 16px;

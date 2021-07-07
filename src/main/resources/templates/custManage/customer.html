@@ -1,5 +1,19 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://thyneleaf.org">
+<script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+<script type="text/javascript">
+    function deleteUser() {
+        var $id = $("#id").val();
+        $.ajax({
+            url: "",
+            请求方式: "post",
+            data: "id=" + $id,
+            success: function (result){
+                alert("删除成功！");
+            }
+        });
+    }
+</script>
 <head>
 <title>Visitors an Admin Panel Category Bootstrap Responsive Website Template | Responsive_table :: w3layouts</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -334,6 +348,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="panel-heading">
      入住/退住管理
     </div>
+     <div class="btn-group">
+         <button>
+             <a href="newCustomer.html">Add New</a> <i class="fa fa-plus"></i>
+         </button>
+     </div>
     <div>
       <table class="table" ui-jq="footable" ui-options='{
         "paging": {
@@ -362,7 +381,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </thead>
         <tbody>
             <tr class="" th:each="customer : ${customerList}">
-                <td><th:block  name="id" th:text="${customer.id}" /></td>
+                <td><th:block id="id" name="id" th:text="${customer.id}" /></td>
                 <td><th:block  name="name" th:text="${customer.name}" /></td>
                 <td><th:block  name="sex" th:text="${customer.sex}" /></td>
                 <td><th:block  name="age" th:text="${customer.age}" /></td>
@@ -372,7 +391,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <td><th:block  name="birthday" th:text="${customer.birthday}" /></td>
                 <td><th:block  name="attention" th:text="${customer.attention}" /></td>
                 <td><a th:href="${'/custManage/editCustomer?id='}+${customer.id}">Edit</a></td>
-                <td><a th:href="${'/custManage/deleteCustomer?id='}+${customer.id}">Delete</a></td>
+                <td><button value="Delete" name="delete" onclick="deleteUser()">Delete</button></td>
+                <!--<td><a th:href="${'/custManage/deleteCustomer?id='}+${customer.id}">Delete</a></td>-->
             </tr>
         </tbody>
       </table>
@@ -396,7 +416,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script src="../../static/js/scripts.js"></script>
 <script src="../../static/js/jquery.slimscroll.js"></script>
 <script src="../../static/js/jquery.nicescroll.js"></script>
-<!--[if lte IE 8]><script language="javascript" type="text/javascript" src="../../static/js/flot-chart/excanvas.min.js"></script><![endif]-->
+<script language="javascript" type="text/javascript" src="../../static/js/flot-chart/excanvas.min.js"></script><![endif]-->
 <script src="../../static/js/jquery.scrollTo.js"></script>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://thyneleaf.org">
 <script type="text/javascript" src="js/jquery-1.8.3.js"></script>
 <script type="text/javascript">
-    function deleteOut() {
+    function deleteUser() {
         var $id = $("#id").val();
         $.ajax({
             url: "",
@@ -346,53 +346,62 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="table-agile-info">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        外出管理
+                        新增客户
                     </div>
-                    <div class="btn-group">
-                        <button>
-                            <a th:href="${'/custManage/editCustomer?id='}+${customer.id}">Add New</a> <i class="fa fa-plus"></i>
-                        </button>
-                    </div>
-                    <div>
+                    <form action="/customer/addCustomer" method="post">
+                        <div>
                         <table class="table" ui-jq="footable" ui-options='{
-        "paging": {
-          "enabled": true
-        },
-        "filtering": {
-          "enabled": true
-        },
-        "sorting": {
-          "enabled": true
-        }}'>
-                            <thead>
+                                "paging": {
+                                  "enabled": true
+                                },
+                                "filtering": {
+                                  "enabled": true
+                                },
+                                "sorting": {
+                                  "enabled": true
+                                }}'>
                             <tr>
-                                <th data-breakpoints="xs">ID</th>
-                                <th>CustId</th>
-                                <th>Reason</th>
-                                <th>StartTime</th>
-                                <th>ExpTime</th>
-                                <th>ActTime</th>
-                                <th>AidPhone</th>
-                                <th>Edit</th>
-                                <th>Delete</th>
+                                <th style="background: #ddede0 no-repeat;">ID:</th>
+                                <td th:text="${customer.id}"><input type="text" name="id" id="id" ></td>
                             </tr>
-                            </thead>
-                            <tbody>
-                            <tr class="" th:each="out : ${outList}">
-                                <td><th:block id="id" name="id" th:text="${out.id}" /></td>
-                                <td><th:block  name="custid" th:text="${out.custid}" /></td>
-                                <td><th:block  name="reason" th:text="${out.reason}" /></td>
-                                <td><th:block  name="starttime" th:text="${out.starttime}" /></td>
-                                <td><th:block  name="exptime" th:text="${out.exptime}" /></td>
-                                <td><th:block  name="acttime" th:text="${out.acttime}" /></td>
-                                <td><th:block  name="aidphone" th:text="${out.aidphone}" /></td>
-                                <td><a th:href="${'/custManage/editOut?id='}+${out.id}">Edit</a></td>
-                                <td><button value="Delete" name="delete" onclick="deleteOut()">Delete</button></td>
-                                <!--<td><a th:href="${'/custManage/deleteOut?id='}+${out.id}">Delete</a></td>-->
+                            <tr>
+                                <th style="background: #ddede0 no-repeat;">Name:</th>
+                                <td><input type="text"  name="name"  id="name"  ></td>
                             </tr>
-                            </tbody>
+                            <tr>
+                                <th style="background: #ddede0 no-repeat;">Sex:</th>
+                                <td><input type="text" id="sex" name="sex" ></td>
+                            </tr>
+                            <tr>
+                                <th style="background: #ddede0 no-repeat;">Age:</th>
+                                <td><input type="text"  id="age" name="age" ></td>
+                            </tr>
+                            <tr>
+                                <th style="background: #ddede0 no-repeat;">Bednum:</th>
+                                <td><input type="text"  id="bednum" name="bednum" ></td>
+                            </tr>
+                            <tr>
+                                <th style="background: #ddede0 no-repeat;">Height:</th>
+                                <td><input type="text"  id="height" name="height" ></td>
+                            </tr>
+                            <tr>
+                                <th style="background: #ddede0 no-repeat;">Weight:</th>
+                                <td><input type="text"  id="weight" name="weight" ></td>
+                            </tr>
+                            <tr>
+                                <th style="background: #ddede0 no-repeat;">Birthday:</th>
+                                <td><input type="text"  id="birthday" name="birthday" ></td>
+                            </tr>
+                            <tr>
+                                <th style="background: #ddede0 no-repeat;">Attention:</th>
+                                <td><input type="text"  id="attention" name="attention" ></td>
+                            </tr>
                         </table>
+                        <div class="btn-group-1">
+                            <input type="submit" name="add" value="新增"/>
+                        </div>
                     </div>
+                    </form>
                 </div>
             </div>
         </section>
@@ -412,7 +421,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script src="../../static/js/scripts.js"></script>
 <script src="../../static/js/jquery.slimscroll.js"></script>
 <script src="../../static/js/jquery.nicescroll.js"></script>
-<!--[if lte IE 8]><script language="javascript" type="text/javascript" src="../../static/js/flot-chart/excanvas.min.js"></script><![endif]-->
+<script language="javascript" type="text/javascript" src="../../static/js/flot-chart/excanvas.min.js"></script><![endif]-->
 <script src="../../static/js/jquery.scrollTo.js"></script>
 </body>
 </html>
