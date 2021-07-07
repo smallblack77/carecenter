@@ -26,7 +26,8 @@ class CarecenterApplicationTests {
     @Test
     void testCustomer(){
         Customer customer = customerService.getCustomer("张三");
-        System.out.println(customer.getSex()+" "+customer.getHeight()+" "+customer.getBirthday());
+     //   if(customer != null)
+            System.out.println(customer.getSex()+" "+customer.getHeight()+" "+customer.getBirthday());
     }
 
     @Test
