@@ -9,7 +9,7 @@ public class User {
     private String email;
     private int age;
     private String phoneNumber;
-    private int role;
+    private String role;
 
     public String getPassword() {
         return password;
@@ -67,11 +67,11 @@ public class User {
         this.phoneNumber = phoneNumber;
     }
 
-    public int getRole() {
+    public String getRole() {
         return role;
     }
 
-    public void setRole(int role) {
+    public void setRole(String role) {
         this.role = role;
     }
 }

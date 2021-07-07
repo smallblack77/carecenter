@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://thyneleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <script type="text/javascript" src="js/jquery-1.8.3.js"></script>
 <script type="text/javascript">
 	function checkUser() {
@@ -37,15 +37,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="reg-w3">
 <div class="w3layouts-main">
 	<h2>用户注册</h2>
-		<form action="#" method="post">
-			<input type="text" class="ggg" id="Username" name="Username" placeholder="用户名" required="required">
-			<input type="password" class="ggg" id="Password" name="Password" placeholder="密码" required="required">
-			<input type="text" class="ggg" name="Sex" placeholder="性别" required="required">
-			<input type="email" class="ggg" name="Email" placeholder="邮箱" required="required">
-			<input type="text" class="ggg" name="Age" placeholder="年龄" required="required">
-			<input type="text" class="ggg" name="Phone" placeholder="手机号" required="required">
-			<input type="text" class="ggg" name="Role" placeholder="职称" required="required">
-
+		<form action="/account/registration" method="post" th:object="${newUser}">
+			<input type="text" class="ggg" id="username" name="username" placeholder="用户名" required="required">
+			<input type="password" class="ggg" id="password" name="password" placeholder="密码" required="required">
+			<input type="password" class="ggg" id="repeatedPassword" name="repeatedPassword" placeholder="密码" required="required">
+			<input type="text" class="ggg" name="sex" placeholder="性别" required="required">
+			<input type="email" class="ggg" name="email" placeholder="邮箱" required="required">
+			<input type="text" class="ggg" name="age" placeholder="年龄" required="required">
+			<input type="text" class="ggg" name="phone" placeholder="手机号" required="required">
+			<input type="text" class="ggg" name="role" placeholder="职称" required="required">
+			<p style="color: red" th:text="${session.msg}">错误信息</p>
 			<h4><input type="checkbox" />我已同意服务条款和隐私政策</h4>
 			
 				<div class="clearfix"></div>

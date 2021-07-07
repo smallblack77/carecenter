@@ -17,5 +17,24 @@
           AND USER.USERID = SIGNON.USERID
     </select>
 
+    <insert id="insertUser" parameterType="User">
+        INSERT INTO USER
+        (USERNAME,SEX,EMAIL,AGE,PHONENUMBER,ROLE)
+        VALUES
+        (#{username},#{sex},#{email},#{age},#{phoneNumber},#{role})
+    </insert>
+
+    <insert id="insertSignon" parameterType="User">
+        INSERT INTO SIGNON
+        (USERID,PASSWORD)
+        VALUES
+        (#{userId},#{password})
+    </insert>
+
+    <select id="getMaxUserId" resultType="int">
+        SELECT
+            Max(USER.USERID)
+        FROM USER
+    </select>
 
 </mapper>

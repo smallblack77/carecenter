@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://thyneleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Visitors an Admin Panel Category Bootstrap Responsive Website Template | Login :: w3layouts</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,18 +25,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="log-w3">
     <div class="w3layouts-main">
         <h2>用户登录</h2>
-        <form action="login" method="post">
+
+        <form action="/account/login" method="post">
             <input type="text" class="ggg" name="userId" placeholder="员工号" required="required">
             <input type="password" class="ggg" name="password" placeholder="密码" required="required">
             <!--<input type="text" name="vCode" placeholder="VerificationCode" size="5" maxlength="5"/>
             <div style="text-align: center"><img src="/account/kaptcha" /></a></div>-->
+
             <span><input type="checkbox" />记住密码</span>
+            <div id="Tips" th:if="${errorValue}!= null">
+                <span th:text="${errorValue}"></span>
+            </div>
             <h6><a href="#">忘记密码?</a></h6>
             <div class="clearfix"></div>
             <input type="submit" value="登 录" name="login">
         </form>
         <p>还没有账户?&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
-            <a href="registration.html">账户注册</a></p>
+            <a href="/account/registration">账户注册</a></p>
     </div>
 </div>
 <script src="../js/bootstrap.js"></script>
