@@ -2405,11 +2405,19 @@ input.ggg{
 }
 .w3layouts-main a {
     color: #fff;
+    display: inline-block;
+    text-align: center;
+    background: #82a584;
+    border-width: 0.3ex;
+    font-size: 18px;
+    font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+    border-color: #788078;
+    border-radius: 40%;
 	transition:0.5s all;
-	-webkit-transition:0.5s all;
-	-o-transition:0.5s all;
-	-moz-transition:0.5s all;
-	-ms-transition:0.5s all;
+    -webkit-transition:0.5s all;
+    -o-transition:0.5s all;
+    -moz-transition:0.5s all;
+    -ms-transition:0.5s all;
 }
 .w3layouts-main a:hover{
 	color: #ffffff;
@@ -2419,6 +2427,7 @@ input.ggg{
 	-moz-transition:0.5s all;
 	-ms-transition:0.5s all;
 }
+
 .w3layouts-main input[type="submit"] {
     padding: 12px 38px;
     font-size: 18px;
@@ -2452,7 +2461,7 @@ input.ggg{
     font-size: 18px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    background: #f0bcb4;
+    background: #95af85;
     color: white;
     border: none;
     outline: none;
@@ -2467,7 +2476,7 @@ input.ggg{
 }
 
 .w3layouts-main input[type="button"]:hover {
-    background:#8b5c7e;
+    background:#5FB878;
     transition:0.5s all;
     -webkit-transition:0.5s all;
     -o-transition:0.5s all;
