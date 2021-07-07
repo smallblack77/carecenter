@@ -7,4 +7,6 @@ import org.springframework.stereotype.Repository;
 public interface CustomerMapper {
 
     Customer getCustomer(String name);
+
+    void addCustomer(Customer customer);
 }

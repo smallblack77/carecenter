@@ -25,9 +25,19 @@ class CarecenterApplicationTests {
 
     @Test
     void testCustomer(){
-        Customer customer = customerService.getCustomer("张三");
-     //   if(customer != null)
-            System.out.println(customer.getSex()+" "+customer.getHeight()+" "+customer.getBirthday());
+//        Customer customer = customerService.getCustomer("张三");
+//        System.out.println(customer.getSex()+" "+customer.getHeight()+" "+customer.getBirthday());
+        Customer customer = new Customer();
+        customer.setId("2");
+        customer.setName("张思");
+        customer.setSex("男");
+        customer.setAge(56);
+        customer.setBirthday("1965-2-7");
+        customer.setHeight(186.0);
+        customer.setWeight(130.2);
+        customer.setBedNum(1);
+        customer.setAttention("花生过敏");
+        customerService.addCustomer(customer);
     }
 
     @Test

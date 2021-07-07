@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-
 <mapper namespace="org.csu.carecenter.Persistence.CustomerMapper">
-    <select id="getCustomer" parameterType="string" resultType="Customer">
+
+    <select id="getCustomer"  parameterType="String" resultType="Customer">
         SELECT
             CUSTOMER.ID,
             CUSTOMER.NAME,
@@ -16,4 +16,19 @@
         FROM CUSTOMER
         WHERE CUSTOMER.NAME = #{name}
     </select>
+
+    <insert id="addCustomer"  parameterType="Customer">
+        INSERT INTO CUSTOMER
+            (CUSTOMER.ID,
+            CUSTOMER.NAME,
+            CUSTOMER.SEX,
+            CUSTOMER.AGE,
+            CUSTOMER.BEDNUM,
+            CUSTOMER.HEIGHT,
+            CUSTOMER.WEIGHT,
+            CUSTOMER.BIRTHDAY,
+            CUSTOMER.ATTENTION)
+        VALUES
+            (#{id}, #{name}, #{sex}, #{age}, #{bedNum}, #{height}, #{weight}, #{birthday}, #{attention})
+    </insert>
 </mapper>

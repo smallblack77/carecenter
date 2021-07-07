@@ -11,9 +11,9 @@ public class Customer {
 
     private int bedNum;
 
-    private String height;
+    private Double height;
 
-    private String weight;
+    private Double weight;
 
     private String birthday;
 
@@ -59,19 +59,19 @@ public class Customer {
         this.bedNum = bedNum;
     }
 
-    public String getHeight() {
+    public Double getHeight() {
         return height;
     }
 
-    public void setHeight(String height) {
+    public void setHeight(Double height) {
         this.height = height;
     }
 
-    public String getWeight() {
+    public Double getWeight() {
         return weight;
     }
 
-    public void setWeight(String weight) {
+    public void setWeight(Double weight) {
         this.weight = weight;
     }
 

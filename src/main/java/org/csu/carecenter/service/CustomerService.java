@@ -13,4 +13,8 @@ public class CustomerService {
     public Customer getCustomer(String name){
         return customerMapper.getCustomer(name);
     }
+
+    public void addCustomer(Customer customer){
+        customerMapper.addCustomer(customer);
+    }
 }
