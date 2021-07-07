@@ -1,6 +1,8 @@
 package org.csu.carecenter;
 
+import org.csu.carecenter.entity.Customer;
 import org.csu.carecenter.entity.User;
+import org.csu.carecenter.service.CustomerService;
 import org.csu.carecenter.service.UserService;
 import org.junit.jupiter.api.Test;
 import org.mybatis.spring.annotation.MapperScan;
@@ -14,8 +16,17 @@ class CarecenterApplicationTests {
     @Autowired
     UserService userService ;
 
+    @Autowired
+    CustomerService customerService;
+
     @Test
     void contextLoads() {
+    }
+
+    @Test
+    void testCustomer(){
+        Customer customer = customerService.getCustomer("张三");
+        System.out.println(customer.getSex()+" "+customer.getHeight()+" "+customer.getBirthday());
     }
 
     @Test
