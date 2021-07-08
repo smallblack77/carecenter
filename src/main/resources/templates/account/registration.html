@@ -3,11 +3,13 @@
 <script type="text/javascript" src="js/jquery-1.8.3.js"></script>
 <script type="text/javascript">
 	function checkUser() {
+		var $userId = [[${userId}]];
 		$.ajax({
-			url: "",
+			url: "account/registration",
 			请求方式: "post",
 			success: function (result){
-				alert("注册成功！您的员工号为："+result);
+				if (result == 1)
+					alert("注册成功！您的员工号为："+$userId);
 			}
 		});
 	}
@@ -38,19 +40,43 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="w3layouts-main">
 	<h2>用户注册</h2>
 		<form action="/account/registration" method="post" th:object="${newUser}">
-			<input type="text" class="ggg" id="username" name="username" placeholder="用户名" required="required">
-			<input type="password" class="ggg" id="password" name="password" placeholder="密码" required="required">
-			<input type="password" class="ggg" id="repeatedPassword" name="repeatedPassword" placeholder="密码" required="required">
-			<input type="text" class="ggg" name="sex" placeholder="性别" required="required">
-			<input type="email" class="ggg" name="email" placeholder="邮箱" required="required">
-			<input type="text" class="ggg" name="age" placeholder="年龄" required="required">
-			<input type="text" class="ggg" name="phone" placeholder="手机号" required="required">
-			<input type="text" class="ggg" name="role" placeholder="职称" required="required">
+			<table class="regist">
+				<tr>
+					<td>用户名:</td>
+					<td th><input type="text" class="ggg" id="username" name="username" placeholder="用户名" required="required"></td>
+				</tr>
+				<tr>
+					<td>密码:</td>
+					<td><input type="password" class="ggg" id="password" name="password" placeholder="密码" required="required"></td>
+				</tr>
+				<tr>
+					<td>重复密码:</td>
+					<td><input type="password" class="ggg" id="repeatedPassword" name="repeatedPassword" placeholder="重复密码" required="required"></td>
+				</tr>
+				<tr>
+					<td>性别:</td>
+					<td><input type="text" class="ggg" name="sex" placeholder="性别" required="required"></td>
+				</tr>
+				<tr>
+					<td>邮箱:</td>
+					<td><input type="email" class="ggg" name="email" placeholder="邮箱" required="required"></td>
+				</tr>
+				<tr>
+					<td>年龄:</td>
+					<td><input type="text" class="ggg" name="age" placeholder="年龄" required="required"></td>
+				</tr>
+				<tr>
+					<td>手机号:</td>
+					<td><input type="text" class="ggg" name="phone" placeholder="手机号" required="required"></td>
+				</tr>
+				<tr>
+					<td>职称:</td>
+					<td><input type="text" class="ggg" name="role" placeholder="职称" required="required"></td>
+				</tr>
+			</table>
 			<p style="color: red" th:text="${session.msg}">错误信息</p>
 			<h4><input type="checkbox" />我已同意服务条款和隐私政策</h4>
-			
-				<div class="clearfix"></div>
-				<input type="button" value="注册" name="register" onclick="checkUser()" >
+			<input type="submit" value="注册" name="register" onclick="checkUser()" >
 		</form>
 		<p> >>>>>>&emsp;若注册成功，请点击此处&emsp;&emsp;<a href="userLogin.html">登录&emsp;</a></p>
 </div>
