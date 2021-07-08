@@ -5,7 +5,6 @@ import org.csu.carecenter.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.jws.soap.SOAPBinding;
 
 @Service
 public class UserService {
