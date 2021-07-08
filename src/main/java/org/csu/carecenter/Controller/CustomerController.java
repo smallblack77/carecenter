@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Controller
@@ -31,6 +32,43 @@ public class CustomerController {
     public String getCustomerLsit(Model model){
         List<Customer> customers =  customerService.getCustomerLsit();
         model.addAttribute("customerList", customers);
+        return "custManage/customer";
+    }
+
+     //删除客户信息
+    @GetMapping("/deleteCustomer")
+    public String deleteCustomer(@RequestParam("id")String id){
+        customerService.deleteCustomer(Integer.parseInt(id));
+        return "custManage/customer";
+    }
+
+    //修改客户信息的表单
+    @GetMapping("/editCustomerForm")
+    public String editCustomerForm(){
+        return "custManage/editCustomer";
+    }
+
+    //修改客户信息
+    @PostMapping("/editCustomer")
+    public String editCustomer(@RequestParam("name")String name,
+                               @RequestParam("sex")String sex,
+                               @RequestParam("age")String age,
+                               @RequestParam("height")String height,
+                               @RequestParam("weight")String weight,
+                               @RequestParam("birthday")String birthday,
+                               @RequestParam("attention")String attention,
+                               HttpSession httpSession,
+                               Model model){
+        int id = Integer.parseInt(httpSession.getAttribute("id").toString());
+        Customer customer = new Customer();
+        customer.setId(id);
+        customer.setName(name);
+        customer.setSex(sex);
+        customer.setAge(Integer.parseInt(age));
+        customer.setHeight(Double.parseDouble(height));
+        customer.setWeight(Double.parseDouble(weight));
+        customer.setBirthday(birthday);
+        customer.setAttention(attention);
         return "custManage/customer";
     }
 
