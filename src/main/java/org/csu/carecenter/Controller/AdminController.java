@@ -6,16 +6,14 @@ import org.csu.carecenter.service.AdminService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.SessionAttributes;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.Map;
 
 @Controller
 @RequestMapping("/admin")
@@ -31,12 +29,14 @@ public class AdminController {
         return "manager/login";
     }
 
-    @GetMapping("/adminLogin")
-    public String login(@RequestParam("adminName")String username,
-                        @RequestParam("password")String password,
-                        @RequestParam("code")String code,
-                        HttpSession session,
-                        Model model){
+    @ResponseBody
+    @RequestMapping(value = "/adminLogin",method = RequestMethod.POST,produces = "application/json;charset=UTF-8")
+    public String login(Map<String ,Object> map,HttpSession session,Model model){
+
+        String username = (String)map.get("adminName");
+        String password = (String)map.get("password");
+        String code = (String)map.get("code");
+        System.out.println(username+":"+password+":"+code);
 
         if(!code.contentEquals((String)session.getAttribute("checkcode")))
         {

@@ -15,6 +15,8 @@
     "sex":"女",
     "age":20,
     "email": "331980235@qq/com",
+    "phoneNumber": "12345678910",
+    "role": 1,
     "login": null
   },{
     "checked":false,
@@ -23,6 +25,8 @@
     "sex":"女",
     "age":20,
     "email": "331980235@qq/com",
+    "phoneNumber": "12345678910",
+    "role": 1,
     "login": null
   },{
     "checked":false,
@@ -31,5 +35,7 @@
     "sex":"女",
     "age":20,
     "email": "331980235@qq/com",
+    "phoneNumber": "12345678910",
+    "role": 1,
     "login": null
   }]}

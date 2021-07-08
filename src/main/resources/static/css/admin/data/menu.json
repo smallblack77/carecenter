@@ -32,7 +32,7 @@
 		"title": "系统管理",
 		"icon": "layui-icon layui-icon-set-fill",
 		"type": 0,
-		"href": "",
+		"href": "manageUser.html",
 		"children": [{
 			"id": 601,
 			"title": "用户管理",
@@ -40,22 +40,7 @@
 			"type": 1,
 			"openType": "_iframe",
 			"href": "manageUser.html"
-			}, {
-				"id": 605,
-				"title": "用户修改",
-				"icon": "layui-icon layui-icon-face-cry",
-				"type": 1,
-				"openType": "_iframe",
-				"href": "editUser.html"
-			}, {
-				"id": 606,
-				"title": "数据字典",
-				"icon": "layui-icon layui-icon-face-cry",
-				"type": 1,
-				"openType": "_iframe",
-				"href": "view/system/dict.html"
 			}
-
 		]
 	}
 ]
