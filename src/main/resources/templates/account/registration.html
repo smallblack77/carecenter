@@ -89,11 +89,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<input type="submit" value="注册" name="register" >
 		</form>
 	<div th:if="${userId}!= null">
-		<span >注册成功！您的ID为:</span>
+		<span id="tishiID">注册成功！您的ID为:</span>
 		<span th:text="${userId}"></span>
 	</div>
-
+	<div>
 		<p> >>>>>>&emsp;若注册成功，请点击此处&emsp;&emsp;<a href="/account/userLoginForm">登录&emsp;</a></p>
+	</div>
+
 </div>
 </div>
 <script src="../js/bootstrap.js"></script>
