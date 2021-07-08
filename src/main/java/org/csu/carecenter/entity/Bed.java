@@ -11,6 +11,47 @@ public class Bed {
 
     private String description;
 
+    private int bedAndCustId;
+
+    private int customerId;
+
+    private String startTime;
+
+    private String endTime;
+
+    public int getBedAndCustId() {
+        return bedAndCustId;
+    }
+
+    public void setBedAndCustId(int bedAndCustId) {
+        this.bedAndCustId = bedAndCustId;
+    }
+
+    public int getCustomerId() {
+        return customerId;
+    }
+
+    public void setCustomerId(int customerId) {
+        this.customerId = customerId;
+    }
+
+
+    public String getStartTime() {
+        return startTime;
+    }
+
+    public void setStartTime(String startTime) {
+        this.startTime = startTime;
+    }
+
+    public String getEndTime() {
+        return endTime;
+    }
+
+    public void setEndTime(String endTime) {
+        this.endTime = endTime;
+    }
+
     public Integer getId() {
         return id;
     }

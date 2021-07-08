@@ -9,8 +9,12 @@ import java.util.List;
 @Repository
 public interface BedMapper {
 
-    //获取床位信息
-    List<Bed> getBedList();
+    //获取不可住床位和床位与客户关系的信息
+    List<Bed> getBedListNotEmpty();
+    //获取空床位
+    List<Bed> getBedListEmpty();
+    //获取所有床位信息
+    List<Bed> getAllBedList();
 
     //获取床位和客户具体信息
     BedAndCustomer getBedAndCustomer(int bedId);

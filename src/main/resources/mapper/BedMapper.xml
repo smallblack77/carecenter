@@ -1,15 +1,43 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="org.csu.carecenter.Persistence.BedMapper">
-    <select id="getBedList" resultType="Bed">
+    <select id="getBedListNotEmpty" resultType="Bed">
         SELECT
-            ID,
-            ROOMNUM as roomNum,
-            BEDSTATUS as bedStatus,
-            SORT,
-            DESCRIPTION
-        FROM BED
+            BED.ID,
+            BED.ROOMNUM as roomNum,
+            BED.BEDSTATUS as bedStatus,
+            BED.SORT,
+            BED.DESCRIPTION,
+            BEDANDCUST.CUSTID as customerId,
+            BEDANDCUST.STARTTIME as startTime,
+            BEDANDCUST.ENDTIME as endTime
+        FROM BED,BEDANDCUST
+        WHERE BED.ID=BEDANCUST.BEDID
     </select>
+
+    <select id="getBedListEmpty" resultType="Bed">
+        SELECT
+            BED.ID,
+            BED.ROOMNUM as roomNum,
+            BED.BEDSTATUS as bedStatus,
+            BED.SORT,
+            BED.DESCRIPTION,
+        FROM BED
+        WHERE BED.BEDSTATUS=1
+    </select>
+
+    <select id="getAllBedList" resultType="Bed">
+        SELECT
+            BED.ID,
+            BED.ROOMNUM as roomNum,
+            BED.BEDSTATUS as bedStatus,
+            BED.SORT,
+            BED.DESCRIPTION,
+        FROM BED
+        WHERE BED.ID
+    </select>
+
+
 
     <select id="getBedAndCustomer" parameterType="int" resultType="BedAndCustomer">
         SELECT

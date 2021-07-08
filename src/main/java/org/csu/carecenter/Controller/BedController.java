@@ -15,7 +15,7 @@ public class BedController {
     @Autowired
     private BedService bedService;
 
-    //返回床的列表
+/*    //返回床的列表
     public String viewBedList(Model model){
         List<Bed> bedList = bedService.getBedList();
         model.addAttribute("bedList",bedList);
@@ -27,6 +27,6 @@ public class BedController {
         BedAndCustomer bedAndCustomer = bedService.getBedAndCustomer(bedId);
         model.addAttribute("bedAndCustomer",bedAndCustomer);
         return null;
-    }
+    }*/
 
 }

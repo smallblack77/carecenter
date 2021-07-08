@@ -15,9 +15,17 @@ public class BedService {
     @Autowired
     private BedMapper bedMapper;
 
+    //获取不空床位信息
+    public List<Bed> getBedListNotEmpty(){
+        return bedMapper.getBedListNotEmpty();
+    }
+    //获取空床位信息
+    public List<Bed> getBedListEmpty(){
+        return bedMapper.getBedListEmpty();
+    }
     //获取所有床位信息
-    public List<Bed> getBedList(){
-        return bedMapper.getBedList();
+    public List<Bed> getAllBedList(){
+        return bedMapper.getAllBedList();
     }
 
     public BedAndCustomer getBedAndCustomer(int bedId){
