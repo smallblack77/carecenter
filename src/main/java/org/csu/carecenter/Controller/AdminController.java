@@ -13,8 +13,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
 
 @Controller
 @RequestMapping("/admin")
@@ -70,9 +68,42 @@ public class AdminController {
         }
     }
 
-    //跳转到管理员登陆界面
+    //跳转到管理员管理用户界面
     @GetMapping("/manageUser")
     public String manageUser(Model model){
-        return "manager/manageUser";
+        return "/manager/managerUser";
     }
+
+    //跳转到管理员个人信息展示界面
+    @GetMapping("/managerAccount")
+    public String managerAccount(Model model){
+        return "manager/managerAccount";
+    }
+
+    //跳转到管理员个人信息修改界面
+    @GetMapping("/editAccountForm")
+    public String editAccount(Model model){
+        return "manager/editAccount";
+    }
+
+    //跳转到管理员修改用户信息界面
+    @GetMapping("/editUserForm")
+    public String editUser(Model model){
+        return "manager/editUser";
+    }
+
+    //跳转到管理员增加个人信息界面
+    @GetMapping("/addUserForm")
+    public String addUser(Model model){
+        return "manager/addUser";
+    }
+
+    //修改头像
+    @GetMapping("/upload")
+    public String upload(){return "uploadProfile";}
+
+    //修改管理员信息
+    @RequestMapping("/editAccount")
+    public String editAccount(){return "";}
+
 }

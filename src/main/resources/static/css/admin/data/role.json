@@ -1,23 +1,16 @@
 {
-  "createTime":null,
-  "createBy":null,
-  "updateTime":null,
-  "updateBy":null,
-  "remark":null,
   "code":0,
   "msg":"...",
   "count":3,
   "data":
   [{
-    "checked":false,
     "userId":"0001",
     "username":"常晓颖",
     "sex":"女",
     "age":20,
     "email": "331980235@qq/com",
     "phoneNumber": "12345678910",
-    "role": 1,
-    "login": null
+    "role": 1
   },{
     "checked":false,
     "userId":"0001",

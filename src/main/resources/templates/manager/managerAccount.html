@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="utf-8">
     <title></title>
-    <link rel="stylesheet" href="../../static/css/component/pear/css/pear.css" />
-    <link rel="stylesheet" href="../../static/css/admin/css/other/person.css" />
+    <link rel="stylesheet" href="../../css/component/pear/css/pear.css" />
+    <link rel="stylesheet" href="../../css/admin/css/other/person.css" />
 </head>
 <body class="pear-container">
 <div class="layui-row layui-col-space10">
@@ -13,9 +13,9 @@
             <div class="layui-card-body" style="padding: 25px;">
                 <div class="text-center layui-text">
                     <div class="user-info-head" id="userInfoHead">
-                        <img src="../../static/css/admin/images/avatar.jpg" id="userAvatar" width="115px" height="115px" alt="">
+                        <img src="../../css/admin/images/avatar.jpg" id="userAvatar" width="115px" height="115px" alt="">
                     </div>
-                    <h2 style="padding-top: 20px;font-size: 20px;">就眠仪式</h2>
+                    <h2 style="padding-top: 20px;font-size: 20px;" >就眠仪式</h2>
                     <p style="padding-top: 8px;margin-top: 10px;font-size: 13.5px;">China ， 中国</p>
                 </div>
             </div>
@@ -48,7 +48,7 @@
                         <div class="layui-tab-item layui-show">
                             <div class="layui-row layui-col-space10" style="margin: 15px;">
                                 <div class="layui-col-md1">
-                                    <img src="../../static/images/reback.png" style="width: 100%;height: 100%;border-radius: 5px;" />
+                                    <img src="../../images/reback.png" style="width: 100%;height: 100%;border-radius: 5px;" />
                                 </div>
                                 <div class="layui-col-md11" style="height: 80px;">
                                     <div class="title">提议：应当增加颐养中心娱乐活动设置</div>
@@ -71,7 +71,7 @@
         </div>
     </div>
 </div>
-<script src="../../static/css/component/layui/layui.js"></script>
+<script src="../../css/component/layui/layui.js"></script>
 <script>
     layui.use(['jquery', 'element', 'layer'], function () {
         var element = layui.element,
@@ -92,7 +92,7 @@
                 title: '更换图片',
                 shade: 0.1,
                 area: ["900px", "500px"],
-                content: '../uploadProfile.html',
+                content: '/admin/upload',
                 btn: ['确定', '取消'],
                 yes: function (index, layero) {
                     window['layui-layer-iframe' + index].submitForm();
