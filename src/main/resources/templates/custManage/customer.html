@@ -414,8 +414,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                      <td><th:block  name="birthday" th:text="${customer.birthday}" /></td>
                                      <td><th:block  name="attention" th:text="${customer.attention}" /></td>
                                      <td><a th:href="${'/customer/editCustomerForm?id='}+${customer.id}">Edit</a></td>
-                                     <td><button value="Delete" name="delete" onclick="deleteUser()">Delete</button></td>
-                                     <!--<td><a th:href="${'/custManage/deleteCustomer?id='}+${customer.id}">Delete</a></td>-->
+                                     <td><a th:href="${'/customer/deleteCustomer?id='}+${customer.id}">Delete</a></td>
                                  </tr>
                                  </tbody>
                              </table>

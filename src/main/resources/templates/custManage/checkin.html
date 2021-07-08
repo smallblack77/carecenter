@@ -393,7 +393,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                                     <th>CustID</th>
                                                     <th>BedID</th>
                                                     <th>StartTime</th>
-                                                    <th>EndTime</th>
                                                     <th>Edit</th>
                                                     <th>Delete</th>
                                                 </tr>
@@ -404,10 +403,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                                     <td><th:block  name="custid" th:text="${bedandcust.custid}" /></td>
                                                     <td><th:block  name="bedid" th:text="${bedandcust.bedid}" /></td>
                                                     <td><th:block  name="starttime" th:text="${bedandcust.starttime}" /></td>
-                                                    <td><th:block  name="endtime" th:text="${bedandcust.endtime}" /></td>
-                                                    <td><a th:href="${'/custManage/editCustomer?id='}+${customer.id}">Edit</a></td>
-                                                    <td><button value="Delete" name="delete" onclick="deleteCheckin()">Delete</button></td>
-                                                    <!--<td><a th:href="${'/custManage/deleteCustomer?id='}+${customer.id}">Delete</a></td>-->
+                                                    <td><a th:href="${'/custManage/editbedandcust?id='}+${bedandcust.id}">Edit</a></td>
+                                                    <td><a th:href="${'/customer/deletebedandcust?id='}+${bedandcust.id}">Delete</a></td>
                                                 </tr>
                                                 </tbody>
                                             </table>

@@ -410,8 +410,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                                     <td><th:block  name="acttime" th:text="${out.acttime}" /></td>
                                                     <td><th:block  name="aidphone" th:text="${out.aidphone}" /></td>
                                                     <td><a th:href="${'/custManage/editOut?id='}+${out.id}">Edit</a></td>
-                                                    <td><button value="Delete" name="delete" onclick="deleteOut()">Delete</button></td>
-                                                    <!--<td><a th:href="${'/custManage/deleteOut?id='}+${out.id}">Delete</a></td>-->
+                                                    <td><a th:href="${'/custManage/deleteOut?id='}+${out.id}">Delete</a></td>
                                                 </tr>
                                                 </tbody>
                                             </table>
