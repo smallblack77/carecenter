@@ -31,7 +31,7 @@ public class AdminController {
 
     @ResponseBody
     @RequestMapping(value = "/adminLogin",method = RequestMethod.POST,produces = "application/json;charset=UTF-8")
-    public String login(Map<String ,Object> map,HttpSession session,Model model){
+    public  String login(@RequestBody Map<String,Object> map, HttpSession session, Model model){
 
         String username = (String)map.get("adminName");
         String password = (String)map.get("password");

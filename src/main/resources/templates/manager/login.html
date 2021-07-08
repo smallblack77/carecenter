@@ -24,6 +24,9 @@
 			<p style="color:#5FB878">梅  岭  社  区  高  级  颐  养  中  心</p>
 		</div>
 	</div>
+	<div class="layui-form-item" style="display: none" id="inform">
+		<span id="information"></span>
+	</div>
 	<div class="layui-form-item">
 		<input placeholder="账 户 : admin " id="adminName" name="adminName" lay-verify="required" hover class="layui-input">
 	</div>
@@ -57,18 +60,14 @@
 
 		// 登 录 提 交
 		form.on('submit(login)', function(data) {
-
-			/// 验证
-
 			/// 登录
 			var data={
-				data:{
-					'adminName':document.getElementById('adminName').value,
-					'password':document.getElementById('password').value,
-					'code':document.getElementById('code').value
-				}
+				'adminName':document.getElementById('adminName').value,
+				'password':document.getElementById('password').value,
+				'code':document.getElementById('code').value
 			};
 
+			console.log(data);
 			$.ajax({
 				type : "post",
 				url : "/admin/adminLogin",
@@ -76,21 +75,19 @@
 				contentType:'application/json',
 				data : JSON.stringify(data),
 				success : function(data) {
-					console.log(data);
+					/// 动画
+					button.load({
+						elem: '.login',
+						time: 1500,
+						done: function() {
+							popup.success("登录成功", function() {
+							});
+						}
+					})
 				}
 			});
-			/// 动画
-			button.load({
-				elem: '.login',
-				time: 1500,
-				done: function() {
-					popup.success("登录成功", function() {
-						location.href = "/admin/adminLogin"
-					});
-				}
-			})
-			return false;
 
+			return false;
 		});
 	})
 </script>
