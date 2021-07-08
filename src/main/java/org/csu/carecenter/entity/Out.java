@@ -1,19 +1,27 @@
 package org.csu.carecenter.entity;
 
 public class Out {
-
-    private String customerId;
+    private int id;
+    private int customerId;
     private String reason;
     private String startTime;
     private String expectReturnTime;
     private String actualReturnTime;
     private String airPhone;
 
-    public String getCustomerId() {
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getCustomerId() {
         return customerId;
     }
 
-    public void setCustomerId(String customerId) {
+    public void setCustomerId(int customerId) {
         this.customerId = customerId;
     }
 

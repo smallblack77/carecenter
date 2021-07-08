@@ -8,13 +8,25 @@
             CUSTOMER.NAME,
             CUSTOMER.SEX,
             CUSTOMER.AGE,
-            CUSTOMER.BEDNUM as bedNum,
             CUSTOMER.HEIGHT,
             CUSTOMER.WEIGHT,
             CUSTOMER.BIRTHDAY,
             CUSTOMER.ATTENTION
         FROM CUSTOMER
         WHERE CUSTOMER.NAME = #{name}
+    </select>
+
+    <select id="getCustomerList"  resultType="Customer">
+        SELECT
+            CUSTOMER.ID,
+            CUSTOMER.NAME,
+            CUSTOMER.SEX,
+            CUSTOMER.AGE,
+            CUSTOMER.HEIGHT,
+            CUSTOMER.WEIGHT,
+            CUSTOMER.BIRTHDAY,
+            CUSTOMER.ATTENTION
+        FROM CUSTOMER
     </select>
 
     <insert id="addCustomer"  parameterType="Customer">
@@ -42,4 +54,12 @@
          CUSTOMER.ATTENTION = #{attention}
         WHERE CUSTOMER.ID = #{id}
     </update>
+
+    <delete id="deleteCustomer"  parameterType="int">
+        DELETE FROM CUSTOMER
+        WHERE CUSTOMER.ID = #{id}
+    </delete>
+    
+<!--  客户的入住信息  -->
+
 </mapper>
