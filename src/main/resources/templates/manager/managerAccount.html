@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="../../static/css/component/pear/css/pear.css" />
+    <link rel="stylesheet" href="../../static/css/admin/css/other/person.css" />
+</head>
+<body class="pear-container">
+<div class="layui-row layui-col-space10">
+    <div class="layui-col-md3">
+        <div class="layui-card">
+            <div class="layui-card-body" style="padding: 25px;">
+                <div class="text-center layui-text">
+                    <div class="user-info-head" id="userInfoHead">
+                        <img src="../../static/css/admin/images/avatar.jpg" id="userAvatar" width="115px" height="115px" alt="">
+                    </div>
+                    <h2 style="padding-top: 20px;font-size: 20px;">就眠仪式</h2>
+                    <p style="padding-top: 8px;margin-top: 10px;font-size: 13.5px;">China ， 中国</p>
+                </div>
+            </div>
+            <div style="height: 45px;border-top: 1px whitesmoke solid;text-align: center;line-height: 45px;font-size: 13.5px;">
+                <span>今日事 ，今日毕</span>
+            </div>
+        </div>
+
+        <div class="layui-card">
+            <div class="layui-card-header">
+                归档
+            </div>
+            <div class="layui-card-body">
+                <ul class="list">
+                    <li class="list-item"><span class="title">优化代码格式</span><span class="footer">2020-06-04 11:28</span></li>
+                    <li class="list-item"><span class="title">新增消息组件</span><span class="footer">2020-06-01 04:23</span></li>
+                    <li class="list-item"><span class="title">移动端兼容</span><span class="footer">2020-05-22 21:38</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="layui-col-md9">
+        <div class="layui-card">
+            <div class="layui-card-header">
+                用户反馈
+            </div>
+            <div class="layui-card-body">
+                <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+                    <div class="layui-tab-content" id="advice">
+                        <div class="layui-tab-item layui-show">
+                            <div class="layui-row layui-col-space10" style="margin: 15px;">
+                                <div class="layui-col-md1">
+                                    <img src="../../static/images/reback.png" style="width: 100%;height: 100%;border-radius: 5px;" />
+                                </div>
+                                <div class="layui-col-md11" style="height: 80px;">
+                                    <div class="title">提议：应当增加颐养中心娱乐活动设置</div>
+                                    <div class="content">
+                                        当前，颐养中心中娱乐活动限于读书，运动，打牌等等，随着时代的变化，我认为颐养中心应当增设比如电影院，KTV等活动...
+                                    </div>
+                                    <div class="comment">2020-06-12 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 评论 5 点赞 12 转发 4</div>
+                                </div>
+                                <div class="layui-col-md1">
+                                    <button class="pear-btn pear-btn-danger pear-btn-md" lay-event="batchRemove" id="delete">
+                                        <i class="layui-icon layui-icon-delete"></i>
+                                        删除
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../../static/css/component/layui/layui.js"></script>
+<script>
+    layui.use(['jquery', 'element', 'layer'], function () {
+        var element = layui.element,
+            layer = layui.layer,
+            $ = layui.jquery;
+
+        let MODULE_PATH = "operate/";
+        $("#userAvatar").attr("src", parent.layui.$(".layui-nav-img").attr("src"));
+
+        window.callback = function (data) {
+            layer.close(data.index);
+            $("#userAvatar").attr("src", data.newAvatar);
+            parent.layui.$(".layui-nav-img").attr("src", data.newAvatar);
+        }
+
+        $("#userAvatar").click(function () {
+            layer.open({
+                type: 2,
+                title: '更换图片',
+                shade: 0.1,
+                area: ["900px", "500px"],
+                content: MODULE_PATH + 'uploadProfile.html',
+                btn: ['确定', '取消'],
+                yes: function (index, layero) {
+                    window['layui-layer-iframe' + index].submitForm();
+                }
+            });
+        });
+
+        $("delete").click(function (){
+           $("advice").remove();
+        });
+    });
+</script>
+</body>
+</html>

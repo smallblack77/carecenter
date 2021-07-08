@@ -17,7 +17,7 @@
 		"icon": "layui-icon layui-icon-console",
 		"type": 1,
 		"openType": "_iframe",
-		"href": "editAccount.html"
+		"href": "#"
 	}, {
 		"id": 14,
 		"title": "百度一下",
@@ -25,13 +25,6 @@
 		"type": 1,
 		"openType": "_iframe",
 		"href": "http://www.baidu.com"
-	}, {
-		"id": 15,
-		"title": "主题预览",
-		"icon": "layui-icon layui-icon-console",
-		"type": 1,
-		"openType": "_iframe",
-		"href": "view/system/theme.html"
 	}]
 },
 	{
@@ -47,14 +40,13 @@
 			"type": 1,
 			"openType": "_iframe",
 			"href": "manageUser.html"
-		},
-			{
+			}, {
 				"id": 605,
-				"title": "行为日志",
+				"title": "用户修改",
 				"icon": "layui-icon layui-icon-face-cry",
 				"type": 1,
 				"openType": "_iframe",
-				"href": "view/system/log.html"
+				"href": "editUser.html"
 			}, {
 				"id": 606,
 				"title": "数据字典",

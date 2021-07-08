@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>User</title>
-    <link href="../../css/component/pear/css/pear.css" rel="stylesheet" />
+    <link href="../../static/css/component/pear/css/pear.css" rel="stylesheet">
 </head>
 <body class="pear-container">
 <div class="layui-card">
@@ -69,8 +69,8 @@
     <input type="checkbox" name="enable" value="{{d.id}}" lay-skin="switch" lay-text="启用|禁用" lay-filter="role-enable" checked = "{{ d.id == 10003 ? 'true' : 'false' }}">
 </script>
 
-<script src="../../css/component/layui/layui.js"></script>
-<script src="../../css/component/pear/pear.js"></script>
+<script src="../../static/css/component/layui/layui.js"></script>
+<script src="../../static/css/component/pear/pear.js"></script>
 <script>
     layui.use(['table','form','jquery'],function () {
         let table = layui.table;
