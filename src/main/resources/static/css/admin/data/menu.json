@@ -10,7 +10,7 @@
 		"icon": "layui-icon layui-icon-console",
 		"type": 1,
 		"openType": "_iframe",
-		"href": "#"
+		"href": "managerAccount.html"
 	}, {
 		"id": 13,
 		"title": "编辑个人信息",
@@ -32,14 +32,14 @@
 		"title": "系统管理",
 		"icon": "layui-icon layui-icon-set-fill",
 		"type": 0,
-		"href": "manageUser.html",
+		"href": "",
 		"children": [{
 			"id": 601,
 			"title": "用户管理",
 			"icon": "layui-icon layui-icon-face-smile",
 			"type": 1,
 			"openType": "_iframe",
-			"href": "manageUser.html"
+			"href": "/admin/manageUser"
 			}
 		]
 	}

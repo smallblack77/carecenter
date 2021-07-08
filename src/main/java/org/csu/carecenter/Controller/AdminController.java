@@ -69,4 +69,10 @@ public class AdminController {
             e.printStackTrace();
         }
     }
+
+    //跳转到管理员登陆界面
+    @GetMapping("/manageUser")
+    public String manageUser(Model model){
+        return "manager/manageUser";
+    }
 }
