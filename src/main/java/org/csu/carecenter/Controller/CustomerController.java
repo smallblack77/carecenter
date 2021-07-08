@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.util.List;
 
@@ -44,7 +45,10 @@ public class CustomerController {
 
     //修改客户信息的表单
     @GetMapping("/editCustomerForm")
-    public String editCustomerForm(){
+    public String editCustomerForm(HttpServletRequest req, Model model){
+        int id = Integer.parseInt(req.getParameter("id"));
+        Customer customer = customerService.getCustomer(id);
+        model.addAttribute(customer);
         return "custManage/editCustomer";
     }
 

@@ -34,7 +34,7 @@ class CarecenterApplicationTests {
     @Test
     void testCustomer(){
         //查找客户
-        Customer customer = customerService.getCustomer("张三");
+        Customer customer = customerService.getCustomer(1);
         System.out.println(customer.getSex()+" "+customer.getHeight()+" "+customer.getBirthday());
 
 

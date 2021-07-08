@@ -8,7 +8,7 @@ import java.util.List;
 @Repository
 public interface CustomerMapper {
 
-    Customer getCustomer(String name);
+    Customer getCustomer(int id);
 
     List<Customer> getCustomerList();
 

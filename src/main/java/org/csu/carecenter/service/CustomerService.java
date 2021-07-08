@@ -18,8 +18,8 @@ public class CustomerService {
     private OutMapper outMapper;
 
     //客户本身信息
-    public Customer getCustomer(String name){
-        return customerMapper.getCustomer(name);
+    public Customer getCustomer(int id){
+        return customerMapper.getCustomer(id);
     }
 
     public List<Customer> getCustomerLsit(){
