@@ -45,6 +45,10 @@ public class CustomerService {
         return outMapper.getOutList(custid);
     }
 
+    public List<Out> getAllOutList(){
+        return outMapper.getAllOutList();
+    }
+
     public void addOut(Out out){
         outMapper.insertOut(out);
     }

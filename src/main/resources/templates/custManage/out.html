@@ -274,10 +274,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <span>客户管理</span>
                         </a>
                         <ul class="sub">
-                            <li><a class="active" href="customer.html">客户信息管理</a></li>
-                            <li><a class="active" href="#">客户入住管理</a></li>
-                            <li><a class="active" href="#">客户退住管理</a></li>
-                            <li><a href="out.html">客户外出管理</a></li>
+                            <li><a class="active" href="/customer/selectCustomerLsit">客户信息管理</a></li>
+                            <li><a class="active" href="/customer/selectCheckinList">客户入住管理</a></li>
+                            <li><a class="active" href="/customer/selectCheckoutList">客户退住管理</a></li>
+                            <li><a href="/customer/selectAllOutList">客户外出管理</a></li>
                         </ul>
                     </li>
                     <li class="sub-menu">
@@ -404,12 +404,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                                 <tbody>
                                                 <tr class="" th:each="out : ${outList}">
                                                     <td><th:block id="id" name="id" th:text="${out.id}" /></td>
-                                                    <td><th:block  name="custid" th:text="${out.custid}" /></td>
+                                                    <td><th:block  name="custid" th:text="${out.customerId}" /></td>
                                                     <td><th:block  name="reason" th:text="${out.reason}" /></td>
-                                                    <td><th:block  name="starttime" th:text="${out.starttime}" /></td>
-                                                    <td><th:block  name="exptime" th:text="${out.exptime}" /></td>
-                                                    <td><th:block  name="acttime" th:text="${out.acttime}" /></td>
-                                                    <td><th:block  name="aidphone" th:text="${out.aidphone}" /></td>
+                                                    <td><th:block  name="starttime" th:text="${out.startTime}" /></td>
+                                                    <td><th:block  name="exptime" th:text="${out.expectReturnTime}" /></td>
+                                                    <td><th:block  name="acttime" th:text="${out.actualReturnTime}" /></td>
+                                                    <td><th:block  name="aidphone" th:text="${out.airPhone}" /></td>
                                                     <td><a th:href="${'/custManage/editOut?id='}+${out.id}">Edit</a></td>
                                                     <td><a th:href="${'/custManage/deleteOut?id='}+${out.id}">Delete</a></td>
                                                 </tr>

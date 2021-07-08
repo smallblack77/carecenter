@@ -15,6 +15,18 @@
         WHERE OUT.CUSTID = #{custid}
     </select>
 
+    <select id="getAllOutList" resultType="Out">
+        SELECT
+            OUT.ID,
+            OUT.CUSTID as customerId,
+            OUT.REASON,
+            OUT.STARTTIME,
+            OUT.EXPTIME as expectReturnTime,
+            OUT.ACTTIME as actualReturnTime,
+            OUT.AIDPHONE as airPhone
+        FROM `out`
+    </select>
+
     <insert id="insertOut" parameterType="Out">
         INSERT INTO `out`
             (CUSTID,

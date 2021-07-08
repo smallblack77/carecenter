@@ -1,6 +1,7 @@
 package org.csu.carecenter.Controller;
 
 import org.csu.carecenter.entity.Customer;
+import org.csu.carecenter.entity.Out;
 import org.csu.carecenter.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -38,8 +39,9 @@ public class CustomerController {
 
      //删除客户信息
     @GetMapping("/deleteCustomer")
-    public String deleteCustomer(@RequestParam("id")String id){
+    public String deleteCustomer(@RequestParam("id")String id,Model model){
         customerService.deleteCustomer(Integer.parseInt(id));
+        model.addAttribute("customerList",customerService.getCustomerLsit());
         return "custManage/customer";
     }
 
@@ -49,6 +51,8 @@ public class CustomerController {
         int id = Integer.parseInt(req.getParameter("id"));
         Customer customer = customerService.getCustomer(id);
         model.addAttribute(customer);
+        model.addAttribute("customerId",id);
+        model.addAttribute("addCustomer","新增客户成功！");
         return "custManage/editCustomer";
     }
 
@@ -63,9 +67,8 @@ public class CustomerController {
                                @RequestParam("attention")String attention,
                                HttpSession httpSession,
                                Model model){
-        int id = Integer.parseInt(httpSession.getAttribute("id").toString());
-        Customer customer = new Customer();
-        customer.setId(id);
+//        int id = Integer.parseInt(httpSession.getAttribute("id").toString());
+        Customer customer = (Customer) httpSession.getAttribute("customer");
         customer.setName(name);
         customer.setSex(sex);
         customer.setAge(Integer.parseInt(age));
@@ -73,7 +76,8 @@ public class CustomerController {
         customer.setWeight(Double.parseDouble(weight));
         customer.setBirthday(birthday);
         customer.setAttention(attention);
-        return "custManage/customer";
+        customerService.updateCustomer(customer);
+        return "custManage/editCustomer";
     }
 
     //新增客户的表单
@@ -130,5 +134,28 @@ public class CustomerController {
             return "custManage/addCustomer";
         }
 
+    }
+
+
+
+    //入住信息
+    @GetMapping("/selectCheckinList")
+    public String getCheckinList(Model model){
+
+        return "custManage/checkin";
+    }
+
+    //退住信息
+    @GetMapping("/selectCheckoutList")
+    public String getCheckoutList(Model model){
+
+        return "custManage/checkout";
+    }
+    //外出信息
+    @GetMapping("/selectAllOutList")
+    public String getAllOutList(Model model){
+        List<Out> outList = customerService.getAllOutList();
+        model.addAttribute("outList", outList);
+        return "custManage/out";
     }
 }

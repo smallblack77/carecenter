@@ -10,6 +10,8 @@ public interface OutMapper {
 
     List<Out> getOutList(int custid);
 
+    List<Out> getAllOutList();
+
     void insertOut(Out out);
 
     void deleteOut(int id);
