@@ -39,7 +39,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="reg-w3">
 <div class="w3layouts-main">
 	<h2>用户注册</h2>
-		<form action="/account/registration" method="post" th:object="${newUser}">
+		<form action="/account/registration" method="post">
 			<table class="regist">
 				<tr>
 					<td>用户名:</td>
@@ -78,7 +78,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<h4><input type="checkbox" />我已同意服务条款和隐私政策</h4>
 			<input type="submit" value="注册" name="register" onclick="checkUser()" >
 		</form>
-		<p> >>>>>>&emsp;若注册成功，请点击此处&emsp;&emsp;<a href="userLogin.html">登录&emsp;</a></p>
+		<p> >>>>>>&emsp;若注册成功，请点击此处&emsp;&emsp;<a href="/account/userLoginForm">登录&emsp;</a></p>
 </div>
 </div>
 <script src="../js/bootstrap.js"></script>

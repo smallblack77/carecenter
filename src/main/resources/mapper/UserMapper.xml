@@ -37,4 +37,8 @@
         FROM USER
     </select>
 
+    <select id="getAllUser" resultType="User">
+        SELECT * FROM USER
+    </select>
+
 </mapper>

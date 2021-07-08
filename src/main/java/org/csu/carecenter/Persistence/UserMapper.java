@@ -4,6 +4,8 @@ package org.csu.carecenter.Persistence;
 import org.csu.carecenter.entity.User;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 public interface UserMapper {
 
@@ -18,5 +20,7 @@ public interface UserMapper {
 
     //获得userId并返回
     int getMaxUserId();
+
+    List<User> getAllUser();
 
 }

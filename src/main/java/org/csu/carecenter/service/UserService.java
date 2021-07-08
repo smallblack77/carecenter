@@ -5,6 +5,8 @@ import org.csu.carecenter.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 
 @Service
 public class UserService {
@@ -34,5 +36,10 @@ public class UserService {
     public int getMaxUserId(){
         return userMapper.getMaxUserId();
     }
+
+    public List<User> getAllUser(){
+        return userMapper.getAllUser();
+    }
+
 
 }
