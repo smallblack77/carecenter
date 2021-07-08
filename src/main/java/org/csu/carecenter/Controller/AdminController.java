@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.Map;
 
 @Controller
@@ -29,13 +30,12 @@ public class AdminController {
         return "manager/login";
     }
 
-    @ResponseBody
-    @RequestMapping(value = "/adminLogin",method = RequestMethod.POST,produces = "application/json;charset=UTF-8")
-    public  String login(@RequestBody Map<String,Object> map, HttpSession session, Model model){
+    @RequestMapping(value = "/adminLogin")
+    public  String login(@RequestParam("adminName")String username,
+                         @RequestParam("password")String password,
+                         @RequestParam("code")String code,
+                         HttpSession session, Model model){
 
-        String username = (String)map.get("adminName");
-        String password = (String)map.get("password");
-        String code = (String)map.get("code");
         System.out.println(username+":"+password+":"+code);
 
         if(!code.contentEquals((String)session.getAttribute("checkcode")))

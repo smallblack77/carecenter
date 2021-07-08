@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Manager</title>
     <!-- 依 赖 样 式 -->
-    <link rel="stylesheet" href="../../static/css/component/pear/css/pear.css">
+    <link rel="stylesheet" href="../../css/component/pear/css/pear.css">
     <!-- 加 载 样 式-->
-    <link rel="stylesheet" href="../../static/css/admin/css/load.css">
+    <link rel="stylesheet" href="../../css/admin/css/load.css">
     <!-- 布 局 样 式 -->
-    <link rel="stylesheet" href="../../static/css/admin/css/admin.css">
+    <link rel="stylesheet" href="../../css/admin/css/admin.css">
 </head>
 <!-- 结 构 代 码 -->
 <body class="layui-layout-body pear-admin">
@@ -31,7 +31,7 @@
             <li class="layui-nav-item user">
                 <!-- 头 像 -->
                 <a href="javascript:;">
-                    <img src="../../static/css/admin/images/avatar.jpg" class="layui-nav-img">
+                    <img src="../../css/admin/images/avatar.jpg" class="layui-nav-img">
                 </a>
                 <!-- 功 能 菜 单 -->
                 <dl class="layui-nav-child">
@@ -68,8 +68,8 @@
     <a href="#" class="layui-icon layui-icon-shrink-right"></a>
 </div>
 <!-- 依 赖 脚 本 -->
-<script src="../../static/css/component/layui/layui.js"></script>
-<script src="../../static/css/component/pear/pear.js"></script>
+<script src="../../css/component/layui/layui.js"></script>
+<script src="../../css/component/pear/pear.js"></script>
 <!-- 框 架 初 始 化 -->
 <script>
     layui.use(['admin','jquery','convert','popup'], function() {
@@ -79,13 +79,13 @@
         var popup = layui.popup;
 
         // 初始化顶部用户信息
-        admin.setAvatar("../../static/css/admin/images/avatar.jpg","就眠仪式");
+        admin.setAvatar("../../css/admin/images/avatar.jpg","就眠仪式");
 
         // 根目录下 pear.config.yml 文件为初始化配置
         // 你可以通过 admin.setConfigPath 方法修改配置文件位置
         // 你可以通过 admin.setConfigType 方法修改配置文件类型
         admin.setConfigType("yml");
-        admin.setConfigPath("../../static/config/pear.config.yml");
+        admin.setConfigPath("../../config/pear.config.yml");
         admin.render();
 
         // 登出逻辑
