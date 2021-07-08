@@ -58,6 +58,7 @@ public class UserController {
     public String newUser(String username,String password,String sex,String email,String age,String phone,String role,
                           Model model,String repeatedPassword,HttpSession session) {
         User user = new User();
+
         if(username!=null && password!= null && sex!= null && email!=null && age!=null && phone!=null && role != null
                 && repeatedPassword!=null){
             if(!repeatedPassword.equals(password)){
@@ -75,10 +76,10 @@ public class UserController {
                 int userId = userService.getMaxUserId();
                 userService.insertSignon(user);
                 model.addAttribute("user",user);
+                model.addAttribute("userId",userId);
             }
-
         }
-        return null;
+        return "account/registration";
     }
 
     @ResponseBody

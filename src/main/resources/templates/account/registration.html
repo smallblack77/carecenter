@@ -8,7 +8,7 @@
 			url: "account/registration",
 			请求方式: "post",
 			success: function (result){
-				if (result == 1)
+				if (result != null)
 					alert("注册成功！您的员工号为："+$userId);
 			}
 		});
@@ -86,8 +86,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</table>
 			<p style="color: red" th:text="${session.msg}">错误信息</p>
 			<h4><input type="checkbox" />我已同意服务条款和隐私政策</h4>
-			<input type="submit" value="注册" name="register" onclick="checkUser()" >
+			<input type="submit" value="注册" name="register" >
 		</form>
+	<div th:if="${userId}!= null">
+		<span >注册成功！您的ID为:</span>
+		<span th:text="${userId}"></span>
+	</div>
+
 		<p> >>>>>>&emsp;若注册成功，请点击此处&emsp;&emsp;<a href="/account/userLoginForm">登录&emsp;</a></p>
 </div>
 </div>
