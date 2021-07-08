@@ -9,8 +9,6 @@ public class Customer {
 
     private int age;
 
-    private int bedNum;
-
     private Double height;
 
     private Double weight;
@@ -49,14 +47,6 @@ public class Customer {
 
     public void setAge(int age) {
         this.age = age;
-    }
-
-    public int getBedNum() {
-        return bedNum;
-    }
-
-    public void setBedNum(int bedNum) {
-        this.bedNum = bedNum;
     }
 
     public Double getHeight() {
