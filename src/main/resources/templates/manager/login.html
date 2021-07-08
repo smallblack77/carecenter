@@ -6,6 +6,12 @@
 	<!-- 样 式 文 件 -->
 	<link rel="stylesheet" href="../../css/component/pear/css/pear.css">
 	<link rel="stylesheet" href="../../css/admin/css/other/login.css">
+	<script type="text/javascript">
+		//刷新验证码
+		function changeImg(){
+			document.getElementById("validateCodeImg").src="/account/checkCode?"+Math.random();
+		}
+	</script>
 </head>
 <!-- 代 码 结 构 -->
 <body background="../../images/login.gif" style="background-size: cover;">
@@ -25,7 +31,8 @@
 	</div>
 	<div class="layui-form-item">
 		<input placeholder="验证码 : " hover name="code" lay-verify="required" class="code layui-input layui-input-inline">
-		<img src="../../css/admin/images/captcha.gif" class="codeImage">
+		<img src="/account/checkCode" name="validateCodeImg" id="validateCodeImg" alt="Change One" onclick="changeImg();">
+		<a href="javascript:void(0)" onclick="changeImg()">Change one</a>
 	</div>
 	<div class="layui-form-item">
 		<input type="checkbox" name="" title="记住密码" lay-skin="primary" checked>
