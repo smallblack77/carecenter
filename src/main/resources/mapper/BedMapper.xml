@@ -63,6 +63,15 @@
         FROM BEDANDCUST
     </select>
 
+    <update id="updateBedAndCustomer" parameterType="BedAndCustomer">
+        UPDATE BEDANDCUST
+        SET CUSTID=#{customerID},
+            BEDID=#{bedId},
+            STARTTIME = #{startTime},
+            ENDTIME = #{endTime}
+        WHERE ID=#{id}
+    </update>
+
 
 
 
