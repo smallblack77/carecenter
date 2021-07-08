@@ -13,7 +13,7 @@ public class BedService {
     @Autowired
     private BedMapper bedMapper;
 
-    public List<Bed> getBedList(){
+/*    public List<Bed> getBedList(){
 
-    }
+    }*/
 }
