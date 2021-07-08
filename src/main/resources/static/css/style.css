@@ -23,6 +23,17 @@ html, body{
     background: url(../images/shuru1.jpg) no-repeat 0px 0px;
     background-size:cover;
 }
+.pwd{width:50px;height:20px;line-height:14px;padding-top:2px;}
+.pwd_f{color:#BBBBBB;}
+.pwd_c{background-color:#F3F3F3;border-top:1px solid #D0D0D0;border-bottom:1px solid #D0D0D0;border-left:1px solid #D0D0D0;}
+.pwd_Weak_c{background-color:#FF4545;border-top:1px solid #BB2B2B;border-bottom:1px solid #BB2B2B;border-left:1px solid #BB2B2B;}
+.pwd_Medium_c{background-color:#FFD35E;border-top:1px solid #E9AE10;border-bottom:1px solid #E9AE10;border-left:1px solid #E9AE10;}
+.pwd_Strong_c{background-color:#3ABB1C;border-top:1px solid #267A12;border-bottom:1px solid #267A12;border-left:1px solid #267A12;}
+.pwd_c_r{border-right:1px solid #D0D0D0;}
+.pwd_Weak_c_r{border-right:1px solid #BB2B2B;}
+.pwd_Medium_c_r{border-right:1px solid #E9AE10;}
+.pwd_Strong_c_r{border-right:1px solid #267A12;}
+
 body a{
 	transition: 0.5s all ease;
 	-webkit-transition: 0.5s all ease;
@@ -2392,12 +2403,12 @@ input.ggg{
 
 .regist input.ggg{
     width: 100%;
-    padding: 15px 0px 15px 15px;
+    padding: 15px 15px 10px 10px;
     border: 1px solid #fff;
     outline: none;
     font-size: 16px;
     color: #fff;
-    margin: 14px 35px;
+    margin: 14px auto;
     background: none;
 }
 .w3layouts-main span {
@@ -3275,15 +3286,6 @@ Author: ThemeBucket
 @import url('jquery-ui-1.10.3.css');
 @import url('../fonts/css/font-awesome.min.css');
 @import url('custom-ico-fonts.css');
-
-body {
-    background: #424f63;
-    font-family: 'Open Sans', sans-serif;
-    color: #7a7676;
-    line-height: 20px;
-    overflow-x: hidden;
-    font-size: 14px;
-}
 
 input, select, textarea {
     font-family: 'Open Sans', sans-serif;

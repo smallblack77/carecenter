@@ -21,7 +21,8 @@
 <meta name="keywords" content="Visitors Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!-- bootstrap-css -->
+	<script type="text/javascript" src="../js/repeatpassword.js"></script>
+	<!-- bootstrap-css -->
 <link rel="stylesheet" href="../css/bootstrap.min.css" >
 <!-- //bootstrap-css -->
 <!-- Custom CSS -->
@@ -42,35 +43,44 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<form action="/account/registration" method="post">
 			<table class="regist">
 				<tr>
-					<td>用户名:</td>
+					<th>用户名:</th>
 					<td th><input type="text" class="ggg" id="username" name="username" placeholder="用户名" required="required"></td>
 				</tr>
 				<tr>
-					<td>密码:</td>
-					<td><input type="password" class="ggg" id="password" name="password" placeholder="密码" required="required"></td>
+					<th>密码:</th>
+					<td><input type="password" class="ggg" id="password" name="password" placeholder="密码" required="required" onblur="CheckIntensity(this.value)"></td>
+				</tr>
+				<tr  id="strong" style="display: none;text-align: center; align-content: center">
+
+					<td id="pwd_Weak" class="pwd pwd_c"> </td>
+					<td id="pwd_Medium" class="pwd pwd_c pwd_f"></td>
+					<td id="pwd_Strong" class="pwd pwd_c pwd_c_r"> </td>
 				</tr>
 				<tr>
-					<td>重复密码:</td>
-					<td><input type="password" class="ggg" id="repeatedPassword" name="repeatedPassword" placeholder="重复密码" required="required"></td>
+					<th>重复密码:</th>
+					<td><input type="password" class="ggg" id="repeatedPassword" name="repeatedPassword" placeholder="重复密码" required="required" onblur="checkpw()">
+						<div id="checkpw" style="display:none"></div>
+						<div id="error"></div>
+					</td>
 				</tr>
 				<tr>
-					<td>性别:</td>
+					<th>性别:</th>
 					<td><input type="text" class="ggg" name="sex" placeholder="性别" required="required"></td>
 				</tr>
 				<tr>
-					<td>邮箱:</td>
+					<th>邮箱:</th>
 					<td><input type="email" class="ggg" name="email" placeholder="邮箱" required="required"></td>
 				</tr>
 				<tr>
-					<td>年龄:</td>
+					<th>年龄:</th>
 					<td><input type="text" class="ggg" name="age" placeholder="年龄" required="required"></td>
 				</tr>
 				<tr>
-					<td>手机号:</td>
+					<th>手机号:</th>
 					<td><input type="text" class="ggg" name="phone" placeholder="手机号" required="required"></td>
 				</tr>
 				<tr>
-					<td>职称:</td>
+					<th>职称:</th>
 					<td><input type="text" class="ggg" name="role" placeholder="职称" required="required"></td>
 				</tr>
 			</table>
