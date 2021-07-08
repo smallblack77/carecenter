@@ -61,12 +61,7 @@
 
 <script type="text/html" id="role-bar">
     <button class="pear-btn pear-btn-primary pear-btn-sm" lay-event="edit"><i class="layui-icon layui-icon-edit"></i></button>
-    <button class="pear-btn pear-btn-warming pear-btn-sm" lay-event="power"><i class="layui-icon layui-icon-vercode"></i></button>
     <button class="pear-btn pear-btn-danger pear-btn-sm" lay-event="remove"><i class="layui-icon layui-icon-delete"></i></button>
-</script>
-
-<script type="text/html" id="role-enable">
-    <input type="checkbox" name="enable" value="{{d.id}}" lay-skin="switch" lay-text="启用|禁用" lay-filter="role-enable" checked = "{{ d.id == 10003 ? 'true' : 'false' }}">
 </script>
 
 <script src="../../static/css/component/layui/layui.js"></script>
@@ -77,7 +72,6 @@
         let form = layui.form;
         let $ = layui.jquery;
 
-        let MODULE_PATH = "operate/";
 
         let cols = [
             [{
@@ -112,20 +106,8 @@
                     align: 'center'
                 },
                 {
-                    title: '登录',
-                    field: 'login',
-                    align: 'center',
-                    templet: '#user-login'
-                },
-                {
-                    title: '注册',
-                    field: 'createTime',
-                    align: 'center',
-                    templet: '#user-createTime'
-                },
-                {
                     title: '操作',
-                    toolbar: '#user-bar',
+                    toolbar: '#role-bar',
                     align: 'center',
                     width: 130
                 }
@@ -134,7 +116,7 @@
 
         table.render({
             elem: '#role-table',
-            url: '../../admin/data/role.json',
+            url: '../../static/css/admin/data/role.json',
             page: true ,
             cols: cols ,
             skin: 'line',
@@ -151,8 +133,6 @@
                 window.remove(obj);
             } else if(obj.event === 'edit'){
                 window.edit(obj);
-            } else if(obj.event === 'power'){
-                window.power(obj);
             }
         });
 
@@ -181,36 +161,29 @@
                 title: '新增',
                 shade: 0.1,
                 area: ['500px', '400px'],
-                content: MODULE_PATH + 'add.html'
+                content: 'addUser.html'
             });
         }
 
-        window.power = function(obj){
-            layer.open({
-                type: 2,
-                title: '授权',
-                shade: 0.1,
-                area: ['320px', '400px'],
-                content: MODULE_PATH + 'edit.html'
-            });
-        }
-
-        window.edit = function(obj){
+        //修改用户
+        window.edit = function(){
             layer.open({
                 type: 2,
                 title: '修改',
                 shade: 0.1,
                 area: ['500px', '400px'],
-                content: MODULE_PATH + 'edit.html'
+                content: 'editUser.html'
             });
         }
 
+        //选中删除
         window.remove = function(obj){
             layer.confirm('确定要删除该角色', {icon: 3, title:'提示'}, function(index){
                 layer.close(index);
                 let loading = layer.load();
                 $.ajax({
-                    url: MODULE_PATH+"remove/"+obj.data['roleId'],
+                    //需修改
+                    url: "/user/"+obj.data['userId'],
                     dataType:'json',
                     type:'delete',
                     success:function(result){
@@ -227,6 +200,7 @@
             });
         }
 
+        //全选删除
         window.batchRemove = function(obj){
             let data = table.checkStatus(obj.config.id).data;
             if(data.length === 0){
@@ -242,7 +216,7 @@
                 layer.close(index);
                 let loading = layer.load();
                 $.ajax({
-                    url: MODULE_PATH+"batchRemove/"+ids,
+                    url: "batchRemove/"+ids,
                     dataType:'json',
                     type:'delete',
                     success:function(result){

@@ -26,7 +26,7 @@
 
         <div class="layui-card">
             <div class="layui-card-header">
-                归档
+                日志
             </div>
             <div class="layui-card-body">
                 <ul class="list">
@@ -43,7 +43,7 @@
                 用户反馈
             </div>
             <div class="layui-card-body">
-                <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+                <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief" id="adviceParent">
                     <div class="layui-tab-content" id="advice">
                         <div class="layui-tab-item layui-show">
                             <div class="layui-row layui-col-space10" style="margin: 15px;">
@@ -78,7 +78,6 @@
             layer = layui.layer,
             $ = layui.jquery;
 
-        let MODULE_PATH = "operate/";
         $("#userAvatar").attr("src", parent.layui.$(".layui-nav-img").attr("src"));
 
         window.callback = function (data) {
@@ -93,16 +92,12 @@
                 title: '更换图片',
                 shade: 0.1,
                 area: ["900px", "500px"],
-                content: MODULE_PATH + 'uploadProfile.html',
+                content: '../uploadProfile.html',
                 btn: ['确定', '取消'],
                 yes: function (index, layero) {
                     window['layui-layer-iframe' + index].submitForm();
                 }
             });
-        });
-
-        $("delete").click(function (){
-           $("advice").remove();
         });
     });
 </script>

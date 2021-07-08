@@ -1,10 +1,10 @@
 {
 	"logo": {
-		"title": "Pear Admin",
-		"image": "admin/images/logo.png"
+		"title": "梅岭社区",
+		"image": "../../static/css/admin/images/logo.png"
 	},
 	"menu": {
-		"data": "admin/data/menu.json",
+		"data": "../../static/css/admin/data/menu.json",
 		"collaspe": true,
 		"accordion": true,
 		"method": "GET",
@@ -17,7 +17,7 @@
 		"tabMax": 30,
 		"index": {
 			"id": "0",
-			"href": "view/console/console1.html",
+			"href": "managerAccount.html",
 			"title": "首页"
 		}
 	},
