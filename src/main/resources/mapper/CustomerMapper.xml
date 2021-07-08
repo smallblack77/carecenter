@@ -23,12 +23,23 @@
             CUSTOMER.NAME,
             CUSTOMER.SEX,
             CUSTOMER.AGE,
-            CUSTOMER.BEDNUM,
             CUSTOMER.HEIGHT,
             CUSTOMER.WEIGHT,
             CUSTOMER.BIRTHDAY,
             CUSTOMER.ATTENTION)
         VALUES
-            (#{id}, #{name}, #{sex}, #{age}, #{bedNum}, #{height}, #{weight}, #{birthday}, #{attention})
+            (#{id}, #{name}, #{sex}, #{age}, #{height}, #{weight}, #{birthday}, #{attention})
     </insert>
+
+    <update id="updateCustomer"  parameterType="Customer">
+        UPDATE CUSTOMER SET
+         CUSTOMER.NAME = #{name},
+         CUSTOMER.SEX = #{sex},
+         CUSTOMER.AGE = #{age},
+         CUSTOMER.HEIGHT = #{height},
+         CUSTOMER.WEIGHT = #{weight},
+         CUSTOMER.BIRTHDAY = #{birthday},
+         CUSTOMER.ATTENTION = #{attention}
+        WHERE CUSTOMER.ID = #{id}
+    </update>
 </mapper>
