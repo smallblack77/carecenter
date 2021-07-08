@@ -80,7 +80,7 @@ public class CustomerController {
 
     //新增客户
     @RequestMapping("/addCustomer")
-    public String addCustomer(@RequestParam("id")String id,
+    public String addCustomer(
                             @RequestParam("name")String name,
                             @RequestParam("sex")String sex,
                             @RequestParam("age")String age,
@@ -89,9 +89,8 @@ public class CustomerController {
                             @RequestParam("birthday")String birthday,
                             @RequestParam("attention")String attention,
                             Model model){
-        if(id != null & name != null & sex != null & age != null & height != null & weight != null & birthday != null & attention != null ){
+        if( name != null & sex != null & age != null & height != null & weight != null & birthday != null & attention != null ){
             Customer customer = new Customer();
-            customer.setId(Integer.parseInt(id));
             customer.setName(name);
             customer.setSex(sex);
             customer.setAge(Integer.parseInt(age));

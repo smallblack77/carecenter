@@ -5,10 +5,10 @@
     function deleteUser() {
         var $id = $("#id").val();
         $.ajax({
-            url: "",
+            url: "/account/deleteCustomer",
             请求方式: "post",
             data: "id=" + $id,
-            success: function (result){
+            success: function (){
                 alert("删除成功！");
             }
         });

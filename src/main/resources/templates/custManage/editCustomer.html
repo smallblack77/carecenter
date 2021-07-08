@@ -22,18 +22,18 @@
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
     <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
     <!-- bootstrap-css -->
-    <link rel="stylesheet" href="../../static/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="../css/bootstrap.min.css" >
     <!-- //bootstrap-css -->
     <!-- Custom CSS -->
-    <link href="../../static/css/style.css" rel='stylesheet' type='text/css' />
-    <link href="../../static/css/style-responsive.css" rel="stylesheet"/>
+    <link href="../css/style.css" rel='stylesheet' type='text/css' />
+    <link href="../css/style-responsive.css" rel="stylesheet"/>
     <!-- font CSS -->
     <link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
     <!-- font-awesome icons -->
-    <link rel="stylesheet" href="../../static/css/font.css" type="text/css"/>
-    <link href="../../static/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/font.css" type="text/css"/>
+    <link href="../css/font-awesome.css" rel="stylesheet">
     <!-- //font-awesome icons -->
-    <script src="../../static/js/jquery2.0.3.min.js"></script>
+    <script src="../js/jquery2.0.3.min.js"></script>
 </head>
 <body>
 <section id="container">
@@ -350,7 +350,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <div class="panel-heading">
                         修改客户信息
                     </div>
-                    <form action="/customer/addCustomer" method="post">
+                    <form action="/customer/editCustomer" method="post">
                         <div>
                             <table class="table" ui-jq="footable" ui-options='{
                                 "paging": {
@@ -363,36 +363,32 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                   "enabled": true
                                 }}'>
                                 <tr>
-                                    <th style="background: #ddede0 no-repeat;">ID:</th>
-                                    <td th:value="${customer.id}"><input type="text" name="id" id="id" ></td>
-                                </tr>
-                                <tr>
                                     <th style="background: #ddede0 no-repeat;">Name:</th>
-                                    <td th:value="${customer.name}" ><input type="text" name="name"  id="name"  ></td>
+                                    <td th:text="${customer.name}" ><input type="text" name="name"  id="name"  ></td>
                                 </tr>
                                 <tr>
                                     <th style="background: #ddede0 no-repeat;">Sex:</th>
-                                    <td th:value="${customer.sex}"><input type="text" id="sex" name="sex" ></td>
+                                    <td th:text="${customer.sex}"><input type="text" id="sex" name="sex" ></td>
                                 </tr>
                                 <tr>
                                     <th style="background: #ddede0 no-repeat;">Age:</th>
-                                    <td th:value="${customer.age}"><input type="text"  id="age" name="age" ></td>
+                                    <td th:text="${customer.age}"><input type="text"  id="age" name="age" ></td>
                                 </tr>
                                 <tr>
                                     <th style="background: #ddede0 no-repeat;">Height:</th>
-                                    <td th:value="${customer.height}"><input type="text"  id="height" name="height" ></td>
+                                    <td th:text="${customer.height}"><input type="text"  id="height" name="height" ></td>
                                 </tr>
                                 <tr>
                                     <th style="background: #ddede0 no-repeat;">Weight:</th>
-                                    <td th:value="${customer.weight}"><input type="text"  id="weight" name="weight" ></td>
+                                    <td th:text="${customer.weight}"><input type="text"  id="weight" name="weight" ></td>
                                 </tr>
                                 <tr>
                                     <th style="background: #ddede0 no-repeat;">Birthday:</th>
-                                    <td th:value="${customer.birthday}"><input type="text"  id="birthday" name="birthday" ></td>
+                                    <td th:text="${customer.birthday}"><input type="text"  id="birthday" name="birthday" ></td>
                                 </tr>
                                 <tr>
                                     <th style="background: #ddede0 no-repeat;">Attention:</th>
-                                    <td th:value="${customer.attention}"><input type="text"  id="attention" name="attention" ></td>
+                                    <td th:text="${customer.attention}"><input type="text"  id="attention" name="attention" ></td>
                                 </tr>
                             </table>
                             <div class="btn-group-1">
@@ -414,12 +410,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
     <!--main content end-->
 </section>
-<script src="../../static/js/bootstrap.js"></script>
-<script src="../../static/js/jquery.dcjqaccordion.2.7.js"></script>
-<script src="../../static/js/scripts.js"></script>
-<script src="../../static/js/jquery.slimscroll.js"></script>
-<script src="../../static/js/jquery.nicescroll.js"></script>
-<script language="javascript" type="text/javascript" src="../../static/js/flot-chart/excanvas.min.js"></script><![endif]-->
-<script src="../../static/js/jquery.scrollTo.js"></script>
+<script src="../js/bootstrap.js"></script>
+<script src="../js/jquery.dcjqaccordion.2.7.js"></script>
+<script src="../js/scripts.js"></script>
+<script src="../js/jquery.slimscroll.js"></script>
+<script src="../js/jquery.nicescroll.js"></script>
+<script language="javascript" type="text/javascript" src="../js/flot-chart/excanvas.min.js"></script><![endif]-->
+<script src="../js/jquery.scrollTo.js"></script>
 </body>
 </html>
