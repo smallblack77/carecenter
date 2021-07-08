@@ -32,7 +32,7 @@ public class UserController {
         if(userId != null && password != null){
             User user = userService.getUserByUserIdAndPassword(userId,password);
             if (user == null){
-                String errorValue = "Invalid username or password.  Signon failed.";
+                String errorValue = "账户或密码有误！";
                 model.addAttribute("errorValue",errorValue);
                 return "account/userLogin";
             }else {
