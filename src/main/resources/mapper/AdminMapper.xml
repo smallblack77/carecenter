@@ -4,10 +4,10 @@
 
     <select id="selectAdmin" parameterType="Admin" resultType="Admin">
         SELECT
-            ADMIN.NAME,
+            ADMIN.NAME as adminName,
             ADMIN.PASSWORD
         FROM ADMIN
-        WHERE ADMIN.NAME = #{name}
+        WHERE ADMIN.NAME = #{adminName}
         AND ADMIN.PASSWORD = #{password}
     </select>
 </mapper>
