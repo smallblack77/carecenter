@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.csu.carecenter.Persistence.BedMapper">
+    <select id="getBedList" resultType="Bed">
+        SELECT
+            ID,
+            ROOMNUM as roomNum,
+            BEDSTATUS as bedStatus,
+            SORT,
+            DESCRIPTION
+        FROM BED
+    </select>
+
+    <select id="getBedAndCustomer" parameterType="int" resultType="BedAndCustomer">
+        SELECT
+            ID,
+            CUSTID as customerID,
+            BEDID as bedId,
+            STARTTIME as startTime,
+            ENDTIME as endTime
+        FROM BEDANDCUST
+        WHERE BEDANDCUST.BEDID=#{bedId}
+    </select>
+
+    <insert id="insertBed" parameterType="Bed">
+        INSERT INTO BED
+        (ID,ROOMNUM,BEDSTATUS,SORT,DESCRIPTION)
+        VALUES
+        (#{id},#{roomNum},#{bedStatus},#{sort},#{description})
+    </insert>
+
+    <delete id="deleteBed" parameterType="int">
+        DELETE FROM BED
+        WHERE ID=#{bedId}
+    </delete>
+
+    <insert id="insertBedAndCustomer" parameterType="BedAndCustomer">
+        INSERT INTO BEDANDCUST
+        (CUSTID,STARTTIME,ENDTIME)
+        VALUES
+        (#{customerID},#{startTime},#{endTime})
+    </insert>
+
+    <delete id="deleteBedAndCustomer" parameterType="int">
+        DELETE FROM BEDANDCUST
+        WHERE BEDID = #{bedId}
+    </delete>
+
+    <update id="updateBed">
+        UPDATE BED
+        SET ID=#{bed.id},
+            ROOMNUM=#{bed.roomNum},
+            BEDSTATUS=#{bed.bedStatus},
+            SORT=#{bed.sort},
+            DESCRIPTION=#{bed.description}
+        WHERE ID=#{oldBedId}
+
+    </update>
+
+    <select id="getMaxId" resultType="int">
+        SELECT
+            Max(BEDANDCUST.ID)
+        FROM BEDANDCUST
+    </select>
+
+
+
+
+</mapper>

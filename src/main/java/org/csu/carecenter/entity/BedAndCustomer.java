@@ -5,13 +5,13 @@ import java.util.Date;
 public class BedAndCustomer {
     private Integer id;
 
-    private String customerID;
+    private int customerID;
 
     private int bedId;
 
-    private Date startTime;
+    private String startTime;
 
-    private Date endTime;
+    private String endTime;
 
     public Integer getId() {
         return id;
@@ -21,11 +21,11 @@ public class BedAndCustomer {
         this.id = id;
     }
 
-    public String getCustomerID() {
+    public int getCustomerID() {
         return customerID;
     }
 
-    public void setCustomerID(String customerID) {
+    public void setCustomerID(int customerID) {
         this.customerID = customerID;
     }
 
@@ -37,19 +37,19 @@ public class BedAndCustomer {
         this.bedId = bedId;
     }
 
-    public Date getStartTime() {
+    public String getStartTime() {
         return startTime;
     }
 
-    public void setStartTime(Date startTime) {
+    public void setStartTime(String startTime) {
         this.startTime = startTime;
     }
 
-    public Date getEndTime() {
+    public String getEndTime() {
         return endTime;
     }
 
-    public void setEndTime(Date endTime) {
+    public void setEndTime(String endTime) {
         this.endTime = endTime;
     }
 }

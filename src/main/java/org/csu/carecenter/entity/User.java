@@ -2,7 +2,7 @@ package org.csu.carecenter.entity;
 
 public class User {
 
-    private String userId;
+    private int userId;
     private String username;
     private String password;
     private String sex;
@@ -19,11 +19,11 @@ public class User {
         this.password = password;
     }
 
-    public String getUserId() {
+    public int getUserId() {
         return userId;
     }
 
-    public void setUserId(String userId) {
+    public void setUserId(int userId) {
         this.userId = userId;
     }
 

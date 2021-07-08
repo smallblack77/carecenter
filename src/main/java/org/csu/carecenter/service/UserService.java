@@ -15,7 +15,7 @@ public class UserService {
     private UserMapper userMapper;
 
     //登录
-    public User getUserByUserIdAndPassword(String userId,String password){
+    public User getUserByUserIdAndPassword(int userId,String password){
         User user = new User();
         user.setUserId(userId);
         user.setPassword(password);
