@@ -2382,10 +2382,21 @@ input.ggg{
     padding: 15px 0px 15px 15px;
     border: 1px solid #fff;
     outline: none;
-    font-size: 14px;
+    font-size: 16px;
     color: #fff;
     margin: 14px 0px;
 	background: none;
+}
+
+.regist input.ggg{
+    width: 100%;
+    padding: 15px 0px 15px 15px;
+    border: 1px solid #fff;
+    outline: none;
+    font-size: 16px;
+    color: #fff;
+    margin: 14px 35px;
+    background: none;
 }
 .w3layouts-main span {
     font-size: 16px;
