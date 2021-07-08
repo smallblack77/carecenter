@@ -1,19 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://thyneleaf.org">
 <script type="text/javascript" src="js/jquery-1.8.3.js"></script>
-<script type="text/javascript">
-    function deleteUser() {
-        var $id = $("#id").val();
-        $.ajax({
-            url: "/account/deleteCustomer",
-            请求方式: "post",
-            data: "id=" + $id,
-            success: function (){
-                alert("删除成功！");
-            }
-        });
-    }
-</script>
+
 <head>
 <title>Visitors an Admin Panel Category Bootstrap Responsive Website Template | Responsive_table :: w3layouts</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
