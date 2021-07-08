@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://thyneleaf.org">
 <script type="text/javascript" src="js/jquery-1.8.3.js"></script>
 <script type="text/javascript">
-    function deleteOut() {
+    function deleteCheckout() {
         var $id = $("#id").val();
         $.ajax({
             url: "",
@@ -350,7 +350,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <!-- page heading start-->
                     <div class="page-heading">
                         <h3>
-                            客户外出管理
+                            客户退住管理
                         </h3>
                         <ul class="breadcrumb">
                             <li>
@@ -359,7 +359,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <li>
                                 <a href="#">客户管理</a>
                             </li>
-                            <li class="active"> 客户外出管理 </li>
+                            <li class="active"> 客户退住管理 </li>
                         </ul>
                     </div>
                     <!-- page heading end-->
@@ -370,7 +370,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <div class="col-sm-12">
                                 <section class="panel">
                                     <header class="panel-heading">
-                                        客户外出管理
+                                        客户退住管理
                                         <span class="tools pull-right">
                         <a href="javascript:;" class="fa fa-chevron-down"></a>
                         <a href="javascript:;" class="fa fa-times"></a>
@@ -381,7 +381,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                             <div class="clearfix">
                                                 <div class="btn-group">
                                                     <button>
-                                                        <a href="/Manager/viewnewCategory">Add New</a> <i class="fa fa-plus"></i>
+                                                        <a href="addCustomer.html">Add New</a> <i class="fa fa-plus"></i>
                                                     </button>
                                                 </div>
                                             </div>
@@ -390,28 +390,24 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                                 <thead>
                                                 <tr>
                                                     <th data-breakpoints="xs">ID</th>
-                                                    <th>CustId</th>
-                                                    <th>Reason</th>
+                                                    <th>CustID</th>
+                                                    <th>BedID</th>
                                                     <th>StartTime</th>
-                                                    <th>ExpTime</th>
-                                                    <th>ActTime</th>
-                                                    <th>AidPhone</th>
+                                                    <th>EndTime</th>
                                                     <th>Edit</th>
                                                     <th>Delete</th>
                                                 </tr>
                                                 </thead>
                                                 <tbody>
-                                                <tr class="" th:each="out : ${outList}">
-                                                    <td><th:block id="id" name="id" th:text="${out.id}" /></td>
-                                                    <td><th:block  name="custid" th:text="${out.custid}" /></td>
-                                                    <td><th:block  name="reason" th:text="${out.reason}" /></td>
-                                                    <td><th:block  name="starttime" th:text="${out.starttime}" /></td>
-                                                    <td><th:block  name="exptime" th:text="${out.exptime}" /></td>
-                                                    <td><th:block  name="acttime" th:text="${out.acttime}" /></td>
-                                                    <td><th:block  name="aidphone" th:text="${out.aidphone}" /></td>
-                                                    <td><a th:href="${'/custManage/editOut?id='}+${out.id}">Edit</a></td>
-                                                    <td><button value="Delete" name="delete" onclick="deleteOut()">Delete</button></td>
-                                                    <!--<td><a th:href="${'/custManage/deleteOut?id='}+${out.id}">Delete</a></td>-->
+                                                <tr class="" th:each="bedandcust : ${bedandcustList}">
+                                                    <td><th:block id="id" name="id" th:text="${bedandcust.id}" /></td>
+                                                    <td><th:block  name="custid" th:text="${bedandcust.custid}" /></td>
+                                                    <td><th:block  name="bedid" th:text="${bedandcust.bedid}" /></td>
+                                                    <td><th:block  name="starttime" th:text="${bedandcust.starttime}" /></td>
+                                                    <td><th:block  name="endtime" th:text="${bedandcust.endtime}" /></td>
+                                                    <td><a th:href="${'/custManage/editCustomer?id='}+${customer.id}">Edit</a></td>
+                                                    <td><button value="Delete" name="delete" onclick="deleteCheckout()">Delete</button></td>
+                                                    <!--<td><a th:href="${'/custManage/deleteCustomer?id='}+${customer.id}">Delete</a></td>-->
                                                 </tr>
                                                 </tbody>
                                             </table>

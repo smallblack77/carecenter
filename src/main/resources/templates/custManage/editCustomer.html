@@ -22,18 +22,18 @@
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
     <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
     <!-- bootstrap-css -->
-    <link rel="stylesheet" href="../css/bootstrap.min.css" >
+    <link rel="stylesheet" href="../../static/css/bootstrap.min.css" >
     <!-- //bootstrap-css -->
     <!-- Custom CSS -->
-    <link href="../css/style.css" rel='stylesheet' type='text/css' />
-    <link href="../css/style-responsive.css" rel="stylesheet"/>
+    <link href="../../static/css/style.css" rel='stylesheet' type='text/css' />
+    <link href="../../static/css/style-responsive.css" rel="stylesheet"/>
     <!-- font CSS -->
     <link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
     <!-- font-awesome icons -->
-    <link rel="stylesheet" href="../css/font.css" type="text/css"/>
-    <link href="../css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../static/css/font.css" type="text/css"/>
+    <link href="../../static/css/font-awesome.css" rel="stylesheet">
     <!-- //font-awesome icons -->
-    <script src="../js/jquery2.0.3.min.js"></script>
+    <script src="../../static/js/jquery2.0.3.min.js"></script>
 </head>
 <body>
 <section id="container">
@@ -273,8 +273,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <span>客户管理</span>
                         </a>
                         <ul class="sub">
-                            <li><a class="active" href="customer.html">入住/退住管理</a></li>
-                            <li><a href="out.html">外出管理</a></li>
+                            <li><a class="active" href="customer.html">客户信息管理</a></li>
+                            <li><a class="active" href="#">客户入住管理</a></li>
+                            <li><a class="active" href="#">客户退住管理</a></li>
+                            <li><a href="out.html">客户外出管理</a></li>
                         </ul>
                     </li>
                     <li class="sub-menu">
@@ -346,11 +348,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="table-agile-info">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        新增客户
+                        修改客户信息
                     </div>
                     <form action="/customer/addCustomer" method="post">
                         <div>
-                        <table class="table" ui-jq="footable" ui-options='{
+                            <table class="table" ui-jq="footable" ui-options='{
                                 "paging": {
                                   "enabled": true
                                 },
@@ -360,47 +362,43 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 "sorting": {
                                   "enabled": true
                                 }}'>
-                            <tr>
-                                <th style="background: #ddede0 no-repeat;">ID:</th>
-                                <td th:text="${customer.id}"><input type="text" name="id" id="id" ></td>
-                            </tr>
-                            <tr>
-                                <th style="background: #ddede0 no-repeat;">Name:</th>
-                                <td><input type="text"  name="name"  id="name"  ></td>
-                            </tr>
-                            <tr>
-                                <th style="background: #ddede0 no-repeat;">Sex:</th>
-                                <td><input type="text" id="sex" name="sex" ></td>
-                            </tr>
-                            <tr>
-                                <th style="background: #ddede0 no-repeat;">Age:</th>
-                                <td><input type="text"  id="age" name="age" ></td>
-                            </tr>
-                            <tr>
-                                <th style="background: #ddede0 no-repeat;">Bednum:</th>
-                                <td><input type="text"  id="bednum" name="bednum" ></td>
-                            </tr>
-                            <tr>
-                                <th style="background: #ddede0 no-repeat;">Height:</th>
-                                <td><input type="text"  id="height" name="height" ></td>
-                            </tr>
-                            <tr>
-                                <th style="background: #ddede0 no-repeat;">Weight:</th>
-                                <td><input type="text"  id="weight" name="weight" ></td>
-                            </tr>
-                            <tr>
-                                <th style="background: #ddede0 no-repeat;">Birthday:</th>
-                                <td><input type="text"  id="birthday" name="birthday" ></td>
-                            </tr>
-                            <tr>
-                                <th style="background: #ddede0 no-repeat;">Attention:</th>
-                                <td><input type="text"  id="attention" name="attention" ></td>
-                            </tr>
-                        </table>
-                        <div class="btn-group-1">
-                            <input type="submit" name="add" value="新增"/>
+                                <tr>
+                                    <th style="background: #ddede0 no-repeat;">ID:</th>
+                                    <td th:value="${customer.id}"><input type="text" name="id" id="id" ></td>
+                                </tr>
+                                <tr>
+                                    <th style="background: #ddede0 no-repeat;">Name:</th>
+                                    <td th:value="${customer.name}" ><input type="text" name="name"  id="name"  ></td>
+                                </tr>
+                                <tr>
+                                    <th style="background: #ddede0 no-repeat;">Sex:</th>
+                                    <td th:value="${customer.sex}"><input type="text" id="sex" name="sex" ></td>
+                                </tr>
+                                <tr>
+                                    <th style="background: #ddede0 no-repeat;">Age:</th>
+                                    <td th:value="${customer.age}"><input type="text"  id="age" name="age" ></td>
+                                </tr>
+                                <tr>
+                                    <th style="background: #ddede0 no-repeat;">Height:</th>
+                                    <td th:value="${customer.height}"><input type="text"  id="height" name="height" ></td>
+                                </tr>
+                                <tr>
+                                    <th style="background: #ddede0 no-repeat;">Weight:</th>
+                                    <td th:value="${customer.weight}"><input type="text"  id="weight" name="weight" ></td>
+                                </tr>
+                                <tr>
+                                    <th style="background: #ddede0 no-repeat;">Birthday:</th>
+                                    <td th:value="${customer.birthday}"><input type="text"  id="birthday" name="birthday" ></td>
+                                </tr>
+                                <tr>
+                                    <th style="background: #ddede0 no-repeat;">Attention:</th>
+                                    <td th:value="${customer.attention}"><input type="text"  id="attention" name="attention" ></td>
+                                </tr>
+                            </table>
+                            <div class="btn-group-1">
+                                <input type="submit" name="add" value="修改"/>
+                            </div>
                         </div>
-                    </div>
                     </form>
                 </div>
             </div>
@@ -416,12 +414,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
     <!--main content end-->
 </section>
-<script src="../js/bootstrap.js"></script>
-<script src="../js/jquery.dcjqaccordion.2.7.js"></script>
-<script src="../js/scripts.js"></script>
-<script src="../js/jquery.slimscroll.js"></script>
-<script src="../js/jquery.nicescroll.js"></script>
-<script language="javascript" type="text/javascript" src="../js/flot-chart/excanvas.min.js"></script><![endif]-->
-<script src="../js/jquery.scrollTo.js"></script>
+<script src="../../static/js/bootstrap.js"></script>
+<script src="../../static/js/jquery.dcjqaccordion.2.7.js"></script>
+<script src="../../static/js/scripts.js"></script>
+<script src="../../static/js/jquery.slimscroll.js"></script>
+<script src="../../static/js/jquery.nicescroll.js"></script>
+<script language="javascript" type="text/javascript" src="../../static/js/flot-chart/excanvas.min.js"></script><![endif]-->
+<script src="../../static/js/jquery.scrollTo.js"></script>
 </body>
 </html>
