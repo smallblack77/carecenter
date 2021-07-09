@@ -273,10 +273,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <span>客户管理</span>
                         </a>
                         <ul class="sub">
-                            <li><a class="active" href="/customer/selectCustomerLsit">客户信息管理</a></li>
-                            <li><a class="active" href="/customer/selectCheckinList">客户入住管理</a></li>
-                            <li><a class="active" href="/customer/selectCheckoutList">客户退住管理</a></li>
-                            <li><a href="/customer/selectAllOutList">客户外出管理</a></li>
+                            <li><a class="active" href="customer.html">客户信息管理</a></li>
+                            <li><a class="active" href="#">客户入住管理</a></li>
+                            <li><a class="active" href="#">客户退住管理</a></li>
+                            <li><a href="out.html">客户外出管理</a></li>
                         </ul>
                     </li>
                     <li class="sub-menu">
@@ -286,18 +286,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         </a>
                         <ul class="sub">
                             <li><a href="form_component.html">床位信息管理</a></li>
-                        </ul>
-                    </li>
-                    <li class="sub-menu">
-                        <a href="javascript:;">
-                            <i class=" fa fa-bar-chart-o"></i>
-                            <span>护理管理</span>
-                        </a>
-                        <ul class="sub">
-                            <li><a href="form_component.html">护工信息管理</a></li>
-                        </ul>
-                        <ul class="sub">
-                            <li><a href="form_component.html">护理记录管理</a></li>
                         </ul>
                     </li>
                     <li class="sub-menu">
@@ -369,7 +357,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="table-agile-info">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        修改客户信息
+                        修改床位信息
                     </div>
                     <form action="/customer/editCustomer" method="post">
                         <div>
@@ -384,32 +372,37 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                   "enabled": true
                                 }}'>
                                 <tr>
+                                    <th style="background: #ddede0 no-repeat;">NurID:</th>
+                                    <td><input type="text" name="nurid"  id="nurid" th:value="${bed.nurid}"></td>
+                                </tr>
+                                <tr>
                                     <th style="background: #ddede0 no-repeat;">Name:</th>
-                                    <td><input type="text" name="name"  id="name" th:value="${customer.name}"></td>
+                                    <td ><input type="text" id="name" name="name" th:value="${bed.name}"></td>
                                 </tr>
                                 <tr>
                                     <th style="background: #ddede0 no-repeat;">Sex:</th>
-                                    <td ><input type="text" id="sex" name="sex" th:value="${customer.sex}"></td>
+                                    <td ><input type="text"  id="sex" name="sex" th:value="${bed.sex}"></td>
                                 </tr>
                                 <tr>
                                     <th style="background: #ddede0 no-repeat;">Age:</th>
-                                    <td ><input type="text"  id="age" name="age" th:value="${customer.age}"></td>
+                                    <td ><input type="text"  id="age" name="age" th:value="${bed.age}"></td>
                                 </tr>
                                 <tr>
-                                    <th style="background: #ddede0 no-repeat;">Height:</th>
-                                    <td ><input type="text"  id="height" name="height" th:value="${customer.height}"></td>
+                                    <th style="background: #ddede0 no-repeat;">Price:</th>
+                                    <td ><input type="text"  id="price" name="price" th:value="${bed.price}"></td>
                                 </tr>
                                 <tr>
-                                    <th style="background: #ddede0 no-repeat;">Weight:</th>
-                                    <td ><input type="text"  id="weight" name="weight" th:value="${customer.weight}"></td>
+                                    <th style="background: #ddede0 no-repeat;">Description:</th>
+                                    <td ><input type="text"  id="description" name="description" th:utext="${bed.description}"></td>
+                                    <td><input type="file" name="file" id="file" ></td>
                                 </tr>
                                 <tr>
-                                    <th style="background: #ddede0 no-repeat;">Birthday:</th>
-                                    <td ><input type="text"  id="birthday" name="birthday" th:value="${customer.birthday}"></td>
+                                    <th style="background: #ddede0 no-repeat;">LevelID:</th>
+                                    <td ><input type="text"  id="levelid" name="levelid" th:value="${bed.levelid}"></td>
                                 </tr>
                                 <tr>
-                                    <th style="background: #ddede0 no-repeat;">Attention:</th>
-                                    <td ><input type="text"  id="attention" name="attention" th:value="${customer.attention}"></td>
+                                    <th style="background: #ddede0 no-repeat;">LevelName:</th>
+                                    <td th:text="${bed.levename}"></td>
                                 </tr>
                             </table>
                             <div class="btn-group-1">
