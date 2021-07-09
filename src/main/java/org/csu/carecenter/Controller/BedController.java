@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Controller
@@ -39,10 +40,10 @@ public class BedController {
 
     @RequestMapping("/viewBedDetail")
     //传递床和客户的关系
-    public String viewBedAndCustomer( Model model, HttpServletRequest req){
-
+    public String viewBedAndCustomer(Model model, HttpServletRequest req, HttpSession session){
         int id = Integer.parseInt(req.getParameter("bedId"));
         BedAndCustomer bedAndCustomer = bedService.getBedAndCustomer(id);
+        session.setAttribute("bedAndCustomer",bedAndCustomer);
         model.addAttribute("bedAndCustomer",bedAndCustomer);
         return "bedManage/bedDetail";
     }

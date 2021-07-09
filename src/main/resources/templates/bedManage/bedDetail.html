@@ -360,6 +360,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         修改床位信息
                     </div>
                         <div>
+                            <!--<div class="btn-group-1">
+                                <button name="return" >
+                                    <a href="/bed/bedForm"></a>
+                                </button>
+                            </div>-->
                             <table class="table" ui-jq="footable" ui-options='{
                                 "paging": {
                                   "enabled": true
@@ -372,32 +377,25 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 }}'>
                                 <tr>
                                     <th style="background: #ddede0 no-repeat;">ID:</th>
-                                    <td th:text="${bedAndCustomer.id}"></td>
+                                    <td><th:block th:text="${bedAndCustomer.id}"/></td>
                                 </tr>
                                 <tr>
-                                    <th style="background: #ddede0 no-repeat;">nurid:</th>
-                                    <td th:text="${bedAndCustomer.nurid}"></td>
+                                    <th style="background: #ddede0 no-repeat;">CustID:</th>
+                                    <td ><th:block th:text="${bedAndCustomer.customerID}" /></td>
                                 </tr>
                                 <tr>
-                                    <th style="background: #ddede0 no-repeat;">custid:</th>
-                                    <td th:text="${bedAndCustomer.custid}"></td>
+                                    <th style="background: #ddede0 no-repeat;">BedID:</th>
+                                    <td><th:block th:text="${bedAndCustomer.bedId}" /></td>
                                 </tr>
                                 <tr>
-                                    <th style="background: #ddede0 no-repeat;">starttime:</th>
-                                    <td th:text="${bedAndCustomer.starttime}"></td>
+                                    <th style="background: #ddede0 no-repeat;">StartTime:</th>
+                                    <td><th:block  th:text="${bedAndCustomer.startTime}" /></td>
                                 </tr>
                                 <tr>
-                                    <th style="background: #ddede0 no-repeat;">content:</th>
-                                    <td th:text="${bedAndCustomer.content}"></td>
-                                </tr>
-                                <tr>
-                                    <th style="background: #ddede0 no-repeat;">endtime:</th>
-                                    <td th:text="${bedAndCustomer.endtime}"></td>
+                                    <th style="background: #ddede0 no-repeat;">EndTime:</th>
+                                    <td ><th:block th:text="${bedAndCustomer.endTime}"/></td>
                                 </tr>
                             </table>
-                            <div class="btn-group-1">
-                                <input type="submit" name="add" value="修改"/>
-                            </div>
                         </div>
                 </div>
             </div>

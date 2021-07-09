@@ -28,9 +28,9 @@ public class UserController {
 
     //user登录
     @RequestMapping("/login")
-    public String login(int userId,String password,Model model){
-        if(String.valueOf(userId) != null && password != null){
-            User user = userService.getUserByUserIdAndPassword(userId,password);
+    public String login(String userId,String password,Model model){
+        if(userId != null && password != null){
+            User user = userService.getUserByUserIdAndPassword(Integer.valueOf(userId),password);
             if (user == null){
                 String errorValue = "账户或密码有误！";
                 model.addAttribute("errorValue",errorValue);
