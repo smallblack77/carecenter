@@ -19,10 +19,15 @@ public class BedController {
     @Autowired
     private BedService bedService;
 
+    //跳转到bedmanage页面
     @GetMapping("/bedForm")
-    private String bedForm(){
-        return null;
+    private String bedForm(Model model){
+        List<Bed> bedList = bedService.getAllBedList();
+        model.addAttribute("bedList",bedList);
+        return "bedManage/bed";
     }
+
+
 
     //返回床的列表
     @RequestMapping("/viewBedList")

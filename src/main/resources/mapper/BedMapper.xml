@@ -21,7 +21,7 @@
             BED.ROOMNUM as roomNum,
             BED.BEDSTATUS as bedStatus,
             BED.SORT,
-            BED.DESCRIPTION,
+            BED.DESCRIPTION
         FROM BED
         WHERE BED.BEDSTATUS=1
     </select>
@@ -32,9 +32,8 @@
             BED.ROOMNUM as roomNum,
             BED.BEDSTATUS as bedStatus,
             BED.SORT,
-            BED.DESCRIPTION,
+            BED.DESCRIPTION
         FROM BED
-        WHERE BED.ID
     </select>
 
 
