@@ -41,4 +41,30 @@
         SELECT * FROM USER
     </select>
 
+    <delete id="deleteUser" parameterType="int">
+        DELETE FROM USER
+        WHERE USERID=#{userId}
+    </delete>
+
+    <delete id="deleteSignon" parameterType="int">
+        DELETE FROM SIGNON
+        WHERE USERID=#{userId}
+    </delete>
+
+    <update id="updateUser"  parameterType="User">
+        UPDATE USER
+        SET USERNAME=#{username},
+            SEX = #{sex},
+            EMAIL=#{email},
+            AGE=#{age},
+            PHONENUMBER=#{phoneNumber},
+            ROLE=#{role}
+        WHERE USERID=#{userId}
+    </update>
+
+    <update id="updateSignon" parameterType="User">
+        UPDATE SIGNON
+        SET PASSWORD=#{password}
+        WHERE USERID=#{userId}
+    </update>
 </mapper>

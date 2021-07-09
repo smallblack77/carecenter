@@ -37,9 +37,29 @@ public class UserService {
         return userMapper.getMaxUserId();
     }
 
+    //获取所有user
     public List<User> getAllUser(){
         return userMapper.getAllUser();
     }
 
+    //删除user
+    public void deleteUser(int userId){
+        userMapper.deleteUser(userId);
+    }
+
+    //删除signon表中的user
+    public void deleteSignon(int userId){
+        userMapper.deleteSignon(userId);
+    }
+
+    //修改user表
+    public void updateUser(User user){
+        userMapper.updateUser(user);
+    }
+
+    //修改Signon表
+    public void updateSignon(User user){
+        userMapper.updateSignon(user);
+    }
 
 }

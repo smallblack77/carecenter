@@ -21,6 +21,19 @@ public interface UserMapper {
     //获得userId并返回
     int getMaxUserId();
 
+    //获取所有user
     List<User> getAllUser();
+
+    //User删除
+    void deleteUser(int userId);
+
+    //signon表中删除
+    void deleteSignon(int userId);
+
+    //修改User表
+    void updateUser(User user);
+
+    //修改Signon表
+    void updateSignon(User user);
 
 }
