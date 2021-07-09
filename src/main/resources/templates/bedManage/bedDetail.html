@@ -359,7 +359,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <div class="panel-heading">
                         修改床位信息
                     </div>
-                    <form action="/customer/editCustomer" method="post">
                         <div>
                             <table class="table" ui-jq="footable" ui-options='{
                                 "paging": {
@@ -373,30 +372,29 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 }}'>
                                 <tr>
                                     <th style="background: #ddede0 no-repeat;">ID:</th>
-                                    <td th:text="${bed.id}"></td>
+                                    <td th:text="${bedAndCustomer.id}"></td>
                                 </tr>
                                 <tr>
                                     <th style="background: #ddede0 no-repeat;">RoomNum:</th>
-                                    <td th:text="${bed.roomnum}"></td>
+                                    <td th:text="${bedAndCustomer.roomnum}"></td>
                                 </tr>
                                 <tr>
                                     <th style="background: #ddede0 no-repeat;">BedStatus:</th>
-                                    <td th:text="${bed.bedstatus}"></td>
+                                    <td th:text="${bedAndCustomer.bedstatus}"></td>
                                 </tr>
                                 <tr>
                                     <th style="background: #ddede0 no-repeat;">Sort:</th>
-                                    <td th:text="${bed.sort}"></td>
+                                    <td th:text="${bedAndCustomer.sort}"></td>
                                 </tr>
                                 <tr>
                                     <th style="background: #ddede0 no-repeat;">Description:</th>
-                                    <td th:utext="${bed.description}"></td>
+                                    <td th:utext="${bedAndCustomer.description}"></td>
                                 </tr>
                             </table>
                             <div class="btn-group-1">
                                 <input type="submit" name="add" value="修改"/>
                             </div>
                         </div>
-                    </form>
                 </div>
             </div>
         </section>

@@ -408,7 +408,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                                 </thead>
                                                 <tbody>
                                                 <tr class="" th:each="bed : ${bedList}">
-                                                    <td><a th:href="${'/bed/getbed?id='}+${bed.id}"><th:block id="id" name="id" th:text="${bed.id}" /></a></td>
+                                                    <td><a th:href="${'/bed/viewBedDetail?id='}+${bed.id}"><th:block id="id" name="id" th:text="${bed.id}" /></a></td>
                                                     <td><th:block  name="roomnum" th:text="${bed.roomNum}" /></td>
                                                     <td><th:block  name="bedstatus" th:text="${bed.bedStatus}" /></td>
                                                     <td><th:block  name="sort" th:text="${bed.sort}" /></td>

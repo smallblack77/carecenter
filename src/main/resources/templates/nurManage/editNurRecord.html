@@ -357,7 +357,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="table-agile-info">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        修改护工信息
+                        修改护理记录
                     </div>
                     <form action="/customer/editCustomer" method="post">
                         <div>
@@ -372,37 +372,24 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                   "enabled": true
                                 }}'>
                                 <tr>
+                                    <th style="background: #ddede0 no-repeat;">CustID:</th>
+                                    <td><input type="text" name="custid"  id="custid" th:value="${bed.custid}"></td>
+                                </tr>
+                                <tr>
                                     <th style="background: #ddede0 no-repeat;">NurID:</th>
-                                    <td><input type="text" name="nurid"  id="nurid" th:value="${bed.nurid}"></td>
+                                    <td ><input type="text" id="nurid" name="nurid" th:value="${bed.nurid}"></td>
                                 </tr>
                                 <tr>
-                                    <th style="background: #ddede0 no-repeat;">Name:</th>
-                                    <td ><input type="text" id="name" name="name" th:value="${bed.name}"></td>
+                                    <th style="background: #ddede0 no-repeat;">Content:</th>
+                                    <td ><input type="text"  id="content" name="content" th:value="${bed.content}"></td>
                                 </tr>
                                 <tr>
-                                    <th style="background: #ddede0 no-repeat;">Sex:</th>
-                                    <td ><input type="text"  id="sex" name="sex" th:value="${bed.sex}"></td>
+                                    <th style="background: #ddede0 no-repeat;">StartTime:</th>
+                                    <td ><input type="text"  id="starttime" name="starttime" th:value="${bed.starttime}"></td>
                                 </tr>
                                 <tr>
-                                    <th style="background: #ddede0 no-repeat;">Age:</th>
-                                    <td ><input type="text"  id="age" name="age" th:value="${bed.age}"></td>
-                                </tr>
-                                <tr>
-                                    <th style="background: #ddede0 no-repeat;">Price:</th>
-                                    <td ><input type="text"  id="price" name="price" th:value="${bed.price}"></td>
-                                </tr>
-                                <tr>
-                                    <th style="background: #ddede0 no-repeat;">Description:</th>
-                                    <td ><input type="text"  id="description" name="description" th:utext="${bed.description}"></td>
-                                    <td><input type="file" name="file" id="file" ></td>
-                                </tr>
-                                <tr>
-                                    <th style="background: #ddede0 no-repeat;">LevelID:</th>
-                                    <td ><input type="text"  id="levelid" name="levelid" th:value="${bed.levelid}"></td>
-                                </tr>
-                                <tr>
-                                    <th style="background: #ddede0 no-repeat;">LevelName:</th>
-                                    <td th:text="${bed.levename}"></td>
+                                    <th style="background: #ddede0 no-repeat;">EndTime:</th>
+                                    <td ><input type="text"  id="endtime" name="endtime" th:value="${bed.endtime}"></td>
                                 </tr>
                             </table>
                             <div class="btn-group-1">
