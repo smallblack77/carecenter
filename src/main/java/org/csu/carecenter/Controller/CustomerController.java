@@ -163,6 +163,7 @@ public class CustomerController {
         int id = Integer.parseInt(req.getParameter("id"));
         BedAndCustomer checkin = customerService.selectCheckin(id);
         session.setAttribute("checkin", checkin);
+        model.addAttribute("checkin", checkin);
         model.addAttribute("checkinId",id);
         return "/custManage/editCheckin";
     }
