@@ -224,20 +224,8 @@
                     type: 'delete',
                     success: function(result) {
                         alert("success");
-                        layer.close(loading);
-                        if (result.success) {
-                            layer.msg(result.msg, {
-                                icon: 1,
-                                time: 1000
-                            }, function() {
-                                obj.del();
-                            });
-                        } else {
-                            layer.msg(result.msg, {
-                                icon: 2,
-                                time: 1000
-                            });
-                        }
+                        window.location.href = '/admin/manageUser'
+
                     },
                     error:function (){
                         alert('error');
