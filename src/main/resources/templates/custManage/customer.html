@@ -415,7 +415,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                  </thead>
                                  <tbody>
                                  <tr class="" th:each="customer : ${customerList}">
-                                     <td><th:block id="id" name="id" th:text="${customer.id}" /></td>
+                                     <td><a th:block id="id" name="id" th:text="${customer.id}" th:href="${'/diet/timeLine?id='}+${customer.id}"></a></td>
                                      <td><th:block  name="name" th:text="${customer.name}" /></td>
                                      <td><th:block  name="sex" th:text="${customer.sex}" /></td>
                                      <td><th:block  name="age" th:text="${customer.age}" /></td>
