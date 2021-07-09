@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thyneleaf.org">
+<script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+
+<head>
+    <title>Visitors an Admin Panel Category Bootstrap Responsive Website Template | Responsive_table :: w3layouts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Visitors Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- bootstrap-css -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" >
+    <link rel="stylesheet" href="../js/data-tables/DT_bootstrap.css" />
+    <!-- //bootstrap-css -->
+    <!-- Custom CSS -->
+    <link href="../css/style.css" rel='stylesheet' type='text/css' />
+    <link href="../css/style-responsive.css" rel="stylesheet"/>
+    <!-- font CSS -->
+    <link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <!-- font-awesome icons -->
+    <link rel="stylesheet" href="../../css/font.css" type="text/css"/>
+    <link href="../css/font-awesome.css" rel="stylesheet">
+    <!-- //font-awesome icons -->
+    <script src="../js/jquery2.0.3.min.js"></script>
+</head>
+<body>
+<section id="container">
+    <!--header start-->
+    <header class="header fixed-top clearfix">
+        <!--logo start-->
+        <div class="brand">
+
+            <a href="index.html" class="logo">
+                系统管理
+            </a>
+            <div class="sidebar-toggle-box">
+                <div class="fa fa-bars"></div>
+            </div>
+        </div>
+        <!--logo end-->
+
+        <div class="nav notify-row" id="top_menu">
+            <!--  notification start -->
+            <ul class="nav top-menu">
+                <!-- settings start -->
+                <li class="dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                        <i class="fa fa-tasks"></i>
+                        <span class="badge bg-success">8</span>
+                    </a>
+                    <ul class="dropdown-menu extended tasks-bar">
+                        <li>
+                            <p class="">You have 8 pending tasks</p>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="task-info clearfix">
+                                    <div class="desc pull-left">
+                                        <h5>Target Sell</h5>
+                                        <p>25% , Deadline  12 June’13</p>
+                                    </div>
+                                    <span class="notification-pie-chart pull-right" data-percent="45">
+                            <span class="percent"></span>
+                            </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="task-info clearfix">
+                                    <div class="desc pull-left">
+                                        <h5>Product Delivery</h5>
+                                        <p>45% , Deadline  12 June’13</p>
+                                    </div>
+                                    <span class="notification-pie-chart pull-right" data-percent="78">
+                            <span class="percent"></span>
+                            </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="task-info clearfix">
+                                    <div class="desc pull-left">
+                                        <h5>Payment collection</h5>
+                                        <p>87% , Deadline  12 June’13</p>
+                                    </div>
+                                    <span class="notification-pie-chart pull-right" data-percent="60">
+                            <span class="percent"></span>
+                            </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="task-info clearfix">
+                                    <div class="desc pull-left">
+                                        <h5>Target Sell</h5>
+                                        <p>33% , Deadline  12 June’13</p>
+                                    </div>
+                                    <span class="notification-pie-chart pull-right" data-percent="90">
+                            <span class="percent"></span>
+                            </span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="external">
+                            <a href="#">See All Tasks</a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- settings end -->
+                <!-- inbox dropdown start-->
+                <li id="header_inbox_bar" class="dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                        <i class="fa fa-envelope-o"></i>
+                        <span class="badge bg-important">4</span>
+                    </a>
+                    <ul class="dropdown-menu extended inbox">
+                        <li>
+                            <p class="red">You have 4 Mails</p>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="photo"><img alt="avatar" src="images/3.png"></span>
+                                <span class="subject">
+                                <span class="from">Jonathan Smith</span>
+                                <span class="time">Just now</span>
+                                </span>
+                                <span class="message">
+                                    Hello, this is an example msg.
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="photo"><img alt="avatar" src="images/1.png"></span>
+                                <span class="subject">
+                                <span class="from">Jane Doe</span>
+                                <span class="time">2 min ago</span>
+                                </span>
+                                <span class="message">
+                                    Nice admin template
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="photo"><img alt="avatar" src="images/3.png"></span>
+                                <span class="subject">
+                                <span class="from">Tasi sam</span>
+                                <span class="time">2 days ago</span>
+                                </span>
+                                <span class="message">
+                                    This is an example msg.
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="photo"><img alt="avatar" src="images/2.png"></span>
+                                <span class="subject">
+                                <span class="from">Mr. Perfect</span>
+                                <span class="time">2 hour ago</span>
+                                </span>
+                                <span class="message">
+                                    Hi there, its a test
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">See all messages</a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- inbox dropdown end -->
+                <!-- notification dropdown start-->
+                <li id="header_notification_bar" class="dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+
+                        <i class="fa fa-bell-o"></i>
+                        <span class="badge bg-warning">3</span>
+                    </a>
+                    <ul class="dropdown-menu extended notification">
+                        <li>
+                            <p>Notifications</p>
+                        </li>
+                        <li>
+                            <div class="alert alert-info clearfix">
+                                <span class="alert-icon"><i class="fa fa-bolt"></i></span>
+                                <div class="noti-info">
+                                    <a href="#"> Server #1 overloaded.</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="alert alert-danger clearfix">
+                                <span class="alert-icon"><i class="fa fa-bolt"></i></span>
+                                <div class="noti-info">
+                                    <a href="#"> Server #2 overloaded.</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="alert alert-success clearfix">
+                                <span class="alert-icon"><i class="fa fa-bolt"></i></span>
+                                <div class="noti-info">
+                                    <a href="#"> Server #3 overloaded.</a>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </li>
+                <!-- notification dropdown end -->
+            </ul>
+            <!--  notification end -->
+        </div>
+        <div class="top-nav clearfix">
+            <!--search & user info start-->
+            <ul class="nav pull-right top-menu">
+                <li>
+                    <input type="text" class="form-control search" placeholder=" Search">
+                </li>
+                <!-- user login dropdown start-->
+                <li class="dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                        <img alt="" src="images/2.png">
+                        <span class="username">John Doe</span>
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu extended logout">
+                        <li><a href="#"><i class=" fa fa-suitcase"></i>Profile</a></li>
+                        <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
+                        <li><a href="login.html"><i class="fa fa-key"></i> Log Out</a></li>
+                    </ul>
+                </li>
+                <!-- user login dropdown end -->
+
+            </ul>
+            <!--search & user info end-->
+        </div>
+    </header>
+    <!--header end-->
+    <!--sidebar start-->
+    <aside>
+        <div id="sidebar" class="nav-collapse">
+            <!-- sidebar menu start-->
+            <div class="leftside-navigation">
+                <ul class="sidebar-menu" id="nav-accordion">
+                    <li>
+                        <a href="../account/index.html">
+                            <i class="fa fa-dashboard"></i>
+                            <span>主页</span>
+                        </a>
+                    </li>
+                    <li class="sub-menu">
+                        <a class="active" href="javascript:;">
+                            <i class="fa fa-th"></i>
+                            <span>客户管理</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a class="active" href="/customer/selectCustomerLsit">客户信息管理</a></li>
+                            <li><a class="active" href="/customer/selectCheckinList">客户入住管理</a></li>
+                            <li><a class="active" href="/customer/selectCheckoutList">客户退住管理</a></li>
+                            <li><a href="/customer/selectAllOutList">客户外出管理</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;">
+                            <i class="fa fa-tasks"></i>
+                            <span>床位管理</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="form_component.html">床位信息管理</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;">
+                            <i class=" fa fa-bar-chart-o"></i>
+                            <span>护理管理</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="form_component.html">护工信息管理</a></li>
+                        </ul>
+                        <ul class="sub">
+                            <li><a href="form_component.html">护理记录管理</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;">
+                            <i class="fa fa-tasks"></i>
+                            <span>膳食管理</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="form_component.html">膳食信息管理</a></li>
+                        </ul>
+                        <ul class="sub">
+                            <li><a href="form_component.html">膳食日历管理</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;">
+                            <i class="fa fa-envelope"></i>
+                            <span>Mail </span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="mail.html">Inbox</a></li>
+                            <li><a href="mail_compose.html">Compose Mail</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;">
+                            <i class=" fa fa-bar-chart-o"></i>
+                            <span>Charts</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="chartjs.html">Chart js</a></li>
+                            <li><a href="flot_chart.html">Flot Charts</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;">
+                            <i class=" fa fa-bar-chart-o"></i>
+                            <span>Maps</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="google_map.html">Google Map</a></li>
+                            <li><a href="vector_map.html">Vector Map</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;">
+                            <i class="fa fa-glass"></i>
+                            <span>Extra</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="gallery.html">Gallery</a></li>
+                            <li><a href="404.html">404 Error</a></li>
+                            <li><a href="registration.html">Registration</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="login.html">
+                            <i class="fa fa-user"></i>
+                            <span>Login Page</span>
+                        </a>
+                    </li>
+                </ul>            </div>
+            <!-- sidebar menu end-->
+        </div>
+    </aside>
+    <!--sidebar end-->
+    <!--main content start-->
+    <section id="main-content">
+        <section class="wrapper">
+            <div class="table-agile-info">
+                <div class="panel panel-default">
+                    <!-- page heading start-->
+                    <div class="page-heading">
+                        <h3>
+                            膳食信息
+                        </h3>
+                        <ul class="breadcrumb">
+                            <li>
+                                <a href="#">梅岭社区颐养中心</a>
+                            </li>
+                            <li>
+                                <a href="#">膳食管理</a>
+                            </li>
+                            <li class="active"> 膳食信息管理 </li>
+                        </ul>
+                    </div>
+                    <!-- page heading end-->
+
+                    <!--body wrapper start-->
+                    <div class="wrapper">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <section class="panel">
+                                    <header class="panel-heading">
+                                        膳食信息管理
+                                        <span class="tools pull-right">
+                        <a href="/diet/diets" class="fa fa-chevron-down"></a>
+                        <a href="/diet/calendar" class="fa fa-times"></a>
+                     </span>
+                                    </header>
+                                    <div class="panel-body">
+                                        <div class="adv-table editable-table ">
+                                            <div class="clearfix">
+                                                <div class="btn-group">
+<!--                                                    //此处需修改-->
+                                                    <a href="/customer/newCustomerForm">
+                                                        <button>
+                                                            Add New <i class="fa fa-plus"></i>
+                                                        </button>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="space15"></div>
+                                            <table id="diet-table" lay-filter="diet-table"></table>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--body wrapper end-->
+            </div>
+
+        </section>
+
+        <!-- footer -->
+        <div class="footer">
+            <div class="wthree-copyright">
+                <p>© 2021 Visitors. All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
+            </div>
+        </div>
+        <!-- / footer -->
+    </section>
+
+    <!--main content end-->
+</section>
+<script src="../js/bootstrap.js"></script>
+<script src="../js/jquery.dcjqaccordion.2.7.js"></script>
+<script src="../js/scripts.js"></script>
+<script src="../js/jquery.slimscroll.js"></script>
+<script src="../js/jquery.nicescroll.js"></script>
+<script language="javascript" type="text/javascript" src="../js/flot-chart/excanvas.min.js"></script><![endif]-->
+<script src="../js/jquery.scrollTo.js"></script>
+
+<!-- Placed js at the end of the document so the pages load faster -->
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/jquery-ui-1.9.2.custom.min.js"></script>
+<script src="../js/jquery-migrate-1.2.1.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/modernizr.min.js"></script>
+<script src="../js/jquery.nicescroll.js"></script>
+
+<!--data table-->
+<script type="text/javascript" src="../js/data-tables/jquery.dataTables.js"></script>
+<script type="text/javascript" src="../js/data-tables/DT_bootstrap.js"></script>
+
+<!--common scripts for all pages-->
+<script src="../js/scripts.js"></script>
+
+<!--script for editable table-->
+<script src="../js/editable-table.js"></script>
+
+
+<script type="text/html" id="diet-toolbar">
+    <button class="pear-btn pear-btn-primary pear-btn-md" lay-event="add">
+        <i class="layui-icon layui-icon-add-1"></i>
+        新增
+    </button>
+    <button class="pear-btn pear-btn-danger pear-btn-md" lay-event="batchRemove">
+        <i class="layui-icon layui-icon-delete"></i>
+        删除
+    </button>
+</script>
+
+<script type="text/html" id="diet-bar">
+    <button class="pear-btn pear-btn-primary pear-btn-sm" lay-event="edit"><i class="layui-icon layui-icon-edit"></i></button>
+    <button class="pear-btn pear-btn-danger pear-btn-sm" lay-event="remove"><i class="layui-icon layui-icon-delete"></i></button>
+</script>
+<script src="../../css/component/layui/layui.js"></script>
+<script src="../../css/component/pear/pear.js"></script>
+<script>
+    layui.use(['table', 'form', 'jquery','common'], function() {
+        let table = layui.table;
+        let form = layui.form;
+        let $ = layui.jquery;
+        let common = layui.common;
+
+        let cols = [
+            [{
+                type: 'checkbox'
+            },
+                {
+                    title: '编号',
+                    field: 'id',
+                    align: 'center',
+                    width: 100
+                },
+                {
+                    title: '名称',
+                    field: 'name',
+                    align: 'center'
+                },
+                {
+                    title: '食物搭配1',
+                    field: 'food1',
+                    align: 'center',
+                },
+                {
+                    title: '食物搭配2',
+                    field: 'food2',
+                    align: 'center'
+                },
+                {
+                    title: '食物搭配3',
+                    field: 'food3',
+                    align: 'center'
+                },
+                {
+                    title: '食物搭配4',
+                    field: 'food4',
+                    align: 'center'
+                },
+                {
+                    title: '食物搭配5',
+                    field: 'food5',
+                    align: 'center',
+                },
+                {
+                    title: '味道',
+                    field: 'taste',
+                    align: 'center',
+                },
+                {
+                    title: '价格',
+                    field: 'price',
+                    align: 'center',
+                },
+                {
+                    title: '图片',
+                    field: 'picture',
+                    align: 'center',
+                },
+                {
+                    title: '操作',
+                    toolbar: '#diet-bar',
+                    align: 'center',
+                    width: 130
+                }
+            ]
+        ]
+
+        table.render({
+            elem: '#diet-table',
+            url: '/diet/getAllDiet',
+            page: true,
+            cols: cols,
+            method:'post', //请求方式
+            parseData: function (res) {
+                return {
+                    'code': 0, //接口状态
+                    'msg': '', //提示文本
+                    'count': res.length, //数据长度
+                    'data': res //数据列表，是直接填充进表格中的数组
+                }
+            },
+            skin: 'line',
+            toolbar: '#diet-toolbar',
+            defaultToolbar: [{
+                title: '刷新',
+                layEvent: 'refresh',
+                icon: 'layui-icon-refresh',
+            }, 'filter', 'print', 'exports']
+        });
+
+        table.on('tool(diet-table)', function(obj) {
+            if (obj.event === 'remove') {
+                window.remove(obj);
+            } else if (obj.event === 'edit') {
+                window.edit(obj);
+            }
+        });
+
+        table.on('toolbar(diet-table)', function(obj) {
+            if (obj.event === 'add') {
+                window.add();
+            } else if (obj.event === 'refresh') {
+                window.refresh();
+            } else if (obj.event === 'batchRemove') {
+                window.batchRemove(obj);
+            }
+        });
+
+        form.on('submit(diet-query)', function(data) {
+            table.reload('diet-table', {
+                where: data.field
+            })
+            return false;
+        });
+
+
+        window.add = function() {
+            layer.open({
+                type: 2,
+                title: '新增',
+                shade: 0.1,
+                area: [common.isModile()?'100%':'500px', common.isModile()?'100%':'400px'],
+                content: '/diet/addDiet'
+            });
+        }
+
+        window.edit = function(obj) {
+            layer.open({
+                type: 2,
+                title: '修改',
+                shade: 0.1,
+                area: ['500px', '400px'],
+                content: '/diet/editDiet'
+            });
+        }
+
+        window.remove = function(obj) {
+            layer.confirm('确定要删除该用户', {
+                icon: 3,
+                title: '提示'
+            }, function(index) {
+                layer.close(index);
+                let loading = layer.load();
+                $.ajax({
+                    url: "/diet/removeDiet?id=" + obj.data['id'],
+                    dataType: 'text',
+                    type: 'delete',
+                    success: function(result) {
+                        alert("success");
+                        window.location.href = '/diet/viewDiet'
+
+                    },
+                    error:function (){
+                        alert('error');
+                    }
+                })
+            });
+        }
+
+        window.batchRemove = function(obj) {
+
+            var checkIds = common.checkField(obj,'userId');
+
+            if (checkIds === "") {
+                layer.msg("未选中数据", {
+                    icon: 3,
+                    time: 1000
+                });
+                return false;
+            }
+
+            layer.confirm('确定要删除这些膳食', {
+                icon: 3,
+                title: '提示'
+            }, function(index) {
+                layer.close(index);
+                let loading = layer.load();
+                $.ajax({
+                    url: MODULE_PATH + "batchRemove/" + ids,
+                    dataType: 'json',
+                    type: 'delete',
+                    success: function(result) {
+                        layer.close(loading);
+                        if (result.success) {
+                            layer.msg(result.msg, {
+                                icon: 1,
+                                time: 1000
+                            }, function() {
+                                table.reload('diet-table');
+                            });
+                        } else {
+                            layer.msg(result.msg, {
+                                icon: 2,
+                                time: 1000
+                            });
+                        }
+                    }
+                })
+            });
+        }
+
+        window.refresh = function(param) {
+            table.reload('diet-table');
+        }
+    })
+</script>
+<!-- END JAVASCRIPTS -->
+<script>
+    jQuery(document).ready(function() {
+        EditableTable.init();
+    });
+</script>
+</body>
+</html>
