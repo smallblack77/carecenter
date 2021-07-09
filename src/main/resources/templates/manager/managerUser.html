@@ -219,7 +219,7 @@
                 layer.close(index);
                 let loading = layer.load();
                 $.ajax({
-                    url: "/account/removeAccount/" + obj.data['userId'],
+                    url: "/admin/removeUser/" + obj.data['userId'],
                     dataType: 'json',
                     type: 'delete',
                     success: function(result) {
