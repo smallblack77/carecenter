@@ -1,26 +1,27 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://thyneleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <script type="text/javascript" src="js/jquery-1.8.3.js"></script>
 
 <head>
     <title>Visitors an Admin Panel Category Bootstrap Responsive Website Template | Responsive_table :: w3layouts</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="keywords" content="Visitors Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design">
     <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
     <!-- bootstrap-css -->
-    <link rel="stylesheet" href="../css/bootstrap.min.css" >
-    <link rel="stylesheet" href="../js/data-tables/DT_bootstrap.css" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../js/data-tables/DT_bootstrap.css">
     <!-- //bootstrap-css -->
     <!-- Custom CSS -->
-    <link href="../css/style.css" rel='stylesheet' type='text/css' />
-    <link href="../css/style-responsive.css" rel="stylesheet"/>
+    <link href="../css/style.css" rel="stylesheet" type="text/css">
+    <link href="../css/style-responsive.css" rel="stylesheet">
     <!-- font CSS -->
-    <link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+<!--    <link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>-->
     <!-- font-awesome icons -->
-    <link rel="stylesheet" href="../../css/font.css" type="text/css"/>
-    <link href="../css/font-awesome.css" rel="stylesheet">
+<!--    <link rel="stylesheet" href="../../css/font.css" type="text/css"/>-->
+<!--    <link href="../css/font-awesome.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="../../css/component/pear/css/pear.css">
     <!-- //font-awesome icons -->
     <script src="../js/jquery2.0.3.min.js"></script>
 </head>
@@ -361,16 +362,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <!-- page heading start-->
                     <div class="page-heading">
                         <h3>
-                            膳食信息
+                            护工信息管理
                         </h3>
                         <ul class="breadcrumb">
                             <li>
                                 <a href="#">梅岭社区颐养中心</a>
                             </li>
                             <li>
-                                <a href="#">膳食管理</a>
+                                <a href="#">护理管理</a>
                             </li>
-                            <li class="active"> 膳食信息管理 </li>
+                            <li class="active"> 护工信息管理 </li>
                         </ul>
                     </div>
                     <!-- page heading end-->
@@ -381,18 +382,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <div class="col-sm-12">
                                 <section class="panel">
                                     <header class="panel-heading">
-                                        膳食信息管理
+                                        护工信息管理
                                         <span class="tools pull-right">
-                        <a href="/diet/diets" class="fa fa-chevron-down"></a>
-                        <a href="/diet/calendar" class="fa fa-times"></a>
+                        <a href="javascript:;" class="fa fa-chevron-down"></a>
+                        <a href="javascript:;" class="fa fa-times"></a>
                      </span>
                                     </header>
                                     <div class="panel-body">
                                         <div class="adv-table editable-table ">
                                             <div class="clearfix">
                                                 <div class="btn-group">
-<!--                                                    //此处需修改-->
-                                                    <a href="/customer/newCustomerForm">
+                                                    <a href="/diet/addDietForm">
                                                         <button>
                                                             Add New <i class="fa fa-plus"></i>
                                                         </button>
@@ -400,7 +400,43 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                                 </div>
                                             </div>
                                             <div class="space15"></div>
-                                            <table id="diet-table" lay-filter="diet-table"></table>
+                                            <table class="table table-striped table-hover table-bordered" id="editable-sample">
+                                                <thead>
+                                                <tr>
+                                                    <th data-breakpoints="xs">NurID</th>
+                                                    <th>Id</th>
+                                                    <th>Name</th>
+                                                    <th>Food1</th>
+                                                    <th>Food2</th>
+                                                    <th>Food3</th>
+                                                    <th>Food4</th>
+                                                    <th>Food5</th>
+                                                    <th>Description</th>
+                                                    <th>Taste</th>
+                                                    <th>Price</th>
+                                                    <th>Picture</th>
+                                                    <th>Edit</th>
+                                                    <th>Delete</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr class="" th:each="diets : ${diets}">
+                                                    <td><th:block id="nurid" name="nurid" th:text="${diets.nurid}"></th:block></td>
+                                                    <td><th:block name="name" th:text="${diets.name}"></th:block></td>
+                                                    <td><th:block name="food1" th:text="${diets.food1}"></th:block></td>
+                                                    <td><th:block name="food2" th:text="${diets.food2}"></th:block></td>
+                                                    <td><th:block name="food3" th:text="${diets.food3}"></th:block></td>
+                                                    <td><th:block name="food4" th:text="${diets.food4}"></th:block></td>
+                                                    <td><th:block name="food5" th:text="${diets.food5}"></th:block></td>
+                                                    <td><th:block name="description" th:utext="${diets.description}"></th:block></td>
+                                                    <td><th:block name="taste" th:text="${diets.taste}"></th:block></td>
+                                                    <td><th:block name="price" th:text="${diets.price}"></th:block></td>
+                                                    <td><th:block name="picture" th:text="${diets.picture}"></th:block></td>
+                                                    <td><a th:href="${'/diet/editDietForm?id='}+${diets.id}">Edit</a></td>
+                                                    <td><a th:href="${'/diet/deleteDiet?id='}+${diets.id}">Delete</a></td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
                                         </div>
                                     </div>
                                 </section>
@@ -429,7 +465,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script src="../js/scripts.js"></script>
 <script src="../js/jquery.slimscroll.js"></script>
 <script src="../js/jquery.nicescroll.js"></script>
-<script language="javascript" type="text/javascript" src="../js/flot-chart/excanvas.min.js"></script><![endif]-->
+<script language="javascript" type="text/javascript" src="../js/flot-chart/excanvas.min.js"></script><!--[endif]---->
 <script src="../js/jquery.scrollTo.js"></script>
 
 <!-- Placed js at the end of the document so the pages load faster -->
@@ -449,236 +485,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 <!--script for editable table-->
 <script src="../js/editable-table.js"></script>
-
-
-<script type="text/html" id="diet-toolbar">
-    <button class="pear-btn pear-btn-primary pear-btn-md" lay-event="add">
-        <i class="layui-icon layui-icon-add-1"></i>
-        新增
-    </button>
-    <button class="pear-btn pear-btn-danger pear-btn-md" lay-event="batchRemove">
-        <i class="layui-icon layui-icon-delete"></i>
-        删除
-    </button>
-</script>
-
-<script type="text/html" id="diet-bar">
-    <button class="pear-btn pear-btn-primary pear-btn-sm" lay-event="edit"><i class="layui-icon layui-icon-edit"></i></button>
-    <button class="pear-btn pear-btn-danger pear-btn-sm" lay-event="remove"><i class="layui-icon layui-icon-delete"></i></button>
-</script>
-<script src="../../css/component/layui/layui.js"></script>
-<script src="../../css/component/pear/pear.js"></script>
-<script>
-    layui.use(['table', 'form', 'jquery','common'], function() {
-        let table = layui.table;
-        let form = layui.form;
-        let $ = layui.jquery;
-        let common = layui.common;
-
-        let cols = [
-            [{
-                type: 'checkbox'
-            },
-                {
-                    title: '编号',
-                    field: 'id',
-                    align: 'center',
-                    width: 100
-                },
-                {
-                    title: '名称',
-                    field: 'name',
-                    align: 'center'
-                },
-                {
-                    title: '食物搭配1',
-                    field: 'food1',
-                    align: 'center',
-                },
-                {
-                    title: '食物搭配2',
-                    field: 'food2',
-                    align: 'center'
-                },
-                {
-                    title: '食物搭配3',
-                    field: 'food3',
-                    align: 'center'
-                },
-                {
-                    title: '食物搭配4',
-                    field: 'food4',
-                    align: 'center'
-                },
-                {
-                    title: '食物搭配5',
-                    field: 'food5',
-                    align: 'center',
-                },
-                {
-                    title: '味道',
-                    field: 'taste',
-                    align: 'center',
-                },
-                {
-                    title: '价格',
-                    field: 'price',
-                    align: 'center',
-                },
-                {
-                    title: '图片',
-                    field: 'picture',
-                    align: 'center',
-                },
-                {
-                    title: '操作',
-                    toolbar: '#diet-bar',
-                    align: 'center',
-                    width: 130
-                }
-            ]
-        ]
-
-        table.render({
-            elem: '#diet-table',
-            url: '/diet/getAllDiet',
-            page: true,
-            cols: cols,
-            method:'post', //请求方式
-            parseData: function (res) {
-                return {
-                    'code': 0, //接口状态
-                    'msg': '', //提示文本
-                    'count': res.length, //数据长度
-                    'data': res //数据列表，是直接填充进表格中的数组
-                }
-            },
-            skin: 'line',
-            toolbar: '#diet-toolbar',
-            defaultToolbar: [{
-                title: '刷新',
-                layEvent: 'refresh',
-                icon: 'layui-icon-refresh',
-            }, 'filter', 'print', 'exports']
-        });
-
-        table.on('tool(diet-table)', function(obj) {
-            if (obj.event === 'remove') {
-                window.remove(obj);
-            } else if (obj.event === 'edit') {
-                window.edit(obj);
-            }
-        });
-
-        table.on('toolbar(diet-table)', function(obj) {
-            if (obj.event === 'add') {
-                window.add();
-            } else if (obj.event === 'refresh') {
-                window.refresh();
-            } else if (obj.event === 'batchRemove') {
-                window.batchRemove(obj);
-            }
-        });
-
-        form.on('submit(diet-query)', function(data) {
-            table.reload('diet-table', {
-                where: data.field
-            })
-            return false;
-        });
-
-
-        window.add = function() {
-            layer.open({
-                type: 2,
-                title: '新增',
-                shade: 0.1,
-                area: [common.isModile()?'100%':'500px', common.isModile()?'100%':'400px'],
-                content: '/diet/addDiet'
-            });
-        }
-
-        window.edit = function(obj) {
-            layer.open({
-                type: 2,
-                title: '修改',
-                shade: 0.1,
-                area: ['500px', '400px'],
-                content: '/diet/editDiet'
-            });
-        }
-
-        window.remove = function(obj) {
-            layer.confirm('确定要删除该用户', {
-                icon: 3,
-                title: '提示'
-            }, function(index) {
-                layer.close(index);
-                let loading = layer.load();
-                $.ajax({
-                    url: "/diet/removeDiet?id=" + obj.data['id'],
-                    dataType: 'text',
-                    type: 'delete',
-                    success: function(result) {
-                        alert("success");
-                        window.location.href = '/diet/viewDiet'
-
-                    },
-                    error:function (){
-                        alert('error');
-                    }
-                })
-            });
-        }
-
-        window.batchRemove = function(obj) {
-
-            var checkIds = common.checkField(obj,'userId');
-
-            if (checkIds === "") {
-                layer.msg("未选中数据", {
-                    icon: 3,
-                    time: 1000
-                });
-                return false;
-            }
-
-            layer.confirm('确定要删除这些膳食', {
-                icon: 3,
-                title: '提示'
-            }, function(index) {
-                layer.close(index);
-                let loading = layer.load();
-                $.ajax({
-                    url: MODULE_PATH + "batchRemove/" + ids,
-                    dataType: 'json',
-                    type: 'delete',
-                    success: function(result) {
-                        layer.close(loading);
-                        if (result.success) {
-                            layer.msg(result.msg, {
-                                icon: 1,
-                                time: 1000
-                            }, function() {
-                                table.reload('diet-table');
-                            });
-                        } else {
-                            layer.msg(result.msg, {
-                                icon: 2,
-                                time: 1000
-                            });
-                        }
-                    }
-                })
-            });
-        }
-
-        window.refresh = function(param) {
-            table.reload('diet-table');
-        }
-    })
-</script>
-<!-- END JAVASCRIPTS -->
 <script>
     jQuery(document).ready(function() {
         EditableTable.init();

@@ -1,6 +1,6 @@
 package org.csu.carecenter.entity;
 
-public class Diet {
+public class Diets {
 
     private int id;
     private String name;
