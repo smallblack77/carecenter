@@ -7,4 +7,7 @@ import org.springframework.stereotype.Repository;
 public interface AdminMapper {
 
     Admin selectAdmin(Admin admin);
+
+
+    void updateAdmin(Admin admin,String oldName);
 }

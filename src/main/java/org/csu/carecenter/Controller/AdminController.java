@@ -6,8 +6,6 @@ import org.csu.carecenter.entity.User;
 import org.csu.carecenter.service.AdminService;
 import org.csu.carecenter.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.boot.web.servlet.server.Session;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -86,13 +84,21 @@ public class AdminController {
     //跳转到管理员个人信息展示界面
     @GetMapping("/managerAccount")
     public String managerAccount(Model model){
+        Admin admin = (Admin)model.getAttribute("admin");
+        String name = null;
+        if(admin != null){
+            name = admin.getAdminName();
+        }
+        model.addAttribute("name",name);
         return "manager/managerAccount";
     }
 
     //跳转到管理员个人信息修改界面
     @GetMapping("/editAccountForm")
     public String editAccount(Model model){
-
+        Admin admin = (Admin)model.getAttribute("admin");
+        model.addAttribute("name",admin.getAdminName());
+        model.addAttribute("password",admin.getPassword());
         return "manager/editAccount";
     }
 
@@ -186,7 +192,19 @@ public class AdminController {
 
     //修改管理员信息
     @RequestMapping("/editAccount")
-    public String editAccount(){return "";}
+    public String editAccount(Model model,String name,String password){
+        Admin admin = (Admin) model.getAttribute("admin");
+        String oldName = admin.getAdminName();
+        admin.setPassword(password);
+        admin.setAdminName(name);
+        System.out.println(password);
+        System.out.println(name);
+        System.out.println(oldName);
+
+        adminService.updateAdminn(admin,oldName);
+        model.addAttribute("admin",admin);
+        return "/manager/managerAccount";
+    }
 
     //删除user
     @RequestMapping("/removeUser")

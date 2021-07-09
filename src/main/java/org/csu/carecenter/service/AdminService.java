@@ -17,4 +17,8 @@ public class AdminService {
         admin.setPassword(password);
         return adminMapper.selectAdmin(admin);
     }
+
+    public void updateAdminn(Admin admin,String oldName){
+        adminMapper.updateAdmin(admin,oldName);
+    }
 }

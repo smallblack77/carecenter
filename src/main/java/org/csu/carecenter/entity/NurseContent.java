@@ -9,6 +9,15 @@ public class NurseContent {
     private int price;
     private String description;
     private int levelId;
+    private String levelName;
+
+    public String getLevelName() {
+        return levelName;
+    }
+
+    public void setLevelName(String levelName) {
+        this.levelName = levelName;
+    }
 
     public String getNurseId() {
         return nurseId;

@@ -10,4 +10,12 @@
         WHERE ADMIN.NAME = #{adminName}
         AND ADMIN.PASSWORD = #{password}
     </select>
+
+
+    <update id="updateAdmin" >
+        UPDATE ADMIN
+        SET NAME=#{admin.adminName},
+            PASSWORD=#{admin.password}
+        WHERE NAME=#{oldName}
+    </update>
 </mapper>
