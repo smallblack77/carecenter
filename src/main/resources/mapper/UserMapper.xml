@@ -67,4 +67,19 @@
         SET PASSWORD=#{password}
         WHERE USERID=#{userId}
     </update>
+
+    <select id="getUserByUserId" parameterType="int" resultType="User">
+        SELECT
+            USER.USERID as userId,
+            SIGNON.PASSWORD,
+            USER.USERNAME,
+            USER.SEX,
+            USER.EMAIL,
+            USER.AGE,
+            USER.PHONENUMBER as phoneNumber,
+            USER.ROLE
+        FROM USER, SIGNON
+        WHERE SIGNON.USERID = #{userId}
+          AND USER.USERID = SIGNON.USERID
+    </select>
 </mapper>

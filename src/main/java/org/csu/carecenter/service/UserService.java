@@ -62,4 +62,9 @@ public class UserService {
         userMapper.updateSignon(user);
     }
 
+    //通过UserId获取User信息
+    public User getUserByUserId(int userId){
+        return userMapper.getUserByUserId(userId);
+    }
+
 }

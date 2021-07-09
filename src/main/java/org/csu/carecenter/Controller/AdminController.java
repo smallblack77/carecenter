@@ -1,5 +1,6 @@
 package org.csu.carecenter.Controller;
 
+import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.csu.carecenter.entity.Admin;
 import org.csu.carecenter.entity.RandomValidateCode;
 import org.csu.carecenter.entity.User;
@@ -10,6 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import javax.jws.WebParam;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -93,13 +95,18 @@ public class AdminController {
         return "manager/editAccount";
     }
 
-    //跳转到管理员修改用户信息界面
+    //修改用户信息界面
     @GetMapping("/editUserForm")
-    public String editUser(Model model,String username,String password,String userId){
-
-
-
+    public String editUser(Model model,int userId){
+        User user = userService.getUserByUserId(userId);
+        model.addAttribute("user",user);
         return "manager/editUser";
+    }
+
+    //修改信息显示
+    @RequestMapping("/viewUser")
+    public String viewUser(Model model,int userId){
+        return null;
     }
 
     //跳转到管理员增加个人信息界面

@@ -36,4 +36,7 @@ public interface UserMapper {
     //修改Signon表
     void updateSignon(User user);
 
+    //通过userId获取User信息
+    User getUserByUserId(int userId);
+
 }

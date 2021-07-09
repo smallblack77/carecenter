@@ -28,7 +28,6 @@ public class BedController {
     }
 
 
-
     //返回床的列表
     @RequestMapping("/viewBedList")
     public String viewBedList(Model model){
@@ -37,11 +36,12 @@ public class BedController {
         return null;
     }
 
+    @RequestMapping("/viewBedDetail")
     //传递床和客户的关系
     public String viewBedAndCustomer(int bedId,Model model){
         BedAndCustomer bedAndCustomer = bedService.getBedAndCustomer(bedId);
         model.addAttribute("bedAndCustomer",bedAndCustomer);
-        return null;
+        return "bedManage/bedDetail";
     }
 
 }
