@@ -22,48 +22,48 @@
                 <div class="layui-form-item">
                     <label class="layui-form-label">姓名</label>
                     <div class="layui-input-block">
-                        <input type="text" name="username" lay-verify="title" autocomplete="off" placeholder="请输入姓名" class="layui-input">
+                        <input th:field="*{userId}" type="text" name="username" lay-verify="title" autocomplete="off" placeholder="请输入姓名" class="layui-input">
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">密码</label>
                     <div class="layui-input-block">
-                        <input type="text" name="password" lay-verify="title" autocomplete="off" placeholder="请输入标题" class="layui-input">
+                        <input th:field="*{password}" type="text" name="password" lay-verify="title" autocomplete="off" placeholder="请输入标题" class="layui-input">
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">年龄</label>
                     <div class="layui-input-block">
-                        <input type="text" name="age" lay-verify="title" autocomplete="off" placeholder="请输入标题" class="layui-input">
+                        <input th:field="*{age}" type="text" name="age" lay-verify="title" autocomplete="off" placeholder="请输入标题" class="layui-input">
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">邮箱</label>
                     <div class="layui-input-block">
-                        <input type="text" name="email" lay-verify="title" autocomplete="off" placeholder="请输入邮箱" class="layui-input">
+                        <input th:field="*{email}" type="text" name="email" lay-verify="title" autocomplete="off" placeholder="请输入邮箱" class="layui-input">
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">电话</label>
                     <div class="layui-input-block">
-                        <input type="text" name="phone" lay-verify="title" autocomplete="off" placeholder="请输入标题" class="layui-input">
+                        <input th:field="*{phoneNumber}" type="text" name="phone" lay-verify="title" autocomplete="off" placeholder="请输入标题" class="layui-input">
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">角色</label>
                     <div class="layui-input-block">
                         <select name="user.role">
-                            <option style="display: none" selected>护士</option>
-                            <option value="护工">护工</option>
-                            <option value="医生">医生</option>
+                            <option  th:selected="*{role eq '护士'}" value="护士" selected>护士</option>
+                            <option  th:selected="*{role eq '护工'}" value="护工">护工</option>
+                            <option  th:selected="*{role eq '医生'}" value="医生">医生</option>
                         </select>
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">性别</label>
                     <div class="layui-input-block">
-                        <input type="radio" name="sex" value="0" title="男">
-                        <input type="radio" name="sex" value="1" title="女" checked>
+                        <input type="radio" name="sex" th:if="*{sex == '男'}" value="0" title="男">
+                        <input type="radio" name="sex" th:if="*{sex == '女'}" value="1" title="女" checked>
                     </div>
                 </div>
             </div>
