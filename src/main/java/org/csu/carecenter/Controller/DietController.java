@@ -147,8 +147,10 @@ public class DietController {
     }
 
     @RequestMapping("/deleteDiet")
-    public String deleteDiet(Model model,int id)
+    public String deleteDiet(Model model,HttpServletRequest req)
     {
+        int id = Integer.parseInt(req.getParameter("id"));
+        dietService.deleteDiet(id);
         List<Diet> dietList = dietService.getAllDiet();
         model.addAttribute(dietList);
         return "dietManage/diet";
