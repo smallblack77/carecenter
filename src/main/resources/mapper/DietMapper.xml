@@ -1,7 +1,46 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="org.csu.carecenter.Persistence.DietMapper">
-    <select id="getAllDiet" resultType="Diets">
+    <select id="getAllDiet" resultType="Diet">
         SELECT * FROM DIETS
     </select>
+
+    <select id="getDietById" resultType="Diet">
+        SELECT * FROM DIETS WHERE ID = #{id}
+    </select>
+
+    <update id="updateDiet" parameterType="Diet">
+        UPDATE DIETS SET
+            DIETS.NAME = #{name},
+            DIETS.FOOD1 = #{food1},
+            DIETS.FOOD2 = #{food2},
+            DIETS.FOOD3 = #{food3},
+            DIETS.FOOD4 = #{food4},
+            DIETS.FOOD5 = #{food5},
+            DIETS.DESCRIPTION = #{description},
+            DIETS.TASTE = #{taste},
+            DIETS.PRICE = #{price},
+            DIETS.PICTURE = #{picture}
+        WHERE DIETS.ID = #{id}
+    </update>
+
+    <insert id="insertDiet" parameterType="Diet">
+        INSERT INTO DIETS
+            (DIETS.NAME,
+             DIETS.FOOD1,
+             DIETS.FOOD2,
+             DIETS.FOOD3,
+             DIETS.FOOD4,
+             DIETS.FOOD5,
+             DIETS.DESCRIPTION,
+             DIETS.TASTE,
+             DIETS.PRICE,
+             DIETS.PICTURE)
+        VALUES (#{name}, #{food1}, #{food2}, #{food3}, #{food4}, #{food5}, #{description}, #{taste}, #{price}, #{picture})
+    </insert>
+
+    <delete id="deleteDiet" parameterType="int">
+        DELETE FROM DIETS
+        WHERE DIETS.ID = #{id}
+    </delete>
 </mapper>

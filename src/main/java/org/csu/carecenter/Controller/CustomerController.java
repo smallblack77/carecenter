@@ -55,7 +55,6 @@ public class CustomerController {
         Customer customer = customerService.getCustomer(id);
         model.addAttribute(customer);
         model.addAttribute("customerId",id);
-        model.addAttribute("editCustomer","修改客户成功！");
         return "custManage/editCustomer";
     }
 

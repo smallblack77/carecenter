@@ -403,7 +403,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                             <table class="table table-striped table-hover table-bordered" id="editable-sample">
                                                 <thead>
                                                 <tr>
-                                                    <th data-breakpoints="xs">NurID</th>
                                                     <th>Id</th>
                                                     <th>Name</th>
                                                     <th>Food1</th>
@@ -420,20 +419,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                                 </tr>
                                                 </thead>
                                                 <tbody>
-                                                <tr class="" th:each="diets : ${diets.getAllDiet}">
-                                                    <td><th:block id="nurid" name="nurid" th:text="${diets.id}"></th:block></td>
-                                                    <td><th:block name="name" th:text="${diets.name}"></th:block></td>
-                                                    <td><th:block name="food1" th:text="${diets.food1}"></th:block></td>
-                                                    <td><th:block name="food2" th:text="${diets.food2}"></th:block></td>
-                                                    <td><th:block name="food3" th:text="${diets.food3}"></th:block></td>
-                                                    <td><th:block name="food4" th:text="${diets.food4}"></th:block></td>
-                                                    <td><th:block name="food5" th:text="${diets.food5}"></th:block></td>
-                                                    <td><th:block name="description" th:utext="${diets.description}"></th:block></td>
-                                                    <td><th:block name="taste" th:text="${diets.taste}"></th:block></td>
-                                                    <td><th:block name="price" th:text="${diets.price}"></th:block></td>
-                                                    <td><th:block name="picture" th:text="${diets.picture}"></th:block></td>
-                                                    <td><a th:href="${'/diet/editDietForm?id='}+${diets.id}">Edit</a></td>
-                                                    <td><a th:href="${'/diet/deleteDiet?id='}+${diets.id}">Delete</a></td>
+                                                <tr class="" th:each="diet : ${dietList}">
+                                                    <td><th:block id="dietid" name="dietid" th:text="${diet.id}"></th:block></td>
+                                                    <td><th:block name="name" th:text="${diet.name}"></th:block></td>
+                                                    <td><th:block name="food1" th:text="${diet.food1}"></th:block></td>
+                                                    <td><th:block name="food2" th:text="${diet.food2}"></th:block></td>
+                                                    <td><th:block name="food3" th:text="${diet.food3}"></th:block></td>
+                                                    <td><th:block name="food4" th:text="${diet.food4}"></th:block></td>
+                                                    <td><th:block name="food5" th:text="${diet.food5}"></th:block></td>
+                                                    <td><th:block name="description" th:text="${diet.description}"></th:block></td>
+                                                    <td><th:block name="taste" th:text="${diet.taste}"></th:block></td>
+                                                    <td><th:block name="price" th:text="${diet.price}"></th:block></td>
+                                                    <td><th:block name="picture" th:text="${diet.picture}"></th:block></td>
+                                                    <td><a th:href="${'/diet/editDietForm?id='}+${diet.id}">Edit</a></td>
+                                                    <td><a th:href="${'/diet/deleteDiet?id='}+${diet.id}">Delete</a></td>
                                                 </tr>
                                                 </tbody>
                                             </table>

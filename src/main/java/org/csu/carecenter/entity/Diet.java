@@ -1,6 +1,6 @@
 package org.csu.carecenter.entity;
 
-public class Diets {
+public class Diet {
 
     private int id;
     private String name;
@@ -10,7 +10,25 @@ public class Diets {
     private String food4;
     private String food5;
     private String description;
+    private int price;
     private String taste;
+    private String picture;
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+    public String getPicture() {
+        return picture;
+    }
+
+    public void setPicture(String picture) {
+        this.picture = picture;
+    }
 
     public int getId() {
         return id;
