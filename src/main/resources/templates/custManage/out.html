@@ -382,7 +382,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                             <div class="clearfix">
                                                 <div class="btn-group">
                                                     <button>
-                                                        <a href="/Manager/viewnewCategory">Add New</a> <i class="fa fa-plus"></i>
+                                                        <a href="/customer/addOutForm">Add New</a> <i class="fa fa-plus"></i>
                                                     </button>
                                                 </div>
                                             </div>
@@ -410,8 +410,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                                     <td><th:block  name="exptime" th:text="${out.expectReturnTime}" /></td>
                                                     <td><th:block  name="acttime" th:text="${out.actualReturnTime}" /></td>
                                                     <td><th:block  name="aidphone" th:text="${out.airPhone}" /></td>
-                                                    <td><a th:href="${'/custManage/editOut?id='}+${out.id}">Edit</a></td>
-                                                    <td><a th:href="${'/custManage/deleteOut?id='}+${out.id}">Delete</a></td>
+                                                    <td><a th:href="${'/customer/editOutForm?id='}+${out.id}">Edit</a></td>
+                                                    <td><a th:href="${'/customer/deleteOut?id='}+${out.id}">Delete</a></td>
                                                 </tr>
                                                 </tbody>
                                             </table>

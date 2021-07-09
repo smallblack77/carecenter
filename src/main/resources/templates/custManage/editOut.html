@@ -350,7 +350,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <div class="panel-heading">
                         修改外出信息
                     </div>
-                    <form action="/customer/addCustomer" method="post">
+                    <form action="/customer/editOut" method="post">
                         <div>
                             <table class="table" ui-jq="footable" ui-options='{
                                 "paging": {
@@ -364,7 +364,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 }}'>
                                 <tr>
                                     <th style="background: #ddede0 no-repeat;">CustID:</th>
-                                    <td ><input type="text"  name="custid"  id="custid" th:value="${out.custid}" ></td>
+                                    <td ><input type="text"  name="custid"  id="custid" th:value="${out.customerId}" ></td>
                                 </tr>
                                 <tr>
                                     <th style="background: #ddede0 no-repeat;">Reason:</th>
@@ -372,19 +372,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 </tr>
                                 <tr>
                                     <th style="background: #ddede0 no-repeat;">StartTime:</th>
-                                    <td ><input type="text"  id="starttime" name="starttime" th:value="${out.starttime}"></td>
+                                    <td ><input type="text"  id="starttime" name="starttime" th:value="${out.startTime}"></td>
                                 </tr>
                                 <tr>
                                     <th style="background: #ddede0 no-repeat;">ExpTime:</th>
-                                    <td ><input type="text"  id="exptime" name="exptime" th:value="${out.exptime}"></td>
+                                    <td ><input type="text"  id="exptime" name="exptime" th:value="${out.expectReturnTime}"></td>
                                 </tr>
                                 <tr>
                                     <th style="background: #ddede0 no-repeat;">ActTime:</th>
-                                    <td ><input type="text"  id="acttime" name="acttime" th:value="${out.acttime}"></td>
+                                    <td ><input type="text"  id="acttime" name="acttime" th:value="${out.actualReturnTime}"></td>
                                 </tr>
                                 <tr>
                                     <th style="background: #ddede0 no-repeat;">AidPhone:</th>
-                                    <td ><input type="text"  id="aidphone" name="aidphone" th:value="${out.aidphone}"></td>
+                                    <td ><input type="text"  id="aidphone" name="aidphone" th:value="${out.airPhone}"></td>
                                 </tr>
                             </table>
                             <div class="btn-group-1">

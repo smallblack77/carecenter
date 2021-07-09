@@ -52,7 +52,7 @@ public class CustomerController {
         Customer customer = customerService.getCustomer(id);
         model.addAttribute(customer);
         model.addAttribute("customerId",id);
-        model.addAttribute("addCustomer","新增客户成功！");
+        model.addAttribute("editCustomer","修改客户成功！");
         return "custManage/editCustomer";
     }
 
@@ -77,7 +77,9 @@ public class CustomerController {
         customer.setBirthday(birthday);
         customer.setAttention(attention);
         customerService.updateCustomer(customer);
-        return "custManage/editCustomer";
+        List<Customer> customers =  customerService.getCustomerLsit();
+        model.addAttribute("customerList", customers);
+        return "custManage/customer";
     }
 
     //新增客户的表单
@@ -97,7 +99,7 @@ public class CustomerController {
                             @RequestParam("birthday")String birthday,
                             @RequestParam("attention")String attention,
                             Model model){
-        if( name != null & sex != null & age != null & height != null & weight != null & birthday != null & attention != null ){
+        if( name != null && sex != null && age != null && height != null && weight != null && birthday != null && attention != null ){
             Customer customer = new Customer();
             customer.setName(name);
             customer.setSex(sex);
@@ -151,9 +153,114 @@ public class CustomerController {
 
         return "custManage/checkout";
     }
+
+
+
+
     //外出信息
+    //查询所有的外出记录
     @GetMapping("/selectAllOutList")
     public String getAllOutList(Model model){
+        List<Out> outList = customerService.getAllOutList();
+        model.addAttribute("outList", outList);
+        return "custManage/out";
+    }
+
+    //修改外出信息的表单
+    @GetMapping("/editOutForm")
+    public String editOutForm(HttpServletRequest req,HttpSession session, Model model){
+        int id = Integer.parseInt(req.getParameter("id"));
+        Out out = customerService.getOut(id);
+        model.addAttribute(out);
+        session.setAttribute("out",out);
+        model.addAttribute("outId",id);
+        return "custManage/editOut";
+    }
+
+    //修改外出信息
+    @PostMapping("/editOut")
+    public String editOut(@RequestParam("custid")String custid,
+                          @RequestParam("reason")String reason,
+                          @RequestParam("starttime")String starttime,
+                          @RequestParam("exptime")String exptime,
+                          @RequestParam("acttime")String acttime,
+                          @RequestParam("aidphone")String aidphone,
+                          HttpSession httpSession,
+                          Model model){
+        Out out = (Out) httpSession.getAttribute("out");
+        out.setCustomerId(Integer.parseInt(custid));
+        out.setReason(reason);
+        out.setStartTime(starttime);
+        out.setExpectReturnTime(exptime);
+        out.setActualReturnTime(acttime);
+        out.setAirPhone(aidphone);
+        customerService.updateOut(out);
+        model.addAttribute("out", out);
+
+        List<Out> outList = customerService.getAllOutList();
+        model.addAttribute("outList", outList);
+        return "custManage/out";
+    }
+
+    //新增外出信息的表单
+    @GetMapping("/addOutForm")
+    public String addOutForm(){
+        return "custManage/addOut";
+    }
+
+    //新增外出信息
+    @RequestMapping("/addOut")
+    public String addOut(@RequestParam("custid")String custid,
+                         @RequestParam("reason")String reason,
+                         @RequestParam("starttime")String starttime,
+                         @RequestParam("exptime")String exptime,
+                         @RequestParam("acttime")String acttime,
+                         @RequestParam("aidphone")String aidphone,
+                         HttpSession httpSession,
+                         Model model){
+        if(custid != null && reason != null && starttime != null && exptime != null && acttime != null && aidphone != null){
+            Out out = new Out();
+            out.setCustomerId(Integer.parseInt(custid));
+            out.setReason(reason);
+            out.setStartTime(starttime);
+            out.setExpectReturnTime(exptime);
+            out.setActualReturnTime(acttime);
+            out.setAirPhone(aidphone);
+
+            List<Out> outList = customerService.getAllOutList();
+            model.addAttribute("outList", outList);
+
+            boolean jug = false;
+            for (Out out1:outList
+            ) {
+                if(out.equals(out1)){
+                    jug = true;
+                    break;
+                }
+            }
+
+            if(jug){
+                String addOutValue = "重复外出信息，请重新添加";
+                model.addAttribute("addOutValue",addOutValue);
+                return "custManage/addOut";
+            }else {
+                customerService.addOut(out);
+                model.addAttribute("outList",customerService.getAllOutList());
+                return "custManage/out";
+            }
+
+        }else {
+            String addOutValue = "新增失败";
+            model.addAttribute("addOutValue",addOutValue);
+            return "custManage/out";
+        }
+
+    }
+
+    //删除外出信息
+    @GetMapping("/deleteOut")
+    public String deleteOut(@RequestParam("id")String id, Model model){
+        customerService.deleteOut(Integer.parseInt(id));
         List<Out> outList = customerService.getAllOutList();
         model.addAttribute("outList", outList);
         return "custManage/out";
