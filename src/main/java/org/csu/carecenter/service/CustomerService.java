@@ -39,23 +39,52 @@ public class CustomerService {
         customerMapper.deleteCustomer(id);
     }
 
+
+
     //入住信息
     public List<BedAndCustomer> selectCheckinList(){
         return customerMapper.selectCheckinList();
+    }
+
+    public BedAndCustomer selectCheckin(int id){
+        return customerMapper.selectCheckin(id);
     }
 
     public void deleteCheckin(BedAndCustomer bedAndCustomer){
         customerMapper.deleteCheckin(bedAndCustomer);
     }
 
+    public void updateCheckin(BedAndCustomer bedAndCustomer){
+        customerMapper.updateCheckin(bedAndCustomer);
+    }
+
+    public void addCheckin(BedAndCustomer bedAndCustomer) {
+        customerMapper.insertCheckin(bedAndCustomer);
+    }
+
+
+
     //退住信息
     public List<BedAndCustomer> selectCheckoutList(){
         return customerMapper.selectCheckoutList();
     }
 
+    public BedAndCustomer selectCheckout(int id){
+        return customerMapper.selectCheckout(id);
+    }
+
+    public void updateCheckout(BedAndCustomer bedAndCustomer){
+        customerMapper.updateCheckout(bedAndCustomer);
+    }
+
     public void deleteCheckout(BedAndCustomer bedAndCustomer){
         customerMapper.deleteCheckout(bedAndCustomer);
     }
+
+    public void addCheckout(BedAndCustomer bedAndCustomer){
+        customerMapper.insertCheckout(bedAndCustomer);
+    }
+
 
     //外出信息
     public List<Out> getOutList(int custid){

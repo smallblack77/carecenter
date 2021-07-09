@@ -382,7 +382,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                             <div class="clearfix">
                                                 <div class="btn-group">
                                                     <button>
-                                                        <a href="/customer/addCheckin">Add New</a> <i class="fa fa-plus"></i>
+                                                        <a href="/customer/addCheckinForm">Add New</a> <i class="fa fa-plus"></i>
                                                     </button>
                                                 </div>
                                             </div>
@@ -404,7 +404,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                                     <td><th:block  name="custid" th:text="${bedandcust.customerID}" /></td>
                                                     <td><th:block  name="bedid" th:text="${bedandcust.bedId}" /></td>
                                                     <td><th:block  name="starttime" th:text="${bedandcust.startTime}" /></td>
-                                                    <td><a th:href="${'/customer/editCheckin?id='}+${bedandcust.id}">Edit</a></td>
+                                                    <td><a th:href="${'/customer/editCheckinForm?id='}+${bedandcust.id}">Edit</a></td>
                                                     <td><a th:href="${'/customer/deleteCheckin?id='}+${bedandcust.id}">Delete</a></td>
                                                 </tr>
                                                 </tbody>

@@ -158,6 +158,82 @@ public class CustomerController {
         return "custManage/checkin";
     }
 
+    @RequestMapping("/editCheckinForm")
+    public String editCheckinForm(HttpServletRequest req,HttpSession session, Model model){
+        int id = Integer.parseInt(req.getParameter("id"));
+        BedAndCustomer checkin = customerService.selectCheckin(id);
+        session.setAttribute("checkin", checkin);
+        model.addAttribute("checkinId",id);
+        return "/custManage/editCheckin";
+    }
+
+    @RequestMapping("/editCheckin")
+    public String editCheckin(@RequestParam("custid")String custid,
+                              @RequestParam("bedid")String bedid,
+                              @RequestParam("starttime")String starttime,
+                              HttpSession httpSession,
+                              Model model){
+        BedAndCustomer checkin = (BedAndCustomer) httpSession.getAttribute("checkin");
+        checkin.setCustomerID(Integer.parseInt(custid));
+        checkin.setBedId(Integer.parseInt(bedid));
+        checkin.setStartTime(starttime);
+
+        customerService.updateCheckin(checkin);
+        List<BedAndCustomer> checkinList = customerService.selectCheckinList();
+        model.addAttribute("checkinList", checkinList);
+        return "custManage/checkout";
+    }
+
+    @GetMapping("/addCheckinForm")
+    public String addCheckinForm(){
+        return "custManage/addCheckin";
+    }
+
+    @RequestMapping("/addCheckin")
+    public String addCheckin(@RequestParam("custid")String custid,
+                             @RequestParam("bedid")String bedid,
+                             @RequestParam("starttime")String starttime,
+                             HttpSession httpSession,
+                             Model model){
+        if(custid != null && bedid != null && starttime != null){
+            BedAndCustomer checkin = new BedAndCustomer();
+            checkin.setCustomerID(Integer.parseInt(custid));
+            checkin.setBedId(Integer.parseInt(bedid));
+            checkin.setStartTime(starttime);
+
+            List<BedAndCustomer> checkinList = customerService.selectCheckinList();
+
+            boolean jug = false;
+            for (BedAndCustomer b:checkinList
+            ) {
+                if(checkin.equals(b)){
+                    jug = true;
+                    break;
+                }
+            }
+
+            if(jug){
+                String addCheckinValue = "重复入住信息，请重新添加";
+                model.addAttribute("addCheckinValue",addCheckinValue);
+                return "custManage/addCheckin";
+            }else {
+                customerService.addCheckin(checkin);
+                model.addAttribute("checkinList",customerService.selectCheckinList());
+                return "custManage/checkin";
+            }
+
+        }else {
+            String addCheckinValue = "新增失败";
+            model.addAttribute("addCheckinValue",addCheckinValue);
+            return "custManage/addCheckin";
+        }
+    }
+
+
+
+
+
+
     //退住信息
     //查看所有退住信息
     @GetMapping("/selectCheckoutList")
@@ -167,6 +243,76 @@ public class CustomerController {
         return "custManage/checkout";
     }
 
+    @RequestMapping("/editCheckoutForm")
+    public String editCheckoutForm(HttpServletRequest req,HttpSession session, Model model){
+        int id = Integer.parseInt(req.getParameter("id"));
+        BedAndCustomer checkout = customerService.selectCheckout(id);
+        session.setAttribute("checkout", checkout);
+        model.addAttribute("CheckoutId",id);
+        return "/custManage/editCheckout";
+    }
+
+    @RequestMapping("/editCheckout")
+    public String editCheckout(@RequestParam("custid")String custid,
+                              @RequestParam("bedid")String bedid,
+                              @RequestParam("starttime")String starttime,
+                              HttpSession httpSession,
+                              Model model){
+        BedAndCustomer checkout = (BedAndCustomer) httpSession.getAttribute("checkout");
+        checkout.setCustomerID(Integer.parseInt(custid));
+        checkout.setBedId(Integer.parseInt(bedid));
+        checkout.setStartTime(starttime);
+
+        customerService.updateCheckout(checkout);
+        List<BedAndCustomer> checkoutList = customerService.selectCheckoutList();
+        model.addAttribute("checkoutList", checkoutList);
+        return "custManage/checkout";
+    }
+
+    @GetMapping("/addCheckoutForm")
+    public String addCheckoutForm(){
+        return "custManage/addCheckout";
+    }
+
+    @RequestMapping("/addCheckout")
+    public String addCheckout(@RequestParam("custid")String custid,
+                             @RequestParam("bedid")String bedid,
+                             @RequestParam("starttime")String starttime,
+                             HttpSession httpSession,
+                             Model model){
+        if(custid != null && bedid != null && starttime != null){
+            BedAndCustomer checkout = new BedAndCustomer();
+            checkout.setCustomerID(Integer.parseInt(custid));
+            checkout.setBedId(Integer.parseInt(bedid));
+            checkout.setStartTime(starttime);
+
+            List<BedAndCustomer> checkoutList = customerService.selectCheckoutList();
+
+            boolean jug = false;
+            for (BedAndCustomer b:checkoutList
+            ) {
+                if(checkout.equals(b)){
+                    jug = true;
+                    break;
+                }
+            }
+
+            if(jug){
+                String addCheckoutValue = "重复入住信息，请重新添加";
+                model.addAttribute("addCheckoutValue",addCheckoutValue);
+                return "custManage/addCheckout";
+            }else {
+                customerService.addCheckout(checkout);
+                model.addAttribute("checkoutList",customerService.selectCheckoutList());
+                return "custManage/checkout";
+            }
+
+        }else {
+            String addCheckoutValue = "新增失败";
+            model.addAttribute("addCheckoutValue",addCheckoutValue);
+            return "custManage/addCheckout";
+        }
+    }
 
 
 
@@ -241,7 +387,6 @@ public class CustomerController {
             out.setAirPhone(aidphone);
 
             List<Out> outList = customerService.getAllOutList();
-            model.addAttribute("outList", outList);
 
             boolean jug = false;
             for (Out out1:outList

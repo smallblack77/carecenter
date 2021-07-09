@@ -24,8 +24,20 @@ public interface CustomerMapper {
 
     List<BedAndCustomer> selectCheckinList();
 
+    BedAndCustomer selectCheckin(int id);
+
+    void updateCheckin(BedAndCustomer bedAndCustomer);
+
+    void insertCheckin(BedAndCustomer bedAndCustomer);
+
 //退住信息
     void deleteCheckout(BedAndCustomer bedAndCustomer);
 
     List<BedAndCustomer> selectCheckoutList();
+
+    BedAndCustomer selectCheckout(int id);
+
+    void updateCheckout(BedAndCustomer bedAndCustomer);
+
+    void insertCheckout(BedAndCustomer bedAndCustomer);
 }

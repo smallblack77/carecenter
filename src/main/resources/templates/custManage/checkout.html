@@ -406,8 +406,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                                     <td><th:block  name="bedid" th:text="${bedandcust.bedId}" /></td>
                                                     <td><th:block  name="starttime" th:text="${bedandcust.startTime}" /></td>
                                                     <td><th:block  name="endtime" th:text="${bedandcust.endTime}" /></td>
-                                                    <td><a th:href="${'/custManage/editbedandcust?id='}+${customer.id}">Edit</a></td>
-                                                    <td><a th:href="${'/customer/deletebedandcust?id='}+${customer.id}">Delete</a></td>
+                                                    <td><a th:href="${'/customer/editCheckoutForm?id='}+${bedandcust.id}">Edit</a></td>
+                                                    <td><a th:href="${'/customer/deletebedandcust?id='}+${bedandcust.id}">Delete</a></td>
                                                 </tr>
                                                 </tbody>
                                             </table>
