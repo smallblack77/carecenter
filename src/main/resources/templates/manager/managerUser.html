@@ -219,8 +219,8 @@
                 layer.close(index);
                 let loading = layer.load();
                 $.ajax({
-                    url: "/admin/removeUser/" + obj.data['userId'],
-                    dataType: 'json',
+                    url: "/admin/removeUser?userId=" + obj.data['userId'],
+                    dataType: 'text',
                     type: 'delete',
                     success: function(result) {
                         alert("success");
@@ -238,6 +238,9 @@
                                 time: 1000
                             });
                         }
+                    },
+                    error:function (){
+                        alert('error');
                     }
                 })
             });
