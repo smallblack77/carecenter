@@ -95,7 +95,7 @@ public class AdminController {
 
     //修改用户信息界面
     @GetMapping("/editUserForm")
-    public String editUser(Model model,int userId){
+    public String editUser(Model model,Integer userId){
         User user = userService.getUserByUserId(userId);
         model.addAttribute("user",user);
         return "manager/editUser";
@@ -103,7 +103,7 @@ public class AdminController {
 
     //修改信息显示
     @RequestMapping("/viewUser")
-    public String viewUser(Model model,int userId){
+    public String viewUser(Model model,Integer userId){
         return null;
     }
 
@@ -123,7 +123,7 @@ public class AdminController {
 
     //删除user
     @RequestMapping("/removeUser")
-    public String deleteUser(Model model, int userId){
+    public String deleteUser(Model model,Integer userId){
         userService.deleteSignon(userId);
         userService.deleteUser(userId);
 

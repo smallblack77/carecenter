@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 @Controller
@@ -38,8 +39,10 @@ public class BedController {
 
     @RequestMapping("/viewBedDetail")
     //传递床和客户的关系
-    public String viewBedAndCustomer(int bedId,Model model){
-        BedAndCustomer bedAndCustomer = bedService.getBedAndCustomer(bedId);
+    public String viewBedAndCustomer( Model model, HttpServletRequest req){
+
+        int id = Integer.parseInt(req.getParameter("bedId"));
+        BedAndCustomer bedAndCustomer = bedService.getBedAndCustomer(id);
         model.addAttribute("bedAndCustomer",bedAndCustomer);
         return "bedManage/bedDetail";
     }
