@@ -73,14 +73,14 @@
         WHERE BEDID = #{bedId}
     </delete>
 
-    <update id="updateBed">
+    <update id="updateBed" parameterType="Bed">
         UPDATE BED
-        SET ID=#{bed.id},
-            ROOMNUM=#{bed.roomNum},
-            BEDSTATUS=#{bed.bedStatus},
-            SORT=#{bed.sort},
-            DESCRIPTION=#{bed.description}
-        WHERE ID=#{oldBedId}
+        SET ID=#{id},
+            ROOMNUM=#{roomNum},
+            BEDSTATUS=#{bedStatus},
+            SORT=#{sort},
+            DESCRIPTION=#{description}
+        WHERE ID=#{id}
 
     </update>
 
@@ -98,6 +98,17 @@
             ENDTIME = #{endTime}
         WHERE ID=#{id}
     </update>
+
+    <select id="getBedByBedId" parameterType="int" resultType="Bed">
+        SELECT
+            BED.ID,
+            BED.ROOMNUM as roomNum,
+            BED.BEDSTATUS as bedStatus,
+            BED.SORT,
+            BED.DESCRIPTION
+        FROM BED
+        WHERE BED.ID=#{bedId}
+    </select>
 
 
 

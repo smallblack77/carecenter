@@ -380,7 +380,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                             <div class="clearfix">
                                                 <div class="btn-group">
                                                     <button>
-                                                        <a href="addCustomer.html">Add New</a> <i class="fa fa-plus"></i>
+                                                        <a href="/bed/addBedForm">Add New</a> <i class="fa fa-plus"></i>
                                                     </button>
                                                 </div>
                                                 <div class="btn-group pull-right">
@@ -413,8 +413,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                                     <td><th:block  name="bedstatus" th:text="${bed.bedStatus}" /></td>
                                                     <td><th:block  name="sort" th:text="${bed.sort}" /></td>
                                                     <td><th:block  name="description" th:utext="${bed.description}" /></td>
-                                                    <td><a th:href="${'/bed/editbed?id='}+${bed.id}">Edit</a></td>
-                                                    <td><a th:href="${'/bed/deletebed?id='}+${bed.id}">Delete</a></td>
+                                                    <td><a th:href="${'/bed/updateBedForm?bedId='}+${bed.id}">Edit</a></td>
+                                                    <td><a th:href="${'/bed/deleteBed?bedId='}+${bed.id}">Delete</a></td>
                                                 </tr>
                                                 </tbody>
                                             </table>

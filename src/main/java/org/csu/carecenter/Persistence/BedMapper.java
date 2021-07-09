@@ -32,13 +32,16 @@ public interface BedMapper {
     void deleteBedAndCustomer(int bedId);
 
     //修改床位信息
-    void updateBed(Bed bed,int oldBedId);
+    void updateBed(Bed bed);
 
     //修改床位客户信息
     void updateBedAndCustomer(BedAndCustomer bedAndCustomer);
 
     //获取bedandcust的最大id
     int getMaxId();
+
+    //通过id获取bed
+    Bed getBedByBedId(int bedId);
 
 
 }

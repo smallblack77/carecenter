@@ -156,11 +156,27 @@ public class AdminController {
 
     @RequestMapping("/addUser")
     public String addUser(Model model, String username,String sex,String age,String phoneNumber,String role,String email,
-                          String password, String userId){
-        User newUser = new User();
-        newUser.setUserId(Integer.valueOf(userId));
-        newUser.setPassword(password);
-        return null;
+                          String password, String userId,HttpSession session){
+        if(username!= null && sex != null && age != null && password!= null && phoneNumber!= null && email!=null && role!=null ){
+            User newUser = new User();
+            newUser.setUserId(Integer.valueOf(userId));
+            newUser.setPassword(password);
+            newUser.setRole(role);
+            newUser.setAge(Integer.valueOf(age));
+            newUser.setUsername(username);
+            newUser.setPhoneNumber(phoneNumber);
+            newUser.setEmail(email);
+            newUser.setSex(sex);
+            userService.updateUser(newUser);
+            userService.insertSignon(newUser);
+            List<User> userList = userService.getAllUser();
+            model.addAttribute(userList);
+            return "/manager/managerUser";
+        }else {
+            String msg = "输入不能为空";
+            session.setAttribute("msg",msg);
+            return null;
+        }
 
     }
 

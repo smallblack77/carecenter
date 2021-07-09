@@ -48,8 +48,8 @@ public class BedService {
         bedMapper.deleteBedAndCustomer(bedId);
     }
 
-    public void updateBed(Bed bed,int oldBedId){
-        bedMapper.updateBed(bed,oldBedId);
+    public void updateBed(Bed bed){
+        bedMapper.updateBed(bed);
     }
 
     public int getMaxId(){
@@ -58,5 +58,10 @@ public class BedService {
 
     public void updateBedAndCustomer(BedAndCustomer bedAndCustomer){
         bedMapper.updateBedAndCustomer(bedAndCustomer);
+    }
+
+    //通过id获取bed
+    public Bed getBedByBedId(int bedId){
+         return bedMapper.getBedByBedId(bedId);
     }
 }

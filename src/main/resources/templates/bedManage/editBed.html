@@ -359,7 +359,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <div class="panel-heading">
                         修改床位信息
                     </div>
-                    <form action="/customer/editCustomer" method="post">
+                    <form action="/bed/updateBed" method="post">
                         <div>
                             <table class="table" ui-jq="footable" ui-options='{
                                 "paging": {
@@ -373,15 +373,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 }}'>
                                 <tr>
                                     <th style="background: #ddede0 no-repeat;">ID:</th>
-                                    <td><input type="text" name="id"  id="id" th:value="${bed.id}"></td>
+                                    <td><input type="text" name="bedId"  id="id" th:value="${bed.id}"></td>
                                 </tr>
                                 <tr>
                                     <th style="background: #ddede0 no-repeat;">RoomNum:</th>
-                                    <td ><input type="text" id="roomnum" name="roomnum" th:value="${bed.roomnum}"></td>
+                                    <td ><input type="text" id="roomnum" name="roomNum" th:value="${bed.roomNum}"></td>
                                 </tr>
                                 <tr>
                                     <th style="background: #ddede0 no-repeat;">BedStatus:</th>
-                                    <td ><input type="text"  id="bedstatus" name="bedstatus" th:value="${bed.bedstatus}"></td>
+                                    <td ><input type="text"  id="bedstatus" name="bedStatus" th:value="${bed.bedStatus}"></td>
                                 </tr>
                                 <tr>
                                     <th style="background: #ddede0 no-repeat;">Sort:</th>
