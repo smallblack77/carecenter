@@ -4,7 +4,8 @@
 	"type": 0,
 	"icon": "layui-icon layui-icon-console",
 	"href": "",
-	"children": [{
+	"children": [
+		{
 		"id": 10,
 		"title": "查看个人信息",
 		"icon": "layui-icon layui-icon-console",
@@ -42,6 +43,34 @@
 			"href": "/admin/manageUser"
 			}
 		]
-	}
+	},{
+	"id": "mail",
+	"title": "邮件管理",
+	"icon": "layui-icon layui-icon-set-fill",
+	"type": 0,
+	"href": "",
+	"children": [{
+		"id": 501,
+		"title": "收件箱",
+		"icon": "layui-icon layui-icon-face-smile",
+		"type": 1,
+		"openType": "_iframe",
+		"href": "/mailForManager/mailForm"
+	},{
+		"id": 502,
+		"title": "撰写邮件",
+		"icon": "layui-icon layui-icon-face-smile",
+		"type": 1,
+		"openType": "_iframe",
+		"href": "/mailForManager/composeMailForm"
+	},{
+		"id": 503,
+		"title": "查看邮件",
+		"icon": "layui-icon layui-icon-face-smile",
+		"type": 1,
+		"openType": "_iframe",
+		"href": "/mailForManager/viewMailForm"
+	}]
+}
 ]
 
