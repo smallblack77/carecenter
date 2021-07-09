@@ -363,7 +363,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <!-- page heading start-->
                     <div class="page-heading">
                         <h3>
-                            护工信息管理
+                            护理级别管理
                         </h3>
                         <ul class="breadcrumb">
                             <li>
@@ -372,7 +372,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <li>
                                 <a href="#">护理管理</a>
                             </li>
-                            <li class="active"> 护工信息管理 </li>
+                            <li class="active"> 护理级别管理 </li>
                         </ul>
                     </div>
                     <!-- page heading end-->
@@ -383,7 +383,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <div class="col-sm-12">
                                 <section class="panel">
                                     <header class="panel-heading">
-                                        护工信息管理
+                                        护理级别管理
                                         <span class="tools pull-right">
                         <a href="javascript:;" class="fa fa-chevron-down"></a>
                         <a href="javascript:;" class="fa fa-times"></a>
@@ -404,30 +404,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                             <table class="table table-striped table-hover table-bordered" id="editable-sample">
                                                 <thead>
                                                 <tr>
-                                                    <th data-breakpoints="xs">NurID</th>
-                                                    <th>Name</th>
-                                                    <th>Sex</th>
-                                                    <th>Age</th>
-                                                    <th>Price</th>
-                                                    <th>Describe</th>
-                                                    <th>LevelID</th>
+                                                    <th data-breakpoints="xs">ID</th>
                                                     <th>LevelName</th>
-                                                    <th>Edit</th>
-                                                    <th>Delete</th>
                                                 </tr>
                                                 </thead>
                                                 <tbody>
-                                                <tr class="" th:each="nurse : ${nurseList}">
-                                                    <td><th:block id="nurid" name="nurid" th:text="${nurse.nurid}" /></td>
-                                                    <td><th:block  name="name" th:text="${nurse.name}" /></td>
-                                                    <td><th:block  name="sex" th:text="${nurse.sex}" /></td>
-                                                    <td><th:block  name="age" th:text="${nurse.age}" /></td>
-                                                    <td><th:block  name="price" th:text="${nurse.price}" /></td>
-                                                    <td><th:block  name="describe" th:utext="${nurse.describe}" /></td>
-                                                    <td><th:block  name="levelid" th:text="${nurse.levelid}" /></td>
-                                                    <td><th:block  name="levename" th:text="${nurse.levename}" /></td>
-                                                    <td><a th:href="${'/nurse/editnurse?nurid='}+${nurse.nurid}">Edit</a></td>
-                                                    <td><a th:href="${'/nurse/deletenurse?nurid='}+${nurse.nurid}">Delete</a></td>
+                                                <tr class="" th:each="nurLevel : ${nurLevelList}">
+                                                    <td><th:block id="id" name="id" th:text="${nurLevel.id}" /></td>
+                                                    <td><th:block  name="levelname" th:text="${nurLevel.levelname}" /></td>
+                                                    <td><a th:href="${'/nurse/editnurse?id='}+${nurLevel.id}">Edit</a></td>
+                                                    <td><a th:href="${'/nurse/deletenurse?id='}+${nurLevel.id}">Delete</a></td>
                                                 </tr>
                                                 </tbody>
                                             </table>
