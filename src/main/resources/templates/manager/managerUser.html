@@ -99,7 +99,7 @@
             },
                 {
                     title: '账号',
-                    field: 'username',
+                    field: 'userId',
                     align: 'center',
                     width: 100
                 },
@@ -219,10 +219,11 @@
                 layer.close(index);
                 let loading = layer.load();
                 $.ajax({
-                    url: MODULE_PATH + "remove/" + obj.data['userId'],
+                    url: "/account/removeAccount/" + obj.data['userId'],
                     dataType: 'json',
                     type: 'delete',
                     success: function(result) {
+                        alert("success");
                         layer.close(loading);
                         if (result.success) {
                             layer.msg(result.msg, {
