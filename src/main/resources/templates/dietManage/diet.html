@@ -296,10 +296,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <span>膳食管理</span>
                         </a>
                         <ul class="sub">
-                            <li><a href="form_component.html">膳食信息管理</a></li>
+                            <li><a href="/diet/diets">膳食信息管理</a></li>
                         </ul>
                         <ul class="sub">
-                            <li><a href="form_component.html">膳食日历管理</a></li>
+                            <li><a href="/diet/calendar">膳食日历管理</a></li>
                         </ul>
                     </li>
                     <li class="sub-menu">
@@ -362,16 +362,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <!-- page heading start-->
                     <div class="page-heading">
                         <h3>
-                            护工信息管理
+                            膳食信息管理
                         </h3>
                         <ul class="breadcrumb">
                             <li>
                                 <a href="#">梅岭社区颐养中心</a>
                             </li>
                             <li>
-                                <a href="#">护理管理</a>
+                                <a href="#">膳食管理</a>
                             </li>
-                            <li class="active"> 护工信息管理 </li>
+                            <li class="active"> 膳食信息管理 </li>
                         </ul>
                     </div>
                     <!-- page heading end-->
@@ -382,7 +382,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <div class="col-sm-12">
                                 <section class="panel">
                                     <header class="panel-heading">
-                                        护工信息管理
+                                        膳食信息管理
                                         <span class="tools pull-right">
                         <a href="javascript:;" class="fa fa-chevron-down"></a>
                         <a href="javascript:;" class="fa fa-times"></a>
@@ -420,8 +420,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                                 </tr>
                                                 </thead>
                                                 <tbody>
-                                                <tr class="" th:each="diets : ${diets}">
-                                                    <td><th:block id="nurid" name="nurid" th:text="${diets.nurid}"></th:block></td>
+                                                <tr class="" th:each="diets : ${diets.getAllDiet}">
+                                                    <td><th:block id="nurid" name="nurid" th:text="${diets.id}"></th:block></td>
                                                     <td><th:block name="name" th:text="${diets.name}"></th:block></td>
                                                     <td><th:block name="food1" th:text="${diets.food1}"></th:block></td>
                                                     <td><th:block name="food2" th:text="${diets.food2}"></th:block></td>
