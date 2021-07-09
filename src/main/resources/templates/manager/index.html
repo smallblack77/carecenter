@@ -78,8 +78,21 @@
         var convert = layui.convert;
         var popup = layui.popup;
 
+        var username;
+        $.ajax({
+            url: "/admin/getAccount",
+            dataType: 'text',
+            type: 'post',
+            async :false,
+            success: function(result) {
+                username = result;
+            },
+            error:function (){
+                alert('error');
+            }
+        })
         // 初始化顶部用户信息
-        admin.setAvatar("../../css/admin/images/avatar.jpg","就眠仪式");
+        admin.setAvatar("../../css/admin/images/avatar.jpg",username);
 
         // 根目录下 pear.config.yml 文件为初始化配置
         // 你可以通过 admin.setConfigPath 方法修改配置文件位置

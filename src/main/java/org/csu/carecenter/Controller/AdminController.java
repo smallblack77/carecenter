@@ -218,6 +218,18 @@ public class AdminController {
 
     }
 
+    @ResponseBody
+    @RequestMapping("/getAccount")
+    public String getAccount(Model model)
+    {
+        Admin admin = (Admin)model.getAttribute("admin");
+        String name = null;
+        if(admin != null){
+            name = admin.getAdminName();
+        }
+        model.addAttribute("name",name);
+        return name;
+    }
 
 
 }
