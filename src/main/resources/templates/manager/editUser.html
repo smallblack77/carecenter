@@ -9,7 +9,7 @@
 </head>
 <body>
 <!--此处action需添加修改用户的路径-->
-<form class="layui-form" action="/admin/editAccount" th:object="${user}">
+<form class="layui-form" action="/admin/editUser" th:object="${user}">
     <div class="mainBox">
         <div class="main-container">
             <div class="main-container">
@@ -52,7 +52,7 @@
                 <div class="layui-form-item">
                     <label class="layui-form-label">角色</label>
                     <div class="layui-input-block">
-                        <select name="user.role">
+                        <select name="role">
                             <option  th:selected="*{role eq '护士'}" value="护士" selected>护士</option>
                             <option  th:selected="*{role eq '护工'}" value="护工">护工</option>
                             <option  th:selected="*{role eq '医生'}" value="医生">医生</option>
@@ -62,8 +62,8 @@
                 <div class="layui-form-item">
                     <label class="layui-form-label">性别</label>
                     <div class="layui-input-block">
-                        <input type="radio" name="sex" th:if="*{sex == '男'}" value="0" title="男">
-                        <input type="radio" name="sex" th:if="*{sex == '女'}" value="1" title="女" checked>
+                        <input type="radio" name="sex"  value="0" title="男">
+                        <input type="radio" name="sex"  value="1" title="女" checked>
                     </div>
                 </div>
             </div>
@@ -72,7 +72,7 @@
     <div class="bottom">
         <div class="button-container">
             <a href="">
-                <button type="submit" class="pear-btn pear-btn-primary pear-btn-sm" lay-submit="" lay-filter="user-save">
+                <button type="submit" class="pear-btn pear-btn-primary pear-btn-sm"  lay-filter="user-save">
                     <i class="layui-icon layui-icon-ok"></i>
                     提交
                 </button>

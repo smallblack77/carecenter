@@ -6,6 +6,7 @@ import org.csu.carecenter.entity.User;
 import org.csu.carecenter.service.AdminService;
 import org.csu.carecenter.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.web.servlet.server.Session;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -91,6 +92,7 @@ public class AdminController {
     //跳转到管理员个人信息修改界面
     @GetMapping("/editAccountForm")
     public String editAccount(Model model){
+
         return "manager/editAccount";
     }
 
@@ -113,8 +115,13 @@ public class AdminController {
                            @RequestParam("phoneNumber") String phoneNumber,
                            @RequestParam("role") String role,
                            @RequestParam("password") String password){
-        System.out.println("before"+username);
-        if(username!=null && sex!=null && email !=null && age !=null && phoneNumber !=null && role !=null ){
+        System.out.println(sex);
+        if(username!=null  && email !=null && age !=null && phoneNumber !=null && role !=null ){
+           if(Integer.valueOf(sex) == 1){
+                sex = "女";
+            }else {
+                sex = "男";
+            }
             System.out.println(username);
             User user = new User();
             user.setUsername(username);
@@ -139,8 +146,22 @@ public class AdminController {
 
     //跳转到管理员增加个人信息界面
     @GetMapping("/addUserForm")
-    public String addUser(Model model){
+    public String addUserForm(Model model){
+        User newUser = new User();
+        userService.insertUser(newUser);
+        int userId = userService.getMaxUserId();
+        model.addAttribute("userId",userId);
         return "manager/addUser";
+    }
+
+    @RequestMapping("/addUser")
+    public String addUser(Model model, String username,String sex,String age,String phoneNumber,String role,String email,
+                          String password, String userId){
+        User newUser = new User();
+        newUser.setUserId(Integer.valueOf(userId));
+        newUser.setPassword(password);
+        return null;
+
     }
 
     //修改头像
@@ -162,6 +183,7 @@ public class AdminController {
         return "manager/managerUser";
 
     }
+
 
 
 }

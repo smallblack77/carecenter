@@ -39,4 +39,5 @@ public interface UserMapper {
     //通过userId获取User信息
     User getUserByUserId(int userId);
 
+
 }
