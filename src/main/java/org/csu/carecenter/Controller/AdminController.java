@@ -119,12 +119,13 @@ public class AdminController {
 
     //删除user
     @RequestMapping("/removeUser")
-    public List<User> deleteUser(Model model, int userId){
-        userService.deleteUser(userId);
+    public String deleteUser(Model model, int userId){
         userService.deleteSignon(userId);
+        userService.deleteUser(userId);
+
         List<User> userList = userService.getAllUser();
         model.addAttribute("userList",userList);
-        return userList;
+        return "manager/managerUser";
 
     }
 

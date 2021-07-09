@@ -6,18 +6,28 @@ import org.csu.carecenter.service.BedService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
 
 @Controller
+@RequestMapping("/bed")
 public class BedController {
 
     @Autowired
     private BedService bedService;
 
-/*    //返回床的列表
+    @GetMapping("/bedForm")
+    private String bedForm(){
+        return null;
+    }
+
+    //返回床的列表
+    @RequestMapping("/viewBedList")
     public String viewBedList(Model model){
-        List<Bed> bedList = bedService.getBedList();
+        List<Bed> bedList = bedService.getAllBedList();
         model.addAttribute("bedList",bedList);
         return null;
     }
@@ -27,6 +37,6 @@ public class BedController {
         BedAndCustomer bedAndCustomer = bedService.getBedAndCustomer(bedId);
         model.addAttribute("bedAndCustomer",bedAndCustomer);
         return null;
-    }*/
+    }
 
 }
