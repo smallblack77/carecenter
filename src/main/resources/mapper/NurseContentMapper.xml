@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.csu.carecenter.Persistence.NurseContentMapper">
+    <select id="getAllNurseContentList" resultType="NurseContent">
+        SELECT
+            NURCONTENT.NURID as nurseId,
+            NURCONTENT.NAME,
+            NURCONTENT.SEX,
+            NURCONTENT.AGE,
+            NURCONTENT.PRICE,
+            NURCONTENT.DESCRIBE as description,
+            NURCONTENT.LEVELID as levelId,
+            NURLEVEL.LEVELNAME
+        FROM NURCONTENT,NURLEVEL
+        WHERE NURCONTENT.LEVELID = NURLEVEL.ID
+    </select>
+
+    <insert id="addNurseContent" parameterType="NurseContent">
+        INSERT INTO NURCONTENT
+        (NURID,NAME,SEX,AGE,PRICE,DESCRIBE,LEVELID)
+        VALUES
+        (#{userId},#{name},#{sex},#{age},#{price},#{description},#{levelId})
+    </insert>
+
+    <delete id="deleteNurContent" parameterType="string">
+        DELETE FROM NURCONTENT
+        WHERE NURID=#{nurid}
+    </delete>
+</mapper>

@@ -393,7 +393,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                         <div class="adv-table editable-table ">
                                             <div class="clearfix">
                                                 <div class="btn-group">
-                                                    <a href="/customer/newCustomerForm">
+                                                    <a href="/nurseContent/addNurContentForm">
                                                         <button>
                                                             Add New <i class="fa fa-plus"></i>
                                                         </button>
@@ -418,16 +418,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                                 </thead>
                                                 <tbody>
                                                 <tr class="" th:each="nurse : ${nurseList}">
-                                                    <td><th:block id="nurid" name="nurid" th:text="${nurse.nurid}" /></td>
+                                                    <td><th:block id="nurid" name="nurid" th:text="${nurse.nurseId}" /></td>
                                                     <td><th:block  name="name" th:text="${nurse.name}" /></td>
                                                     <td><th:block  name="sex" th:text="${nurse.sex}" /></td>
                                                     <td><th:block  name="age" th:text="${nurse.age}" /></td>
                                                     <td><th:block  name="price" th:text="${nurse.price}" /></td>
-                                                    <td><th:block  name="describe" th:utext="${nurse.describe}" /></td>
-                                                    <td><th:block  name="levelid" th:text="${nurse.levelid}" /></td>
-                                                    <td><th:block  name="levename" th:text="${nurse.levename}" /></td>
-                                                    <td><a th:href="${'/nurse/editnurse?nurid='}+${nurse.nurid}">Edit</a></td>
-                                                    <td><a th:href="${'/nurse/deletenurse?nurid='}+${nurse.nurid}">Delete</a></td>
+                                                    <td><th:block  name="describe" th:utext="${nurse.description}" /></td>
+                                                    <td><th:block  name="levelid" th:text="${nurse.levelId}" /></td>
+                                                    <td><th:block  name="levename" th:text="${nurse.levelName}" /></td>
+                                                    <td><a th:href="${'/nurse/editnurse?nurid='}+${nurse.nurseId}">Edit</a></td>
+                                                    <td><a th:href="${'/nurseContent/deleteNurContent?nurid='}+${nurse.nurseId}">Delete</a></td>
                                                 </tr>
                                                 </tbody>
                                             </table>
