@@ -45,17 +45,18 @@ public class DietController {
 
     //跳转到膳食信息展示界面
     @GetMapping("/addDietForm")
-    public String addDietForm(HttpServletRequest req, Model model){
+    public String addDietForm(){
         return "dietManage/addDiet";
     }
 
     //跳转到膳食信息展示界面
-    @GetMapping("/editDietForm")
-    public String editDietForm(HttpServletRequest req, Model model){
-        int id = Integer.parseInt(req.getParameter("dietid"));
+    @RequestMapping("/editDietForm")
+    public String editDietForm(HttpServletRequest req, HttpSession session, Model model){
+        int id = Integer.parseInt(req.getParameter("id"));
         Diet diet = dietService.getDietById(id);
         model.addAttribute(diet);
-        model.addAttribute("dietid",id);
+        session.setAttribute("diet", diet);
+        model.addAttribute("dietId",id);
         return "dietManage/editDiet";
     }
 
