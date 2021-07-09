@@ -6,6 +6,7 @@ import org.csu.carecenter.entity.User;
 import org.csu.carecenter.service.AdminService;
 import org.csu.carecenter.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.web.servlet.server.Session;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -102,9 +103,38 @@ public class AdminController {
     }
 
     //修改信息显示
-    @RequestMapping("/viewUser")
-    public String viewUser(Model model,Integer userId){
-        return null;
+    @RequestMapping("/editUser")
+    public String viewUser(Model model, @RequestParam("userId")Integer userId,
+                           @RequestParam("username")String username,
+                           @RequestParam("sex")String sex,
+                           @RequestParam("email")String email,
+                           @RequestParam("age") String age,
+                           HttpSession session,
+                           @RequestParam("phoneNumber") String phoneNumber,
+                           @RequestParam("role") String role,
+                           @RequestParam("password") String password){
+        System.out.println("before"+username);
+        if(username!=null && sex!=null && email !=null && age !=null && phoneNumber !=null && role !=null ){
+            System.out.println(username);
+            User user = new User();
+            user.setUsername(username);
+            user.setUserId(userId);
+            user.setSex(sex);
+            user.setEmail(email);
+            user.setPhoneNumber(phoneNumber);
+            user.setAge(Integer.valueOf(age));
+            user.setRole(role);
+            user.setPassword(password);
+            userService.updateUser(user);
+            userService.updateSignon(user);
+            List<User> userList = userService.getAllUser();
+            model.addAttribute("userList",userList);
+            return "manager/managerUser";
+        }else {
+            String msg = "输入不能为空";
+            session.setAttribute("mag",msg);
+            return "redirect:/admin/editUserForm";
+        }
     }
 
     //跳转到管理员增加个人信息界面
