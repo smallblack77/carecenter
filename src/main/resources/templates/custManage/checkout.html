@@ -400,12 +400,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                                 </tr>
                                                 </thead>
                                                 <tbody>
-                                                <tr class="" th:each="bedandcust : ${bedandcustList}">
+                                                <tr class="" th:each="bedandcust : ${checkoutList}">
                                                     <td><th:block id="id" name="id" th:text="${bedandcust.id}" /></td>
-                                                    <td><th:block  name="custid" th:text="${bedandcust.custid}" /></td>
-                                                    <td><th:block  name="bedid" th:text="${bedandcust.bedid}" /></td>
-                                                    <td><th:block  name="starttime" th:text="${bedandcust.starttime}" /></td>
-                                                    <td><th:block  name="endtime" th:text="${bedandcust.endtime}" /></td>
+                                                    <td><th:block  name="custid" th:text="${bedandcust.customerID}" /></td>
+                                                    <td><th:block  name="bedid" th:text="${bedandcust.bedId}" /></td>
+                                                    <td><th:block  name="starttime" th:text="${bedandcust.startTime}" /></td>
+                                                    <td><th:block  name="endtime" th:text="${bedandcust.endTime}" /></td>
                                                     <td><a th:href="${'/custManage/editbedandcust?id='}+${customer.id}">Edit</a></td>
                                                     <td><a th:href="${'/customer/deletebedandcust?id='}+${customer.id}">Delete</a></td>
                                                 </tr>

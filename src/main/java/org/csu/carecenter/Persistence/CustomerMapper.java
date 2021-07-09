@@ -1,5 +1,6 @@
 package org.csu.carecenter.Persistence;
 
+import org.csu.carecenter.entity.BedAndCustomer;
 import org.csu.carecenter.entity.Customer;
 import org.springframework.stereotype.Repository;
 
@@ -17,4 +18,14 @@ public interface CustomerMapper {
     void updateCustomer(Customer customer);
 
     void deleteCustomer(int id);
+
+//入住信息
+    void deleteCheckin(BedAndCustomer bedAndCustomer);
+
+    List<BedAndCustomer> selectCheckinList();
+
+//退住信息
+    void deleteCheckout(BedAndCustomer bedAndCustomer);
+
+    List<BedAndCustomer> selectCheckoutList();
 }

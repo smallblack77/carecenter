@@ -1,5 +1,6 @@
 package org.csu.carecenter.Controller;
 
+import org.csu.carecenter.entity.BedAndCustomer;
 import org.csu.carecenter.entity.Customer;
 import org.csu.carecenter.entity.Out;
 import org.csu.carecenter.service.CustomerService;
@@ -140,17 +141,29 @@ public class CustomerController {
 
 
 
+
     //入住信息
+    //查看所有入住信息
     @GetMapping("/selectCheckinList")
     public String getCheckinList(Model model){
+        List<BedAndCustomer> checkinList = customerService.selectCheckinList();
+        model.addAttribute("checkinList", checkinList);
+        return "custManage/checkin";
+    }
+
+    //删除入住信息
+    @GetMapping("/deleteCheckin")
+    public String deleteCheckin(){
 
         return "custManage/checkin";
     }
 
     //退住信息
+    //查看所有退住信息
     @GetMapping("/selectCheckoutList")
     public String getCheckoutList(Model model){
-
+        List<BedAndCustomer> checkoutList = customerService.selectCheckoutList();
+        model.addAttribute("checkoutList", checkoutList);
         return "custManage/checkout";
     }
 

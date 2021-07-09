@@ -2,6 +2,7 @@ package org.csu.carecenter.service;
 
 import org.csu.carecenter.Persistence.CustomerMapper;
 import org.csu.carecenter.Persistence.OutMapper;
+import org.csu.carecenter.entity.BedAndCustomer;
 import org.csu.carecenter.entity.Customer;
 import org.csu.carecenter.entity.Out;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,6 +40,22 @@ public class CustomerService {
     }
 
     //入住信息
+    public List<BedAndCustomer> selectCheckinList(){
+        return customerMapper.selectCheckinList();
+    }
+
+    public void deleteCheckin(BedAndCustomer bedAndCustomer){
+        customerMapper.deleteCheckin(bedAndCustomer);
+    }
+
+    //退住信息
+    public List<BedAndCustomer> selectCheckoutList(){
+        return customerMapper.selectCheckoutList();
+    }
+
+    public void deleteCheckout(BedAndCustomer bedAndCustomer){
+        customerMapper.deleteCheckout(bedAndCustomer);
+    }
 
     //外出信息
     public List<Out> getOutList(int custid){

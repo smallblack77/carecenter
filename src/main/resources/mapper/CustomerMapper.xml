@@ -61,5 +61,35 @@
     </delete>
     
 <!--  客户的入住信息  -->
+    <select id="selectCheckinList" resultType="BedAndCustomer">
+        SELECT
+            BEDANDCUST.ID,
+            BEDANDCUST.CUSTID,
+            BEDANDCUST.BEDID,
+            BEDANDCUST.STARTTIME
+        FROM BEDANDCUST
+    </select>
 
+    <update id="deleteCheckin" parameterType="BedAndCustomer">
+        UPDATE BEDANDCUST SET
+            BEDANDCUST.STARTTIME = NULL
+        WHERE BEDANDCUST.ID = #{id}
+    </update>
+
+<!--  客户的退住信息  -->
+    <select id="selectCheckoutList" resultType="BedAndCustomer">
+        SELECT
+            BEDANDCUST.ID,
+            BEDANDCUST.CUSTID,
+            BEDANDCUST.BEDID,
+            BEDANDCUST.STARTTIME,
+            BEDANDCUST.ENDTIME
+        FROM BEDANDCUST
+    </select>
+
+    <update id="deleteCheckout" parameterType="BedAndCustomer">
+        UPDATE BEDANDCUST SET
+            BEDANDCUST.ENDTIME = NULL
+        WHERE BEDANDCUST.ID = #{id}
+    </update>
 </mapper>

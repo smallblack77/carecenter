@@ -87,10 +87,8 @@ class CarecenterApplicationTests {
 //        customerService.addOut(out);
     }
 
-    /*@Test
+    @Test
     void testUser(){
-        User user = userService.getUserByUserIdAndPassword("1","2333");
-        System.out.println(user.getUserId()+" "+user.getEmail()+" "+user.getPhoneNumber());
-    }*/
+    }
 
 }

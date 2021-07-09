@@ -382,7 +382,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                             <div class="clearfix">
                                                 <div class="btn-group">
                                                     <button>
-                                                        <a href="addCustomer.html">Add New</a> <i class="fa fa-plus"></i>
+                                                        <a href="/customer/addCheckin">Add New</a> <i class="fa fa-plus"></i>
                                                     </button>
                                                 </div>
                                             </div>
@@ -399,13 +399,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                                 </tr>
                                                 </thead>
                                                 <tbody>
-                                                <tr class="" th:each="bedandcust : ${bedandcustList}">
+                                                <tr class="" th:each="bedandcust : ${checkinList}">
                                                     <td><th:block id="id" name="id" th:text="${bedandcust.id}" /></td>
-                                                    <td><th:block  name="custid" th:text="${bedandcust.custid}" /></td>
-                                                    <td><th:block  name="bedid" th:text="${bedandcust.bedid}" /></td>
-                                                    <td><th:block  name="starttime" th:text="${bedandcust.starttime}" /></td>
-                                                    <td><a th:href="${'/custManage/editbedandcust?id='}+${bedandcust.id}">Edit</a></td>
-                                                    <td><a th:href="${'/customer/deletebedandcust?id='}+${bedandcust.id}">Delete</a></td>
+                                                    <td><th:block  name="custid" th:text="${bedandcust.customerID}" /></td>
+                                                    <td><th:block  name="bedid" th:text="${bedandcust.bedId}" /></td>
+                                                    <td><th:block  name="starttime" th:text="${bedandcust.startTime}" /></td>
+                                                    <td><a th:href="${'/customer/editCheckin?id='}+${bedandcust.id}">Edit</a></td>
+                                                    <td><a th:href="${'/customer/deleteCheckin?id='}+${bedandcust.id}">Delete</a></td>
                                                 </tr>
                                                 </tbody>
                                             </table>
