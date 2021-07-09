@@ -50,8 +50,8 @@ public class CustomerService {
         return customerMapper.selectCheckin(id);
     }
 
-    public void deleteCheckin(BedAndCustomer bedAndCustomer){
-        customerMapper.deleteCheckin(bedAndCustomer);
+    public void deleteCheckin(int id){
+        customerMapper.deleteCheckin(id);
     }
 
     public void updateCheckin(BedAndCustomer bedAndCustomer){

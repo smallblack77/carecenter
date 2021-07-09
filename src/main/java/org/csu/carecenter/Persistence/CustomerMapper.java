@@ -20,7 +20,7 @@ public interface CustomerMapper {
     void deleteCustomer(int id);
 
 //入住信息
-    void deleteCheckin(BedAndCustomer bedAndCustomer);
+    void deleteCheckin(int id);
 
     List<BedAndCustomer> selectCheckinList();
 

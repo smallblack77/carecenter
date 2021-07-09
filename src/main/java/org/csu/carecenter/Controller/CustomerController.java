@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 @Controller
@@ -153,8 +155,10 @@ public class CustomerController {
 
     //删除入住信息
     @GetMapping("/deleteCheckin")
-    public String deleteCheckin(){
-
+    public String deleteCheckin(@RequestParam("id")String id,Model model){
+        customerService.deleteCheckin(Integer.parseInt(id));
+        List<BedAndCustomer> checkinList = customerService.selectCheckinList();
+        model.addAttribute("checkinList", checkinList);
         return "custManage/checkin";
     }
 
@@ -182,7 +186,7 @@ public class CustomerController {
         customerService.updateCheckin(checkin);
         List<BedAndCustomer> checkinList = customerService.selectCheckinList();
         model.addAttribute("checkinList", checkinList);
-        return "custManage/checkout";
+        return "custManage/checkin";
     }
 
     @GetMapping("/addCheckinForm")
@@ -239,7 +243,32 @@ public class CustomerController {
     //查看所有退住信息
     @GetMapping("/selectCheckoutList")
     public String getCheckoutList(Model model){
-        List<BedAndCustomer> checkoutList = customerService.selectCheckoutList();
+        List<BedAndCustomer> list = customerService.selectCheckoutList();
+        List<BedAndCustomer> checkoutList = new ArrayList<>();
+
+        for (BedAndCustomer b:list
+             ) {
+            if(b.getEndTime() != null){
+                checkoutList.add(b);
+            }
+        }
+        model.addAttribute("checkoutList", checkoutList);
+        return "custManage/checkout";
+    }
+
+    @GetMapping("/deleteCheckout")
+    public String deleteCheckout(@RequestParam("id")String id,Model model){
+        BedAndCustomer checkout = customerService.selectCheckout(Integer.parseInt(id));
+        customerService.deleteCheckout(checkout);
+        List<BedAndCustomer> list = customerService.selectCheckoutList();
+        List<BedAndCustomer> checkoutList = new ArrayList<>();
+
+        for (BedAndCustomer b:list
+        ) {
+            if(b.getEndTime() != null){
+                checkoutList.add(b);
+            }
+        }
         model.addAttribute("checkoutList", checkoutList);
         return "custManage/checkout";
     }
@@ -249,6 +278,7 @@ public class CustomerController {
         int id = Integer.parseInt(req.getParameter("id"));
         BedAndCustomer checkout = customerService.selectCheckout(id);
         session.setAttribute("checkout", checkout);
+        model.addAttribute("checkout", checkout);
         model.addAttribute("CheckoutId",id);
         return "/custManage/editCheckout";
     }
@@ -265,7 +295,15 @@ public class CustomerController {
         checkout.setStartTime(starttime);
 
         customerService.updateCheckout(checkout);
-        List<BedAndCustomer> checkoutList = customerService.selectCheckoutList();
+        List<BedAndCustomer> list = customerService.selectCheckoutList();
+        List<BedAndCustomer> checkoutList = new ArrayList<>();
+
+        for (BedAndCustomer b:list
+        ) {
+            if(b.getEndTime() != null){
+                checkoutList.add(b);
+            }
+        }
         model.addAttribute("checkoutList", checkoutList);
         return "custManage/checkout";
     }
@@ -304,7 +342,16 @@ public class CustomerController {
                 return "custManage/addCheckout";
             }else {
                 customerService.addCheckout(checkout);
-                model.addAttribute("checkoutList",customerService.selectCheckoutList());
+                List<BedAndCustomer> list = customerService.selectCheckoutList();
+                List<BedAndCustomer> checkoutList1 = new ArrayList<>();
+
+                for (BedAndCustomer b:list
+                ) {
+                    if(b.getEndTime() != null){
+                        checkoutList1.add(b);
+                    }
+                }
+                model.addAttribute("checkoutList", checkoutList1);
                 return "custManage/checkout";
             }
 

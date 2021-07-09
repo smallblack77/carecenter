@@ -92,11 +92,10 @@
         VALUES (#{customerID}, #{bedId}, #{startTime}, null)
     </insert>
 
-    <update id="deleteCheckin" parameterType="BedAndCustomer">
-        UPDATE BEDANDCUST SET
-            BEDANDCUST.STARTTIME = NULL
+    <delete id="deleteCheckin" parameterType="int">
+        DELETE FROM BEDANDCUST
         WHERE BEDANDCUST.ID = #{id}
-    </update>
+    </delete>
 
     <update id="updateCheckin" parameterType="BedAndCustomer">
         UPDATE BEDANDCUST SET

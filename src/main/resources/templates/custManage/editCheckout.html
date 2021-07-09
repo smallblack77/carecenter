@@ -350,7 +350,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <div class="panel-heading">
                         修改退住信息
                     </div>
-                    <form action="/customer/addCustomer" method="post">
+                    <form action="/customer/editCheckout" method="post">
                         <div>
                             <table class="table" ui-jq="footable" ui-options='{
                                 "paging": {
@@ -368,15 +368,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 </tr>
                                 <tr>
                                     <th style="background: #ddede0 no-repeat;">BedID:</th>
-                                    <td ><input type="text" id="bedid" name="bedid" th:value="${checkout.bedid}"></td>
+                                    <td ><input type="text" id="bedid" name="bedid" th:value="${checkout.bedId}"></td>
                                 </tr>
                                 <tr>
                                     <th style="background: #ddede0 no-repeat;">StartTime:</th>
-                                    <td ><input type="text"  id="starttime" name="starttime" th:value="${checkout.starttime}"></td>
+                                    <td ><input type="text"  id="starttime" name="starttime" th:value="${checkout.startTime}"></td>
                                 </tr>
                                 <tr>
                                     <th style="background: #ddede0 no-repeat;">EndTime:</th>
-                                    <td ><input type="text"  id="endtime" name="endtime" th:value="${checkout.endtime}"></td>
+                                    <td ><input type="text"  id="endtime" name="endtime" th:value="${checkout.endTime}"></td>
                                 </tr>
                             </table>
                             <div class="btn-group-1">
