@@ -9,62 +9,62 @@
 </head>
 <body>
 <!--此处action需添加修改用户的路径-->
-<form class="layui-form" action="">
+<form class="layui-form" action="/account/editAccount">
     <div class="mainBox">
         <div class="main-container">
             <div class="main-container">
                 <div class="layui-form-item">
                     <label class="layui-form-label">账号</label>
                     <div class="layui-input-block">
-                        <input th:text="${user.userId}" type="text" name="userId" value="854085467" lay-verify="title" autocomplete="off" placeholder="请输入账号" class="layui-input">
+                        <input type="text" name="userId" value="854085467" lay-verify="title" autocomplete="off" placeholder="请输入账号" class="layui-input">
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">姓名</label>
                     <div class="layui-input-block">
-                        <input th:text="${user.username}" type="text" name="username" lay-verify="title" autocomplete="off" placeholder="请输入姓名" class="layui-input">
+                        <input type="text" name="username" lay-verify="title" autocomplete="off" placeholder="请输入姓名" class="layui-input">
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">密码</label>
                     <div class="layui-input-block">
-                        <input th:text="${user.password}" type="text" name="password" value="*******" lay-verify="title" autocomplete="off" placeholder="请输入标题" class="layui-input">
+                        <input type="text" name="password" value="*******" lay-verify="title" autocomplete="off" placeholder="请输入标题" class="layui-input">
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">年龄</label>
                     <div class="layui-input-block">
-                        <input th:text="${user.age}" type="text" name="age" value="20" lay-verify="title" autocomplete="off" placeholder="请输入标题" class="layui-input">
+                        <input type="text" name="age" value="20" lay-verify="title" autocomplete="off" placeholder="请输入标题" class="layui-input">
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">邮箱</label>
                     <div class="layui-input-block">
-                        <input th:text="${user.email}" type="text" name="email" value="854085467@qq.com" lay-verify="title" autocomplete="off" placeholder="请输入邮箱" class="layui-input">
+                        <input type="text" name="email" value="854085467@qq.com" lay-verify="title" autocomplete="off" placeholder="请输入邮箱" class="layui-input">
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">电话</label>
                     <div class="layui-input-block">
-                        <input th:text="${user.phoneNumber}" type="text" name="phone" value="15555555555" lay-verify="title" autocomplete="off" placeholder="请输入标题" class="layui-input">
+                        <input type="text" name="phone" value="15555555555" lay-verify="title" autocomplete="off" placeholder="请输入标题" class="layui-input">
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">角色</label>
                     <div class="layui-input-block">
                         <select name="user.role">
-                            <option style="display: none" selected th:if="*{user.role == null}">护士</option>
-                            <option style="display: none" selected th:if="*{user.role eq '护士'}">护士</option>
-                            <option value="FISH" th:selected="*{user.role eq '护工'}">护工</option>
-                            <option value="DOGS" th:selected="*{user.role eq '医生'}">医生</option>
+                            <option style="display: none" selected>护士</option>
+                            <option style="display: none">护士</option>
+                            <option value="护工">护工</option>
+                            <option value="医生">医生</option>
                         </select>
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">性别</label>
                     <div class="layui-input-block">
-                        <input th:if="${user.sex='男'}" type="radio" name="sex" value="0" title="男">
-                        <input th:if="${user.sex='女'}" type="radio" name="sex" value="1" title="女" checked>
+                        <input type="radio" name="sex" value="0" title="男">
+                        <input type="radio" name="sex" value="1" title="女" checked>
                     </div>
                 </div>
             </div>
@@ -85,7 +85,5 @@
         </div>
     </div>
 </form>
-<script>
-</script>
 </body>
 </html>
