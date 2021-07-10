@@ -388,23 +388,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 }}'>
                                 <tr>
                                     <th style="background: #ddede0 no-repeat;">CustID:</th>
-                                    <td><input type="text" name="custid"  id="custid" th:value="${bed.custid}"></td>
+                                    <td><input type="text" name="custid"  id="customerId" th:value="$nurseRecord.customerId}"></td>
                                 </tr>
                                 <tr>
                                     <th style="background: #ddede0 no-repeat;">NurID:</th>
-                                    <td ><input type="text" id="nurid" name="nurid" th:value="${bed.nurid}"></td>
+                                    <td ><input type="text" id="nurid" name="nurseId" th:value="${nurseRecord.nurseId}"></td>
                                 </tr>
                                 <tr>
                                     <th style="background: #ddede0 no-repeat;">Content:</th>
-                                    <td ><input type="text"  id="content" name="content" th:value="${bed.content}"></td>
+                                    <td ><input type="text"  id="content" name="content" th:value="${nurseRecord.content}"></td>
                                 </tr>
                                 <tr>
                                     <th style="background: #ddede0 no-repeat;">StartTime:</th>
-                                    <td ><input type="date"  id="starttime" name="starttime" th:value="${bed.starttime}"></td>
+                                    <td ><input type="date"  id="starttime" name="startTime" th:value="${nurseRecord.startTime}"></td>
                                 </tr>
                                 <tr>
                                     <th style="background: #ddede0 no-repeat;">EndTime:</th>
-                                    <td ><input type="date"  id="endtime" name="endtime" th:value="${bed.endtime}"></td>
+                                    <td ><input type="date"  id="endtime" name="endTime" th:value="${nurseRecord.endTime}"></td>
                                 </tr>
                             </table>
                             <div class="btn-group-1">

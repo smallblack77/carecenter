@@ -10,7 +10,7 @@
             NURCONTENT.PRICE,
             NURCONTENT.DESCRIBE as description,
             NURCONTENT.LEVELID as levelId,
-            NURLEVEL.LEVELNAME
+            NURLEVEL.LEVELNAME as levelName
         FROM NURCONTENT,NURLEVEL
         WHERE NURCONTENT.LEVELID = NURLEVEL.ID
     </select>
@@ -26,4 +26,54 @@
         DELETE FROM NURCONTENT
         WHERE NURID=#{nurid}
     </delete>
+
+    <select id="getNurById" parameterType="string" resultType="NurseContent">
+        SELECT
+            NURCONTENT.NURID as nurseId,
+            NURCONTENT.NAME,
+            NURCONTENT.SEX,
+            NURCONTENT.AGE,
+            NURCONTENT.PRICE,
+            NURCONTENT.DESCRIBE as description,
+            NURCONTENT.LEVELID as levelId,
+            NURLEVEL.LEVELNAME as levelName
+        FROM NURCONTENT,NURLEVEL
+        WHERE NURCONTENT.LEVELID = NURLEVEL.ID
+        AND NURCONTENT.NURID = #{nurId}
+    </select>
+
+    <update id="updateNurContent">
+        UPDATE NURCONTENT
+        SET NURID=#{nurseContent.nurseId},
+            NAME = #{nurseContent.name},
+            SEX = #{nurseContent.sex},
+            AGE = #{nurseContent.age},
+            PRICE = #{nurseContent.price},
+            DESCRIBE = #{nurseContent.description},
+            LEVELID = #{levelId}
+        WHERE NURID = #{oldId}
+    </update>
+
+    <select id="getAllNurseRecordList" resultType="NurseRecord">
+        SELECT
+            ID,
+            CUSTID as customerId,
+            NURID as nurseId,
+            CONTENT ,
+            STARTTIME as startTime,
+            ENDTIME as endTime
+        FROM NURRECORD
+    </select>
+
+    <select id="getNurseRecord" resultType="NurseRecord" parameterType="int">
+        SELECT
+            ID,
+            CUSTID as customerId,
+            NURID as nurseId,
+            CONTENT ,
+            STARTTIME as startTime,
+            ENDTIME as endTime
+        FROM NURRECORD
+        WHERE ID = #{id}
+    </select>
 </mapper>

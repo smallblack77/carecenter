@@ -393,7 +393,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                         <div class="adv-table editable-table ">
                                             <div class="clearfix">
                                                 <div class="btn-group">
-                                                    <a href="/customer/newCustomerForm">
+                                                    <a href="/nurseContent/addNurseRecordForm">
                                                         <button>
                                                             Add New <i class="fa fa-plus"></i>
                                                         </button>
@@ -415,15 +415,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                                 </tr>
                                                 </thead>
                                                 <tbody>
-                                                <tr class="" th:each="nurRecord : ${nurRecordList}">
+                                                <tr class="" th:each="nurRecord : ${nurseRecordList}">
                                                     <td><th:block id="id" name="id" th:text="${nurRecord.id}" /></td>
-                                                    <td><th:block  name="custid" th:text="${nurRecord.custid}" /></td>
-                                                    <td><th:block  name="nurid" th:text="${nurRecord.nurid}" /></td>
+                                                    <td><th:block  name="customerId" th:text="${nurRecord.customerId}" /></td>
+                                                    <td><th:block  name="nurseId" th:text="${nurRecord.nurseId}" /></td>
                                                     <td><th:block  name="content" th:text="${nurRecord.content}" /></td>
-                                                    <td><th:block  name="starttime" th:text="${nurRecord.starttime}" /></td>
-                                                    <td><th:block  name="endtime" th:text="${nurRecord.endtime}" /></td>
-                                                    <td><a th:href="${'/nurRecord/editnurRecord?id='}+${nurRecord.id}">Edit</a></td>
-                                                    <td><a th:href="${'/nurRecord/deletenurRecord?id='}+${nurRecord.id}">Delete</a></td>
+                                                    <td><th:block  name="startTime" th:text="${nurRecord.startTime}" /></td>
+                                                    <td><th:block  name="endTime" th:text="${nurRecord.endTime}" /></td>
+                                                    <td><a th:href="${'/nurseContent/editNurRecordForm?id='}+${nurRecord.id}">Edit</a></td>
+                                                    <td><a th:href="${'/nurRecord/deleteNurRecord?id='}+${nurRecord.id}">Delete</a></td>
                                                 </tr>
                                                 </tbody>
                                             </table>

@@ -426,7 +426,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                                     <td><th:block  name="describe" th:utext="${nurse.description}" /></td>
                                                     <td><th:block  name="levelid" th:text="${nurse.levelId}" /></td>
                                                     <td><th:block  name="levename" th:text="${nurse.levelName}" /></td>
-                                                    <td><a th:href="${'/nurse/editnurse?nurid='}+${nurse.nurseId}">Edit</a></td>
+                                                    <td><a th:href="${'/nurseContent/updateNurContentForm?nurid='}+${nurse.nurseId}">Edit</a></td>
                                                     <td><a th:href="${'/nurseContent/deleteNurContent?nurid='}+${nurse.nurseId}">Delete</a></td>
                                                 </tr>
                                                 </tbody>

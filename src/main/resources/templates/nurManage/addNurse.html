@@ -374,7 +374,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <div class="panel-heading">
                         新增护工信息
                     </div>
-                    <form action="/customer/addCustomer" method="post">
+                    <form action="/nurseContent/addNurContent" method="post">
                         <div>
                             <table class="table" ui-jq="footable" ui-options='{
                                 "paging": {
@@ -388,11 +388,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 }}'>
                                 <tr>
                                     <th style="background: #ddede0 no-repeat;">NurID:</th>
-                                    <td><input type="text"  name="nurid"  id="nurid"  ></td>
+                                    <td><input type="text"  name="nurId"  id="nurid"  ></td>
                                 </tr>
                                 <tr>
                                     <th style="background: #ddede0 no-repeat;">Name:</th>
-                                    <td><input type="text"  name="name"  id="name"  ></td>
+                                    <td><input type="text"  name="name"  id="name" ></td>
                                 </tr>
                                 <tr>
                                     <th style="background: #ddede0 no-repeat;">Sex:</th>
@@ -412,11 +412,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 </tr>
                                 <tr>
                                     <th style="background: #ddede0 no-repeat;">LevelID:</th>
-                                    <td><input type="text"  id="levelid" name="levelid" ></td>
+                                    <td><input type="text"  id="levelId" name="levelId"  ></td>
                                 </tr>
                                 <tr>
                                     <th style="background: #ddede0 no-repeat;">LeveName:</th>
-                                    <td th:text="${nurlevel.levename}"></td>
+                                    <td th:value="${nurseContent.levelName}" ></td>
                                 </tr>
                             </table>
                             <div class="btn-group-1">

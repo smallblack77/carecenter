@@ -2,17 +2,26 @@ package org.csu.carecenter.entity;
 
 public class NurseRecord {
 
-    private String customerId;
+    private String id;
+    private int customerId;
     private String nurseId;
     private String content;
     private String startTime;
     private String endTime;
 
-    public String getCustomerId() {
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public int getCustomerId() {
         return customerId;
     }
 
-    public void setCustomerId(String customerId) {
+    public void setCustomerId(int customerId) {
         this.customerId = customerId;
     }
 
