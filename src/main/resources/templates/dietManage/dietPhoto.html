@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thyneleaf.org">
+<script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+<script type="text/javascript">
+    function deleteBed() {
+        var $id = $("#id").val();
+        $.ajax({
+            url: "",
+            请求方式: "post",
+            data: "id=" + $id,
+            success: function (result){
+                alert("删除成功！");
+            }
+        });
+    }
+</script>
+<head>
+    <title>Visitors an Admin Panel Category Bootstrap Responsive Website Template | Responsive_table :: w3layouts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Visitors Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- bootstrap-css -->
+    <link rel="stylesheet" href="../../static/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="../../static/js/data-tables/DT_bootstrap.css" />
+    <!-- //bootstrap-css -->
+    <!-- Custom CSS -->
+    <link href="../../static/css/style.css" rel='stylesheet' type='text/css' />
+    <link href="../../static/css/style-responsive.css" rel="stylesheet"/>
+    <!-- font CSS -->
+    <link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <!-- font-awesome icons -->
+    <link rel="stylesheet" href="../../static/css/font.css" type="text/css"/>
+    <link href="../../static/css/font-awesome.css" rel="stylesheet">
+    <!-- //font-awesome icons -->
+    <script src="../../static/js/jquery2.0.3.min.js"></script>
+</head>
+<body>
+<section id="container">
+    <!--header start-->
+    <header class="header fixed-top clearfix">
+        <!--logo start-->
+        <div class="brand">
+
+            <a href="index.html" class="logo">
+                系统管理
+            </a>
+            <div class="sidebar-toggle-box">
+                <div class="fa fa-bars"></div>
+            </div>
+        </div>
+        <!--logo end-->
+
+        <div class="nav notify-row" id="top_menu">
+            <!--  notification start -->
+            <ul class="nav top-menu">
+                <!-- settings start -->
+                <li class="dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                        <i class="fa fa-tasks"></i>
+                        <span class="badge bg-success">8</span>
+                    </a>
+                    <ul class="dropdown-menu extended tasks-bar">
+                        <li>
+                            <p class="">You have 8 pending tasks</p>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="task-info clearfix">
+                                    <div class="desc pull-left">
+                                        <h5>Target Sell</h5>
+                                        <p>25% , Deadline  12 June’13</p>
+                                    </div>
+                                    <span class="notification-pie-chart pull-right" data-percent="45">
+                            <span class="percent"></span>
+                            </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="task-info clearfix">
+                                    <div class="desc pull-left">
+                                        <h5>Product Delivery</h5>
+                                        <p>45% , Deadline  12 June’13</p>
+                                    </div>
+                                    <span class="notification-pie-chart pull-right" data-percent="78">
+                            <span class="percent"></span>
+                            </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="task-info clearfix">
+                                    <div class="desc pull-left">
+                                        <h5>Payment collection</h5>
+                                        <p>87% , Deadline  12 June’13</p>
+                                    </div>
+                                    <span class="notification-pie-chart pull-right" data-percent="60">
+                            <span class="percent"></span>
+                            </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="task-info clearfix">
+                                    <div class="desc pull-left">
+                                        <h5>Target Sell</h5>
+                                        <p>33% , Deadline  12 June’13</p>
+                                    </div>
+                                    <span class="notification-pie-chart pull-right" data-percent="90">
+                            <span class="percent"></span>
+                            </span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="external">
+                            <a href="#">See All Tasks</a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- settings end -->
+                <!-- inbox dropdown start-->
+                <li id="header_inbox_bar" class="dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                        <i class="fa fa-envelope-o"></i>
+                        <span class="badge bg-important">4</span>
+                    </a>
+                    <ul class="dropdown-menu extended inbox">
+                        <li>
+                            <p class="red">You have 4 Mails</p>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="photo"><img alt="avatar" src="../../static/../../static/images/3.png"></span>
+                                <span class="subject">
+                                <span class="from">Jonathan Smith</span>
+                                <span class="time">Just now</span>
+                                </span>
+                                <span class="message">
+                                    Hello, this is an example msg.
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="photo"><img alt="avatar" src="../../static/../../static/images/1.png"></span>
+                                <span class="subject">
+                                <span class="from">Jane Doe</span>
+                                <span class="time">2 min ago</span>
+                                </span>
+                                <span class="message">
+                                    Nice admin template
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="photo"><img alt="avatar" src="../../static/../../static/images/3.png"></span>
+                                <span class="subject">
+                                <span class="from">Tasi sam</span>
+                                <span class="time">2 days ago</span>
+                                </span>
+                                <span class="message">
+                                    This is an example msg.
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="photo"><img alt="avatar" src="../../static/../../static/images/2.png"></span>
+                                <span class="subject">
+                                <span class="from">Mr. Perfect</span>
+                                <span class="time">2 hour ago</span>
+                                </span>
+                                <span class="message">
+                                    Hi there, its a test
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">See all messages</a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- inbox dropdown end -->
+                <!-- notification dropdown start-->
+                <li id="header_notification_bar" class="dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+
+                        <i class="fa fa-bell-o"></i>
+                        <span class="badge bg-warning">3</span>
+                    </a>
+                    <ul class="dropdown-menu extended notification">
+                        <li>
+                            <p>Notifications</p>
+                        </li>
+                        <li>
+                            <div class="alert alert-info clearfix">
+                                <span class="alert-icon"><i class="fa fa-bolt"></i></span>
+                                <div class="noti-info">
+                                    <a href="#"> Server #1 overloaded.</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="alert alert-danger clearfix">
+                                <span class="alert-icon"><i class="fa fa-bolt"></i></span>
+                                <div class="noti-info">
+                                    <a href="#"> Server #2 overloaded.</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="alert alert-success clearfix">
+                                <span class="alert-icon"><i class="fa fa-bolt"></i></span>
+                                <div class="noti-info">
+                                    <a href="#"> Server #3 overloaded.</a>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </li>
+                <!-- notification dropdown end -->
+            </ul>
+            <!--  notification end -->
+        </div>
+        <div class="top-nav clearfix">
+            <!--search & user info start-->
+            <ul class="nav pull-right top-menu">
+                <li>
+                    <input type="text" class="form-control search" placeholder=" Search">
+                </li>
+                <!-- user login dropdown start-->
+                <li class="dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                        <img alt="" src="../../static/../../static/images/2.png">
+                        <span class="username">John Doe</span>
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu extended logout">
+                        <li><a href="#"><i class=" fa fa-suitcase"></i>Profile</a></li>
+                        <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
+                        <li><a href="login.html"><i class="fa fa-key"></i> Log Out</a></li>
+                    </ul>
+                </li>
+                <!-- user login dropdown end -->
+
+            </ul>
+            <!--search & user info end-->
+        </div>
+    </header>
+    <!--header end-->
+    <!--sidebar start-->
+    <aside>
+        <div id="sidebar" class="nav-collapse">
+            <!-- sidebar menu start-->
+            <div class="leftside-navigation">
+                <ul class="sidebar-menu" id="nav-accordion">
+                    <li>
+                        <a href="../account/index.html">
+                            <i class="fa fa-dashboard"></i>
+                            <span>主页</span>
+                        </a>
+                    </li>
+                    <li class="sub-menu">
+                        <a class="active" href="javascript:;">
+                            <i class="fa fa-th"></i>
+                            <span>客户管理</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a class="active" href="customer.html">客户信息管理</a></li>
+                            <li><a class="active" href="#">客户入住管理</a></li>
+                            <li><a class="active" href="#">客户退住管理</a></li>
+                            <li><a href="out.html">客户外出管理</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;">
+                            <i class="fa fa-tasks"></i>
+                            <span>床位管理</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="/bed/bedForm">床位信息管理</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;">
+                            <i class="fa fa-envelope"></i>
+                            <span>Mail </span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="mail.html">Inbox</a></li>
+                            <li><a href="mail_compose.html">Compose Mail</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;">
+                            <i class=" fa fa-bar-chart-o"></i>
+                            <span>Charts</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="chartjs.html">Chart js</a></li>
+                            <li><a href="flot_chart.html">Flot Charts</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;">
+                            <i class=" fa fa-bar-chart-o"></i>
+                            <span>Maps</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="google_map.html">Google Map</a></li>
+                            <li><a href="vector_map.html">Vector Map</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;">
+                            <i class="fa fa-glass"></i>
+                            <span>Extra</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="gallery.html">Gallery</a></li>
+                            <li><a href="404.html">404 Error</a></li>
+                            <li><a href="registration.html">Registration</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="login.html">
+                            <i class="fa fa-user"></i>
+                            <span>Login Page</span>
+                        </a>
+                    </li>
+                </ul>            </div>
+            <!-- sidebar menu end-->
+        </div>
+    </aside>
+    <!--sidebar end-->
+    <!--main content start-->
+    <section id="main-content">
+        <section class="wrapper">
+            <!--body wrapper start-->
+            <div class="table-agile-info">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <section class="panel">
+                            <header class="panel-heading">
+                                Diet Display
+                                <span class="tools pull-right">
+                            <a href="javascript:;" class="fa fa-chevron-down"></a>
+                            <a href="javascript:;" class="fa fa-times"></a>
+                         </span>
+                            </header>
+                            <div class="panel-body">
+
+                                <ul id="filters" class="media-filter">
+                                    <li><a href="#" data-filter="*"> All</a></li>
+                                    <li><a href="#" data-filter=".images">Images</a></li>
+                                    <li><a href="#" data-filter=".audio">Audio</a></li>
+                                    <li><a href="#" data-filter=".video">Video</a></li>
+                                    <li><a href="#" data-filter=".documents">Documents</a></li>
+                                </ul>
+
+                                <div class="btn-group pull-right">
+                                    <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-check-square-o"></i> Select all</button>
+                                    <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-folder-open"></i> Add New</button>
+                                    <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-trash-o"></i> Delete</button>
+                                    <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-upload"></i> Upload New File</button>
+                                </div>
+
+
+
+                                <div id="gallery" class="media-gal">
+                                    <div class="images item " >
+                                        <a href="#myModal" data-toggle="modal">
+                                            <img src="../../static/images/gallery/image1.jpg" alt="" />
+                                        </a>
+                                        <p>img01.jpg </p>
+                                    </div>
+
+                                    <div class=" audio item " >
+                                        <a href="#myModal" data-toggle="modal">
+                                            <img src="../../static/images/gallery/image2.jpg" alt="" />
+                                        </a>
+                                        <p>img02.jpg </p>
+                                    </div>
+
+                                    <div class=" video item " >
+                                        <a href="#myModal" data-toggle="modal">
+                                            <img src="../../static/images/gallery/image3.jpg" alt="" />
+                                        </a>
+                                        <p>img03.jpg </p>
+                                    </div>
+
+                                    <div class=" images audio item " >
+                                        <a href="#myModal" data-toggle="modal">
+                                            <img src="../../static/images/gallery/image4.jpg" alt="" />
+                                        </a>
+                                        <p>img04.jpg </p>
+                                    </div>
+
+                                    <div class=" images documents item " >
+                                        <a href="#myModal" data-toggle="modal">
+                                            <img src="../../static/images/gallery/image5.jpg" alt="" />
+                                        </a>
+                                        <p>img05.jpg </p>
+                                    </div>
+
+                                    <div class=" audio item " >
+                                        <a href="#myModal" data-toggle="modal">
+                                            <img src="../../static/images/gallery/image1.jpg" alt="" />
+                                        </a>
+                                        <p>img01.jpg </p>
+                                    </div>
+
+                                    <div class=" documents item " >
+                                        <a href="#myModal" data-toggle="modal">
+                                            <img src="../../static/images/gallery/image2.jpg" alt="" />
+                                        </a>
+                                        <p>img02.jpg </p>
+                                    </div>
+                                    <div class=" video item " >
+                                        <a href="#myModal" data-toggle="modal">
+                                            <img src="../../static/images/gallery/image3.jpg" alt="" />
+                                        </a>
+                                        <p>img03.jpg </p>
+                                    </div>
+
+                                    <div class=" images item " >
+                                        <a href="#myModal" data-toggle="modal">
+                                            <img src="../../static/images/gallery/image4.jpg" alt="" />
+                                        </a>
+                                        <p>img04.jpg </p>
+                                    </div>
+
+                                    <div class=" documents item " >
+                                        <a href="#myModal" data-toggle="modal">
+                                            <img src="../../static/images/gallery/image5.jpg" alt="" />
+                                        </a>
+                                        <p>img05.jpg </p>
+                                    </div>
+
+                                    <div class=" video item " >
+                                        <a href="#myModal" data-toggle="modal">
+                                            <img src="../../static/images/gallery/image1.jpg" alt="" />
+                                        </a>
+                                        <p>img01.jpg </p>
+                                    </div>
+
+                                    <div class=" audio images item " >
+                                        <a href="#myModal" data-toggle="modal">
+                                            <img src="../../static/images/gallery/image2.jpg" alt="" />
+                                        </a>
+                                        <p>img02.jpg </p>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-12 text-center clearfix">
+                                    <ul class="pagination">
+                                        <li><a href="#">«</a></li>
+                                        <li><a href="#">1</a></li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#">4</a></li>
+                                        <li><a href="#">5</a></li>
+                                        <li><a href="#">»</a></li>
+                                    </ul>
+                                </div>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                <h4 class="modal-title">Edit Media Gallery</h4>
+                                            </div>
+
+                                            <div class="modal-body row">
+
+                                                <div class="col-md-5 img-modal">
+                                                    <img src="../../static/images/gallery/image1.jpg" alt="">
+                                                    <a href="#" class="btn btn-white btn-sm"><i class="fa fa-pencil"></i> Edit Image</a>
+                                                    <a href="#" class="btn btn-white btn-sm"><i class="fa fa-eye"></i> View Full Size</a>
+
+                                                    <p class="mtop10"><strong>File Name:</strong> img01.jpg</p>
+                                                    <p><strong>File Type:</strong> jpg</p>
+                                                    <p><strong>Resolution:</strong> 300x200</p>
+                                                    <p><strong>Uploaded By:</strong> <a href="#">ThemeBucket</a></p>
+                                                </div>
+                                                <div class="col-md-7">
+                                                    <div class="form-group">
+                                                        <label> Name</label>
+                                                        <input id="name" value="img01.jpg" class="form-control">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label> Tittle Text</label>
+                                                        <input id="title" value="awesome image" class="form-control">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label> Description</label>
+                                                        <textarea rows="2" class="form-control"></textarea>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label> Link URL</label>
+                                                        <input id="link" value="../../static/images/gallery/img01.jpg" class="form-control">
+                                                    </div>
+                                                    <div class="pull-right">
+                                                        <button class="btn btn-danger btn-sm" type="button">Delete</button>
+                                                        <button class="btn btn-success btn-sm" type="button">Save changes</button>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- modal -->
+
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <!--body wrapper end-->
+        </section>
+
+        <!-- footer -->
+        <div class="footer">
+            <div class="wthree-copyright">
+                <p>© 2021 Visitors. All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
+            </div>
+        </div>
+        <!-- / footer -->
+    </section>
+
+    <!--main content end-->
+</section>
+<script src="../../static/js/bootstrap.js"></script>
+<script src="../../static/js/jquery.dcjqaccordion.2.7.js"></script>
+<script src="../../static/js/scripts.js"></script>
+<script src="../../static/js/jquery.slimscroll.js"></script>
+<script src="../../static/js/jquery.nicescroll.js"></script>
+<script language="javascript" type="text/javascript" src="../../static/js/flot-chart/excanvas.min.js"></script><![endif]-->
+<script src="../../static/js/jquery.scrollTo.js"></script>
+
+<!-- Placed js at the end of the document so the pages load faster -->
+<script src="../../static/js/jquery-1.10.2.min.js"></script>
+<script src="../../static/js/jquery-ui-1.9.2.custom.min.js"></script>
+<script src="../../static/js/jquery-migrate-1.2.1.min.js"></script>
+<script src="../../static/js/bootstrap.min.js"></script>
+<script src="../../static/js/modernizr.min.js"></script>
+<script src="../../static/js/jquery.nicescroll.js"></script>
+
+<!--data table-->
+<script type="text/javascript" src="../../static/js/data-tables/jquery.dataTables.js"></script>
+<script type="text/javascript" src="../../static/js/data-tables/DT_bootstrap.js"></script>
+
+<!--common scripts for all pages-->
+<script src="../../static/js/scripts.js"></script>
+
+<!--script for editable table-->
+<script src="../../static/js/editable-table.js"></script>
+
+<!-- END JAVASCRIPTS -->
+<script>
+    jQuery(document).ready(function() {
+        EditableTable.init();
+    });
+</script>
+</body>
+</html>

@@ -1617,8 +1617,8 @@ ul.bs-glyphicons-list {
     padding: 0;
 }
 .w3ls_head {
-    font-size: 30px;
-    color: #000000;
+    color: #6a8e63;
+    font: bold 40px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
     margin-bottom: 2em;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -2336,7 +2336,7 @@ ul.inbox-pagination li {
     bottom: 12%;
 }
 .captn {
-    background:rgba(139, 92, 126, 0.73);
+    background: rgba(98, 147, 104, 0.73);
     padding: 2em;
     position: absolute;
     border: solid 1px #FFF;
