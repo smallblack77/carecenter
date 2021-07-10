@@ -368,21 +368,35 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
                                 <div class="btn-group pull-right">
                                     <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-check-square-o"></i> Select all</button>
-                                    <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-folder-open"></i> Add New</button>
+                                    <button type="button" class="btn btn-primary btn-sm">
+                                        <i class="fa fa-folder-open"></i>
+                                        <a th:href="${'/diet/addDietForm?id='}+${diet.id}" style="color: white;text-decoration: none">
+                                            Add New
+                                        </a>
+                                    </button>
                                     <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-trash-o"></i> Delete</button>
-                                    <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-upload"></i> Upload New File</button>
+                                    <!--<button type="button" class="btn btn-primary btn-sm"><i class="fa fa-upload"></i> Upload New File</button>-->
                                 </div>
 
 
 
                                 <div id="gallery" class="media-gal">
-                                    <div class="images item " >
-                                        <a href="#myModal" data-toggle="modal">
-                                            <img src="../../static/images/gallery/image1.jpg" alt="" />
-                                        </a>
-                                        <p>img01.jpg </p>
-                                    </div>
-
+                                    <table class="table table-striped table-hover table-bordered" id="editable-sample"
+                                           border="1" th:with="colSize=${4}, rowSize=${dietList.size()/colSize}, rowSize=${(dietList.size()%colSize==0 ? rowSize : (rowSize+1))}">
+                                        <tr th:if="${dietList.size() gt 0}" th:each="rowIdx:${#numbers.sequence(1, rowSize)}">
+                                            <td th:each="colIdx:${#numbers.sequence(1,colSize)}">
+                                                <th:block th:with="idx = ${(rowIdx-1)*colSize+colIdx-1}, diet = ${idx<dietList.size() ? dietList[idx] : null}">
+                                                    <div class="images item">
+                                                        <a href="#myModal" data-toggle="modal">
+                                                            <img src="../../static/images/gallery/image1.jpg" alt="" th:utext="${diet.description}"/>
+                                                            <!--<th:block th:utext="${diet.description}"/>-->
+                                                        </a>
+                                                        <p>img01.jpg </p>
+                                                    </div>
+                                                </th:block>
+                                            </td>
+                                        </tr>
+                                    </table>
                                     <div class=" audio item " >
                                         <a href="#myModal" data-toggle="modal">
                                             <img src="../../static/images/gallery/image2.jpg" alt="" />
@@ -474,55 +488,57 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 </div>
 
                                 <!-- Modal -->
-                                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog">
-                                        <!--弹窗内容-->
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                                <h4 class="modal-title">修改膳食信息</h4>
-                                            </div>
-
-                                            <div class="modal-body row">
-
-                                                <div class="col-md-5 img-modal">
-                                                    <img src="../../static/images/gallery/image1.jpg" alt="">
-                                                    <a href="#" class="btn btn-white btn-sm"><i class="fa fa-pencil"></i> Edit Image</a>
-                                                    <a href="#" class="btn btn-white btn-sm"><i class="fa fa-eye"></i> View Full Size</a>
-
-                                                    <p class="mtop10"><strong>File Name:</strong> img01.jpg</p>
-                                                    <p><strong>File Type:</strong> jpg</p>
-                                                    <p><strong>Resolution:</strong> 300x200</p>
-                                                    <p><strong>Uploaded By:</strong> <a href="#">ThemeBucket</a></p>
-                                                </div>
-                                                <div class="col-md-7">
-                                                    <div class="form-group">
-                                                        <label> Name</label>
-                                                        <input id="name" value="img01.jpg" class="form-control">
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label> Tittle Text</label>
-                                                        <input id="title" value="awesome image" class="form-control">
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label> Description</label>
-                                                        <textarea rows="2" class="form-control"></textarea>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label> Link URL</label>
-                                                        <input id="link" value="../../static/images/gallery/img01.jpg" class="form-control">
-                                                    </div>
-                                                    <div class="pull-right">
-                                                        <button class="btn btn-danger btn-sm" type="button">Delete</button>
-                                                        <button class="btn btn-success btn-sm" type="button">Save changes</button>
-                                                    </div>
+                                <form action="/diet/updateDiet" method="post">
+                                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <!--弹窗内容-->
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                    <h4 class="modal-title">修改膳食信息</h4>
                                                 </div>
 
-                                            </div>
+                                                <div class="modal-body row">
 
+                                                    <div class="col-md-5 img-modal">
+                                                        <img src="../../static/images/gallery/image1.jpg" alt="">
+                                                        <a href="#" class="btn btn-white btn-sm"><i class="fa fa-pencil"></i> Edit Image</a>
+                                                        <a href="#" class="btn btn-white btn-sm"><i class="fa fa-eye"></i> View Full Size</a>
+
+                                                        <p class="mtop10"><strong>File Name:</strong> img01.jpg</p>
+                                                        <p><strong>File Type:</strong> jpg</p>
+                                                        <p><strong>Resolution:</strong> 300x200</p>
+                                                        <p><strong>Uploaded By:</strong> <a href="#">ThemeBucket</a></p>
+                                                    </div>
+                                                    <div class="col-md-7">
+                                                        <div class="form-group">
+                                                            <label> Name</label>
+                                                            <input id="name" value="img01.jpg" class="form-control" th:value="${diet.name}">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label> Tittle Text</label>
+                                                            <input id="title" value="awesome image" class="form-control" th:value="${diet.title}">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label> Description</label>
+                                                            <textarea rows="2" class="form-control" th:value="${diet.description}"></textarea>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label> Link URL</label>
+                                                            <input id="link" value="../../static/images/gallery/img01.jpg" class="form-control" th:value="${diet.link}">
+                                                        </div>
+                                                        <div class="pull-right">
+                                                            <button class="btn btn-danger btn-sm" type="button"><a th:href="${'/diet/updateDietForm?id='}+${diet.id}" style="color: white;text-decoration: none">Delete</a></button>
+                                                            <button class="btn btn-success btn-sm" type="button">Save changes</button>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+                                </form>
                                 <!-- modal -->
 
                             </div>
