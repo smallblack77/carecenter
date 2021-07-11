@@ -130,10 +130,61 @@ public class NurseContentController {
         return "nurManage/editNurRecord";
     }
 
+    //添加护理记录
     @RequestMapping("/addNurseRecord")
     public String addNurseRecord(Model model,HttpSession session,String customerId,String nurseId,String content,
                                  String startTime,String endTime){
+        if(customerId!=null && startTime!=null && endTime != null &&nurseId != null && content !=null){
+            NurseRecord nurseRecord = new NurseRecord();
+            nurseRecord.setContent(content);
+            nurseRecord.setNurseId(nurseId);
+            nurseRecord.setCustomerId(Integer.valueOf(customerId));
+            nurseRecord.setStartTime(startTime);
+            nurseRecord.setEndTime(endTime);
+            nurseContentService.addNurseRecord(nurseRecord);
+            int id = nurseContentService.getNurseRecordMaxId();
+            nurseRecord.setId(String.valueOf(id));
+            List<NurseRecord> nurseRecordList = nurseContentService.getAllNurseRecordList();
+            model.addAttribute(nurseRecordList);
+            return "nurManage/nurRecord";
+        }else {
+            String msg = "输入不能为空";
+            session.setAttribute("mas",msg);
+            return "nurManage/addNurRecord";
+        }
+    }
 
+    //修改护理记录
+    @RequestMapping("updateNurRecord")
+    public String updateNurRecord(Model model,HttpSession session,String customerId,String nurseId,String content,
+                                  String startTime,String endTime) {
+        if (customerId != null && startTime != null && endTime != null && nurseId != null && content != null) {
+            NurseRecord nurseRecord = new NurseRecord();
+            nurseRecord.setContent(content);
+            nurseRecord.setNurseId(nurseId);
+            nurseRecord.setCustomerId(Integer.valueOf(customerId));
+            nurseRecord.setStartTime(startTime);
+            nurseRecord.setEndTime(endTime);
+            NurseRecord nurseRecord1 = (NurseRecord) model.getAttribute("nurseRecord");
+            int id = Integer.valueOf(nurseRecord1.getId());
+            nurseRecord.setId(String.valueOf(id));
+            nurseContentService.updateNurRecord(nurseRecord);
+            List<NurseRecord> nurseRecordList = nurseContentService.getAllNurseRecordList();
+            model.addAttribute(nurseRecordList);
+            return "nurManage/nurRecord";
+        } else {
+            String msg = "输入不能为空";
+            session.setAttribute("mas", msg);
+            return "nurManage/editNurRecord";
+        }
+    }
+
+    //删除
+    @RequestMapping("deleteNurRecord")
+    public String deleteNurRecord(String id,Model model){
+        nurseContentService.deleteNurRecord(Integer.valueOf(id));
+        List<NurseRecord> nurseRecordList = nurseContentService.getAllNurseRecordList();
+        model.addAttribute(nurseRecordList);
         return "nurManage/nurRecord";
     }
 

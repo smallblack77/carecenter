@@ -76,4 +76,32 @@
         FROM NURRECORD
         WHERE ID = #{id}
     </select>
+
+    <insert id="addNurseRecord" parameterType="NurseRecord">
+        INSERT INTO NURRECORD
+            (ID,CUSTID,NURID,CONTENT,STARTTIME,ENDTIME)
+        VALUES
+            (#{id},#{customerID},#{nurseId},#{content},#{startTime},#{endTime})
+    </insert>
+
+    <select id="getNurseRecordMaxId" resultType="int">
+        SELECT
+            MAX(ID)
+        FROM NURRECORD
+    </select>
+
+    <update id="updateNurRecord" parameterType="NurseRecord">
+        UPDATE NURRECORD
+        SET ID=#{nurseRecord.id},
+            CUSTID=#{nurseRecord.customerId},
+            NURID=#{nurseRecord.nurseId},
+            CONTENT=#{nurseRecord.content},
+            STARTTIMR=#{nurseRecord.startTime},
+            ENDTIME = #{nurseRecord.endTime}
+    </update>
+
+    <delete id="deleteNurRecord" parameterType="int">
+        DELETE FROM NURRECORD
+        WHERE ID = #{id}
+    </delete>
 </mapper>

@@ -48,4 +48,24 @@ public class NurseContentService {
     public NurseRecord getNurseRecord(int id){
         return nurseContentMapper.getNurseRecord(id);
     }
+
+    //添加护理记录
+    public void addNurseRecord(NurseRecord nurseRecord){
+        nurseContentMapper.addNurseRecord(nurseRecord);
+    }
+
+    //获取最大id
+    public int getNurseRecordMaxId(){
+        return nurseContentMapper.getNurseRecordMaxId();
+    }
+
+    //修改护理记录
+    public void updateNurRecord(NurseRecord nurseRecord){
+        nurseContentMapper.updateNurRecord(nurseRecord);
+    }
+
+    //删除
+    public void deleteNurRecord(int id){
+        nurseContentMapper.deleteNurRecord(id);
+    }
 }

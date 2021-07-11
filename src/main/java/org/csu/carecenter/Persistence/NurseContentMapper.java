@@ -28,4 +28,16 @@ public interface NurseContentMapper {
 
     //获取护理记录通过id
     NurseRecord getNurseRecord(int id);
+
+    //添加护理记录
+    void addNurseRecord(NurseRecord nurseRecord);
+
+    //获取最大id
+    int getNurseRecordMaxId();
+
+    //修改护理记录
+    void updateNurRecord(NurseRecord nurseRecord);
+
+    //删除
+    void deleteNurRecord(int id);
 }
