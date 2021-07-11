@@ -393,7 +393,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                         <div class="adv-table editable-table ">
                                             <div class="clearfix">
                                                 <div class="btn-group">
-                                                    <a href="/customer/newCustomerForm">
+                                                    <a href="/nurseLevel/addNurLevelForm">
                                                         <button>
                                                             Add New <i class="fa fa-plus"></i>
                                                         </button>
@@ -410,10 +410,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                                 </thead>
                                                 <tbody>
                                                 <tr class="" th:each="nurLevel : ${nurLevelList}">
-                                                    <td><th:block id="id" name="id" th:text="${nurLevel.id}" /></td>
-                                                    <td><th:block  name="levelname" th:text="${nurLevel.levelname}" /></td>
-                                                    <td><a th:href="${'/nurse/editnurse?id='}+${nurLevel.id}">Edit</a></td>
-                                                    <td><a th:href="${'/nurse/deletenurse?id='}+${nurLevel.id}">Delete</a></td>
+                                                    <td><th:block id="id" name="id" th:text="${nurLevel.levelId}" /></td>
+                                                    <td><th:block id="levelName" name="levelName" th:text="${nurLevel.levelName}" /></td>
+                                                    <td><a th:href="${'/nurseLevel/editNurLevelForm?id='}+${nurLevel.levelId}">Edit</a></td>
+                                                    <td><a th:href="${'/nurseLevel/deleteNurLevel?id='}+${nurLevel.levelId}">Delete</a></td>
                                                 </tr>
                                                 </tbody>
                                             </table>

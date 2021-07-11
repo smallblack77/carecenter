@@ -374,7 +374,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <div class="panel-heading">
                         修改护理级别
                     </div>
-                    <form action="/customer/editCustomer" method="post">
+                    <form action="/nurseLevel/editNurLevel" method="post">
                         <div>
                             <table class="table" ui-jq="footable" ui-options='{
                                 "paging": {
@@ -388,11 +388,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 }}'>
                                 <tr>
                                     <th style="background: #ddede0 no-repeat;">ID:</th>
-                                    <td ><input type="text"  id="id" name="id" th:value="${bed.id}"></td>
+                                    <td ><input type="text"  id="id" name="id" th:value="${nurLevel.levelId}" disabled></td>
                                 </tr>
                                 <tr>
                                     <th style="background: #ddede0 no-repeat;">LevelName:</th>
-                                    <td ><input type="text"  id="levename" name="levename" th:value="${bed.levename}"></td>
+                                    <td ><input type="text"  id="levelName" name="levelName" th:value="${nurLevel.levelName}"></td>
                                 </tr>
                             </table>
                             <div class="btn-group-1">

@@ -388,11 +388,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 }}'>
                                 <tr>
                                     <th style="background: #ddede0 no-repeat;">ID:</th>
-                                    <td><input type="text"  id="id" name="id" ></td>
+                                    <td><input type="text"  id="id" name="id" th:text="${addId}" disabled ></td>
                                 </tr>
                                 <tr>
-                                    <th style="background: #ddede0 no-repeat;">LeveName:</th>
-                                    <td ><input type="text"  id="levename" name="levename" th:text="${nurlevel.levename}"></td>
+                                    <th style="background: #ddede0 no-repeat;">LevelName:</th>
+                                    <td ><input type="text"  id="levelName" name="levelName" th:text="${nurlevel.levelName}"></td>
                                 </tr>
                             </table>
                             <div class="btn-group-1">
