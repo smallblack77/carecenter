@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Visitors an Admin Panel Category Bootstrap Responsive Website Template | Mail :: w3layouts</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -95,132 +96,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </header>
 
                 <section class="mail-list">
-                    <ul class="list-group ">
+                    <ul class="list-group " th:each="mail:${mailList}">
                         <li class="list-group-item">
                                 <span class="pull-left chk">
                                     <input type="checkbox"/>
                                 </span>
-                            <a class="thumb pull-left" href="#"> <img src="../images/avatar-mini.jpg"> </a>
-                            <a class="" href="/mailForManager/viewMailForm"> <small class="pull-right text-muted">15 April</small> <strong>John Doe</strong>  <span>Donec ultrices faucibus rutrum. Phasellus sodales </span> <span class="label label-sm btn-success">normal</span> </a>
-                        </li>
-                        <li class="list-group-item">
-                                <span class="pull-left chk">
-                                    <input type="checkbox"/>
-                                </span>
-                            <a class="thumb pull-left" href="#"> <img src="../images/photos/user1.png"> </a>
-                            <a class="" href="/mailForManager/viewMailForm"> <small class="pull-right text-muted">10 May</small> <strong>Jane Doe</strong> <span>Phasellus sodales vulputate urna, vel accumsan augue egestas ac  </span> <span class="label label-sm btn-danger">urgent</span> </a>
-                        </li>
-                        <li class="list-group-item">
-                                <span class="pull-left chk">
-                                    <input type="checkbox"/>
-                                </span>
-                            <a class="thumb pull-left" href="#"> <img src="../images/photos/user2.png"> </a>
-                            <a class="" href="/mail/viewMailForm"> <small class="pull-right text-muted">3 June</small> <strong>Jonathan Smith</strong>  <span>Porttitor eu consequat risus. </span> <span class="label label-sm btn-warning">error</span> </a>
-                        </li>
-                        <li class="list-group-item">
-                                <span class="pull-left chk">
-                                    <input type="checkbox"/>
-                                </span>
-                            <a class="thumb pull-left" href="#"> <img src="../images/photos/user3.png"> </a>
-                            <a class="" href="/mail/viewMailForm"> <small class="pull-right text-muted">15 April</small> <strong>John Doe</strong>  <span>Donec ultrices faucibus rutrum. Phasellus sodales </span>  </a>
-                        </li>
-                        <li class="list-group-item">
-                                <span class="pull-left chk">
-                                    <input type="checkbox"/>
-                                </span>
-                            <a class="thumb pull-left" href="#"> <img src="../images/photos/user4.png"> </a>
-                            <a class="" href="/mail/viewMailForm"> <small class="pull-right text-muted">10 May</small> <strong>Jane Doe</strong> <span>Phasellus sodales vulputate urna, vel accumsan augue egestas ac  </span> </a>
-                        </li>
-                        <li class="list-group-item">
-                                <span class="pull-left chk">
-                                    <input type="checkbox"/>
-                                </span>
-                            <a class="thumb pull-left" href="#"> <img src="../images/photos/user1.png"> </a>
-                            <a class="" href="/mail/viewMailForm"> <small class="pull-right text-muted">3 June</small> <strong>Jonathan Smith</strong>  <span>Porttitor eu consequat risus. </span> <span class="label label-sm btn-warning">error</span> </a>
-                        </li>
-                        <li class="list-group-item">
-                                <span class="pull-left chk">
-                                    <input type="checkbox"/>
-                                </span>
-                            <a class="thumb pull-left" href="#"> <img src="../images/photos/user5.png"> </a>
-                            <a class="" href="/mail/viewMailForm"> <small class="pull-right text-muted">15 April</small> <strong>John Doe</strong>  <span>Donec ultrices faucibus rutrum. Phasellus sodales </span>  </a>
-                        </li>
-                        <li class="list-group-item">
-                                <span class="pull-left chk">
-                                    <input type="checkbox"/>
-                                </span>
-                            <a class="thumb pull-left" href="#"> <img src="../images/photos/user1.png"> </a>
-                            <a class="" href="/mail/viewMailForm"> <small class="pull-right text-muted">10 May</small> <strong>Jane Doe</strong> <span>Phasellus sodales vulputate urna, vel accumsan augue egestas ac   </a>
-                        </li>
-                        <li class="list-group-item">
-                                <span class="pull-left chk">
-                                    <input type="checkbox"/>
-                                </span>
-                            <a class="thumb pull-left" href="#"> <img src="../images/avatar-mini.jpg"> </a>
-                            <a class="" href="/mail/viewMailForm"> <small class="pull-right text-muted">3 June</small> <strong>Jonathan Smith</strong>  <span>Porttitor eu consequat risus.  </a>
-                        </li>
-                        <li class="list-group-item">
-                                <span class="pull-left chk">
-                                    <input type="checkbox"/>
-                                </span>
-                            <a class="thumb pull-left" href="#"> <img src="../images/photos/user3.png"> </a>
-                            <a class="" href="/mail/viewMailForm"> <small class="pull-right text-muted">15 April</small> <strong>John Doe</strong>  <span>Donec ultrices faucibus rutrum. Phasellus sodales </span> <span class="label label-sm btn-success">normal</span> </a>
-                        </li>
-                        <li class="list-group-item">
-                                <span class="pull-left chk">
-                                    <input type="checkbox"/>
-                                </span>
-                            <a class="thumb pull-left" href="#"> <img src="../images/photos/user4.png"> </a>
-                            <a class="" href="/mail/viewMailForm"> <small class="pull-right text-muted">10 May</small> <strong>Jane Doe</strong> <span>Phasellus sodales vulputate urna, vel accumsan augue egestas ac  </span> <span class="label label-sm btn-danger">urgent</span> </a>
-                        </li>
-                        <li class="list-group-item">
-                                <span class="pull-left chk">
-                                    <input type="checkbox"/>
-                                </span>
-                            <a class="thumb pull-left" href="#"> <img src="../images/photos/user2.png"> </a>
-                            <a class="" href="/mail/viewMailForm"> <small class="pull-right text-muted">3 June</small> <strong>Jonathan Smith</strong>  <span>Porttitor eu consequat risus. </a>
-                        </li>
-                        <li class="list-group-item">
-                                <span class="pull-left chk">
-                                    <input type="checkbox"/>
-                                </span>
-                            <a class="thumb pull-left" href="#"> <img src="../images/avatar-mini.jpg"> </a>
-                            <a class="" href="/mail/viewMailForm"> <small class="pull-right text-muted">15 April</small> <strong>John Doe</strong>  <span>Donec ultrices faucibus rutrum. Phasellus sodales </span>  </a>
-                        </li>
-                        <li class="list-group-item">
-                                <span class="pull-left chk">
-                                    <input type="checkbox"/>
-                                </span>
-                            <a class="thumb pull-left" href="#"> <img src="../images/avatar-mini.jpg"> </a>
-                            <a class="" href="/mail/viewMailForm"> <small class="pull-right text-muted">10 May</small> <strong>Jane Doe</strong> <span>Phasellus sodales vulputate urna, vel accumsan augue egestas ac  </span>  </a>
-                        </li>
-                        <li class="list-group-item">
-                                <span class="pull-left chk">
-                                    <input type="checkbox"/>
-                                </span>
-                            <a class="thumb pull-left" href="#"> <img src="../images/avatar-mini.jpg"> </a>
-                            <a class="" href="/mail/viewMailForm"> <small class="pull-right text-muted">3 June</small> <strong>Jonathan Smith</strong>  <span>Porttitor eu consequat risus. </span> <span class="label label-sm btn-warning">error</span> </a>
-                        </li>
-                        <li class="list-group-item">
-                                <span class="pull-left chk">
-                                    <input type="checkbox"/>
-                                </span>
-                            <a class="thumb pull-left" href="#"> <img src="../images/avatar-mini.jpg"> </a>
-                            <a class="" href="/mail/viewMailForm"> <small class="pull-right text-muted">15 April</small> <strong>John Doe</strong>  <span>Donec ultrices faucibus rutrum. Phasellus sodales </span> <span class="label label-sm btn-success">normal</span> </a>
-                        </li>
-                        <li class="list-group-item">
-                                <span class="pull-left chk">
-                                    <input type="checkbox"/>
-                                </span>
-                            <a class="thumb pull-left" href="#"> <img src="../images/avatar-mini.jpg"> </a>
-                            <a class="" href="/mail/viewMailForm"> <small class="pull-right text-muted">10 May</small> <strong>Jane Doe</strong> <span>Phasellus sodales vulputate urna, vel accumsan augue egestas ac  </span> <span class="label label-sm btn-danger">urgent</span> </a>
-                        </li>
-                        <li class="list-group-item">
-                                <span class="pull-left chk">
-                                    <input type="checkbox"/>
-                                </span>
-                            <a class="thumb pull-left" href="#"> <img src="../images/avatar-mini.jpg"> </a>
-                            <a class="" href="/mail/viewMailForm"> <small class="pull-right text-muted">3 June</small> <strong>Jonathan Smith</strong>  <span>Porttitor eu consequat risus. </span> <span class="label label-sm btn-warning">error</span> </a>
+                            <a class="thumb pull-left" th:href="@{/mailForManager/viewMail(from=${mail.from},subject=${mail.subject},sentDate=${mail.sentDate})}"> <img src="../../images/reback.png"> </a>
+                            <a class="" th:href="@{/mailForManager/viewMail(from=${mail.from},subject=${mail.subject},sentDate=${mail.sentDate})}">
+                                <small class="pull-right text-muted" th:text="${mail.sentDate}">15 April</small>
+                                <strong th:text="${mail.from}">John Doe</strong><br>
+                                <span th:text="${mail.subject}"></span>
+                            </a>
                         </li>
                     </ul>
                 </section>

@@ -1,22 +1,23 @@
 <!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Visitors an Admin Panel Category Bootstrap Responsive Website Template | Mail :: w3layouts</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="keywords" content="Visitors Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design">
     <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
     <!-- bootstrap-css -->
-    <link rel="stylesheet" href="../css/bootstrap.min.css" >
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
     <!-- //bootstrap-css -->
     <!-- Custom CSS -->
-    <link href="../css/style.css" rel='stylesheet' type='text/css' />
-    <link href="../css/style-responsive.css" rel="stylesheet"/>
+    <link href="../css/style.css" rel="stylesheet" type="text/css">
+    <link href="../css/style-responsive.css" rel="stylesheet">
     <link href="../css/minimal.css" rel="stylesheet">
     <!-- font CSS -->
-    <link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link href="//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic" rel="stylesheet" type="text/css">
     <!-- font-awesome icons -->
-    <link rel="stylesheet" href="../css/font.css" type="text/css"/>
+    <link rel="stylesheet" href="../css/font.css" type="text/css">
     <link href="../css/font-awesome.css" rel="stylesheet">
     <!-- //font-awesome icons -->
     <script src="../js/jquery2.0.3.min.js"></script>
@@ -419,23 +420,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <div class="mail-sender">
                                     <div class="row">
                                         <div class="col-md-8">
-                                            <img src="../images/avatar-mini.jpg" alt="">
-                                            <strong>ThemeBucket</strong>
-                                            <span>[themebucket@gmail.com]</span>
+                                            <img src="../../images/reback.png" alt="">
+                                            <strong th:text="${mail.subject}"></strong>
+                                            <span th:text="${mail.from}"></span>
                                             to
                                             <strong>me</strong>
                                         </div>
                                         <div class="col-md-4">
-                                            <p class="date"> 4:15AM 04 April 2014</p>
+                                            <p class="date" th:text="${mail.sentDate}"></p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="view-mail">
-                                    <p>Donec ultrices faucibus rutrum. Phasellus sodales vulputate urna, vel accumsan augue egestas ac. Donec vitae leo at sem lobortis porttitor eu consequat risus. Mauris sed congue orci. Donec ultrices faucibus rutrum. Phasellus sodales vulputate urna, vel accumsan augue egestas ac. Donec vitae leo at sem lobortis porttitor eu consequat risus. Mauris sed congue orci. Donec ultrices faucibus rutrum. Phasellus sodales vulputate urna, vel accumsan augue egestas ac. Donec vitae leo at sem lobortis porttitor eu consequat risus. Mauris sed congue orci. </p>
-                                    <p>Porttitor eu consequat risus. <a href="#">Mauris sed congue orci. Donec ultrices faucibus rutrum</a>. Phasellus sodales vulputate urna, vel accumsan augue egestas ac. Donec vitae leo at sem lobortis porttitor eu consequat risus. Mauris sed congue orci. Donec ultrices faucibus rutrum. Phasellus sodales vulputate urna, vel accumsan augue egestas ac. Donec vitae leo at sem lobortis porttitor eu consequat risus. Mauris sed congue orci. </p>
-                                    <blockquote> <em>Donec ultrices faucibus rutrum. Phasellus sodales vulputate urna, vel accumsan augue egestas ac. Donec vitae leo at sem lobortis porttitor eu consequat risus. Mauris sed congue orci. Donec ultrices faucibus rutrum. Phasellus sodales vulputate urna, vel accumsan augue egestas ac. Donec vitae leo at sem lobortis porttitor eu consequat risus. Mauris sed congue orci. Donec ultrices faucibus rutrum. Phasellus sodales vulputate urna, vel accumsan augue egestas ac.<br><br>consequat risus. Mauris sed congue orci. Donec ultrices faucibus rutrum. Phasellus sodales vulputate urna, vel accumsan augue egestas ac. Donec vitae leo at sem lobortis porttitor eu consequat risus. Mauris sed congue orci. Donec ultrices faucibus rutrum. Phasellus sodales vulputate urna, vel accumsan augue egestas ac.</em> </blockquote>
-
-                                    <p>Sodales <a href="#">vulputate urna, vel accumsan augue egestas ac</a>. Donec vitae leo at sem lobortis porttitor eu consequat risus. Mauris sed congue orci. Donec ultrices faucibus rutrum. Phasellus sodales vulputate urna, vel accumsan augue egestas ac. Donec vitae leo at sem lobortis porttitor eu consequat risus. Mauris sed congue orci. </p>
+                                    <p th:text="${mail.content}"></p>
                                 </div>
                                 <div class="attachment-mail">
                                     <p>
@@ -480,8 +477,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     </ul>
                                 </div>
                                 <div class="compose-btn pull-left">
-                                    <a href="mail_compose.html" class="btn btn-sm btn-primary" ><i class="fa fa-reply"></i> Reply</a>
-                                    <button class="btn btn-sm btn-default" ><i class="fa fa-arrow-right"></i> Forward</button>
+                                    <a href="mail_compose.html" class="btn btn-sm btn-primary"><i class="fa fa-reply"></i> Reply</a>
+                                    <button class="btn btn-sm btn-default"><i class="fa fa-arrow-right"></i> Forward</button>
                                     <button class="btn  btn-sm btn-default tooltips" data-original-title="Print" type="button" data-toggle="tooltip" data-placement="top" title=""><i class="fa fa-print"></i> </button>
                                     <button class="btn btn-sm btn-default tooltips" data-original-title="Trash" data-toggle="tooltip" data-placement="top" title=""><i class="fa fa-trash-o"></i></button>
                                 </div>
@@ -514,4 +511,4 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--[if lte IE 8]><script language="javascript" type="text/javascript" src="../js/flot-chart/excanvas.min.js"></script><![endif]-->
 <script src="../js/jquery.scrollTo.js"></script>
 </body>
-</html>
+

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Visitors an Admin Panel Category Bootstrap Responsive Website Template | Mail :: w3layouts</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -81,23 +82,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <div class="mail-sender">
                         <div class="row">
                             <div class="col-md-8">
-                                <img src="../images/avatar-mini.jpg" alt="">
-                                <strong>ThemeBucket</strong>
-                                <span>[themebucket@gmail.com]</span>
+                                <img src="../../images/reback.png" alt="">
+                                <strong th:text="${mail.subject}"></strong>
+                                <span th:text="${mail.from}"></span>
                                 to
                                 <strong>me</strong>
                             </div>
                             <div class="col-md-4">
-                                <p class="date"> 4:15AM 04 April 2014</p>
+                                <p class="date" th:text="${mail.sentDate}"></p>
                             </div>
                         </div>
                     </div>
                     <div class="view-mail">
-                        <p>Donec ultrices faucibus rutrum. Phasellus sodales vulputate urna, vel accumsan augue egestas ac. Donec vitae leo at sem lobortis porttitor eu consequat risus. Mauris sed congue orci. Donec ultrices faucibus rutrum. Phasellus sodales vulputate urna, vel accumsan augue egestas ac. Donec vitae leo at sem lobortis porttitor eu consequat risus. Mauris sed congue orci. Donec ultrices faucibus rutrum. Phasellus sodales vulputate urna, vel accumsan augue egestas ac. Donec vitae leo at sem lobortis porttitor eu consequat risus. Mauris sed congue orci. </p>
-                        <p>Porttitor eu consequat risus. <a href="#">Mauris sed congue orci. Donec ultrices faucibus rutrum</a>. Phasellus sodales vulputate urna, vel accumsan augue egestas ac. Donec vitae leo at sem lobortis porttitor eu consequat risus. Mauris sed congue orci. Donec ultrices faucibus rutrum. Phasellus sodales vulputate urna, vel accumsan augue egestas ac. Donec vitae leo at sem lobortis porttitor eu consequat risus. Mauris sed congue orci. </p>
-                        <blockquote> <em>Donec ultrices faucibus rutrum. Phasellus sodales vulputate urna, vel accumsan augue egestas ac. Donec vitae leo at sem lobortis porttitor eu consequat risus. Mauris sed congue orci. Donec ultrices faucibus rutrum. Phasellus sodales vulputate urna, vel accumsan augue egestas ac. Donec vitae leo at sem lobortis porttitor eu consequat risus. Mauris sed congue orci. Donec ultrices faucibus rutrum. Phasellus sodales vulputate urna, vel accumsan augue egestas ac.<br><br>consequat risus. Mauris sed congue orci. Donec ultrices faucibus rutrum. Phasellus sodales vulputate urna, vel accumsan augue egestas ac. Donec vitae leo at sem lobortis porttitor eu consequat risus. Mauris sed congue orci. Donec ultrices faucibus rutrum. Phasellus sodales vulputate urna, vel accumsan augue egestas ac.</em> </blockquote>
-
-                        <p>Sodales <a href="#">vulputate urna, vel accumsan augue egestas ac</a>. Donec vitae leo at sem lobortis porttitor eu consequat risus. Mauris sed congue orci. Donec ultrices faucibus rutrum. Phasellus sodales vulputate urna, vel accumsan augue egestas ac. Donec vitae leo at sem lobortis porttitor eu consequat risus. Mauris sed congue orci. </p>
+                        <p th:text="${mail.content}"></p>
                     </div>
                     <div class="attachment-mail">
                         <p>
