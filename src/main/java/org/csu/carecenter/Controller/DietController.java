@@ -31,10 +31,16 @@ public class DietController {
     }
 
     //跳转到膳食信息展示界面
+    @GetMapping("/photo")
+    public String viewPhoto(Model model){
+        return "dietManage/dietPhoto";
+    }
+
     @GetMapping("/calendar")
     public String viewCalendar(Model model){
         return "dietManage/dietCalendar";
     }
+
 
     //跳转到时间线展示界面
     @GetMapping("/timeLine")
