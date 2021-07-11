@@ -1,6 +1,5 @@
 package org.csu.carecenter.Controller;
 
-import org.csu.carecenter.entity.Customer;
 import org.csu.carecenter.entity.Diet;
 import org.csu.carecenter.service.DietService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,8 +38,8 @@ public class DietController {
 
     //跳转到时间线展示界面
     @GetMapping("/timeLine")
-    public String viewTimeLine(Model model){
-        return "dietManage/dietTimeLine";
+    public String viewTimeLine(Model model,int id){
+        return "custManage/timeLine";
     }
 
     //跳转到膳食信息展示界面
