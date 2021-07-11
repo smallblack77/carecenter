@@ -22,7 +22,6 @@ public class NurseLevelController {
     @Autowired
     private NurseLevelService nurseLevelService;
 
-    @ResponseBody
     @GetMapping("/viewNurseLevelList")
     public String getNurseLevelList(Model model){
         List<NurseLevel> nurLevelList = nurseLevelService.getNurseLevelList();
