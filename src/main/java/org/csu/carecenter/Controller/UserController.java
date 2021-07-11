@@ -40,8 +40,7 @@ public class UserController {
                 model.addAttribute("user", user);
                 return "account/index";
             }
-
-      }else {
+        }else {
             return null;
         }
     }

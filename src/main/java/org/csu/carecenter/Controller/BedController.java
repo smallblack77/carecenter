@@ -39,7 +39,6 @@ public class BedController {
     }
 
     @RequestMapping("/viewBedDetail")
-    //传递床和客户的关系
     public String viewBedAndCustomer(Model model, HttpServletRequest req, HttpSession session){
         int id = Integer.parseInt(req.getParameter("bedId"));
         BedAndCustomer bedAndCustomer = bedService.getBedAndCustomer(id);
