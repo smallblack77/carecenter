@@ -285,7 +285,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <span>床位管理</span>
                         </a>
                         <ul class="sub">
-                            <li><a href="form_component.html">床位信息管理</a></li>
+                            <li><a href="/bed/bedForm">床位信息管理</a></li>
                         </ul>
                     </li>
                     <li class="sub-menu">
@@ -294,34 +294,36 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <span>护理管理</span>
                         </a>
                         <ul class="sub">
-                            <li><a href="form_component.html">护工信息管理</a></li>
+                            <li><a href="/nurseContent/viewList">护工信息管理</a></li>
                         </ul>
                         <ul class="sub">
-                            <li><a href="form_component.html">护理级别管理</a></li>
+                            <li><a href="/nurseLevel/viewNurseLevelList">护理级别管理</a></li>
                         </ul>
                         <ul class="sub">
-                            <li><a href="form_component.html">护理记录管理</a></li>
+                            <li><a href="/nurseContent/viewNurseRecord">护理记录管理</a></li>
                         </ul>
                     </li>
                     <li class="sub-menu">
                         <a href="javascript:;">
                             <i class="fa fa-tasks"></i>
-                            <span>Form Components</span>
+                            <span>膳食管理</span>
                         </a>
                         <ul class="sub">
-                            <li><a href="form_component.html">Form Elements</a></li>
-                            <li><a href="form_validation.html">Form Validation</a></li>
-                            <li><a href="dropzone.html">Dropzone</a></li>
+                            <li><a href="/diet/diets">膳食信息管理</a></li>
+                        </ul>
+                        <ul class="sub">
+                            <li><a href="/diet/calendar">膳食日历管理</a></li>
                         </ul>
                     </li>
                     <li class="sub-menu">
                         <a href="javascript:;">
                             <i class="fa fa-envelope"></i>
-                            <span>Mail </span>
+                            <span>邮件</span>
                         </a>
                         <ul class="sub">
-                            <li><a href="mail.html">Inbox</a></li>
-                            <li><a href="mail_compose.html">Compose Mail</a></li>
+                            <li><a href="/mail/mailForm">收件箱</a></li>
+                            <li><a href="/mail/composeMailForm">撰写邮件</a></li>
+                            <li><a href="/mail/viewMailForm">查看邮件</a></li>
                         </ul>
                     </li>
                     <li class="sub-menu">
@@ -374,7 +376,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <div class="panel-heading">
                         新增护理级别
                     </div>
-                    <form action="/customer/addCustomer" method="post">
+                    <form action="/nurseLevel/addNurLevel" method="post">
                         <div>
                             <table class="table" ui-jq="footable" ui-options='{
                                 "paging": {
@@ -388,7 +390,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 }}'>
                                 <tr>
                                     <th style="background: #ddede0 no-repeat;">ID:</th>
-                                    <td><input type="text"  id="id" name="id" th:value="${addId}" disabled="disabled"></td>
+                                    <td><input type="text"  id="addId" name="addId" th:value="${addId}" disabled="disabled"></td>
                                 </tr>
                                 <tr>
                                     <th style="background: #ddede0 no-repeat;">LevelName:</th>
