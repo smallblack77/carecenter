@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.csu.carecenter.Persistence.TimeLineMapper">
+
+    <select id="getAllTimeLine" resultType="TimeLine">
+        SELECT
+            CUSTID,
+            DAY,
+            TIME as date,
+            CONTENT
+        FROM TIMELINE
+    </select>
+
+    <select id="getTimeLineById" resultType="TimeLine">
+        SELECT
+            CUSTID,
+            DAY,
+            TIME as date,
+            CONTENT
+        FROM TIMELINE
+        WHERE CUSTID = #{custId} AND DAY = #{day}
+    </select>
+<!--    -->
+<!--    <select id="getTimeLineByDay" parameterType="int" resultType="TimeLine">-->
+<!--        SELECT-->
+<!--            CUSTID,-->
+<!--            DAY,-->
+<!--            TIME as date,-->
+<!--            CONTENT-->
+<!--        FROM TIMELINE-->
+<!--        WHERE CUSTID = #{custId}-->
+<!--        GROUP BY DAY-->
+<!--    </select>-->
+
+    <select id="getDayList" resultType="Date">
+        SELECT
+            DAY
+        FROM TIMELINE
+        WHERE CUSTID = #{custId}
+        GROUP BY DAY
+    </select>
+
+    <insert id="insertTimeLime" parameterType="TimeLine">
+        INSERT INTO TIMELINE
+            (CUSTID,
+             DAY,
+             TIME,
+             CONTENT)
+        VALUES (#{custId}, #{day}, #{date}, #{content})
+    </insert>
+</mapper>

@@ -2,12 +2,15 @@ package org.csu.carecenter.service;
 
 import org.csu.carecenter.Persistence.CustomerMapper;
 import org.csu.carecenter.Persistence.OutMapper;
+import org.csu.carecenter.Persistence.TimeLineMapper;
 import org.csu.carecenter.entity.BedAndCustomer;
 import org.csu.carecenter.entity.Customer;
 import org.csu.carecenter.entity.Out;
+import org.csu.carecenter.entity.TimeLine;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -17,6 +20,26 @@ public class CustomerService {
 
     @Autowired
     private OutMapper outMapper;
+
+    @Autowired
+    private TimeLineMapper timeLineMapper;
+
+    //时间线
+    public  List<TimeLine> getAllTimeLine(){
+        return timeLineMapper.getAllTimeLine();
+    }
+
+    public List<TimeLine> getTimeLineById(int custId, String day){
+        return timeLineMapper.getTimeLineById(custId, day);
+    }
+
+    public List<Date> getDayList(){
+        return timeLineMapper.getDayList();
+    }
+
+    public void insertTimeLine(TimeLine timeLine){
+        timeLineMapper.insertTimeLime(timeLine);
+    }
 
     //客户本身信息
     public Customer getCustomer(int id){

@@ -3,18 +3,17 @@ package org.csu.carecenter.Controller;
 import org.csu.carecenter.entity.BedAndCustomer;
 import org.csu.carecenter.entity.Customer;
 import org.csu.carecenter.entity.Out;
+import org.csu.carecenter.entity.TimeLine;
 import org.csu.carecenter.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.stereotype.Repository;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 @Controller
 @RequestMapping("/customer")
@@ -24,11 +23,37 @@ public class CustomerController {
     @Autowired
     private CustomerService customerService;
 
+    //时间线
+//    @GetMapping("/getDay")
+//    public String getDay(HttpServletRequest req,HttpSession session,Model model){
+//        int id = Integer.parseInt(req.getParameter("id"));
+//        List<Date> dayList = customerService.getDayList();
+//        List<TimeLine> timeLineList = customerService.getAllTimeLine();
+////        for (Date day:dayList
+////             ) {
+////
+////        }
+//        model.addAttribute("dayList", dayList);
+//        model.addAttribute("id", id);
+//        session.setAttribute("id", id);
+//        return "redirect:/customer/getTimeLineById";
+//    }
 
-
-    @GetMapping("/selectCustomer")
-    public void getCustomer(){
-
+    @GetMapping("/getTimeLineById")
+    public String getTimeLineById(HttpServletRequest req,HttpSession session,Model model){
+        int id = Integer.parseInt(req.getParameter("id"));
+        List<Date> dayList = customerService.getDayList();
+        List<TimeLine> timeLineList = customerService.getAllTimeLine();
+        model.addAttribute("dayList", dayList);
+        model.addAttribute("id", id);
+        model.addAttribute("timeLineList", timeLineList);
+        session.setAttribute("id", id);
+//        String day =  req.getParameter("day");
+//        List<Date> dayList = session.getAttribute("dayList").toString();
+//        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+//        model.addAttribute("timeLineList", timeLineList);
+//        model.addAttribute("day", timeLineList.get(0).getDay());
+        return "custManage/timeLine";
     }
 
     //客户基本信息
@@ -38,6 +63,11 @@ public class CustomerController {
         List<Customer> customers =  customerService.getCustomerLsit();
         model.addAttribute("customerList", customers);
         return "custManage/customer";
+    }
+
+    @GetMapping("/selectCustomer")
+    public void getCustomer(){
+
     }
 
      //删除客户信息
@@ -221,6 +251,22 @@ public class CustomerController {
                 model.addAttribute("addCheckinValue",addCheckinValue);
                 return "custManage/addCheckin";
             }else {
+
+                Date date = new Date();
+                SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+                SimpleDateFormat df1 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+                TimeLine timeLine = new TimeLine();
+                timeLine.setDay(df.format(date));
+                timeLine.setDate(df1.format(date));
+                timeLine.setCustId(Integer.parseInt(custid));
+                timeLine.setContent("入住到" + bedid + "号房间");
+                customerService.insertTimeLine(timeLine);
+
+                //在某一个时间点上加两小时的写法
+                Calendar calendar = Calendar.getInstance();
+                //此处setTime为Date类型
+                calendar.setTime(date);
+
                 customerService.addCheckin(checkin);
                 model.addAttribute("checkinList",customerService.selectCheckinList());
                 return "custManage/checkin";

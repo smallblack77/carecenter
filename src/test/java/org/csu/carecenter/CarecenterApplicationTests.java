@@ -63,28 +63,28 @@ class CarecenterApplicationTests {
 
 
         //新增Out
-//        Out out = new Out();
-//        out.setCustomerId(1);
-//        out.setReason("看儿女");
-//
-//        Date date = new Date();
-//        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-//        out.setStartTime(df.format(date));
-//
-//        //在某一个时间点上加两小时的写法
-//        Calendar calendar = Calendar.getInstance();
-//        //此处setTime为Date类型
-//        calendar.setTime(date);
-//        //加上两小时
-//        calendar.add(Calendar.HOUR, 2);//时
-//
-//        out.setExpectReturnTime(df.format(calendar.getTime()));
-//
-//        out.setActualReturnTime(df.format(calendar.getTime()));
-//
-//        out.setAirPhone("123456");
-//
-//        customerService.addOut(out);
+        Out out = new Out();
+        out.setCustomerId(1);
+        out.setReason("看儿女");
+
+        Date date = new Date();
+        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        out.setStartTime(df.format(date));
+
+        //在某一个时间点上加两小时的写法
+        Calendar calendar = Calendar.getInstance();
+        //此处setTime为Date类型
+        calendar.setTime(date);
+        //加上两小时
+        calendar.add(Calendar.HOUR, 2);//时
+
+        out.setExpectReturnTime(df.format(calendar.getTime()));
+
+        out.setActualReturnTime(df.format(calendar.getTime()));
+
+        out.setAirPhone("123456");
+
+        customerService.addOut(out);
     }
 
     @Test
