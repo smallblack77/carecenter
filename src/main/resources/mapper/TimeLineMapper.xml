@@ -32,7 +32,7 @@
 <!--        GROUP BY DAY-->
 <!--    </select>-->
 
-    <select id="getDayList" resultType="Date">
+    <select id="getDayList" parameterType="int" resultType="String">
         SELECT
             DAY
         FROM TIMELINE

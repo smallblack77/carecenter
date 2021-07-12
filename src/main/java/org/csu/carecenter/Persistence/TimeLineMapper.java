@@ -15,5 +15,5 @@ public interface TimeLineMapper {
 
     void insertTimeLime(TimeLine timeLine);
 
-    List<Date> getDayList();
+    List<String> getDayList(int custId);
 }

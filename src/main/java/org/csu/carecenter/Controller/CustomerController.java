@@ -42,12 +42,11 @@ public class CustomerController {
     @GetMapping("/getTimeLineById")
     public String getTimeLineById(HttpServletRequest req,HttpSession session,Model model){
         int id = Integer.parseInt(req.getParameter("id"));
-        List<Date> dayList = customerService.getDayList();
+        List<String> dayList = customerService.getDayList(id);
         List<TimeLine> timeLineList = customerService.getAllTimeLine();
         model.addAttribute("dayList", dayList);
-        model.addAttribute("id", id);
+
         model.addAttribute("timeLineList", timeLineList);
-        session.setAttribute("id", id);
 //        String day =  req.getParameter("day");
 //        List<Date> dayList = session.getAttribute("dayList").toString();
 //        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");

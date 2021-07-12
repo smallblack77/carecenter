@@ -394,13 +394,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                         </div>
                                     </article>
                                     <article class="timeline-item alt" th:each="timeLine : ${timeLineList}">
-                                        <div class="timeline-desk" th:if="${timeLine.getDay() gt day}">
+                                        <div class="timeline-desk" th:if="${timeLine.getDay() eq day}">
                                             <div class="panel">
                                                 <div class="panel-body">
                                                     <span class="arrow-alt"></span>
                                                     <span class="timeline-icon"></span>
                                                     <span class="timeline-date" th:text="${timeLine.date}">08:25 am</span>
-                                                    <h1 class="red">1 hour ago</h1>
+                                                    <h1 class="red" th:text="${timeLine.date}">1 hour ago</h1>
                                                     <p th:text="${timeLine.content}">Purchased new stationary items for head office </p>
                                                 </div>
                                             </div>

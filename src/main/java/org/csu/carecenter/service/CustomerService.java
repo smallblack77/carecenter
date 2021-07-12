@@ -33,8 +33,8 @@ public class CustomerService {
         return timeLineMapper.getTimeLineById(custId, day);
     }
 
-    public List<Date> getDayList(){
-        return timeLineMapper.getDayList();
+    public List<String> getDayList(int id){
+        return timeLineMapper.getDayList(id);
     }
 
     public void insertTimeLine(TimeLine timeLine){
