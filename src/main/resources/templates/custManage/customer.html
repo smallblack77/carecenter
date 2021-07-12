@@ -419,6 +419,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                      <th>Attention</th>
                                      <th>Edit</th>
                                      <th>Delete</th>
+                                     <th>Healthy</th>
                                  </tr>
                                  </thead>
                                  <tbody>
@@ -433,6 +434,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                      <td><th:block  name="attention" th:text="${customer.attention}" /></td>
                                      <td><a th:href="${'/customer/editCustomerForm?id='}+${customer.id}">Edit</a></td>
                                      <td><a th:href="${'/customer/deleteCustomer?id='}+${customer.id}">Delete</a></td>
+                                     <td><a th:href="${'/healthy/addHealthy?id='}+${customer.id}">Add</a></td>
                                  </tr>
                                  </tbody>
                              </table>
