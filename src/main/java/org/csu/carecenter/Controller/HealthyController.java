@@ -97,5 +97,10 @@ public class HealthyController {
 
     }
 
+    @GetMapping("/show")
+    public String show(Model model,String id)
+    {
+        return "custManage/showHealthy";
+    }
 
 }
