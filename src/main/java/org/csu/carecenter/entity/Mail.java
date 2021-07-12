@@ -9,7 +9,7 @@ public class Mail {
     private String from;
     private String subject;
     private Date sentDate;
-    private String content;
+    private StringBuffer content;
 
     public Date getSentDate() {
         return sentDate;
@@ -19,11 +19,11 @@ public class Mail {
         this.sentDate = sentDate;
     }
 
-    public String getContent() {
+    public StringBuffer getContent() {
         return content;
     }
 
-    public void setContent(String content) {
+    public void setContent(StringBuffer content) {
         this.content = content;
     }
 

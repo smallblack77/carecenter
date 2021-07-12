@@ -8,7 +8,9 @@ import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
 
 import javax.mail.*;
-import java.io.IOException;
+import javax.mail.internet.MimeMessage;
+import javax.mail.internet.MimeUtility;
+import java.io.*;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
@@ -65,14 +67,20 @@ public class MailService {
         folder.open(Folder.READ_ONLY);
         Message message[] = folder.getMessages();
         for (int i = 0; i < message.length; i++) {
+            MimeMessage message1 = (MimeMessage) message[i];
             Mail mail = new Mail();
-            Message message1 = message[i];
 
             String from = message1.getFrom()[0].toString();
             String subject = message1.getSubject();
             Date sentDate = message1.getSentDate();
-            String content = message1.getContent().toString();
-
+            StringBuffer content = new StringBuffer();
+            String contentType = message1.getContentType();
+            if (contentType.startsWith("text/plain")) {
+                getMailTextContent(message1, content,true);
+            } else
+            {
+                getMailTextContent(message1,content, false);
+            }
             mail.setFrom(from);
             mail.setSubject(subject);
             mail.setSentDate(sentDate);
@@ -108,5 +116,49 @@ public class MailService {
         // 将时分秒,毫秒域清零
         calendar.add(Calendar.HOUR,-14);
         return calendar.getTime();
+    }
+
+    public static void getMailTextContent(Part part, StringBuffer content,boolean plainFlag) throws MessagingException, IOException {
+        //如果是文本类型的附件，通过getContent方法可以取到文本内容，但这不是我们需要的结果，所以在这里要做判断
+        boolean isContainTextAttach = part.getContentType().indexOf("name") > 0;
+        if (part.isMimeType("text/html") && !isContainTextAttach && plainFlag == false) {
+            content.append(MimeUtility.decodeText(part.getContent().toString()));
+        } else if(part.isMimeType("text/plain") && !isContainTextAttach && plainFlag){
+            content.append(part.getContent().toString());
+            plainFlag = false;
+        } else if (part.isMimeType("message/rfc822")) {
+            getMailTextContent((Part)part.getContent(),content,plainFlag);
+        } else if (part.isMimeType("multipart/*")) {
+            Multipart multipart = (Multipart) part.getContent();
+            int partCount = multipart.getCount();
+            for (int i = 0; i < partCount; i++) {
+                BodyPart bodyPart = multipart.getBodyPart(i);
+                getMailTextContent(bodyPart,content,plainFlag);
+            }
+        }
+    }
+
+
+    /**
+     * 对复杂邮件的解析
+     * @param multipart
+     * @throws MessagingException
+     * @throws IOException
+     */
+    public static void parseMultipart(Multipart multipart) throws MessagingException, IOException {
+        int count = multipart.getCount();
+        System.out.println("couont =  "+count);
+        for (int idx=0;idx<count;idx++) {
+            BodyPart bodyPart = multipart.getBodyPart(idx);
+            System.out.println(bodyPart.getContentType());
+            if (bodyPart.isMimeType("text/plain")) {
+                System.out.println("plain................."+bodyPart.getContent());
+            } else if(bodyPart.isMimeType("text/html")) {
+                System.out.println("html..................."+bodyPart.getContent());
+            } else if(bodyPart.isMimeType("multipart/*")) {
+                Multipart mpart = (Multipart)bodyPart.getContent();
+                parseMultipart(mpart);
+            }
+        }
     }
 }
