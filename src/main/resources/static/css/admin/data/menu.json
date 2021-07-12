@@ -45,7 +45,7 @@
 		]
 	},{
 	"id": "mail",
-	"title": "邮件管理",
+	"title": "用户反馈",
 	"icon": "layui-icon layui-icon-set-fill",
 	"type": 0,
 	"href": "",
@@ -58,14 +58,14 @@
 		"href": "/mailForManager/mailForm"
 	},{
 		"id": 502,
-		"title": "撰写邮件",
+		"title": "撰写回复",
 		"icon": "layui-icon layui-icon-face-smile",
 		"type": 1,
 		"openType": "_iframe",
 		"href": "/mailForManager/composeMailForm"
 	},{
 		"id": 503,
-		"title": "查看邮件",
+		"title": "查看反馈",
 		"icon": "layui-icon layui-icon-face-smile",
 		"type": 1,
 		"openType": "_iframe",

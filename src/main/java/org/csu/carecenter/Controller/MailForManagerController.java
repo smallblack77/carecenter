@@ -7,11 +7,14 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 import javax.mail.*;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -56,7 +59,7 @@ public class MailForManagerController {
     }
 
     @RequestMapping("/viewMail")
-    public String viewMail(Model model, String from, String subject, Date sentDate) throws IOException, MessagingException {
+    public String viewMail(Model model,String from, String subject,Date sentDate) throws IOException, MessagingException, ParseException {
         Mail mail = mailService.viewMail(from,subject,sentDate);
         if(mail == null)
         {

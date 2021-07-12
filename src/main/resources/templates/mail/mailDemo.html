@@ -439,8 +439,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <span class="pull-left chk">
                                     <input type="checkbox"/>
                                 </span>
-                                        <a class="thumb pull-left" th:href="@{/mail/viewMail(from=${mail.from},subject=${mail.subject},sentDate=${mail.sentDate})}"> <img src="../../images/reback.png"> </a>
-                                        <a class="" th:href="@{/mail/viewMail(from=${mail.from},subject=${mail.subject},sentDate=${mail.sentDate})}">
+                                        <a class="thumb pull-left" th:href="@{/mail/viewMail(from=${mail.from},subject=${mail.subject},sentDate=${mail.getSentDate()})}"> <img src="../../images/reback.png"> </a>
+                                        <a class="" th:href="@{/mail/viewMail(from=${mail.from},subject=${mail.subject},sentDate=${mail.getSentDate()})}">
                                             <small class="pull-right text-muted" th:text="${mail.sentDate}">15 April</small>
                                             <strong th:text="${mail.from}">John Doe</strong><br>
                                             <span th:text="${mail.subject}"></span>

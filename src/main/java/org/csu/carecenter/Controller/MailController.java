@@ -12,6 +12,7 @@ import javax.mail.MessagingException;
 import javax.servlet.ServletRegistration;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
@@ -56,7 +57,7 @@ public class MailController {
     }
 
     @RequestMapping("/viewMail")
-    public String viewMail(Model model, String from, String subject, Date sentDate) throws IOException, MessagingException {
+    public String viewMail(Model model, String from, String subject,Date sentDate) throws IOException, MessagingException {
         Mail mail = mailService.viewMail(from,subject,sentDate);
         if(mail == null)
         {
@@ -67,5 +68,4 @@ public class MailController {
             return "mail/viewMail";
         }
     }
-
 }

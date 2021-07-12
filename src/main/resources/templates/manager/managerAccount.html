@@ -46,23 +46,19 @@
                 <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief" id="adviceParent">
                     <div class="layui-tab-content" id="advice">
                         <div class="layui-tab-item layui-show">
-                            <div class="layui-row layui-col-space10" style="margin: 15px;">
-                                <div class="layui-col-md1">
-                                    <img src="../../images/reback.png" style="width: 100%;height: 100%;border-radius: 5px;" />
-                                </div>
-                                <div class="layui-col-md11" style="height: 80px;">
-                                    <div class="title">提议：应当增加颐养中心娱乐活动设置</div>
-                                    <div class="content">
-                                        当前，颐养中心中娱乐活动限于读书，运动，打牌等等，随着时代的变化，我认为颐养中心应当增设比如电影院，KTV等活动...
+                            <div class="layui-row layui-col-space10" style="margin: 15px;" th:each="mail:${mailList}">
+                                <a th:href="@{/admin/viewMail(from=${mail.from},subject=${mail.subject},sentDate=${mail.sentDate})}">
+                                    <div class="layui-col-md1">
+                                        <img src="../../images/reback.png" style="width: 100%;height: 100%;border-radius: 5px;" />
                                     </div>
-                                    <div class="comment">2020-06-12 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 评论 5 点赞 12 转发 4</div>
-                                </div>
-                                <div class="layui-col-md1">
-                                    <button class="pear-btn pear-btn-danger pear-btn-md" lay-event="batchRemove" id="delete">
-                                        <i class="layui-icon layui-icon-delete"></i>
-                                        删除
-                                    </button>
-                                </div>
+                                    <div class="layui-col-md11" style="height: 80px;">
+                                        <div class="title" id="from" name="from" th:text="${mail.from}">提议：应当增加颐养中心娱乐活动设置</div>
+                                        <div class="content" id="subject" name="subject" th:text="${mail.subject}">
+                                            当前，颐养中心中娱乐活动限于读书，运动，打牌等等，随着时代的变化，我认为颐养中心应当增设比如电影院，KTV等活动...
+                                        </div>
+                                        <div class="comment" id="sentDate" name="sentDate" th:text="${mail.sentDate}"></div>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </div>

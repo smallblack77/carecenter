@@ -9,10 +9,8 @@ import org.springframework.stereotype.Service;
 
 import javax.mail.*;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.Properties;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 @Service
 public class MailService {
@@ -22,8 +20,8 @@ public class MailService {
     @Value("${mail.fromMail.addr}")
     private String from;
 
-    public static String myEmailAccount = "331980235@qq.com";
-    public static String myEmailPassword = "djvbcjypqziabgcc";
+    public static String myEmailAccount = "1633737877@qq.com";
+    public static String myEmailPassword = "ugzpjrkwhucyfcbd";
     public static String server = "pop.qq.com";
 
     /**
@@ -35,6 +33,7 @@ public class MailService {
      */
     public void sendMail(String to, String subject, String content) {
         SimpleMailMessage mailMessage = new SimpleMailMessage();
+        mailMessage.setFrom(from);
         mailMessage.setTo(to);//接受者
         //多人mailMessage.setTo("1xx.com","2xx.com","3xx.com");
         mailMessage.setSubject(subject);
@@ -86,18 +85,28 @@ public class MailService {
         return mailList;
     }
 
-    public Mail viewMail(String from, String subject, Date sentDate) throws IOException, MessagingException {
+    public Mail viewMail(String from, String subject,Date sentDate) throws IOException, MessagingException {
         List<Mail> mailList = receiveMail();
         Mail mail = null;
+        Date realDate = getRealDate(sentDate);
         for(int i=0;i<mailList.size();i++)
         {
             mail = mailList.get(i);
-            if(mail.getFrom().equals(from) && mail.getSubject().equals(subject) && mail.getSentDate().equals(sentDate))
+            if(mail.getFrom().equals(from) && mail.getSubject().equals(subject) && mail.getSentDate().equals(realDate))
             {
-                System.out.println(mail);
+                System.out.println("break");
                 break;
             }
         }
         return mail;
+    }
+
+    //获取正确时间
+    public static Date getRealDate(Date date) {
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(date);
+        // 将时分秒,毫秒域清零
+        calendar.add(Calendar.HOUR,-14);
+        return calendar.getTime();
     }
 }
