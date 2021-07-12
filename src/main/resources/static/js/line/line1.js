@@ -8,12 +8,8 @@ layui.use(['echarts'], function() {
 		backgroundColor: '#fff',
 		title: {
 			text: '全国6月销售统计',
-			textStyle: {
-				fontSize: 12,
-				fontWeight: 400
-			},
 			left: 'center',
-			top: '5%'
+			// top: '5%'
 		},
 		legend: {
 			icon: 'circle',
@@ -179,7 +175,7 @@ layui.use(['echarts'], function() {
 					}
 				}
 			}, {
-				name: 'Nike',
+				name: '体温',
 				type: 'line',
 				data: [5, 12, 11, 14, 25, 16, 10],
 				symbolSize: 1,
@@ -210,7 +206,7 @@ layui.use(['echarts'], function() {
 				}
 			},
 			{
-				name: '老北京布鞋',
+				name: '体重',
 				type: 'line',
 				data: [150, 120, 170, 140, 500, 160, 110],
 				symbolSize: 1,
