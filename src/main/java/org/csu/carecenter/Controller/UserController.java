@@ -28,7 +28,7 @@ public class UserController {
 
     //user登录
     @RequestMapping("/login")
-    public String login(Integer userId,String password,Model model){
+    public String login(Integer userId,String password,Model model,HttpSession session){
         if(String.valueOf(userId) != null && password != null){
             User user = userService.getUserByUserIdAndPassword(userId,password);
             if (user == null){
@@ -36,12 +36,15 @@ public class UserController {
                 model.addAttribute("errorValue",errorValue);
                 return "account/userLogin";
             }else {
-                user.setPassword(null);
+             //   user.setPassword(null);
                 model.addAttribute("user", user);
+                session.setAttribute("user",user);
                 return "account/index";
             }
         }else {
-            return null;
+            String errorValue = "输出不能为空！";
+            model.addAttribute("errorValue",errorValue);
+            return "account/userLogin";
         }
     }
 
