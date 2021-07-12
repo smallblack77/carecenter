@@ -47,11 +47,6 @@ public class CustomerController {
         model.addAttribute("dayList", dayList);
 
         model.addAttribute("timeLineList", timeLineList);
-//        String day =  req.getParameter("day");
-//        List<Date> dayList = session.getAttribute("dayList").toString();
-//        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
-//        model.addAttribute("timeLineList", timeLineList);
-//        model.addAttribute("day", timeLineList.get(0).getDay());
         return "custManage/timeLine";
     }
 
@@ -253,7 +248,7 @@ public class CustomerController {
 
                 Date date = new Date();
                 SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
-                SimpleDateFormat df1 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+                SimpleDateFormat df1 = new SimpleDateFormat("HH:mm:ss");
                 TimeLine timeLine = new TimeLine();
                 timeLine.setDay(df.format(date));
                 timeLine.setDate(df1.format(date));
@@ -261,10 +256,10 @@ public class CustomerController {
                 timeLine.setContent("入住到" + bedid + "号房间");
                 customerService.insertTimeLine(timeLine);
 
-                //在某一个时间点上加两小时的写法
-                Calendar calendar = Calendar.getInstance();
-                //此处setTime为Date类型
-                calendar.setTime(date);
+//                //在某一个时间点上加两小时的写法
+//                Calendar calendar = Calendar.getInstance();
+//                //此处setTime为Date类型
+//                calendar.setTime(date);
 
                 customerService.addCheckin(checkin);
                 model.addAttribute("checkinList",customerService.selectCheckinList());
@@ -385,6 +380,17 @@ public class CustomerController {
                 model.addAttribute("addCheckoutValue",addCheckoutValue);
                 return "custManage/addCheckout";
             }else {
+
+                Date date = new Date();
+                SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+                SimpleDateFormat df1 = new SimpleDateFormat("HH:mm:ss");
+                TimeLine timeLine = new TimeLine();
+                timeLine.setDay(df.format(date));
+                timeLine.setDate(df1.format(date));
+                timeLine.setCustId(Integer.parseInt(custid));
+                timeLine.setContent("退住" + bedid + "号房间");
+                customerService.insertTimeLine(timeLine);
+
                 customerService.addCheckout(checkout);
                 List<BedAndCustomer> list = customerService.selectCheckoutList();
                 List<BedAndCustomer> checkoutList1 = new ArrayList<>();
@@ -494,6 +500,16 @@ public class CustomerController {
                 model.addAttribute("addOutValue",addOutValue);
                 return "custManage/addOut";
             }else {
+                Date date = new Date();
+                SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+                SimpleDateFormat df1 = new SimpleDateFormat("HH:mm:ss");
+                TimeLine timeLine = new TimeLine();
+                timeLine.setDay(df.format(date));
+                timeLine.setDate(df1.format(date));
+                timeLine.setCustId(Integer.parseInt(custid));
+                timeLine.setContent("由于" + reason + "原因外出");
+                customerService.insertTimeLine(timeLine);
+
                 customerService.addOut(out);
                 model.addAttribute("outList",customerService.getAllOutList());
                 return "custManage/out";
