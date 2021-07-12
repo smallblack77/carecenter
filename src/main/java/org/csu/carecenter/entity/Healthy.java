@@ -2,10 +2,10 @@ package org.csu.carecenter.entity;
 
 public class Healthy {
     int custId;
-    float temp;
-    float pressure;
-    float sugar;
-    float weight;
+    double temp;
+    String pressure;
+    double sugar;
+    double weight;
     int pulse;
     String selfCare;
     String day;
@@ -18,35 +18,36 @@ public class Healthy {
         this.custId = custId;
     }
 
-    public float getTemp() {
-        return temp;
-    }
 
-    public void setTemp(float temp) {
-        this.temp = temp;
-    }
-
-    public float getPressure() {
+    public String getPressure() {
         return pressure;
     }
 
-    public void setPressure(float pressure) {
+    public void setPressure(String pressure) {
         this.pressure = pressure;
     }
 
-    public float getSugar() {
+    public double getTemp() {
+        return temp;
+    }
+
+    public void setTemp(double temp) {
+        this.temp = temp;
+    }
+
+    public double getSugar() {
         return sugar;
     }
 
-    public void setSugar(float sugar) {
+    public void setSugar(double sugar) {
         this.sugar = sugar;
     }
 
-    public float getWeight() {
+    public double getWeight() {
         return weight;
     }
 
-    public void setWeight(float weight) {
+    public void setWeight(double weight) {
         this.weight = weight;
     }
 

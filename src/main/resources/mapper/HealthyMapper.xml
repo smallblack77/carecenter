@@ -1,7 +1,30 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="org.csu.carecenter.Persistence.HealthyMapper">
+<select id="getHealthy" resultType="Healthy">
+    SELECT
+        CUSTID AS custId,
+        TEMP,
+        PRESSURE,
+        SUGAR,
+        WEIGHT,
+        PULSE,
+        SELFCARE AS selfCare,
+        DAY
+    FROM HEALTHY
+    WHERE CUSTID =#{id} AND DAY = #{week}
+</select>
 
+    <update id="updateHealthy" parameterType="Healthy">
+        UPDATE HEALTHY
+        SET TEMP = #{temp},
+            PRESSURE = #{pressure},
+            SUGAR = #{sugar},
+            WEIGHT = #{weight},
+            PULSE = #{pulse},
+            SELFCARE = #{selfCare}
+        WHERE CUSTID = #{custId} AND DAY = #{day}
+    </update>
 
 
 </mapper>
