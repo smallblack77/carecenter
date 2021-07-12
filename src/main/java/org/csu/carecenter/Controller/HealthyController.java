@@ -28,7 +28,7 @@ public class HealthyController {
     @Autowired
     CustomerService customerService;
 
-    @GetMapping("/addHealthy")
+    @RequestMapping("/addHealthy")
     public String addHealthy(String id, Model model, HttpSession session) throws ParseException {
 
         Date date = new Date(); // this object contains the current date value
@@ -50,20 +50,17 @@ public class HealthyController {
     }
 
     @RequestMapping("/updateHealthy")
-    public String updateHealthy(String id, String weight, String temp, String pressure, String sugar, String pulse,
-                                String selfCare, Model model,HttpSession session) throws ParseException {
-/*        Healthy healthy1 = (Healthy) model.getAttribute("healthy");
-        String day = healthy1.getDay();*/
-        Date date = new Date(); // this object contains the current date value
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
-        String currengTime = formatter.format(date);
-        DateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        Date currentDate = sdf.parse(currengTime);
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("EEEE");
-        String currentWeek = simpleDateFormat.format(currentDate);
+    public String updateHealthy( String weight, String temp, String pressure, String sugar, String pulse,
+                                String selfCare, Model model,HttpSession session)  {
 
 
-        if(id != null && weight!=null && temp != null && pressure!=null && sugar != null && pulse!=null && selfCare!=null ){
+        Healthy healthy1 = (Healthy) model.getAttribute("healthy");
+        String day = healthy1.getDay();
+
+        int custId = healthy1.getCustId();
+
+
+        if( weight!=null && temp != null && pressure!=null && sugar != null && pulse!=null && selfCare!=null ){
             System.out.println("+++++++++++++++++++++++++++++++++");
             if (selfCare.equals("1")){
                 selfCare = "可自理";
@@ -77,13 +74,13 @@ public class HealthyController {
 
             Healthy healthy = new Healthy();
             healthy.setPressure(pressure);
-            healthy.setCustId(Integer.valueOf(id));
+            healthy.setCustId(Integer.valueOf(custId));
             healthy.setWeight(Double.valueOf(weight));
             healthy.setTemp(Double.valueOf(temp));
             healthy.setSelfCare(selfCare);
             healthy.setSugar(Double.valueOf(sugar));
             healthy.setPulse(Integer.valueOf(pulse));
-            healthy.setDay(currentWeek);
+            healthy.setDay(day);
 
             healthyService.updateHealthy(healthy);
 

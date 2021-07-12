@@ -14,7 +14,7 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/account")
-@SessionAttributes("user")
+@SessionAttributes(value = {"user"})
 public class UserController {
 
     @Autowired
