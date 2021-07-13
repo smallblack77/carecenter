@@ -133,6 +133,9 @@ public class HealthyController {
 
         model.addAttribute("healthy",healthy);*/
         List<Healthy> healthyList = healthyService.getAllList();
+        for(int i=0;i<healthyList.size();i++){
+            System.out.println(healthyList.get(i).getDay());
+        }
         model.addAttribute("healthyList",healthyList);
         return "custManage/healthyDisplay";
 
@@ -140,8 +143,9 @@ public class HealthyController {
 
     @ResponseBody
     @GetMapping("/showList")
-    public List<Healthy> showList(String id){
-        List<Healthy> healthy = healthyService.getAllHealthy(Integer.valueOf(id));
+    public List<Healthy> showList(String custId,Model model){
+        model.addAttribute("custId",custId);
+        List<Healthy> healthy = healthyService.getAllHealthy(Integer.valueOf(custId));
         return  healthy;
     }
 

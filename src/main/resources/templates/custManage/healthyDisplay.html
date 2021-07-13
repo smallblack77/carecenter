@@ -802,8 +802,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                                 </thead>
                                                 <tbody>
                                                 <tr class="" th:each="ahealthy : ${healthyList}">
-                                                    <td><th:block id="id" name="id" th:text="${ahealthy.id}" /></td>
-                                                    <td><th:block  name="name" th:text="${ahealthy.name}" /></td>
+                                                    <td><th:block id="id" name="id" th:text="${ahealthy.custId}" /></td>
+                                                    <td><th:block  name="name" th:text="${customer.name}" /></td>
                                                     <td><th:block  name="temp" th:text="${ahealthy.temp}" /></td>
                                                     <td><th:block  name="pressure" th:text="${ahealthy.pressure}" /></td>
                                                     <td><th:block  name="sugar" th:text="${ahealthy.sugar}" /></td>
