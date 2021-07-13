@@ -1,11 +1,5 @@
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
 <!DOCTYPE HTML>
-<html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
 <title>Rest a People and Society Category Flat Bootstarp Resposive Website Template | Home :: w3layouts</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -331,15 +325,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="contact-form">
 					<div class="col-md-6 contact-grid">
 						<h4>contact form</h4>
-						<form>
-							<p class="your-para">Your mail:</p>
-							<input type="text" value="" onfocus="this.value='';" onblur="if (this.value == '') {this.value ='';}">
+						<form action="/view">
+							<p class="your-para">Your Name:</p>
+							<input type="text" name="username" id="username" value="" onfocus="this.value='';" onblur="if (this.value == '') {this.value ='';}">
 							<p class="your-para">Your mail:</p>
 							<input type="text" value="" onfocus="this.value='';" onblur="if (this.value == '') {this.value ='';}">
 							<p class="your-para">Your message:</p>
 							<textarea cols="77" rows="6" value=" " onfocus="this.value='';" onblur="if (this.value == '') {this.value = '';}"></textarea>
 							<div class="send">
-								<input type="submit" value="Send" >
+								<input type="submit" value="联系客服" >
+							</div>
+							<div id="dialog" title="Basic dialog">
+								<p>这是一个动画显示的对话框，用于显示信息。对话框窗口可以移动，调整尺寸，默认可通过 'x' 图标关闭。</p>
 							</div>
 						</form>
 					</div>
