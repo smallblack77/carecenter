@@ -108,9 +108,31 @@ public class HealthyController {
 
     @GetMapping("viewList")
     public String viewList(Model model,String id){
-        List<Healthy> healthy = healthyService.getAllHealthy(Integer.valueOf(id));
+        int custId = Integer.valueOf(id);
+        Customer customer = customerService.getCustomer(Integer.valueOf(id));
+        model.addAttribute("customer",customer);
+
+        Healthy mon = healthyService.getHealthy(custId,"星期一");
+        Healthy tue = healthyService.getHealthy(custId,"星期二");
+        System.out.println("+++++++++"+tue.getPressure());
+        Healthy wed = healthyService.getHealthy(custId,"星期三");
+        Healthy thu = healthyService.getHealthy(custId,"星期四");
+        Healthy fri = healthyService.getHealthy(custId,"星期五");
+        Healthy sat = healthyService.getHealthy(custId,"星期六");
+        Healthy sun = healthyService.getHealthy(custId,"星期日");
+        model.addAttribute("mon",mon);
+        model.addAttribute("tue",tue);
+        model.addAttribute("wed",wed);
+        model.addAttribute("thu",thu);
+        model.addAttribute("fri",fri);
+        model.addAttribute("sat",sat);
+        model.addAttribute("sun",sun);
+
+
+/*        List<Healthy> healthy = healthyService.getAllHealthy(Integer.valueOf(id));
+
+        model.addAttribute("healthy",healthy);*/
         List<Healthy> healthyList = healthyService.getAllList();
-        model.addAttribute("healthy",healthy);
         model.addAttribute("healthyList",healthyList);
         return "custManage/healthyDisplay";
 
