@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 import javax.servlet.http.HttpServletRequest;
@@ -17,6 +18,7 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 @Controller
 @RequestMapping("/healthy")
@@ -94,13 +96,33 @@ public class HealthyController {
         }
 
 
-
     }
 
     @GetMapping("/show")
+
     public String show(Model model,String id)
     {
+
         return "custManage/showHealthy";
     }
+
+    @GetMapping("viewList")
+    public String viewList(Model model,String id){
+        List<Healthy> healthy = healthyService.getAllHealthy(Integer.valueOf(id));
+        List<Healthy> healthyList = healthyService.getAllList();
+        model.addAttribute("healthy",healthy);
+        model.addAttribute("healthyList",healthyList);
+        return "custManage/healthyDisplay";
+
+    }
+
+    @ResponseBody
+    @GetMapping("/showList")
+    public List<Healthy> showList(String id){
+        List<Healthy> healthy = healthyService.getAllHealthy(Integer.valueOf(id));
+        return  healthy;
+    }
+
+
 
 }

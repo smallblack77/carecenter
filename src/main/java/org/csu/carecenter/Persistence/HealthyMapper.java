@@ -13,4 +13,10 @@ public interface HealthyMapper {
 
     //修改
     void updateHealthy(Healthy healthy);
+
+    //获取某个客户所有健康
+    List<Healthy> getAllHealthy(int id);
+
+    //所有
+    List<Healthy> getAllList();
 }

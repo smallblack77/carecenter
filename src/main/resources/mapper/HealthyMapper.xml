@@ -26,5 +26,32 @@
         WHERE CUSTID = #{custId} AND DAY = #{day}
     </update>
 
+    <select id="getAllHealthy" parameterType="int" resultType="Healthy">
+    SELECT
+        CUSTID AS custId,
+        TEMP,
+        PRESSURE,
+        SUGAR,
+        WEIGHT,
+        PULSE,
+        SELFCARE AS selfCare,
+        DAY
+    FROM HEALTHY
+    WHERE CUSTID =#{id}
+    </select>
+
+    <select id="getAllList" resultType="Healthy">
+        SELECT
+            CUSTID AS custId,
+            TEMP,
+            PRESSURE,
+            SUGAR,
+            WEIGHT,
+            PULSE,
+            SELFCARE AS selfCare,
+            DAY
+        FROM HEALTHY
+    </select>
+
 
 </mapper>

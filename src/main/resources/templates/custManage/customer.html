@@ -436,8 +436,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                      <td><a th:href="${'/customer/deleteCustomer?id='}+${customer.id}">Delete</a></td>
                                      <td>
                                          <a th:href="${'/healthy/addHealthy?id='}+${customer.id}">Add</a>
+                                         <a th:href="${'/healthy/viewList?id='}+${customer.id}">Detail</a>
                                          <a th:href="${'/healthy/show?id='}+${customer.id}">Show</a>
                                      </td>
+
                                  </tr>
                                  </tbody>
                              </table>

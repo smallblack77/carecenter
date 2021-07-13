@@ -5,6 +5,8 @@ import org.csu.carecenter.entity.Healthy;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class HealthyService {
 
@@ -21,5 +23,13 @@ public class HealthyService {
         healthyMapper.updateHealthy(healthy);
     }
 
+    //获取某个客户所有的
+    public List<Healthy> getAllHealthy(int id){
+        return  healthyMapper.getAllHealthy(id);
+    }
 
+    //所有
+    public List<Healthy> getAllList(){
+        return healthyMapper.getAllList();
+    }
 }
