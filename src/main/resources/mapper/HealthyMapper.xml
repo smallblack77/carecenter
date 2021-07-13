@@ -38,6 +38,7 @@
         DAY
     FROM HEALTHY
     WHERE CUSTID =#{id}
+    ORDER BY mark ASC
     </select>
 
     <select id="getAllList" resultType="Healthy">
