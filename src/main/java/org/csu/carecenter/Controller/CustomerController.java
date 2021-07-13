@@ -43,7 +43,7 @@ public class CustomerController {
     public String getTimeLineById(HttpServletRequest req,HttpSession session,Model model){
         int id = Integer.parseInt(req.getParameter("id"));
         List<String> dayList = customerService.getDayList(id);
-        List<TimeLine> timeLineList = customerService.getAllTimeLine();
+        List<TimeLine> timeLineList = customerService.getTimeLineById(id);
         model.addAttribute("dayList", dayList);
 
         model.addAttribute("timeLineList", timeLineList);

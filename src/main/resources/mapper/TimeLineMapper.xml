@@ -11,14 +11,14 @@
         FROM TIMELINE
     </select>
 
-    <select id="getTimeLineById" resultType="TimeLine">
+    <select id="getTimeLineById" parameterType="int" resultType="TimeLine">
         SELECT
             CUSTID,
             DAY,
             TIME as date,
             CONTENT
         FROM TIMELINE
-        WHERE CUSTID = #{custId} AND DAY = #{day}
+        WHERE CUSTID = #{custId}
     </select>
 <!--    -->
 <!--    <select id="getTimeLineByDay" parameterType="int" resultType="TimeLine">-->

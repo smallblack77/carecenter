@@ -11,7 +11,7 @@ public interface TimeLineMapper {
 
     List<TimeLine> getAllTimeLine();
 
-    List<TimeLine> getTimeLineById(int custId, String day);
+    List<TimeLine> getTimeLineById(int custId);
 
     void insertTimeLime(TimeLine timeLine);
 

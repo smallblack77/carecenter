@@ -29,8 +29,8 @@ public class CustomerService {
         return timeLineMapper.getAllTimeLine();
     }
 
-    public List<TimeLine> getTimeLineById(int custId, String day){
-        return timeLineMapper.getTimeLineById(custId, day);
+    public List<TimeLine> getTimeLineById(int custId){
+        return timeLineMapper.getTimeLineById(custId);
     }
 
     public List<String> getDayList(int id){
