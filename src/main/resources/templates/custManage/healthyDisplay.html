@@ -396,6 +396,25 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <!-- page heading end-->
                     <!--body wrapper start-->
                     <div class="wrapper">
+                        <table>
+                            <tr>
+                                <td>
+
+                                </td>
+                                <td>
+
+                                </td>
+                                <td>
+
+                                </td>
+                                <td>
+
+                                </td>
+                                <td>
+
+                                </td>
+                            </tr>
+                        </table>
                         <div class="row">
                             <div class="col-sm-6">
                                 <section class="panel">
@@ -407,7 +426,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                              </span>
                                     </header>
                                     <div class="panel-body">
-                                        <table class="table" th:if="${healthy.day}='星期一'">
+                                        <table class="table">
                                             <tbody>
                                             <tr>
                                                 <th>ID</th>
@@ -419,27 +438,27 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                             </tr>
                                             <tr>
                                                 <th>Temperature</th>
-                                                <td th:text="${healthy.temp}">Larry</td>
+                                                <td th:text="${mon.temp}">Larry</td>
                                             </tr>
                                             <tr>
                                                 <th>Pressure</th>
-                                                <td th:text="${healthy.pressure}">Larry</td>
+                                                <td th:text="${mon.pressure}">Larry</td>
                                             </tr>
                                             <tr>
                                                 <th>Sugar</th>
-                                                <td th:text="${healthy.sugar}">Larry</td>
+                                                <td th:text="${mon.sugar}">Larry</td>
                                             </tr>
                                             <tr>
                                                 <th>Weight</th>
-                                                <td th:text="${healthy.weight}">Larry</td>
+                                                <td th:text="${mon.weight}">Larry</td>
                                             </tr>
                                             <tr>
                                                 <th>Pulse</th>
-                                                <td th:text="${healthy.pulse}">Larry</td>
+                                                <td th:text="${mon.pulse}">Larry</td>
                                             </tr>
                                             <tr>
                                                 <th>Selfcare</th>
-                                                <td th:text="${healthy.selfcare}">Larry</td>
+                                                <td th:text="${mon.selfcare}">Larry</td>
                                             </tr>
                                             <tr>
                                                 <th>Evaluate</th>
@@ -461,7 +480,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                              </span>
                                     </header>
                                     <div class="panel-body">
-                                        <table class="table table-striped" th:if="${healthy.day}='星期二'">
+                                        <table class="table table-striped">
                                             <tbody>
                                             <tr>
                                                 <th>ID</th>
@@ -473,27 +492,27 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                             </tr>
                                             <tr>
                                                 <th>Temperature</th>
-                                                <td th:text="${healthy.temp}">Larry</td>
+                                                <td th:text="${tue.temp}">Larry</td>
                                             </tr>
                                             <tr>
                                                 <th>Pressure</th>
-                                                <td th:text="${healthy.pressure}">Larry</td>
+                                                <td th:text="${tue.pressure}">Larry</td>
                                             </tr>
                                             <tr>
                                                 <th>Sugar</th>
-                                                <td th:text="${healthy.sugar}">Larry</td>
+                                                <td th:text="${tue.sugar}">Larry</td>
                                             </tr>
                                             <tr>
                                                 <th>Weight</th>
-                                                <td th:text="${healthy.weight}">Larry</td>
+                                                <td th:text="${tue.weight}">Larry</td>
                                             </tr>
                                             <tr>
                                                 <th>Pulse</th>
-                                                <td th:text="${healthy.pulse}">Larry</td>
+                                                <td th:text="${tue.pulse}">Larry</td>
                                             </tr>
                                             <tr>
                                                 <th>Selfcare</th>
-                                                <td th:text="${healthy.selfcare}">Larry</td>
+                                                <td th:text="${tue.selfcare}">Larry</td>
                                             </tr>
                                             <tr>
                                                 <th>Evaluate</th>
@@ -516,7 +535,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                              </span>
                                     </header>
                                     <div class="panel-body">
-                                        <table class="table table-bordered" th:if="${today}='星期三'">
+                                        <table class="table table-bordered">
                                             <tbody>
                                             <tr>
                                                 <th>ID</th>
@@ -528,27 +547,27 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                             </tr>
                                             <tr>
                                                 <th>Temperature</th>
-                                                <td th:text="${healthy.temp}">Larry</td>
+                                                <td th:text="${wed.temp}">Larry</td>
                                             </tr>
                                             <tr>
                                                 <th>Pressure</th>
-                                                <td th:text="${healthy.pressure}">Larry</td>
+                                                <td th:text="${wed.pressure}">Larry</td>
                                             </tr>
                                             <tr>
                                                 <th>Sugar</th>
-                                                <td th:text="${healthy.sugar}">Larry</td>
+                                                <td th:text="${wed.sugar}">Larry</td>
                                             </tr>
                                             <tr>
                                                 <th>Weight</th>
-                                                <td th:text="${healthy.weight}">Larry</td>
+                                                <td th:text="${wed.weight}">Larry</td>
                                             </tr>
                                             <tr>
                                                 <th>Pulse</th>
-                                                <td th:text="${healthy.pulse}">Larry</td>
+                                                <td th:text="${wed.pulse}">Larry</td>
                                             </tr>
                                             <tr>
                                                 <th>Selfcare</th>
-                                                <td th:text="${healthy.selfcare}">Larry</td>
+                                                <td th:text="${wed.selfcare}">Larry</td>
                                             </tr>
                                             <tr>
                                                 <th>Evaluate</th>
@@ -569,7 +588,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                              </span>
                                     </header>
                                     <div class="panel-body">
-                                        <table class="table table-hover" th:if="${today}='星期四'">
+                                        <table class="table table-hover">
                                             <tbody>
                                             <tr>
                                                 <th>ID</th>
@@ -581,27 +600,27 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                             </tr>
                                             <tr>
                                                 <th>Temperature</th>
-                                                <td th:text="${healthy.temp}">Larry</td>
+                                                <td th:text="${thu.temp}">Larry</td>
                                             </tr>
                                             <tr>
                                                 <th>Pressure</th>
-                                                <td th:text="${healthy.pressure}">Larry</td>
+                                                <td th:text="${thu.pressure}">Larry</td>
                                             </tr>
                                             <tr>
                                                 <th>Sugar</th>
-                                                <td th:text="${healthy.sugar}">Larry</td>
+                                                <td th:text="${thu.sugar}">Larry</td>
                                             </tr>
                                             <tr>
                                                 <th>Weight</th>
-                                                <td th:text="${healthy.weight}">Larry</td>
+                                                <td th:text="${thu.weight}">Larry</td>
                                             </tr>
                                             <tr>
                                                 <th>Pulse</th>
-                                                <td th:text="${healthy.pulse}">Larry</td>
+                                                <td th:text="${thu.pulse}">Larry</td>
                                             </tr>
                                             <tr>
                                                 <th>Selfcare</th>
-                                                <td th:text="${healthy.selfcare}">Larry</td>
+                                                <td th:text="${thu.selfcare}">Larry</td>
                                             </tr>
                                             <tr>
                                                 <th>Evaluate</th>
@@ -624,7 +643,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                              </span>
                                     </header>
                                     <div class="panel-body">
-                                        <table class="table" th:if="${today}='星期五'">
+                                        <table class="table">
                                             <tbody>
                                             <tr>
                                                 <th>ID</th>
@@ -636,27 +655,27 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                             </tr>
                                             <tr>
                                                 <th>Temperature</th>
-                                                <td th:text="${healthy.temp}">Larry</td>
+                                                <td th:text="${fri.temp}">Larry</td>
                                             </tr>
                                             <tr>
                                                 <th>Pressure</th>
-                                                <td th:text="${healthy.pressure}">Larry</td>
+                                                <td th:text="${fri.pressure}">Larry</td>
                                             </tr>
                                             <tr>
                                                 <th>Sugar</th>
-                                                <td th:text="${healthy.sugar}">Larry</td>
+                                                <td th:text="${fri.sugar}">Larry</td>
                                             </tr>
                                             <tr>
                                                 <th>Weight</th>
-                                                <td th:text="${healthy.weight}">Larry</td>
+                                                <td th:text="${fri.weight}">Larry</td>
                                             </tr>
                                             <tr>
                                                 <th>Pulse</th>
-                                                <td th:text="${healthy.pulse}">Larry</td>
+                                                <td th:text="${fri.pulse}">Larry</td>
                                             </tr>
                                             <tr>
                                                 <th>Selfcare</th>
-                                                <td th:text="${healthy.selfcare}">Larry</td>
+                                                <td th:text="${fri.selfcare}">Larry</td>
                                             </tr>
                                             <tr>
                                                 <th>Evaluate</th>
@@ -678,7 +697,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                              </span>
                                     </header>
                                     <div class="panel-body">
-                                        <table class="table table-striped" th:if="${today}='星期六'">
+                                        <table class="table table-striped">
                                             <tbody>
                                             <tr>
                                                 <th>ID</th>
@@ -690,27 +709,27 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                             </tr>
                                             <tr>
                                                 <th>Temperature</th>
-                                                <td th:text="${healthy.temp}">Larry</td>
+                                                <td th:text="${sat.temp}">Larry</td>
                                             </tr>
                                             <tr>
                                                 <th>Pressure</th>
-                                                <td th:text="${healthy.pressure}">Larry</td>
+                                                <td th:text="${sat.pressure}">Larry</td>
                                             </tr>
                                             <tr>
                                                 <th>Sugar</th>
-                                                <td th:text="${healthy.sugar}">Larry</td>
+                                                <td th:text="${sat.sugar}">Larry</td>
                                             </tr>
                                             <tr>
                                                 <th>Weight</th>
-                                                <td th:text="${healthy.weight}">Larry</td>
+                                                <td th:text="${sat.weight}">Larry</td>
                                             </tr>
                                             <tr>
                                                 <th>Pulse</th>
-                                                <td th:text="${healthy.pulse}">Larry</td>
+                                                <td th:text="${sat.pulse}">Larry</td>
                                             </tr>
                                             <tr>
                                                 <th>Selfcare</th>
-                                                <td th:text="${healthy.selfcare}">Larry</td>
+                                                <td th:text="${sat.selfcare}">Larry</td>
                                             </tr>
                                             <tr>
                                                 <th>Evaluate</th>
@@ -733,7 +752,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                              </span>
                                     </header>
                                     <div class="panel-body">
-                                        <table class="table" th:if="${today}='星期天'">
+                                        <table class="table">
                                             <thead>
                                             <th>ID</th>
                                             <th>Name</th>
@@ -749,12 +768,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                             <tr>
                                                 <td th:text="${customer.id}">Mark</td>
                                                 <td th:text="${customer.name}">Jacob</td>
-                                                <td th:text="${healthy.temp}">Larry</td>
-                                                <td th:text="${healthy.pressure}">Larry</td>
-                                                <td th:text="${healthy.sugar}">Larry</td>
-                                                <td th:text="${healthy.weight}">Larry</td>
-                                                <td th:text="${healthy.pulse}">Larry</td>
-                                                <td th:text="${healthy.selfcare}">Larry</td>
+                                                <td th:text="${sun.temp}">Larry</td>
+                                                <td th:text="${sun.pressure}">Larry</td>
+                                                <td th:text="${sun.sugar}">Larry</td>
+                                                <td th:text="${sun.weight}">Larry</td>
+                                                <td th:text="${sun.pulse}">Larry</td>
+                                                <td th:text="${sun.selfcare}">Larry</td>
                                                 <td><span class="label label-primary label-mini">良好</span></td>
                                             </tr>
                                             </tbody>
