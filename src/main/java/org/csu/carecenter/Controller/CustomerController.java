@@ -11,7 +11,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.io.IOException;
+import java.io.Writer;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
@@ -53,7 +56,23 @@ public class CustomerController {
     //客户基本信息
     //查询客户列表
     @GetMapping("/selectCustomerLsit")
-    public String getCustomerLsit(Model model){
+    public String getCustomerLsit(Model model, HttpServletResponse response,HttpServletRequest request) throws IOException {
+        response.setContentType("text/html;charset=utf-8");
+        /* 设置响应头允许ajax跨域访问 */
+        response.setHeader("Access-Control-Allow-Origin", "*");
+        /* 星号表示所有的异域请求都可以接受， */
+        response.setHeader("Access-Control-Allow-Methods", "GET,POST");
+
+        //获取微信小程序get的参数值并打印
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+        System.out.println("username="+username+" ,password="+password);
+
+        //返回值给微信小程序
+        Writer out = response.getWriter();
+        out.write("进入后台了");
+        out.flush();
+
         List<Customer> customers =  customerService.getCustomerLsit();
         model.addAttribute("customerList", customers);
         return "custManage/customer";
