@@ -412,6 +412,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                      <th data-breakpoints="xs">ID</th>
                                      <th>Name</th>
                                      <th>Sex</th>
+                                     <th>Phone</th>
                                      <th>Age</th>
                                      <th>Height</th>
                                      <th>Weight</th>
@@ -427,6 +428,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                      <td><a th:block id="id" name="id" th:text="${customer.id}" th:href="${'/customer/getTimeLineById?id='}+${customer.id}"></a></td>
                                      <td><th:block  name="name" th:text="${customer.name}" /></td>
                                      <td><th:block  name="sex" th:text="${customer.sex}" /></td>
+                                     <td><th:block  name="phone" th:text="${customer.phone}" /></td>
                                      <td><th:block  name="age" th:text="${customer.age}" /></td>
                                      <td><th:block  name="height" th:text="${customer.height}" /></td>
                                      <td><th:block  name="weight" th:text="${customer.weight}" /></td>

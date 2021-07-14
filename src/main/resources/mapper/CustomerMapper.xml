@@ -7,6 +7,7 @@
             CUSTOMER.ID,
             CUSTOMER.NAME,
             CUSTOMER.SEX,
+            CUSTOMER.PHONE,
             CUSTOMER.AGE,
             CUSTOMER.HEIGHT,
             CUSTOMER.WEIGHT,
@@ -16,11 +17,19 @@
         WHERE CUSTOMER.ID = #{id}
     </select>
 
+    <select id="getCustomerIdByNameAndPhone" resultType="int">
+        SELECT
+            CUSTOMER.ID
+        FROM CUSTOMER
+        WHERE CUSTOMER.NAME = #{custname} AND CUSTOMER.PHONE = #{phone}
+    </select>
+
     <select id="getCustomerList"  resultType="Customer">
         SELECT
             CUSTOMER.ID,
             CUSTOMER.NAME,
             CUSTOMER.SEX,
+            CUSTOMER.PHONE,
             CUSTOMER.AGE,
             CUSTOMER.HEIGHT,
             CUSTOMER.WEIGHT,
@@ -34,19 +43,21 @@
             (CUSTOMER.ID,
             CUSTOMER.NAME,
             CUSTOMER.SEX,
+            CUSTOMER.PHONE,
             CUSTOMER.AGE,
             CUSTOMER.HEIGHT,
             CUSTOMER.WEIGHT,
             CUSTOMER.BIRTHDAY,
             CUSTOMER.ATTENTION)
         VALUES
-            (#{id}, #{name}, #{sex}, #{age}, #{height}, #{weight}, #{birthday}, #{attention})
+            (#{id}, #{name}, #{sex}, #{phone}, #{age}, #{height}, #{weight}, #{birthday}, #{attention})
     </insert>
 
     <update id="updateCustomer"  parameterType="Customer">
         UPDATE CUSTOMER SET
          CUSTOMER.NAME = #{name},
          CUSTOMER.SEX = #{sex},
+         CUSTOMER.PHONE = #{phone},
          CUSTOMER.AGE = #{age},
          CUSTOMER.HEIGHT = #{height},
          CUSTOMER.WEIGHT = #{weight},

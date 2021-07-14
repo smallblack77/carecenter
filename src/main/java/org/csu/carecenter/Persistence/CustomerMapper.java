@@ -19,6 +19,8 @@ public interface CustomerMapper {
 
     void deleteCustomer(int id);
 
+    int getCustomerIdByNameAndPhone(String custname);
+
 //入住信息
     void deleteCheckin(int id);
 

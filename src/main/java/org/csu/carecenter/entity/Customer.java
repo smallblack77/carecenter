@@ -7,6 +7,8 @@ public class Customer {
 
     private String sex;
 
+    private String phone;
+
     private int age;
 
     private Double height;
@@ -31,6 +33,14 @@ public class Customer {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     public String getSex() {
