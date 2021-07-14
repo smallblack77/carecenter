@@ -48,7 +48,7 @@ label{
   font-weight: 400;
   color: #fff;
   text-transform: uppercase;
-  font-family: 'Six Caps', sans-serif;
+  /*font-family: 'Six Caps', sans-serif;*/
   letter-spacing: 4px;
 }
 .logo  a h1:hover{
@@ -372,7 +372,7 @@ ul.f-icons{
   		   width: 100%;
 		  display: none;
 		  text-align: center;
-		  background: rgba(151, 192, 165, 1);
+		  background: rgb(151, 192, 165);
 		  padding: 0;
 		  margin-top: 4px;
 	}

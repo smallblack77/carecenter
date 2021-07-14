@@ -5,33 +5,64 @@
     <script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery/jquery-1.4.min.js"></script>
     <script src="http://cdn.bootcss.com/stomp.js/2.3.3/stomp.min.js"></script>
     <script src="https://cdn.bootcss.com/sockjs-client/1.1.4/sockjs.min.js"></script>
+    <script type="applijewelleryion/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <link href="../css/mainWeb/bootstrap.css" rel='stylesheet' type='text/css' />
+    <!-- Custom Theme files -->
+    <link href="../css/mainWeb/style.css" rel='stylesheet' type='text/css' />
+    <script src="../js/jquery-1.11.1.min.js"></script>
+    <!--webfonts-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,300,600,700|Six+Caps' rel='stylesheet' type='text/css'>
+    <!--//webfonts-->
+    <style>
+        .button1 {
+            border-radius: 12px;
+            background-color: #97C0A5;
+            width: 150px;
+            height: 50px;
+            -webkit-transition-duration: 0.4s; /* Safari */
+            transition-duration: 0.4s;
+            border: none;
+            font-family: 'Arial';
+            color: #FFFFFF;
+        }
+    </style>
 </head>
 
 <body>
-<div style="margin: auto;text-align: center">
-    <h1>Welcome to websocket</h1>
-</div>
-<br/>
-<div style="margin: auto;text-align: center">
-    <select id="onLineUser">
-        <option>--所有--</option>
-    </select>
-    <input id="text" type="text"/>
-    <button onclick="send()">发送消息</button>
-</div>
-<br>
-<div style="margin-right: 10px;text-align: right">
-    <button onclick="closeWebSocket()">关闭连接</button>
-</div>
-<hr/>
-<div id="message" style="text-align: center;"></div>
-<input type="text" th:value="${username}" id="username" style="display: none"/>
+<div class="contact" id="contact">
+    <div class="container">
+        <h3>Welcome to websocket</h3>
+        <h5>Duis autem vel eum iriure dolor in hendrerit.</h5>
+        <div class="contact-form">
+            <div class="col-md-6 contact-grid">
+                <h4>contact form</h4>
+                <div>
+                    <select id="onLineUser" style="font-family: 'Arial';width:500px;height:40px;line-height:40px;margin-top: 20px;">
+                        <option selected>--所有--</option>
+                    </select>
+                </div>
+                <textarea cols="77" rows="6" id="message" style="width: 1200px;height: 300px;color: #1b6d85;" readonly="readonly"></textarea>
+                <input type="text" th:value="${username}" id="username" style="display: none"/>
+                <input id="text" type="text" style="width: 1200px;height: 50px"/>
+                <button class="button1" onclick="send()">发送消息</button>
+                <div class="send">
+                    <button onclick="closeWebSocket()" style="display: none">关闭连接</button>
+                </div>
+
+
+                <br>
+            </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
 </body>
 
 
 <script type="text/javascript">
     var webSocket;
     var commWebSocket;
+    var d = new Date();//获取系统当前时间
     if ("WebSocket" in window) {
         webSocket = new WebSocket("ws://localhost:8088/websocket/" + document.getElementById('username').value);
 
@@ -39,7 +70,7 @@
         webSocket.onopen = function () {
             //webSocket.send( document.getElementById('username').value+"已经上线了");
             console.log("已经连通了websocket");
-            setMessageInnerHTML("已经连通了websocket");
+            // setMessageInnerHTML("已经连通了websocket");
         };
 
         //接收后台服务端的消息
@@ -54,7 +85,7 @@
                 var onlineName = obj.username;
                 var option = "<option>" + onlineName + "</option>";
                 $("#onLineUser").append(option);
-                setMessageInnerHTML(onlineName + "上线了");
+                setMessageInnerHTML(onlineName + "进入客服\n");
             } else if (obj.messageType == 2) {
                 $("#onLineUser").empty();
                 var onlineName = obj.onlineUsers;
@@ -67,7 +98,7 @@
                 }
                 $("#onLineUser").append(option);
 
-                setMessageInnerHTML(offlineName + "下线了");
+                // setMessageInnerHTML(offlineName + "下线了");
             } else if (obj.messageType == 3) {
                 var onlineName = obj.onlineUsers;
                 var option = null;
@@ -79,14 +110,14 @@
                 $("#onLineUser").append(option);
                 console.log("获取了在线的名单" + onlineName.toString());
             } else {
-                setMessageInnerHTML(obj.fromusername + "对" + obj.tousername + "说：" + obj.textMessage);
+                setMessageInnerHTML(d+"       \n"+obj.fromusername + "：" + "\n"+"     "+obj.textMessage+"\n\n");
             }
         };
 
         //连接关闭的回调事件
         webSocket.onclose = function () {
             console.log("连接已关闭...");
-            setMessageInnerHTML("连接已经关闭....");
+            // setMessageInnerHTML("连接已经关闭....");
         };
     } else {
         // 浏览器不支持 WebSocket
@@ -95,7 +126,8 @@
 
     //将消息显示在网页上
     function setMessageInnerHTML(innerHTML) {
-        document.getElementById('message').innerHTML += innerHTML + '<br/>';
+        var username = document.getElementById("username").value;
+        document.getElementById('message').innerHTML += innerHTML;
     }
 
     function closeWebSocket() {
@@ -103,12 +135,12 @@
         webSocket.close();
     }
 
-    function send() {
+    function send(obj) {
         var selectText = $("#onLineUser").find("option:selected").text();
         if (selectText == "--所有--") {
             selectText = "All";
         } else {
-            setMessageInnerHTML(document.getElementById('username').value + "对" + selectText + "说：" + $("#text").val());
+            setMessageInnerHTML(d+"\n"+ "To : "+selectText+"\n" + "     "+$("#text").val()+"\n\n");
         }
         var message = {
             "message": document.getElementById('text').value,
@@ -120,5 +152,11 @@
 
     }
 </script>
-
+<script src="../js/bootstrap.js"></script>
+<script src="../js/jquery.dcjqaccordion.2.7.js"></script>
+<script src="../js/scripts.js"></script>
+<script src="../js/jquery.slimscroll.js"></script>
+<script src="../js/jquery.nicescroll.js"></script>
+<!--[if lte IE 8]><script language="javascript" type="text/javascript" src="../js/flot-chart/excanvas.min.js"></script><![endif]-->
+<script src="../js/jquery.scrollTo.js"></script>
 </html>

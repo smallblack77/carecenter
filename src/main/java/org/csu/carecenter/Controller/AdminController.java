@@ -262,4 +262,10 @@ public class AdminController {
         }
     }
 
+    @GetMapping("/chatRoom")
+    public String chatRoom()
+    {
+        return "websocket";
+    }
+
 }
