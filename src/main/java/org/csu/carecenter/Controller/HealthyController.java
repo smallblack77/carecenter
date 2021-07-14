@@ -100,9 +100,9 @@ public class HealthyController {
 
     @GetMapping("/show")
 
-    public String show(Model model,String id)
+    public String show(Model model,String custId)
     {
-
+        model.addAttribute("custId",custId);
         return "custManage/showHealthy";
     }
 
@@ -144,7 +144,6 @@ public class HealthyController {
     @ResponseBody
     @GetMapping("/showList")
     public List<Healthy> showList(String custId,Model model){
-        model.addAttribute("custId",custId);
         List<Healthy> healthy = healthyService.getAllHealthy(Integer.valueOf(custId));
         return  healthy;
     }
