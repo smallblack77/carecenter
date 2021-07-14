@@ -129,7 +129,7 @@ label{
   text-decoration: none;
   height: 80px;
   width: 40px;
-  background: transparent url("../../images/mainWeb/arrows.png") no-repeat left top;
+  /*background: transparent url("../../images/mainWeb/arrows.png") no-repeat left top;*/
     margin-top: 4%;
 	  display: none;
 }
@@ -428,7 +428,7 @@ ul.f-icons{
   left: 0;
   right: 0;
   bottom: 0;
-  background:url(../../images/mainWeb/wave2.png) repeat-x left top;
+  /*background:url(../../images/mainWeb/wave2.png) repeat-x left top;*/
   background-size: auto 100%;
   margin: 0 0 -25px;
   height: 25px;
