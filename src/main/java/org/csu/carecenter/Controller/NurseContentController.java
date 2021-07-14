@@ -30,7 +30,6 @@ public class NurseContentController {
         model.addAttribute("nurseList",nurseContentList);
         return "nurManage/nurse";
     }
-
     //跳转到护工添加页面
     @GetMapping("addNurContentForm")
     public String addNurContentForm(){
@@ -81,6 +80,7 @@ public class NurseContentController {
         System.out.println(nurid);
         NurseContent nurseContent = nurseContentService.getNurById(nurid);
         System.out.println(nurseContent.getDescription()+"++++++++");
+        model.addAttribute("nurseContent",nurseContent);
         return "nurManage/editNurse";
     }
 
@@ -128,7 +128,7 @@ public class NurseContentController {
     @RequestMapping("/editNurRecordForm")
     public String editNurRecordForm(Model model,String id){
         NurseRecord nurseRecord = nurseContentService.getNurseRecord(Integer.valueOf(id));
-        model.addAttribute(nurseRecord);
+        model.addAttribute("nurseRecord",nurseRecord);
         return "nurManage/editNurRecord";
     }
 

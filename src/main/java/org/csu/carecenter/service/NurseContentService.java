@@ -13,6 +13,11 @@ public class NurseContentService {
     @Autowired
     NurseContentMapper nurseContentMapper ;
 
+    //获取护工数量
+    public int getCount()
+    {
+        return nurseContentMapper.getCount();
+    }
     //获取所有护工信息
     public List<NurseContent> getAllNurseContentList(){
        return nurseContentMapper.getAllNurseContentList();

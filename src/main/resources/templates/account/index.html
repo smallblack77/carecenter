@@ -33,7 +33,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <header class="header fixed-top clearfix">
 <!--logo start-->
 <div class="brand">
-    <a href="index.html" class="logo">
+    <a href="/account/main" class="logo">
         系统管理
     </a>
     <div class="sidebar-toggle-box">
@@ -75,7 +75,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="leftside-navigation">
             <ul class="sidebar-menu" id="nav-accordion">
                 <li>
-                    <a class="active" href="index.html">
+                    <a class="active" href="/account/main">
                         <i class="fa fa-dashboard"></i>
                         <span>主页</span>
                     </a>
@@ -159,9 +159,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<i class="fa fa-users"> </i>
 					</div>
 					 <div class="col-md-8 market-update-left">
-					 <h4>客户数量</h4>
-					<h3 th:text="${count}"></h3>
-					<p>每个人，都享有精致服务</p>
+					 <h4>护工数量</h4>
+					<h3 th:text="${nurCount}">长沙-天心区</h3>
+					<p>每一位，都关怀备至</p>
 				  </div>
 				  <div class="clearfix"> </div>
 				</div>
@@ -169,38 +169,38 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="col-md-3 market-update-gd">
 				<div class="market-update-block clr-block-1">
 					<div class="col-md-4 market-update-right">
-						<i class="fa fa-eye" ></i>
+						<i class="fa fa-users"> </i>
 					</div>
 					<div class="col-md-8 market-update-left">
-					<h4>Users</h4>
-						<h3>1,250</h3>
-						<p>Other hand, we denounce</p>
+						<h4>客户数量</h4>
+						<h3 th:text="${count}"></h3>
+						<p>每一人，都贴心服务</p>
 					</div>
 				  <div class="clearfix"> </div>
 				</div>
 			</div>
 			<div class="col-md-3 market-update-gd">
 				<div class="market-update-block clr-block-3">
-					<div class="col-md-4 market-update-right">
-						<i class="fa fa-usd"></i>
+					<div class="col-md-2 market-update-right">
+						<i class="fa fa-calendar"></i>
 					</div>
-					<div class="col-md-8 market-update-left">
-						<h4>Sales</h4>
-						<h3>1,500</h3>
-						<p>Other hand, we denounce</p>
+					<div class="col-md-10 market-update-left">
+						<h4>当前日期</h4>
+						<h3 th:text="${calendar}"></h3>
+						<p>每一天，都积极面对</p>
 					</div>
 				  <div class="clearfix"> </div>
 				</div>
 			</div>
 			<div class="col-md-3 market-update-gd">
 				<div class="market-update-block clr-block-4">
-					<div class="col-md-4 market-update-right">
-						<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+					<div class="col-md-2 market-update-right">
+						<i class="fa fa-bell" aria-hidden="true"></i>
 					</div>
-					<div class="col-md-8 market-update-left">
-						<h4>Orders</h4>
-						<h3>1,500</h3>
-						<p>Other hand, we denounce</p>
+					<div class="col-md-10 market-update-left">
+						<h4>当前时间</h4>
+						<h3 th:text="${date}"></h3>
+						<p>每一刻，都值得珍惜</p>
 					</div>
 				  <div class="clearfix"> </div>
 				</div>

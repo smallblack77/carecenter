@@ -1,6 +1,19 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://thyneleaf.org">
 <script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+<script type="text/javascript">
+    function deleteUser() {
+        var $id = $("#id").val();
+        $.ajax({
+            url: "",
+            请求方式: "post",
+            data: "id=" + $id,
+            success: function (result){
+                alert("删除成功！");
+            }
+        });
+    }
+</script>
 <head>
     <title>Visitors an Admin Panel Category Bootstrap Responsive Website Template | Responsive_table :: w3layouts</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,7 +33,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <link rel="stylesheet" href="../css/font.css" type="text/css"/>
     <link href="../css/font-awesome.css" rel="stylesheet">
     <!-- //font-awesome icons -->
-    <script src="../../static/js/jquery2.0.3.min.js"></script>
+    <script src="../js/jquery2.0.3.min.js"></script>
 </head>
 <body>
 <section id="container">
@@ -150,21 +163,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <section class="wrapper">
             <div class="table-agile-info">
                 <div class="panel panel-default">
+
                     <div class="panel-heading">
                         新增床位信息
                     </div>
                     <form action="/bed/addBed" method="post">
                         <div>
                             <table class="table" ui-jq="footable" ui-options='{
-                                "paging": {
-                                  "enabled": true
-                                },
-                                "filtering": {
-                                  "enabled": true
-                                },
-                                "sorting": {
-                                  "enabled": true
-                                }}'>
+            "paging": {
+              "enabled": true
+            },
+            "filtering": {
+              "enabled": true
+            },
+            "sorting": {
+              "enabled": true
+            }}'>
                                 <tr>
                                     <th style="background: #ddede0 no-repeat;">ID:</th>
                                     <td><input type="text"  name="bedId"  id="id"  ></td>

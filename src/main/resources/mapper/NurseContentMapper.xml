@@ -15,6 +15,10 @@
         WHERE NURCONTENT.LEVELID = NURLEVEL.ID
     </select>
 
+    <select id="getCount" resultType="int">
+        SELECT COUNT(*) FROM NURCONTENT
+    </select>
+
     <insert id="addNurseContent" parameterType="NurseContent">
         INSERT INTO NURCONTENT
         (NURID,NAME,SEX,AGE,PRICE,DESCRIBE,LEVELID)

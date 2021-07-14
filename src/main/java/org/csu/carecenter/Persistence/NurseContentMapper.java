@@ -40,4 +40,7 @@ public interface NurseContentMapper {
 
     //删除
     void deleteNurRecord(int id);
+
+    //获取护工数量
+    int getCount();
 }

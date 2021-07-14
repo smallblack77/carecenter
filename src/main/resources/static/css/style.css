@@ -766,12 +766,12 @@ ul.top-menu>li>a:hover,ul.top-menu>li>a:focus {
     color:#fff;
    text-align: left;
 }
-.market-update-right i.fa.fa-usd {
+.market-update-right i.fa.fa-calendar {
      font-size:3em;
     color:#fff;
     text-align: left;
 }
-.market-update-right i.fa.fa-shopping-cart{
+.market-update-right i.fa.fa-bell{
      font-size:3em;
     color:#fff;
     text-align: left;
