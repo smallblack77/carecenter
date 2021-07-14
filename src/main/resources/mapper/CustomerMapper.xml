@@ -82,6 +82,10 @@
         FROM BEDANDCUST
     </select>
 
+    <select id="getCount" resultType="int">
+        SELECT COUNT(*) FROM CUSTOMER
+    </select>
+
     <select id="selectCheckin" resultType="BedAndCustomer">
         SELECT
             BEDANDCUST.ID,
@@ -162,4 +166,5 @@
             BEDANDCUST.ENDTIME = #{endTime}
         WHERE BEDANDCUST.ID = #{id}
     </update>
+
 </mapper>

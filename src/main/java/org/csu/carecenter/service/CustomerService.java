@@ -42,6 +42,8 @@ public class CustomerService {
     }
 
     //客户本身信息
+    public int getCount(){return customerMapper.getCount();};
+
     public Customer getCustomer(int id){
         return customerMapper.getCustomer(id);
     }
