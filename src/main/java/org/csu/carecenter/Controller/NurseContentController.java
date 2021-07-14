@@ -10,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
 import javax.servlet.http.HttpSession;
 
@@ -17,6 +18,7 @@ import java.util.List;
 
 @Controller
 @RequestMapping("nurseContent")
+@SessionAttributes("nurseRecord")
 public class NurseContentController {
     @Autowired
     NurseContentService nurseContentService;
@@ -109,7 +111,7 @@ public class NurseContentController {
     }
 
     //护理记录
-    @GetMapping("/viewNurseRecord")
+    @RequestMapping("/viewNurseRecord")
     public String viewNurseRecord(Model model){
         List<NurseRecord> nurseRecordList = nurseContentService.getAllNurseRecordList();
         model.addAttribute(nurseRecordList);
@@ -166,8 +168,11 @@ public class NurseContentController {
             nurseRecord.setStartTime(startTime);
             nurseRecord.setEndTime(endTime);
             NurseRecord nurseRecord1 = (NurseRecord) model.getAttribute("nurseRecord");
+            System.out.println(nurseRecord1.getCustomerId()+"=============");
             int id = Integer.valueOf(nurseRecord1.getId());
             nurseRecord.setId(String.valueOf(id));
+
+
             nurseContentService.updateNurRecord(nurseRecord);
             List<NurseRecord> nurseRecordList = nurseContentService.getAllNurseRecordList();
             model.addAttribute(nurseRecordList);
