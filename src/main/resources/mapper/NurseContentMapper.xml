@@ -81,7 +81,7 @@
         INSERT INTO NURRECORD
             (ID,CUSTID,NURID,CONTENT,STARTTIME,ENDTIME)
         VALUES
-            (#{id},#{customerID},#{nurseId},#{content},#{startTime},#{endTime})
+            (#{id},#{customerId},#{nurseId},#{content},#{startTime},#{endTime})
     </insert>
 
     <select id="getNurseRecordMaxId" resultType="int">
@@ -92,12 +92,13 @@
 
     <update id="updateNurRecord" parameterType="NurseRecord">
         UPDATE NURRECORD
-        SET ID=#{nurseRecord.id},
-            CUSTID=#{nurseRecord.customerId},
-            NURID=#{nurseRecord.nurseId},
-            CONTENT=#{nurseRecord.content},
-            STARTTIMR=#{nurseRecord.startTime},
-            ENDTIME = #{nurseRecord.endTime}
+        SET
+            CUSTID=#{customerId},
+            NURID=#{nurseId},
+            CONTENT=#{content},
+            STARTTIME=#{startTime},
+            ENDTIME = #{endTime}
+        WHERE ID = #{id}
     </update>
 
     <delete id="deleteNurRecord" parameterType="int">
