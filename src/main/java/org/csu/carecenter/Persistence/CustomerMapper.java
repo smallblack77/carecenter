@@ -42,4 +42,7 @@ public interface CustomerMapper {
     void updateCheckout(BedAndCustomer bedAndCustomer);
 
     void insertCheckout(BedAndCustomer bedAndCustomer);
+
+    //获取当前客户数量
+    int getCount();
 }

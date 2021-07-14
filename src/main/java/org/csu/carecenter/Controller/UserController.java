@@ -2,6 +2,7 @@ package org.csu.carecenter.Controller;
 
 
 import org.csu.carecenter.entity.User;
+import org.csu.carecenter.service.CustomerService;
 import org.csu.carecenter.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -20,6 +21,9 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    @Autowired
+    private CustomerService customerService;
+
     //跳转到user登录界面
     @GetMapping("/userLoginForm")
     public String signonForm(Model model){
@@ -31,6 +35,7 @@ public class UserController {
     public String login(Integer userId,String password,Model model,HttpSession session){
         if(String.valueOf(userId) != null && password != null){
             User user = userService.getUserByUserIdAndPassword(userId,password);
+            int count = customerService.getCount();
             if (user == null){
                 String errorValue = "账户或密码有误！";
                 model.addAttribute("errorValue",errorValue);
@@ -38,6 +43,7 @@ public class UserController {
             }else {
              //   user.setPassword(null);
                 model.addAttribute("user", user);
+                model.addAttribute("count", count);
                 session.setAttribute("user",user);
                 return "account/index";
             }
