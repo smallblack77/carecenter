@@ -3,13 +3,39 @@ layui.use(['echarts'], function() {
 
 	var line2 = echarts.init(document.getElementById('line2'));
 
+	var custId = document.getElementById("custId");
+	// alert(custId.innerText);
 	const colorList = ["#9E87FF", '#73DDFF', '#fe9a8b', '#F56948', '#9E87FF']
+	var series1 = [];
+	var series2 = [];
+	$.ajax({
+		type: 'get',
+		async : false,
+		url: '/healthy/showList?custId='+custId.innerText,//请求数据的地址
+		dataType: "json",        //返回数据形式为json
+		success: function (result) {
+			// alert("success");
+			$.each(result, function (index, item) {
+				series1.push(item.pressure);
+				series2.push(item.sugar);
+			});
+		},
+		error: function (errorMsg) {
+			//请求失败时执行该函数
+			alert("图表请求数据失败!");
+			echarts.hideLoading();
+		}
+	});
 	option = {
 		backgroundColor: '#fff',
 		title: {
-			text: '全国6月销售统计',
+			text: custId.innerText+'一周健康信息表',
+			textStyle: {
+				fontSize: 12,
+				fontWeight: 400
+			},
 			left: 'center',
-			// top: '5%'
+			top: '5%'
 		},
 		legend: {
 			icon: 'circle',
@@ -145,97 +171,66 @@ layui.use(['echarts'], function() {
 			}
 		}],
 		series: [{
-				name: '血压',
-				type: 'line',
-				data: [100, 100, 30, 122, 15, 3, 7],
-				symbolSize: 1,
-				symbol: 'circle',
-				smooth: true,
-				yAxisIndex: 0,
-				showSymbol: false,
-				lineStyle: {
-					width: 5,
-					color: new echarts.graphic.LinearGradient(0, 1, 0, 0, [{
-							offset: 0,
-							color: '#9effff'
-						},
-						{
-							offset: 1,
-							color: '#9E87FF'
-						}
-					]),
-					shadowColor: 'rgba(158,135,255, 0.3)',
-					shadowBlur: 10,
-					shadowOffsetY: 20
+			name: '血压',
+			type: 'line',
+			data: [100, 100, 30, 122, 15, 3, 7],
+			symbolSize: 1,
+			symbol: 'circle',
+			smooth: true,
+			yAxisIndex: 0,
+			showSymbol: false,
+			lineStyle: {
+				width: 5,
+				color: new echarts.graphic.LinearGradient(0, 1, 0, 0, [{
+					offset: 0,
+					color: '#9effff'
 				},
-				itemStyle: {
-					normal: {
-						color: colorList[0],
-						borderColor: colorList[0]
+					{
+						offset: 1,
+						color: '#9E87FF'
 					}
-				}
-			}, {
-				name: '体温',
-				type: 'line',
-				data: [5, 12, 11, 14, 25, 16, 10],
-				symbolSize: 1,
-				symbol: 'circle',
-				smooth: true,
-				yAxisIndex: 0,
-				showSymbol: false,
-				lineStyle: {
-					width: 5,
-					color: new echarts.graphic.LinearGradient(1, 1, 0, 0, [{
-							offset: 0,
-							color: '#73DD39'
-						},
-						{
-							offset: 1,
-							color: '#73DDFF'
-						}
-					]),
-					shadowColor: 'rgba(115,221,255, 0.3)',
-					shadowBlur: 10,
-					shadowOffsetY: 20
-				},
-				itemStyle: {
-					normal: {
-						color: colorList[1],
-						borderColor: colorList[1]
-					}
-				}
+				]),
+				shadowColor: 'rgba(158,135,255, 0.3)',
+				shadowBlur: 10,
+				shadowOffsetY: 20
 			},
-			{
-				name: '体重',
-				type: 'line',
-				data: [150, 120, 170, 140, 500, 160, 110],
-				symbolSize: 1,
-				yAxisIndex: 1,
-				symbol: 'circle',
-				smooth: true,
-				showSymbol: false,
-				lineStyle: {
-					width: 5,
-					color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [{
-							offset: 0,
-							color: '#fe9a'
-						},
-						{
-							offset: 1,
-							color: '#fe9a8b'
-						}
-					]),
-					shadowColor: 'rgba(254,154,139, 0.3)',
-					shadowBlur: 10,
-					shadowOffsetY: 20
-				},
-				itemStyle: {
-					normal: {
-						color: colorList[2],
-						borderColor: colorList[2]
-					}
+			itemStyle: {
+				normal: {
+					color: colorList[0],
+					borderColor: colorList[0]
 				}
 			}
+		}, {
+			name: '血糖',
+			type: 'line',
+			data: [5, 12, 11, 14, 25, 16, 10],
+			symbolSize: 1,
+			symbol: 'circle',
+			smooth: true,
+			yAxisIndex: 0,
+			showSymbol: false,
+			lineStyle: {
+				width: 5,
+				color: new echarts.graphic.LinearGradient(1, 1, 0, 0, [{
+					offset: 0,
+					color: '#73DD39'
+				},
+					{
+						offset: 1,
+						color: '#73DDFF'
+					}
+				]),
+				shadowColor: 'rgba(115,221,255, 0.3)',
+				shadowBlur: 10,
+				shadowOffsetY: 20
+			},
+			itemStyle: {
+				normal: {
+					color: colorList[1],
+					borderColor: colorList[1]
+				}
+			}
+		}
 		]
 	};
 
