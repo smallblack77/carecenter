@@ -8,16 +8,20 @@ layui.use(['echarts'], function() {
 	const colorList = ["#9E87FF", '#73DDFF', '#fe9a8b', '#F56948', '#9E87FF']
 	var series1 = [];
 	var series2 = [];
+	var series3 = [];
 	$.ajax({
 		type: 'get',
 		async : false,
 		url: '/healthy/showList?custId='+custId.innerText,//请求数据的地址
 		dataType: "json",        //返回数据形式为json
 		success: function (result) {
-			// alert("success");
+			alert("success");
 			$.each(result, function (index, item) {
-				series1.push(item.pressure);
+				var split = item.pressure.split('/');
+				alert(split);
+				series1.push(split[0]);
 				series2.push(item.sugar);
+				series3.push(split[1]);
 			});
 		},
 		error: function (errorMsg) {
@@ -171,9 +175,9 @@ layui.use(['echarts'], function() {
 			}
 		}],
 		series: [{
-			name: '血压',
+			name: '收缩压',
 			type: 'line',
-			data: [100, 100, 30, 122, 15, 3, 7],
+			data: series1,
 			symbolSize: 1,
 			symbol: 'circle',
 			smooth: true,
@@ -203,7 +207,7 @@ layui.use(['echarts'], function() {
 		}, {
 			name: '血糖',
 			type: 'line',
-			data: [5, 12, 11, 14, 25, 16, 10],
+			data: series2,
 			symbolSize: 1,
 			symbol: 'circle',
 			smooth: true,
@@ -228,6 +232,36 @@ layui.use(['echarts'], function() {
 				normal: {
 					color: colorList[1],
 					borderColor: colorList[1]
+				}
+			}
+		},{
+			name: '舒张压',
+			type: 'line',
+			data: series3,
+			symbolSize: 1,
+			yAxisIndex: 1,
+			symbol: 'circle',
+			smooth: true,
+			showSymbol: false,
+			lineStyle: {
+				width: 5,
+				color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [{
+					offset: 0,
+					color: '#fe9a'
+				},
+					{
+						offset: 1,
+						color: '#fe9a8b'
+					}
+				]),
+				shadowColor: 'rgba(254,154,139, 0.3)',
+				shadowBlur: 10,
+				shadowOffsetY: 20
+			},
+			itemStyle: {
+				normal: {
+					color: colorList[2],
+					borderColor: colorList[2]
 				}
 			}
 		}
