@@ -247,7 +247,7 @@ layui.use(['echarts'], function() {
 			type: 'line',
 			data: series3,
 			symbolSize: 1,
-			yAxisIndex: 1,
+			yAxisIndex: 0,
 			symbol: 'circle',
 			smooth: true,
 			showSymbol: false,
