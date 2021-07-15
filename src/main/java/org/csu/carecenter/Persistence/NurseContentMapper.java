@@ -47,4 +47,7 @@ public interface NurseContentMapper {
 
     //custandnur表中通过nurid获得custid
     int getNurId(int custId);
+
+    //获取护工数量
+    int getCount();
 }

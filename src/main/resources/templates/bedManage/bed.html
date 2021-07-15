@@ -230,7 +230,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                                     <td><th:block  name="roomnum" th:text="${bed.roomNum}" /></td>
                                                     <td><th:block  name="bedstatus" th:text="${bed.bedStatus}" /></td>
                                                     <td><th:block  name="sort" th:text="${bed.sort}" /></td>
-                                                    <td><th:block  name="description" th:utext="${bed.description}"/></td>
+                                                    <td><th:block  name="description" th:text="${bed.description}"/></td>
                                                     <td><a th:href="${'/bed/updateBedForm?bedId='}+${bed.id}">Edit</a></td>
                                                     <td><a th:href="${'/bed/deleteBed?bedId='}+${bed.id}">Delete</a></td>
                                                 </tr>
