@@ -9,19 +9,27 @@ layui.use(['echarts'], function() {
 	var series1 = [];
 	var series2 = [];
 	var series3 = [];
+	var s = [];
 	$.ajax({
 		type: 'get',
 		async : false,
 		url: '/healthy/showList?custId='+custId.innerText,//请求数据的地址
 		dataType: "json",        //返回数据形式为json
 		success: function (result) {
-			alert("success");
 			$.each(result, function (index, item) {
-				var split = item.pressure.split('/');
-				alert(split);
-				series1.push(split[0]);
+				var temp = item.pressure;
+				if(temp == null)
+				{
+					series1.push(0);
+					series3.push(0);
+				}
+				else
+				{
+					s =  temp.split('/');
+					series1.push(s[0]);
+					series3.push(s[1]);
+				}
 				series2.push(item.sugar);
-				series3.push(split[1]);
 			});
 		},
 		error: function (errorMsg) {
@@ -247,7 +255,7 @@ layui.use(['echarts'], function() {
 				width: 5,
 				color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [{
 					offset: 0,
-					color: '#fe9a'
+					color: '#fe9a00'
 				},
 					{
 						offset: 1,
