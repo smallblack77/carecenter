@@ -1,6 +1,7 @@
 package org.csu.carecenter.Persistence;
 
 import org.csu.carecenter.entity.Diet;
+import org.csu.carecenter.entity.OrderDiet;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -18,4 +19,7 @@ public interface DietMapper {
     void updateDiet(Diet diet);
 
     void insertDiet(Diet diet);
+
+    //点餐信息
+    List<OrderDiet> getOrderDietById(int id);
 }

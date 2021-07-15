@@ -64,8 +64,8 @@ public class CustomerService {
         customerMapper.deleteCustomer(id);
     }
 
-    public int getCustomerId(String name){
-        return customerMapper.getCustomerIdByNameAndPhone(name);
+    public int getCustomerId(String name, String phone){
+        return customerMapper.getCustomerIdByNameAndPhone(name, phone);
     }
 
     //入住信息

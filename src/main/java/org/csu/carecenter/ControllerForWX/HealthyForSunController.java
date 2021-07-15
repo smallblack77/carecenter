@@ -39,8 +39,10 @@ public class HealthyForSunController {
 
         //获取微信小程序get的参数值
         String custname = request.getParameter("custname");
+        String phone = request.getParameter("phone");
 
-        int id = customerService.getCustomerId(custname);
+
+        int id = customerService.getCustomerId(custname, phone);
         List<Healthy> healthyList = healthyService.getAllHealthy(id);
         return healthyList;
     }

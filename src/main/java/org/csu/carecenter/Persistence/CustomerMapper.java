@@ -19,7 +19,7 @@ public interface CustomerMapper {
 
     void deleteCustomer(int id);
 
-    int getCustomerIdByNameAndPhone(String custname);
+    int getCustomerIdByNameAndPhone(String custname, String phone);
 
 //入住信息
     void deleteCheckin(int id);

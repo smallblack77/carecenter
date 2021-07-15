@@ -2,11 +2,20 @@ package org.csu.carecenter.entity;
 
 public class OrderDiet {
 
+    private String day;
     private String customerId;
     private String breakfastId;
     private String lunchId;
     private String dinnerId;
     private String deleteStatus;
+
+    public String getDay() {
+        return day;
+    }
+
+    public void setDay(String day) {
+        this.day = day;
+    }
 
     public String getCustomerId() {
         return customerId;

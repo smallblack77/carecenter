@@ -43,4 +43,17 @@
         DELETE FROM DIETS
         WHERE DIETS.ID = #{id}
     </delete>
+
+<!--  客户膳食菜单  -->
+    <select id="getOrderDietById" parameterType="int" resultType="OrderDiet">
+        SELECT
+            ORDERDIET.DAY,
+            ORDERDIET.CUSTID as customerId,
+            ORDERDIET.BREKID as breakfastId,
+            ORDERDIET.LUNCHID,
+            ORDERDIET.DINNERID,
+            ORDERDIET.DELSTATUS as deleteStatus
+        FROM ORDERDIET
+        WHERE ORDERDIET.CUSTID = #{customerId}
+    </select>
 </mapper>
