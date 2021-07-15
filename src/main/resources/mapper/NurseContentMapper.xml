@@ -109,4 +109,18 @@
         DELETE FROM NURRECORD
         WHERE ID = #{id}
     </delete>
+
+    <insert id="insertCustAndNur" parameterType="CustomerAndNurse">
+        INSERT INTO CUSTANDNUR
+        (NURID,CUSTID,STARTTIME,ENDTIME)
+        VALUES
+        (#{nurId},#{custId},#{startTime},#{endTime})
+    </insert>
+
+    <select id="getNurId" parameterType="int" resultType="int">
+        SELECT
+            NURID
+        FROM CUSTANDNUR
+        WHERE CUSTID = #{custId}
+    </select>
 </mapper>
