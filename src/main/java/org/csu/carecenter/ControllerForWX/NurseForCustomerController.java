@@ -1,6 +1,7 @@
 package org.csu.carecenter.ControllerForWX;
 
 import org.csu.carecenter.Common.ResponseCode;
+import org.csu.carecenter.entity.CustomerAndNurse;
 import org.csu.carecenter.entity.NurseContent;
 import org.csu.carecenter.entity.NurseRecord;
 import org.csu.carecenter.service.NurseContentService;
@@ -35,7 +36,7 @@ public class NurseForCustomerController {
 
     @ResponseBody
     @GetMapping("setNurseContent")
-    public NurseRecord setNurseContent(HttpServletResponse response, HttpServletRequest request){
+    public CustomerAndNurse setNurseContent(HttpServletResponse response, HttpServletRequest request){
 
         response.setContentType("text/html;charset=utf-8");
         /* 设置响应头允许ajax跨域访问 */
@@ -57,13 +58,33 @@ public class NurseForCustomerController {
         //加上两小时
         calendar.add(Calendar.MONTH , 1);//月
 
-        NurseRecord nurseRecord = new NurseRecord();
+        CustomerAndNurse customerAndNurse = new CustomerAndNurse();
+        customerAndNurse.setCustId(customerId);
+        customerAndNurse.setStartTime(df.format(date));
+        customerAndNurse.setEndTime(df.format(calendar.getTime()));
+
+        nurseContentService.insertCustAndNur(customerAndNurse);
+        return customerAndNurse;
+
+/*        NurseRecord nurseRecord = new NurseRecord();
         nurseRecord.setNurseId(nurseId);
         nurseRecord.setCustomerId(Integer.parseInt(customerId));
         nurseRecord.setStartTime(df.format(date));
         nurseRecord.setEndTime(df.format(calendar.getTime()));
 
         nurseContentService.addNurseRecord(nurseRecord);
-        return nurseRecord;
+        return nurseRecord;*/
+
+
     }
+
+    //通过id获取护工
+    @ResponseBody
+    @GetMapping("/getNurById")
+    public NurseContent getNurById(String id){
+        NurseContent nurseContent = nurseContentService.getNurById(id);
+        return nurseContent;
+    }
+
+
 }

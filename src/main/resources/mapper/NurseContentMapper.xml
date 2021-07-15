@@ -15,6 +15,10 @@
         WHERE NURCONTENT.LEVELID = NURLEVEL.ID
     </select>
 
+    <select id="getCount" resultType="int">
+        SELECT COUNT(*) FROM NURCONTENT
+    </select>
+
     <insert id="addNurseContent" parameterType="NurseContent">
         INSERT INTO NURCONTENT
         (NURID,NAME,SEX,AGE,PRICE,DESCRIBE,LEVELID)
@@ -81,7 +85,7 @@
         INSERT INTO NURRECORD
             (ID,CUSTID,NURID,CONTENT,STARTTIME,ENDTIME)
         VALUES
-            (#{id},#{customerID},#{nurseId},#{content},#{startTime},#{endTime})
+            (#{id},#{customerId},#{nurseId},#{content},#{startTime},#{endTime})
     </insert>
 
     <select id="getNurseRecordMaxId" resultType="int">
@@ -92,16 +96,31 @@
 
     <update id="updateNurRecord" parameterType="NurseRecord">
         UPDATE NURRECORD
-        SET ID=#{nurseRecord.id},
-            CUSTID=#{nurseRecord.customerId},
-            NURID=#{nurseRecord.nurseId},
-            CONTENT=#{nurseRecord.content},
-            STARTTIMR=#{nurseRecord.startTime},
-            ENDTIME = #{nurseRecord.endTime}
+        SET
+            CUSTID=#{customerId},
+            NURID=#{nurseId},
+            CONTENT=#{content},
+            STARTTIME=#{startTime},
+            ENDTIME = #{endTime}
+        WHERE ID = #{id}
     </update>
 
     <delete id="deleteNurRecord" parameterType="int">
         DELETE FROM NURRECORD
         WHERE ID = #{id}
     </delete>
+
+    <insert id="insertCustAndNur" parameterType="CustomerAndNurse">
+        INSERT INTO CUSTANDNUR
+        (NURID,CUSTID,STARTTIME,ENDTIME)
+        VALUES
+        (#{nurId},#{custId},#{startTime},#{endTime})
+    </insert>
+
+    <select id="getNurId" parameterType="int" resultType="int">
+        SELECT
+            NURID
+        FROM CUSTANDNUR
+        WHERE CUSTID = #{custId}
+    </select>
 </mapper>

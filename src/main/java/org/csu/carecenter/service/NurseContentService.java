@@ -1,6 +1,7 @@
 package org.csu.carecenter.service;
 
 import org.csu.carecenter.Persistence.NurseContentMapper;
+import org.csu.carecenter.entity.CustomerAndNurse;
 import org.csu.carecenter.entity.NurseContent;
 import org.csu.carecenter.entity.NurseRecord;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +14,11 @@ public class NurseContentService {
     @Autowired
     NurseContentMapper nurseContentMapper ;
 
+    //获取护工数量
+    public int getCount()
+    {
+        return nurseContentMapper.getCount();
+    }
     //获取所有护工信息
     public List<NurseContent> getAllNurseContentList(){
        return nurseContentMapper.getAllNurseContentList();
@@ -67,5 +73,15 @@ public class NurseContentService {
     //删除
     public void deleteNurRecord(int id){
         nurseContentMapper.deleteNurRecord(id);
+    }
+
+    //插入到custandnur表
+    public void insertCustAndNur(CustomerAndNurse customerAndNurse){
+        nurseContentMapper.insertCustAndNur(customerAndNurse);
+    }
+
+    //custandnur表中通过cutid获取nurid
+    public int getNurId(int custId){
+        return nurseContentMapper.getNurId(custId);
     }
 }

@@ -1,5 +1,6 @@
 package org.csu.carecenter.Persistence;
 
+import org.csu.carecenter.entity.CustomerAndNurse;
 import org.csu.carecenter.entity.NurseContent;
 import org.csu.carecenter.entity.NurseRecord;
 import org.springframework.stereotype.Repository;
@@ -40,4 +41,13 @@ public interface NurseContentMapper {
 
     //删除
     void deleteNurRecord(int id);
+
+    //插入到custandnur表
+    void insertCustAndNur(CustomerAndNurse customerAndNurse);
+
+    //custandnur表中通过nurid获得custid
+    int getNurId(int custId);
+
+    //获取护工数量
+    int getCount();
 }

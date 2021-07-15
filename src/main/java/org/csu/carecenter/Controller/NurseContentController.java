@@ -10,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
 import javax.servlet.http.HttpSession;
 
@@ -17,6 +18,7 @@ import java.util.List;
 
 @Controller
 @RequestMapping("nurseContent")
+@SessionAttributes("nurseRecord")
 public class NurseContentController {
     @Autowired
     NurseContentService nurseContentService;
@@ -28,7 +30,6 @@ public class NurseContentController {
         model.addAttribute("nurseList",nurseContentList);
         return "nurManage/nurse";
     }
-
     //跳转到护工添加页面
     @GetMapping("addNurContentForm")
     public String addNurContentForm(){
@@ -79,6 +80,7 @@ public class NurseContentController {
         System.out.println(nurid);
         NurseContent nurseContent = nurseContentService.getNurById(nurid);
         System.out.println(nurseContent.getDescription()+"++++++++");
+        model.addAttribute("nurseContent",nurseContent);
         return "nurManage/editNurse";
     }
 
@@ -109,7 +111,7 @@ public class NurseContentController {
     }
 
     //护理记录
-    @GetMapping("/viewNurseRecord")
+    @RequestMapping("/viewNurseRecord")
     public String viewNurseRecord(Model model){
         List<NurseRecord> nurseRecordList = nurseContentService.getAllNurseRecordList();
         model.addAttribute(nurseRecordList);
@@ -126,7 +128,7 @@ public class NurseContentController {
     @RequestMapping("/editNurRecordForm")
     public String editNurRecordForm(Model model,String id){
         NurseRecord nurseRecord = nurseContentService.getNurseRecord(Integer.valueOf(id));
-        model.addAttribute(nurseRecord);
+        model.addAttribute("nurseRecord",nurseRecord);
         return "nurManage/editNurRecord";
     }
 
@@ -134,22 +136,34 @@ public class NurseContentController {
     @RequestMapping("/addNurseRecord")
     public String addNurseRecord(Model model,HttpSession session,String customerId,String nurseId,String content,
                                  String startTime,String endTime){
-        if(customerId!=null && startTime!=null && endTime != null &&nurseId != null && content !=null){
-            NurseRecord nurseRecord = new NurseRecord();
-            nurseRecord.setContent(content);
-            nurseRecord.setNurseId(nurseId);
-            nurseRecord.setCustomerId(Integer.valueOf(customerId));
-            nurseRecord.setStartTime(startTime);
-            nurseRecord.setEndTime(endTime);
-            nurseContentService.addNurseRecord(nurseRecord);
-            int id = nurseContentService.getNurseRecordMaxId();
-            nurseRecord.setId(String.valueOf(id));
-            List<NurseRecord> nurseRecordList = nurseContentService.getAllNurseRecordList();
-            model.addAttribute(nurseRecordList);
-            return "nurManage/nurRecord";
+
+        if(!customerId.equals("") && !startTime.equals("") && !endTime.equals("") && !nurseId.equals("") && !content.equals("")){
+
+            int NurId = nurseContentService.getNurId(Integer.valueOf(customerId));
+
+            if(NurId != Integer.valueOf(nurseId)){
+                String msg = "护工信息错误";
+                session.setAttribute("msg",msg);
+                return "nurManage/addNurRecord";
+
+            }else {
+                NurseRecord nurseRecord = new NurseRecord();
+                nurseRecord.setContent(content);
+                nurseRecord.setNurseId(nurseId);
+                nurseRecord.setCustomerId(Integer.valueOf(customerId));
+                nurseRecord.setStartTime(startTime);
+                nurseRecord.setEndTime(endTime);
+                nurseContentService.addNurseRecord(nurseRecord);
+                int id = nurseContentService.getNurseRecordMaxId();
+                nurseRecord.setId(String.valueOf(id));
+                List<NurseRecord> nurseRecordList = nurseContentService.getAllNurseRecordList();
+                model.addAttribute(nurseRecordList);
+                return "nurManage/nurRecord";
+            }
+
         }else {
             String msg = "输入不能为空";
-            session.setAttribute("mas",msg);
+            session.setAttribute("msg",msg);
             return "nurManage/addNurRecord";
         }
     }
@@ -158,23 +172,37 @@ public class NurseContentController {
     @RequestMapping("updateNurRecord")
     public String updateNurRecord(Model model,HttpSession session,String customerId,String nurseId,String content,
                                   String startTime,String endTime) {
-        if (customerId != null && startTime != null && endTime != null && nurseId != null && content != null) {
-            NurseRecord nurseRecord = new NurseRecord();
-            nurseRecord.setContent(content);
-            nurseRecord.setNurseId(nurseId);
-            nurseRecord.setCustomerId(Integer.valueOf(customerId));
-            nurseRecord.setStartTime(startTime);
-            nurseRecord.setEndTime(endTime);
-            NurseRecord nurseRecord1 = (NurseRecord) model.getAttribute("nurseRecord");
-            int id = Integer.valueOf(nurseRecord1.getId());
-            nurseRecord.setId(String.valueOf(id));
-            nurseContentService.updateNurRecord(nurseRecord);
-            List<NurseRecord> nurseRecordList = nurseContentService.getAllNurseRecordList();
-            model.addAttribute(nurseRecordList);
-            return "nurManage/nurRecord";
+        if (!customerId.equals("") && !startTime.equals("") && !endTime.equals("") && !nurseId.equals("") && !content.equals("")) {
+
+            int NurId = nurseContentService.getNurId(Integer.valueOf(customerId));
+
+            if(NurId != Integer.valueOf(nurseId)){
+                String msg = "护工信息错误";
+                session.setAttribute("msg",msg);
+                return "nurManage/editNurRecord";
+
+            }else {
+
+                NurseRecord nurseRecord = new NurseRecord();
+                nurseRecord.setContent(content);
+                nurseRecord.setNurseId(nurseId);
+                nurseRecord.setCustomerId(Integer.valueOf(customerId));
+                nurseRecord.setStartTime(startTime);
+                nurseRecord.setEndTime(endTime);
+                NurseRecord nurseRecord1 = (NurseRecord) model.getAttribute("nurseRecord");
+
+                int id = Integer.valueOf(nurseRecord1.getId());
+                nurseRecord.setId(String.valueOf(id));
+
+                nurseContentService.updateNurRecord(nurseRecord);
+                List<NurseRecord> nurseRecordList = nurseContentService.getAllNurseRecordList();
+                model.addAttribute(nurseRecordList);
+                return "nurManage/nurRecord";
+            }
+
         } else {
             String msg = "输入不能为空";
-            session.setAttribute("mas", msg);
+            session.setAttribute("msg", msg);
             return "nurManage/editNurRecord";
         }
     }
