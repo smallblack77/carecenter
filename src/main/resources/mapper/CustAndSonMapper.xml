@@ -8,5 +8,16 @@
         VALUES
         (#{name},#{phone},#{wechat})
     </insert>
+    
+    <select id="getCustAndSon" parameterType="CustAndSon" resultType="CustAndSon">
+        SELECT
+            NAME,
+            PHONE,
+            WECHAT
+        FROM RELATION
+        WHERE NAME = #{name}
+              AND PHONE = #{phone}
+              AND WECHAT = #{wechat}
+    </select>
 
 </mapper>

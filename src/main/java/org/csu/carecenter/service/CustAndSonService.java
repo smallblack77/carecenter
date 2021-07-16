@@ -14,4 +14,8 @@ public class CustAndSonService {
     public void insertRelation(CustAndSon custAndSon){
         custAndSonMapper.insertRelation(custAndSon);
     }
+
+    public CustAndSon getCustAndSon(CustAndSon custAndSon){
+       return custAndSonMapper.getCustAndSon(custAndSon);
+    }
 }

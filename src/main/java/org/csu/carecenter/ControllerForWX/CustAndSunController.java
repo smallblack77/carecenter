@@ -22,16 +22,19 @@ public class CustAndSunController {
     @ResponseBody
     public CustAndSon insertCustAndSon(String name, String phone, String wechat){
 
+
+
         CustAndSon custAndSon = new CustAndSon();
         custAndSon.setName(name);
         custAndSon.setWechat(wechat);
         custAndSon.setPhone(phone);
 
-        custAndSonService.insertRelation(custAndSon);
+        CustAndSon custAndSon1 = custAndSonService.getCustAndSon(custAndSon);
+        if(custAndSon1 == null){
+            custAndSonService.insertRelation(custAndSon);
+        }
 
         return custAndSon;
-
-
 
     }
 }

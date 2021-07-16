@@ -7,4 +7,7 @@ import org.springframework.stereotype.Repository;
 public interface CustAndSonMapper {
 
     void insertRelation(CustAndSon custAndSon);
+
+    //获取数据
+    CustAndSon getCustAndSon(CustAndSon custAndSon);
 }
