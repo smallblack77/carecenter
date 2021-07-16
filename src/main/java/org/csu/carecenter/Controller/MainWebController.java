@@ -11,7 +11,7 @@ public class MainWebController {
     @GetMapping("/mainWeb")
     public String viewMain()
     {
-        return "mainWeb/index";
+        return "index";
     }
 
     @GetMapping("/chatRoom")
