@@ -39,7 +39,7 @@
 	padding: 0.2rem 0rem;
 	text-align: center;
 	color: white;
-	background-color: rgb(214, 13, 16);
+	background-color: rgb(148, 215, 181);
 }
 .container .down-left .list-bottom {
 	width: 100%;
@@ -47,8 +47,8 @@
 	padding-top: 1px;
 	margin-bottom: 0.8rem;
 	/* background-color: #fff; */
-	border-top: 1px solid rgb(214, 13, 16);
-	border-bottom: 0.2rem solid rgb(214, 13, 16);
+	border-top: 1px solid rgb(133, 165, 141);
+	border-bottom: 0.2rem solid rgb(133, 165, 141);
 }
 .container .down-left .list-items {
 	width: 100%;
@@ -109,7 +109,7 @@
 	color: rgb(48, 48, 48);
 }
 .container .down-left .list-items .list-item .content h1 a:hover {
-	color: rgb(214, 13, 16);
+	color: rgb(133, 165, 141);
 }
 .container .down-left .list-items .list-item .content .detail {
 	width: 100%;
@@ -148,7 +148,7 @@
 	color: rgb(48, 48, 48);
 }
 .container .down-left .list-items .more-item:hover {
-	color: rgb(214, 13, 16);
+	color: rgb(133, 165, 141);
 	box-shadow: 0px 0px 7px 4px rgb(216, 216, 216);
 }
 .container .down-right .card-item {
@@ -166,7 +166,7 @@
 	transition: 0.3s ease-in-out;
 }
 .container .down-right .card-item:hover .card-title {
-	color: rgb(214, 13, 16);
+	color: rgb(133, 165, 141);
 	transition: 0.3s ease-in-out;
 }
 .container .down-right .card-item .card-title {
@@ -183,7 +183,7 @@
 	width: 0.3rem;
 	height: 1rem;
 	margin-left: 0.9rem;
-	background-color: rgb(214, 13, 16);
+	background-color: rgb(133, 165, 141);
 }
 .container .down-right .card-item .card-content {
 	display: flex;
@@ -224,26 +224,26 @@
 	margin: 0rem 0rem 1rem 2rem;
 }
 .container .down-right .card-item .card-content .statistics span {
-	color: #d60d10;
+	color: #94c4b7;
 	font-size: 1.3rem;
 }
 .container .down-right .card-item .card-content .statistics i {
 	font-size: 1.3rem;
-	color: #d60d10;
+	color: #94c4b7;
 	font-weight: bolder;
 }
 #orange {
 	background-image: linear-gradient(
 		to bottom right,
-		rgb(255, 201, 174) 5%,
-		rgb(233, 60, 12)
+		rgb(159, 205, 210) 5%,
+		rgb(178, 217, 187)
 	) !important;
 }
 #yellow {
 	background-image: linear-gradient(
 		to bottom right,
-		rgb(255, 218, 197) 5%,
-		rgb(255, 125, 55)
+		rgb(218, 220, 219) 5%,
+		rgb(206, 243, 224)
 	) !important;
 }
 #green {
@@ -262,7 +262,7 @@
 }
 .container .down-right .card-item .card-content .rank .t-time span {
 	font-size: 1.3rem;
-	color: #d60d10;
+	color: #96adad;
 }
 footer {
 	width: 100%;
