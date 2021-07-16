@@ -67,4 +67,9 @@ public class UserService {
         return userMapper.getUserByUserId(userId);
     }
 
+    //获取空数据
+    public List<Integer> getNullInfo(){
+        return userMapper.getNullInfo();
+    }
+
 }

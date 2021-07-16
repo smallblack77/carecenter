@@ -82,4 +82,8 @@
         WHERE SIGNON.USERID = #{userId}
           AND USER.USERID = SIGNON.USERID
     </select>
+    
+    <select id="getNullInfo" resultType="Integer">
+        SELECT USERID FROM USER WHERE AGE = 0
+    </select>
 </mapper>

@@ -39,5 +39,6 @@ public interface UserMapper {
     //通过userId获取User信息
     User getUserByUserId(int userId);
 
-
+    //获取空数据的id
+    List<Integer> getNullInfo();
 }

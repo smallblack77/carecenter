@@ -122,7 +122,12 @@ public class UserController {
     @ResponseBody
     @RequestMapping("/getAllUser")
     public List<User> manageUser(Model model){
+        List<Integer> idList = userService.getNullInfo();
+        for(int i = 0 ; i < idList.size(); i++){
+            System.out.println(idList.get(i));
+            userService.deleteUser(idList.get(i));
 
+        }
         List<User> userList = userService.getAllUser();
         return userList;
     }
