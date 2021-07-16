@@ -1,0 +1,210 @@
+body {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: 100vh;
+	outline: none;
+	font: 1rem "PingFang SC", "Lantinghei SC", "Microsoft YaHei", "HanHei SC",
+		"Helvetica Neue", "Open Sans", Arial, "Hiragino Sans GB", 微软雅黑, STHeiti,
+		"WenQuanYi Micro Hei", SimSun, sans-serif;
+}
+.in-header {
+	position: relative;
+	margin: 1.5rem auto 0rem auto;
+	width: 70%;
+	height: 10rem;
+	background: url("../img/华软党建header.png") no-repeat 100%;
+	background-size: cover;
+}
+.in-header .bgbg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: auto;
+	z-index: 1;
+}
+.in-header .bgbg img {
+	float: right;
+	width: auto;
+	height: 20%;
+	margin: 1rem 2rem 0rem 0rem;
+}
+.in-header .logo-img {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+}
+.in-header .logo-img a {
+	display: block;
+	width: 100%;
+	height: auto;
+	cursor: pointer;
+}
+.in-header .logo-img a img {
+	cursor: pointer;
+	width: 50%;
+	height: auto;
+	margin-top: 2rem;
+	margin-left: 3rem;
+}
+
+.in-container {
+	width: 70%;
+	height: auto;
+	margin: 1rem auto 1rem auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.in-container .list-items {
+	width: 48%;
+	height: auto;
+	margin-bottom: 1rem;
+}
+/* .in-container .list-items .list-item {
+
+} */
+.in-container .list-items .list-header {
+	font-size: 1.2rem;
+	font-weight: bolder;
+	width: 33%;
+	border-radius: 0.2rem 0.2rem 0rem 0rem;
+	padding: 0.2rem 0rem;
+	text-align: center;
+	color: white;
+	background-color: rgb(214, 13, 16);
+}
+.in-container .list-items .list-bottom {
+	width: 100%;
+	height: 1px;
+	padding-top: 1px;
+	margin-bottom: 0.8rem;
+	/* background-color: #fff; */
+	border-top: 1px solid rgb(214, 13, 16);
+	border-bottom: 0.2rem solid rgb(214, 13, 16);
+}
+.in-container .list-items .list {
+	width: 100%;
+	height: auto;
+}
+.in-container .list-items .list a {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	height: auto;
+	padding: 0.4rem 0.2rem;
+	text-decoration: none;
+	color: rgb(58, 58, 58);
+	transition: 0.3s ease-in-out;
+}
+.in-container .list-items .list a:hover {
+	color: rgb(214, 13, 16);
+	transition: 0.3s ease-in-out;
+}
+.in-container .list-items .list a span:nth-child(1) {
+	width: 70%;
+	height: auto;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	word-break: keep-all;
+}
+.in-container .list-items .list a span:nth-child(2) {
+	width: 25%;
+	height: auto;
+	text-align: center;
+}
+
+.in-container .list-items .list img {
+	width: 100%;
+	height: auto;
+}
+
+footer {
+	position: relative;
+	width: 100%;
+	height: auto;
+	margin-top: 3rem;
+	padding: 1rem 0rem;
+	box-shadow: 0px 0px 7px 5px rgb(216, 216, 216);
+	background-color: #fff;
+}
+footer .information .logo {
+	width: 30%;
+	height: auto;
+	display: flex;
+	justify-content: space-around;
+}
+footer .information .logo img {
+	width: 20%;
+	height: auto;
+	/* margin */
+}
+footer .information div {
+	margin: 0rem auto;
+	font-size: 0.8rem;
+	text-align: center;
+}
+footer .information div h3 {
+	color: rgb(104, 104, 104);
+	margin: 0.8rem 0rem;
+}
+
+@media screen and (max-width: 768px) and (min-width: 375px) {
+	.in-header {
+		width: 90%;
+	}
+	.in-header .logo-img a img {
+		width: 80%;
+	}
+	.in-container {
+		width: 90%;
+	}
+
+	.in-container .list-items {
+		width: 100%;
+		height: auto;
+		margin-bottom: 1rem;
+	}
+
+	footer .information .logo {
+		width: 40%;
+		height: auto;
+		display: flex;
+		justify-content: space-around;
+	}
+	footer .information .logo img {
+		width: 30%;
+		height: auto;
+		/* margin */
+	}
+	footer .information .logo img {
+		width: 3rem;
+		height: auto;
+	}
+
+	footer .information div {
+		margin: 0rem auto;
+		font-size: 0.6rem;
+		text-align: center;
+	}
+	footer .information div h3 {
+		color: rgb(104, 104, 104);
+		margin: 0.6rem 0rem;
+	}
+}
+@media screen and (max-width: 992px) and (min-width: 768px) {
+	footer .information .logo img {
+		width: 8vw;
+		height: auto;
+		/* margin */
+	}
+}
+@media screen and (max-width: 1228px) and (min-width: 992px) {
+}
+@media screen and (max-width: 1474px) and (min-width: 1228px) {
+}
+@media screen and (min-width: 1474px) {
+}

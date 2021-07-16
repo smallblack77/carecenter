@@ -2,6 +2,7 @@ package org.csu.carecenter.Controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -18,5 +19,11 @@ public class MainWebController {
     public String chatRoom()
     {
         return "websocket";
+    }
+
+    @RequestMapping("/first")
+    public String first()
+    {
+        return "First/index";
     }
 }

@@ -1,0 +1,191 @@
+/*轮播图*/
+.container .train_banner {
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	position: relative;
+	margin: 0rem auto;
+}
+.container .train_banner ul {
+	margin: 0;
+	padding: 0;
+	width: 80%;
+}
+.container .train_banner .banner_images {
+	width: 1000%;
+}
+.container .train_banner .banner_images li {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	float: left;
+	width: 10%;
+}
+.container .train_banner .banner_images li a {
+	display: block;
+	width: 100%;
+}
+.container .train_banner .banner_images li a img {
+	display: block;
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+}
+.container .train_banner .banner_index {
+	position: absolute;
+	bottom: 20px;
+	width: 100%;
+	text-align: center;
+}
+.banner_index-frame {
+	display: inline-block;
+}
+.container .train_banner .banner_index li {
+	padding: 0;
+	margin: 0;
+	transition: all 0.3s;
+	list-style: none;
+	margin-right: 15px;
+	float: left;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: #ffffff;
+}
+.container .train_banner .banner_index li.current {
+	transition: all 0.3s;
+	border: 1px solid rgb(255, 187, 138);
+	background-color: chocolate;
+	width: 40px;
+	border-radius: 5px;
+}
+.container .train_banner .banner_index li:hover {
+	transform: scale(1.5);
+}
+.container .train_banner .banner_index li.current:hover {
+	transform: scale(1);
+}
+.train_banner_left {
+	cursor: pointer;
+	transition: all 0.5s;
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 5%;
+	text-align: center;
+	z-index: 5;
+	color: #ffffff;
+	opacity: 0.3;
+	background: -webkit-linear-gradient(
+		left,
+		black,
+		rgba(255, 255, 255, 0)
+	); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(
+		right,
+		black,
+		rgba(255, 255, 255, 0)
+	); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(
+		right,
+		black,
+		rgba(255, 255, 255, 0)
+	); /* Firefox 3.6 - 15 */
+	background: linear-gradient(
+		to right,
+		black,
+		rgba(255, 255, 255, 0)
+	); /* 标准的语法 */
+}
+.train_banner_right {
+	cursor: pointer;
+	transition: all 0.5s;
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 100%;
+	width: 5%;
+	text-align: center;
+	z-index: 5;
+	color: #ffffff;
+	opacity: 0.3;
+	background: -webkit-linear-gradient(
+		left,
+		rgba(255, 255, 255, 0),
+		black
+	); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(
+		right,
+		rgba(255, 255, 255, 0),
+		black
+	); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(
+		right,
+		rgba(255, 255, 255, 0),
+		black
+	); /* Firefox 3.6 - 15 */
+	background: linear-gradient(
+		to right,
+		rgba(255, 255, 255, 0),
+		black
+	); /* 标准的语法 */
+}
+.train_banner_left:hover,
+.train_banner_right:hover {
+	display: block;
+	opacity: 0.5;
+}
+.train_banner_li {
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	text-align: center;
+}
+
+@media screen and (max-width: 375px) {
+}
+
+@media screen and (max-width: 768px) and (min-width: 375px) {
+	/*轮播图*/
+	.container {
+		margin: 0rem auto 0rem auto;
+		/* background-color: red; */
+	}
+
+	.container .train_banner {
+		width: 100%;
+		height: auto;
+		overflow: hidden;
+		position: relative;
+		margin: 0rem auto;
+	}
+	.container .train_banner ul {
+		margin: 0;
+		padding: 0;
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 992px) and (min-width: 768px) {
+	/*轮播图*/
+	.container {
+		margin: 0rem auto 0rem auto;
+		/* background-color: red; */
+	}
+	.container .train_banner {
+		width: 100%;
+		height: auto;
+		overflow: hidden;
+		position: relative;
+		margin: 0rem auto;
+	}
+	.container .train_banner ul {
+		margin: 0;
+		padding: 0;
+		width: 90%;
+	}
+}
+
+@media screen and (max-width: 1228px) and (min-width: 992px) {
+}

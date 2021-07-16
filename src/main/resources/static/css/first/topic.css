@@ -1,0 +1,344 @@
+html,
+body {
+	scroll-behavior: smooth;
+}
+.to-container {
+	width: 80%;
+	height: auto;
+	background: white;
+	border-radius: 1rem;
+	margin: 1rem auto 0rem;
+	overflow: hidden;
+}
+.to-container .header {
+	/* height: 3rem; */
+	width: 100%;
+	height: auto;
+	/* padding: ; */
+}
+.to-container .header h3 {
+	color: rgb(148, 17, 17);
+	font-size: 1.5rem;
+	font-weight: bold;
+	margin: 2rem 0rem;
+	text-align: center;
+}
+.to-container .header h4 {
+	width: 80%;
+	margin: 0rem auto 1rem auto;
+	border-bottom: 1px solid rgb(231, 231, 231);
+	font-weight: 300;
+	font-size: 0.9rem;
+	color: rgb(168, 168, 168);
+	text-align: center;
+}
+.to-container .article {
+	font-weight: 300;
+	padding: 0rem 8rem;
+	border-bottom: 1px solid rgb(231, 231, 231);
+}
+.to-container .article span {
+	font-weight: bold;
+}
+.to-container .article p {
+	text-indent: 2rem;
+}
+
+.to-container .article .ar-img {
+	width: 50%;
+	height: auto;
+	margin: 1rem auto;
+}
+.to-container .article .ar-img img {
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+}
+.to-container .article .ar-img h3 {
+	text-align: center;
+	font-size: 0.9rem;
+	color: rgb(48, 48, 207);
+	font-weight: 300;
+	margin: 0.5rem auto;
+}
+.to-container .article .infomatrion {
+	margin: 0.8rem auto;
+	width: 90%;
+	height: auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.to-container .article .infomatrion .state i {
+	color: rgb(58, 58, 58);
+	cursor: pointer;
+	transition: 0.3s ease-in-out;
+	font-weight: bolder;
+}
+.to-container .article .infomatrion .state i:hover {
+	color: rgb(148, 17, 17);
+}
+.to-container .btnlist {
+	width: 70%;
+	height: auto;
+	margin: 0rem auto;
+	display: flex;
+	justify-content: space-around;
+	/* color: #f56c6c; */
+}
+.to-container .btnlist .btn {
+	width: 19%;
+	height: auto;
+	text-align: center;
+	padding: 0.6rem 0.3rem;
+	margin: 1rem 0rem;
+	border: 1px solid rgb(148, 17, 17);
+	border-radius: 0.6rem;
+	color: rgb(148, 17, 17);
+	background-color: #fff;
+	transition: 0.3s ease-in-out;
+}
+.to-container .btnlist .btn:hover {
+	cursor: pointer;
+	color: white;
+	background-color: rgb(148, 17, 17);
+	transition: 0.3s ease-in-out;
+}
+
+footer {
+	width: 100%;
+	height: auto;
+	margin-top: 3rem;
+	padding: 1rem 0rem;
+	box-shadow: 0px 0px 7px 5px rgb(216, 216, 216);
+	background-color: #fff;
+}
+footer .information .logo {
+	width: 20%;
+	height: auto;
+	display: flex;
+	justify-content: space-around;
+}
+footer .information .logo img {
+	width: 25%;
+	height: auto;
+	/* margin */
+}
+footer .information div {
+	margin: 0rem auto;
+	font-size: 0.8rem;
+	text-align: center;
+}
+footer .information div h3 {
+	color: rgb(104, 104, 104);
+	margin: 0.8rem 0rem;
+}
+.toTop {
+	cursor: pointer;
+	position: fixed;
+	opacity: 1;
+	top: 80%;
+	right: 0.5rem;
+	width: 3rem;
+	height: 3rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #fff;
+	border-radius: 50%;
+	box-shadow: 0px 0px 5px 4px rgb(233, 233, 233);
+	transition: 0.5s ease-in-out;
+}
+.toTop:hover {
+	background-color: rgba(255, 244, 244);
+	transition: 0.3s ease-in-out;
+}
+.toTop img {
+	width: 60%;
+	height: auto;
+}
+.fadeOut {
+	animation: becomeOpacity 1.5s ease forwards;
+}
+.fadeIn {
+	animation: becomeUnopacity 1.5s ease forwards;
+}
+
+.success-message {
+	z-index: 3;
+	position: fixed;
+	top: 0%;
+	left: 50%;
+	transform: translateX(-50%);
+	padding: 0.1rem 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: rgb(240, 249, 235);
+	border: 1px solid rgb(236, 247, 230);
+	color: rgb(116, 197, 92);
+	width: 18%;
+	height: auto;
+	border-radius: 0.3rem;
+}
+.success-message img {
+	width: 20px;
+	height: auto;
+	margin-right: 0.4rem;
+}
+.success-message h3 {
+	width: auto;
+	text-align: center;
+	font-size: 0.8rem;
+}
+
+.warning-message {
+	z-index: 3;
+	position: fixed;
+	top: 0%;
+	left: 50%;
+	transform: translateX(-50%);
+	padding: 0.1rem 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: rgb(253, 246, 236);
+	border: 1px solid rgb(252, 243, 231);
+	color: rgb(232, 160, 60);
+	width: 18%;
+	height: auto;
+	border-radius: 0.3rem;
+}
+.warning-message img {
+	width: 20px;
+	height: auto;
+	margin-right: 0.4rem;
+}
+.warning-message h3 {
+	width: auto;
+	text-align: center;
+	font-size: 0.8rem;
+}
+.message-fadeIn {
+	animation: fadeIn 0.5s ease forwards;
+}
+.message-fadeOut {
+	animation: fadeOut 0.5s ease forwards;
+}
+@keyframes becomeOpacity {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+@keyframes becomeUnopacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+		top: 2rem;
+	}
+	100% {
+		opacity: 1;
+		top: 11rem;
+	}
+}
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+		top: 11rem;
+	}
+	100% {
+		opacity: 0;
+		top: 2rem;
+	}
+}
+@media screen and (max-width: 768px) and (min-width: 375px) {
+	.to-container {
+		width: 90%;
+		height: auto;
+		border: 1px solid rgb(216, 216, 216);
+	}
+	.to-container .header h3 {
+		width: 80%;
+		margin: 0.8rem auto;
+	}
+	.to-container .article {
+		padding: 0rem 2rem;
+	}
+	.success-message {
+		width: 30%;
+	}
+	.warning-message {
+		width: 30%;
+	}
+	@keyframes fadeIn {
+		0% {
+			opacity: 0;
+			top: 2rem;
+		}
+		100% {
+			opacity: 1;
+			top: 7.5rem;
+		}
+	}
+	@keyframes fadeOut {
+		0% {
+			opacity: 1;
+			top: 7.5rem;
+		}
+		100% {
+			opacity: 0;
+			top: 2rem;
+		}
+	}
+}
+@media screen and (max-width: 992px) and (min-width: 768px) {
+	.to-container {
+		width: 80%;
+		height: auto;
+		border: 1px solid rgb(216, 216, 216);
+	}
+	.to-container .header h3 {
+		width: 80%;
+		margin: 1rem auto;
+	}
+	.to-container .article {
+		padding: 0rem 3rem;
+	}
+
+	@keyframes fadeIn {
+		0% {
+			opacity: 0;
+			top: 2rem;
+		}
+		100% {
+			opacity: 1;
+			top: 8rem;
+		}
+	}
+	@keyframes fadeOut {
+		0% {
+			opacity: 1;
+			top: 8rem;
+		}
+		100% {
+			opacity: 0;
+			top: 2rem;
+		}
+	}
+}
+@media screen and (max-width: 1228px) and (min-width: 992px) {
+}
+@media screen and (max-width: 1474px) and (min-width: 1228px) {
+}
+@media screen and (min-width: 1474px) {
+}

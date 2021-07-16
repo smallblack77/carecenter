@@ -8,7 +8,7 @@ html, body{
 	font-family: 'Roboto', sans-serif;
     font-size: 100%;
     overflow-x: hidden;
-    background: url(../images/old2.png) no-repeat 0px 0px;
+    background: url(../images/logo1.gif) no-repeat 0px 0px;
 	background-size:cover;
 }
 #container {
@@ -2379,7 +2379,7 @@ ul.inbox-pagination li {
 }
 .w3layouts-main {
     width: 30%;
-    margin:5em auto;
+    margin:4em auto;
     background: rgba(108, 142, 98,0.9);
     padding: 42px 35px;
 }
