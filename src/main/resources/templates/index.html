@@ -1,32 +1,520 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="utf-8">
-    <title>Login Page</title>
-    <!-- 样 式 文 件 -->
-    <link rel="stylesheet" href="../css/component/pear/css/pear.css">
+<title>Rest a People and Society Category Flat Bootstarp Resposive Website Template | Home :: w3layouts</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Rest Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="applijewelleryion/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="../../css/mainWeb/bootstrap.css" rel='stylesheet' type='text/css' />
+<!-- Custom Theme files -->
+<link href="../../css/mainWeb/style.css" rel='stylesheet' type='text/css' />
+<script src="../../js/jquery-1.11.1.min.js"></script>
+<!--webfonts-->
+   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,300,600,700|Six+Caps' rel='stylesheet' type='text/css'>
+<!--//webfonts-->
+	<!--引用百度地图API-->
+	<style type="text/css">
+		html,body{margin:0;padding:0;}
+		.iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
+		.iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
+	</style>
+	<script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
 </head>
-<body background="../images/logo1.gif" style="background-size: cover;">
-<div style="margin-left:800px;margin-top: 500px;">
-    <a href="/admin/adminLoginForm">
-        <button class="pear-btn pear-btn-success" style="width: 600px;height: 50px;">
-            进 入 管 理 员 系 统
-        </button>
-    </a>
+<body>
+<!--start-home-->
+	<div class="header">
+		<div class="banner" id="home">
+			<div class="container">
+				<div class="logo">
+					<a href="/main/mainWeb"><h1>Care Center</h1><h6>Welcome to Meiling</h6></a>
+				</div>
+				<div  id="top" class="callbacks_container">
+					<ul class="rslides" id="slider4">
+					<li>
+						<a href="">
+							<div class="banner-info">
+								<h3>Demo</h3>
+								<h4>THE JOY OF BEING RETIRED</h4>
+							</div>
+						</a>
+					</li>
+							<li>
+								<a href="/account/userLoginForm">
+									<div class="banner-info">
+										<h3>User</h3>
+										<h4>CONFIDENT IN YOUR FUTURE</h4>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="/admin/adminLoginForm">
+									<div class="banner-info">
+										<h3>Admin</h3>
+										<h4>RETIREMENT PLAN WISELY</h4>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<!--- banner Slider starts Here --->
+	  			<script src="../../js/responsiveslides.min.js"></script>
+			 <script>
+			    // You can also use "$(window).load(function() {"
+			    $(function () {
+			      // Slideshow 4
+			      $("#slider4").responsiveSlides({
+			        auto: true,
+			        pager: true,
+			        nav: true,
+			        speed: 500,
+			        namespace: "callbacks",
+			        before: function () {
+			          $('.events').append("<li>before event fired.</li>");
+			        },
+			        after: function () {
+			          $('.events').append("<li>after event fired.</li>");
+			        }
+			      });
+
+			    });
+			  </script>
+				</div>
+			</div>
+	 <div class="header-bottom">
+	  <div class="fixed-header">
+	  <div class="header-right">
+						  <h6>Follows Us :</h6>
+							<ul class="f-icons">
+								<li><a href="#" class="facebook"> </a></li>
+								<li><a href="#" class="p"> </a></li>
+								<li><a href="#" class="twitter"> </a></li>
+							</ul>
+							<div class="clearfix"></div>
+					</div>
+			<span class="menu"> </span>
+			<div class="top-menu">
+			<nav class="cl-effect-21">
+				<ul>
+					<li><a class="active scroll" href="#home">Home</a></li>
+					<li><a class="scroll" href="#service">SERVICEs</a></li>
+					<li><a class="scroll" href="#news">News</a></li>
+					<li><a class="scroll" href="#insurance">Insurance</a></li>
+					<li><a class="scroll" href="#gallery">Gallery</a></li>
+					<li><a class="scroll" href="#contact">Contact Us</a></li>
+					<div class="clearfix"></div>
+				</ul>
+			</nav>		
+			</div>
+					<div class="clearfix"></div>
+		<!-- script for menu -->
+				<script>
+				$( "span.menu" ).click(function() {
+				  $( ".top-menu" ).slideToggle( "slow", function() {
+				    // Animation complete.
+				  });
+				});
+			</script>
+			<!-- script for menu -->
+			<script>
+		$(document).ready(function() {
+			 var navoffeset=$(".header-bottom").offset().top;
+			 $(window).scroll(function(){
+				var scrollpos=$(window).scrollTop(); 
+				if(scrollpos >=navoffeset){
+					$(".header-bottom").addClass("fixed");
+				}else{
+					$(".header-bottom").removeClass("fixed");
+				}
+			 });
+			 
+		});
+		</script>
+	 </div>
+	 </div>
+	</div>
+<!--/welcome-->
+	<div class="welcome-section">
+		<div class="container">
+			<div class="wel-text">
+			   <h3>简 介</h3>
+			   <h4>梅岭社区 · 颐养中心</h4>
+				<p>&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;湖南省长沙市天心区梅岭社区颐养中心（以下简称“颐养中心”）于2008年8月经民政部门批准设立，是一家“民间投资，政府扶持，市场运作，公益性质”的民办非企业，由江苏九洲投资集团投资开发建设，是金东方综合性养老项目的重要组成部分。秉承“帮天下儿女敬孝，让世上老人享福，为党和政府分忧”的宗旨，颐养中心经数年悉心经营，荣膺多项典范荣誉，精心打造出首个“湖南省养老示范工程”，获评“省级养老服务业综合发展示范基地”。
+
+
+
+					颐养中心位于常州市南冀，占地265亩，紧邻西太湖与武进主城区，距离淹城森林公园旅游区1公里，距武进区商业中心2公里，与沪宁高速、锡宜高速、312国道、京杭大运河、沪宁铁路、新长铁路等交通干线紧密相连，沿江高速、常泰高速贴临而过，地理位置优越，交通便捷。
+
+
+
+					颐养中心遵循“尊荣、现代、时尚、生态”的规划理念,将公园式的环境,家庭式的居住,酒店式的服务融合在一起，实现“在家是宾馆,出门是公园,就诊有医院,护理在家园,设施现代化，服务亲情化”。
+
+
+
+					颐养中心引进美国CCRC持续照料退休社区理念，全力打造CCRC 3+1养老模式，实行会员制经营管理。社区内约建1800户老年住宅，并配套约20000㎡的生活、文化和商业中心，与之毗邻的常州金东方医院和常州金东方护理院同属金东方养老配套设施，各设500张床位，为老年人提供便捷、专业、周到、贴心的医护服务。金东方颐养中心、金东方医院和金东方护理院三位一体，完美实现现代养老住区的医养康护一体化布局。
+
+
+
+					颐养中心内绿树成荫，环境宜人，载植200余种各类乔木、灌木和花草，绿化率达52%，其中7500㎡的“迷你”高尔夫球场生态与活力兼具，“动”“静”皆可入画；10000㎡人工湖将人与景观完美相融，湖心岛上各种家禽动物无拘伺养、繁衍生息。湖畔13000㎡的中央会所，内设营养餐厅、老年大学、茶吧、图书馆、阳光房、佛堂、基督教堂、恒温泳池，健身房、棋牌室、台球室、乒乓球室、台球室、儿童乐园、理发室、桑拿浴室、书画室、舞蹈室、摄影室、手工坊、钢琴室等30多种功能房，为社区老人提供“一站式、一条龙、全方位、全天候”服务。
+
+
+
+					社区内建有近1800户适老化住宅，可容纳4000—5000人入住，既可老人自住，也可子女陪住，更能三代同堂，共享天伦之乐。每栋楼一楼为架空层，配备生活秘书、健康秘书和安保人员，为老人的生活提供24小时服务与保障。项目三期建有“金东方大舞台”，为多才多艺的会员提供更多展示风采的互动平台，打造邻里互助、和谐共生的家园氛围，倡导“小户大家，亲如一家，共同建设美好家园”、“我爱我家，我做典范，谦诚文明，博爱包容”的“家”文化。
+
+
+
+					颐养中心设立社区党支部、居委会、侨联等机构，成立金东方颐养文化研究会、文体俱乐部和艺术团，下设茶艺、摄影、书画、聊天养生、舞蹈、戏曲、乐器、手工、牌类、球类、游泳、钓鱼等近40个协会，让老人充分感受“老有所依、老有所学、老有所乐”的精彩晚年生活之余，也让金东方的文化养老特色更加闻名遐迩。
+
+
+
+					颐养中心在探索实践中得到了各级政府和主管部门的指导与关怀，在践行中不断成长，取得了一些成绩。秉承“居家养老、文化养生、专业服务、医养融合”的经营理念，致力为长三角乃至全国的老年人提供一个幸福、温馨、和谐的新家园,打造出中国第一、国际接轨、世界一流的绿色生态高品质银发养生社区。
+
+				</p>
+			</div>
+		</div>
+	</div>
+<!--/news-->
+<!--/services-->
+	<div class="service-section" id="service">
+		<div class="container">
+				<h3>服 务</h3>
+				<h5>为每一处生活细节 悉心斟酌</h5>
+			<div class="serve-grids">
+				<div class="col-md-6 service-grid">
+					<div class="icon">
+						<i class="s1"> </i>
+					</div>
+					<div class="icon-text">
+						<h4>养得安心</h4>
+						<p>为长者提供基础能力与医疗健康评估，建立个性化健康档案，定制精准颐养方案，提供健康监测分析与预警、康复训练等服务，建立专家巡诊、绿色转诊等医疗保障。</p>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<div class="col-md-6 service-grid">
+					<div class="icon">
+						<i class="s2"> </i>
+					</div>
+					<div class="icon-text">
+						<h4>住得舒心</h4>
+						<p>五大公园环伺，感官草坪打造、屋顶花园设计，为长者提供全方位自然景观；设置园艺疗养区，结合日式园艺疗法，让长者悦享自然，舒缓压力，复健心灵。</p>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<div class="col-md-6 service-grid">
+					<div class="icon">
+						<i class="s3"> </i>
+					</div>
+					<div class="icon-text">
+						<h4>食得放心</h4>
+						<p>根据长者不同的身体机能状况、营养需求，提供高品质、个性化的菜单设计；定期评估营养状况，制定营养提升计划；优质食材供应体系，绿色安全，新鲜应季。</p>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<div class="col-md-6 service-grid">
+					<div class="icon">
+						<i class="s4"> </i>
+					</div>
+					<div class="icon-text">
+						<h4>养得安心</h4>
+						<p>园艺区、书画社、外语角、读书会、手工坊、艺文社等，为长者提供展示的舞台；重要节庆日举办展览、比赛、游戏等，在缤纷多彩的文娱生活中，滋养精神世界。</p>
+					<div class="clearfix"> </div>
+				</div>
+
+			 <div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+	<!--/insurance-->
+	<div class="insurance-section" id="insurance">
+		<div class="container">
+			<h3>保险保障</h3>
+			<h5>颐养中心为您提供最优质的服务</h5>
+			<div class="insurance-grids">
+				<div class="col-md-6 insurance-grid">
+						<img src="../../images/mainWeb/i1.jpg" title="couple" />
+				</div>
+				<div class="col-md-6 insurance-grid">
+						<img src="../../images/mainWeb/i2.jpg" title="couple" />
+				</div>
+				 <div class="clearfix"></div>
+			</div>
+			<h4>政策支持</h4>
+			<p>城市生活配套丰富，自然环境宜居，将为高龄自理、术后康复、失能失智及需重疾照料的长者，提供专业照护、温暖生活、自在空间及品质养老生活。 作为龙湖养老的经验沉淀与升级之作，老年公寓将依托龙湖椿山万树在重庆、成都、上海等城市积累成型的养老服务经验，为长者们带来持续优化升级的养老服务，开启品质养老新生活。</p>
+			<ul class="insure">
+			   		<li><a href="#"><i class="tick"></i></a>做好兜底保障让困难老人舒眉展颜</li>
+			   		<li><a href="#"><i class="tick"></i></a>找准需求精准施策让家的“港湾”更温暖</li>
+			   		<li><a href="#"><i class="tick"></i></a>当好银发守护者共绘最美夕阳红</li>
+			   		<li><a href="#"><i class="tick"></i></a>真情伴你走，春色为你留，二十四桥明月夜</li>
+			   		<li><a href="#"><i class="tick"></i></a>通过多种方式参与养老服务供给</li>
+			   		<li><a href="#"><i class="tick"></i></a>发动社会力量共同参与“银发事业</li>
+			   	</ul>
+
+	</div>
 </div>
-<div style="margin-left:800px;margin-top: 50px;">
-    <a href="/account/userLoginForm">
-        <button class="pear-btn pear-btn-success" style="width: 600px;height: 50px;">
-            进 入 用 户 系 统
-        </button>
-    </a>
-</div>
-<div style="margin-left:800px;margin-top: 50px;">
-    <a href="/main/mainWeb">
-        <button class="pear-btn pear-btn-success" style="width: 600px;height: 50px;">
-            进 入 官 方 网 站
-        </button>
-    </a>
-</div>
+<!--/news-->
+	<div class="news-section" id="news">
+		<div class="container">
+		 <h3>新闻 & 事件</h3>
+		 <h5>每日精选</h5>
+			<div class="news-grids">
+				<div class="col-md-6 news-grid">
+					<div class="col-md-6 news-img">
+						<img src="../../images/mainWeb/n1.jpg" title="couple" />
+					</div>
+					<div class="col-md-6 news-text">
+						<span class="event-date">July 16th <span class="event-year">2021</span></span>
+						<h4>老人周末娱乐</h4>
+						<p>供老人们文体活动的设施有：门球场、图书室、电视室、棋艺室、多功能活动大厅及健身房。经常组织老年人健身、定期体检、棋牌娱乐、书法绘画、旅游参观、歌咏看戏活动。梅岭社区颐养中心办院宗旨"一切为老人着想、一切为老人服务"，努力把其办成老年幸福乐园。</p>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="col-md-6 news-grid">
+					<div class="col-md-6 news-img">
+					<img src="../../images/mainWeb/n2.jpg" title="couple" />
+					</div>
+					<div class="col-md-6 news-text">
+						<span class="event-date">Dec 14th <span class="event-year">2019</span></span>
+						<h4>老人优质服务</h4>
+						<p>房间内配有空调、风扇、有线电视机、卫生设施、呼叫系统具全。 敬老院房间宽敞、明亮、舒适、温馨，入住本院享受到家的感觉。本院有一支年轻规范的服务队伍，专业的知识技能，规范化的管理模式，为老人提供人性化服务，老人生活的每一寸空间都充满着温馨和亲情。</p>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+	<!--light-box-files -->
+		<script src="../../js/jquery.chocolat.js"></script>
+		<link rel="stylesheet" href="../../css/mainWeb/chocolat.css" type="text/css" media="screen" charset="utf-8" />
+		<!--light-box-files -->
+		<script type="text/javascript" charset="utf-8">
+		$(function() {
+			$('.gallery-bottom a').Chocolat();
+		});
+		</script>
+	<!--gallery-starts--> 
+	<div class="gallery" id="gallery">
+		<div class="container">
+				<h3>日常剪影</h3>
+				 <h5>老人们愉快的养老时光</h5>
+			<div class="gallery-bottom">
+					<div class="col-md-4 gallery-left">
+						<a href="../../images/mainWeb/g1.jpg">
+							<img src="../../images/mainWeb/g1.jpg" alt="name" />
+						</a>
+					</div>
+					<div class="col-md-4 gallery-left">
+						<a href="../../images/mainWeb/g2.jpg">
+							<img src="../../images/mainWeb/g2.jpg" alt="name" />
+						</a>
+					</div>
+					<div class="col-md-4 gallery-left">
+						<a href="../../images/mainWeb/g3.jpg">
+							<img src="../../images/mainWeb/g3.jpg" alt="name" />
+						</a>
+					</div>
+					<div class="col-md-4 gallery-left">
+						<a href="../../images/mainWeb/g4.jpg">
+							<img src="../../images/mainWeb/g4.jpg" alt="name" />
+						</a>
+					</div>
+					<div class="col-md-4 gallery-left">
+						<a href="../../images/mainWeb/g6.jpg">
+							<img src="../../images/mainWeb/g6.jpg" alt="name" />
+						</a>
+					</div>
+					<div class="col-md-4 gallery-left">
+						<a href="../../images/mainWeb/g5.jpg">
+							<img src="../../images/mainWeb/g5.jpg" alt="name" />
+						</a>
+					</div>
+					<div class="col-md-4 gallery-left">
+						<a href="../../images/mainWeb/g1.jpg">
+							<img src="../../images/mainWeb/g1.jpg" alt="name" />
+						</a>
+					</div>
+					<div class="col-md-4 gallery-left">
+						<a href="../../images/mainWeb/g2.jpg">
+							<img src="../../images/mainWeb/g2.jpg" alt="name" />
+						</a>
+					</div>
+					<div class="col-md-4 gallery-left">
+						<a href="../../images/mainWeb/g3.jpg">
+							<img src="../../images/mainWeb/g3.jpg" alt="name" />
+						</a>
+					</div>
+					<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>	
+	<!--gallery-->
+
+	<!--contact-->
+		<div class="contact" id="contact">
+		   <div class="container">
+				<h3>联系我们</h3>
+				<h5>我们随时随地为您服务</h5>
+				<div class="contact-form">
+					<div class="col-md-6 contact-grid">
+						<h4>详情</h4>
+						<form action="/view">
+							<p class="sed-para">如果您有任何疑问，可随时资讯我们的客服</p>
+							<p class="para1">您可以在下方填写您的姓名，稍后我们将为您转接我们的客服人员；您可以资讯任何您想要资讯的问题</p>
+							<p class="your-para">您的姓名(必填):</p>
+							<input type="text" name="username" id="username" value="" onfocus="this.value='';" onblur="if (this.value == '') {this.value ='';}">
+							<div class="send">
+								<input type="submit" value="联系客服">
+							</div>
+						</form>
+					</div>
+					<div class="col-md-6 contact-in">
+						<h4>联系方式</h4>
+						<p class="sed-para">您要的，在梅岭社区养老中心都有</p>
+						<p class="para1">“医生每天都会来房间量血压、送药，这让我放心多了。以前我自己每顿吃七八种药，总怕吃重吃漏了。”曾宪棣老人住在梅岭社区颐养中心，这既是养老院，又内设了一所一级综合医院，不仅开设了中医理疗馆，还为每个老人建立了“健康档案”，入院老人床前就能看诊。对经济困难的高龄、失能老人给予相关补贴是国家又一温暖举措。截至2020年底，全国享受高龄补贴的老年人3058.9万人；享受护理补贴的老年人81万人；享受养老服务补贴的老年人523.5万人；享受其他老龄补贴的老年人25.5万人。各地已普遍建立了经济困难的高龄、失能等老年人补贴制度，有效缓解了经济困难老年人的实际生活困难。</p>
+						<div class="more-address"> 
+							<div class="address-more">
+								<p>公司名称,</p>
+								<p>梅岭社区·颐养中心,</p>
+								<p>现任董事：常晓颖</p>
+							</div>
+							<div class="address-left">
+								<p>Tel:1115550001</p>
+								<p>Fax:190-4509-494</p>
+								<p><a href="mailto:info@example.com">mail@example.com</a></p>
+							</div>
+							<div class="clearfix"> </div>
+						  </div>
+					</div>
+					<div class="clearfix"> </div>
+			  </div>
+		</div>
+	</div>
+	<!--map-->
+	<div style="width:1440px;height:400px;border:#ccc solid 1px;" id="dituContent"></div>
+<!--    <div class="map">-->
+<!--				<iframe src="map.html" frameborder="0" style="border:0" allowfullscreen></iframe>-->
+	<div class="copy">
+		<p>&copy; 2021 Rest. All Rights Reserved | Welcome to Meiling Carecenter</a> </p>
+	</div>
+	<!--start-smoth-scrolling-->
+<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){
+				event.preventDefault();
+				$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+			});
+		});
+		</script>
+	<!--start-smoth-scrolling-->
+<script type="text/javascript">
+			$(document).ready(function() {
+				/*
+				var defaults = {
+					containerID: 'toTop', // fading element id
+					containerHoverID: 'toTopHover', // fading element hover id
+					scrollSpeed: 1200,
+					easingType: 'linear'
+				};
+				*/
+
+				$().UItoTop({ easingType: 'easeOutQuart' });
+
+			});
+</script>
+<a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+		<script type="text/javascript">
+			//创建和初始化地图函数：
+			function initMap(){
+				createMap();//创建地图
+				setMapEvent();//设置地图事件
+				addMapControl();//向地图添加控件
+				addMarker();//向地图中添加marker
+			}
+
+			//创建地图函数：
+			function createMap(){
+				var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+				var point = new BMap.Point(112.998352,28.147239);//定义一个中心点坐标
+				map.centerAndZoom(point,17);//设定地图的中心点和坐标并将地图显示在地图容器中
+				window.map = map;//将map变量存储在全局
+			}
+
+			//地图事件设置函数：
+			function setMapEvent(){
+			}
+
+			//地图控件添加函数：
+			function addMapControl(){
+				//向地图中添加缩放控件
+				var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+				map.addControl(ctrl_nav);
+				//向地图中添加缩略图控件
+				var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
+				map.addControl(ctrl_ove);
+				//向地图中添加比例尺控件
+				var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+				map.addControl(ctrl_sca);
+			}
+
+			//标注点数组
+			var markerArr = [{title:"梅岭社区颐养中心",content:"我的备注",point:"112.999897|28.149309",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}
+			];
+			//创建marker
+			function addMarker(){
+				for(var i=0;i<markerArr.length;i++){
+					var json = markerArr[i];
+					var p0 = json.point.split("|")[0];
+					var p1 = json.point.split("|")[1];
+					var point = new BMap.Point(p0,p1);
+					var iconImg = createIcon(json.icon);
+					var marker = new BMap.Marker(point,{icon:iconImg});
+					var iw = createInfoWindow(i);
+					var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+					marker.setLabel(label);
+					map.addOverlay(marker);
+					label.setStyle({
+						borderColor:"#808080",
+						color:"#333",
+						cursor:"pointer"
+					});
+
+					(function(){
+						var index = i;
+						var _iw = createInfoWindow(i);
+						var _marker = marker;
+						_marker.addEventListener("click",function(){
+							this.openInfoWindow(_iw);
+						});
+						_iw.addEventListener("open",function(){
+							_marker.getLabel().hide();
+						})
+						_iw.addEventListener("close",function(){
+							_marker.getLabel().show();
+						})
+						label.addEventListener("click",function(){
+							_marker.openInfoWindow(_iw);
+						})
+						if(!!json.isOpen){
+							label.hide();
+							_marker.openInfoWindow(_iw);
+						}
+					})()
+				}
+			}
+			//创建InfoWindow
+			function createInfoWindow(i){
+				var json = markerArr[i];
+				var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>"+json.content+"</div>");
+				return iw;
+			}
+			//创建一个Icon
+			function createIcon(json){
+				var icon = new BMap.Icon("http://app.baidu.com/map/images/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
+				return icon;
+			}
+
+			initMap();//创建和初始化地图
+		</script>
 </body>
 </html>

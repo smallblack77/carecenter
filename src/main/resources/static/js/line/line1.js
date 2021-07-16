@@ -5,7 +5,7 @@ layui.use(['echarts'], function() {
 
 	var custId = document.getElementById("custId");
 	// alert(custId.innerText);
-	const colorList = ["#9E87FF", '#73DDFF', '#fe9a8b', '#F56948', '#9E87FF']
+	const colorList = ["#9e87ff", '#73ddff', '#fe9a8b', '#F56948', '#9E87FF']
 	var series1 = [];
 	var series2 = [];
 	var series3 = [];

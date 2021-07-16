@@ -27,10 +27,12 @@ input[type="button"],input[type="submit"],li.parallelogram{
 	-ms-transition:0.5s all;
 }
 h1,h2,h3,h4,h5,h6{
-	margin:0;			   
+	margin:0;
+    font: bold 200px "FZShuTi";
 }	
 p{
 	margin:0;
+    font: bold 100px "STXinwei";
 }
 ul{
 	margin:0;
@@ -48,7 +50,7 @@ label{
   font-weight: 400;
   color: #fff;
   text-transform: uppercase;
-  /*font-family: 'Six Caps', sans-serif;*/
+  font-family: 'Six Caps', sans-serif;
   letter-spacing: 4px;
 }
 .logo  a h1:hover{
@@ -401,19 +403,22 @@ ul.f-icons{
   font-weight: 400;
   color: #bfe7cd;
   text-transform: uppercase;
-  font-family: 'Six Caps', sans-serif;
+  font-family: "幼圆";
     letter-spacing: 5px;
 }
 .welcome-section h4 {
-  font-size: 2em;
-  font-weight: 400;
-  color: #34495e;
+  font-size: 3em;
+    font-family: "FZShuTi";
+  font-weight: 800;
+  color: #46805b;
   margin: 0.5em 0;
 }
 .welcome-section p {
-  color: #34495e;
-  font-size: 0.9em;
+  color: #60615f;
+  font-size: 1.2em;
   line-height: 1.8em;
+    margin: 0 100px;
+    font-family: "STXinwei";
 }
 /*--service-section--*/
 .service-section{
@@ -442,7 +447,7 @@ ul.f-icons{
   font-weight: 400;
   color: #bfe7cd;
   text-transform: uppercase;
-  font-family: 'Six Caps', sans-serif;
+  font-family: "幼圆";
   letter-spacing: 5px;
     text-align: center;
 }
@@ -455,8 +460,9 @@ ul.f-icons{
 }
 .service-grid p {
   color: #34495e;
-  font-size: 0.9em;
+  font-size: 1.3em;
   line-height: 1.8em;
+    font-weight: 400;
   margin:0.5em 0;
 }
 .icon {
@@ -470,7 +476,7 @@ ul.f-icons{
   margin-top: 0.8em;
 }
 .service-grid h4 {
-  font-size:1.2em;
+  font-size:1.7em;
   font-weight:600;
   color:#bfe7cd;
   text-transform:uppercase;
@@ -514,7 +520,6 @@ i.s4 {
   font-weight: 400;
   color: #bfe7cd;
   text-transform: uppercase;
-  font-family: 'Six Caps', sans-serif;
     letter-spacing: 5px;
     text-align: center;
 }
@@ -546,7 +551,7 @@ ul.insure {
 }
 #insurance p {
   color: #34495e;
-  font-size: 0.9em;
+  font-size: 1.0em;
   line-height: 1.8em;
   margin: 0.5em 0;
 }
@@ -554,6 +559,7 @@ ul.insure li {
   display: block;
   margin: 10px 0;
   font-size: 0.9em;
+    font-family: 华文宋体;
   color:#34495e;
 }
 ul.insure li a i {
@@ -573,7 +579,6 @@ ul.insure li a i {
   font-weight: 400;
   color: #bfe7cd;
   text-transform: uppercase;
-  font-family: 'Six Caps', sans-serif;
   letter-spacing: 5px;
     text-align: center;
   }
@@ -605,7 +610,7 @@ span.event-year {
 }
 .news-text p {
   color: #34495e;
-  font-size: 0.9em;
+  font-size: 1.0em;
   line-height: 1.8em;
   margin: 0.5em 0;
 }
@@ -623,7 +628,7 @@ span.event-year {
   font-weight: 400;
   color: #bfe7cd;
   text-transform: uppercase;
-  font-family: 'Six Caps', sans-serif;
+  font-family: '幼圆', sans-serif;
     letter-spacing: 5px;
     text-align: center;
 }
@@ -650,12 +655,12 @@ span.event-year {
 padding:4em 0;
   background-color: #F4F4F4;
 }
-#contact  h3{
+#contact h3{
    font-size: 5em;
   font-weight: 400;
   color: #bfe7cd;
   text-transform: uppercase;
-  font-family: 'Six Caps', sans-serif;
+  font-family: '幼圆', sans-serif;
   letter-spacing: 5px;
     text-align: center;
 }
@@ -1139,17 +1144,18 @@ color:#bfe7cd;
 	  padding: 0.5em 0.5em;
 	}
   .service-grid p {
-   font-size: 0.8em;
+   font-size: 1.3em;
   }
   #insurance p {
-   font-size: 0.8em;
+   font-size: 1.1em;
   }
   ul.insure li {
   margin:8px 0;
+      font-family: "华文宋体";
   font-size: 0.8em;
   }
   #news h5, #insurance h5, .gallery h5, #contact h5, .service-section h5 {
-	  font-size: 0.85em;
+	  font-size: 1.6em;
   line-height: 1.6em;
   }
   .news-grid {
@@ -1260,7 +1266,7 @@ color:#bfe7cd;
 	  margin: 5px 0;
 	}
 	.news-text p{
-	font-size:0.8em;
+	font-size:1.0em;
 	}
 }
 @media (max-width:320px){
@@ -1276,7 +1282,7 @@ color:#bfe7cd;
 	  font-size: 2.9em;
 	}
 	#news h5, #insurance h5, .gallery h5, #contact h5, .service-section h5 {
-	  font-size: 0.9em;
+	  font-size: 1.6em;
 	}
 	.insurance-grid {
 	  float: left;
