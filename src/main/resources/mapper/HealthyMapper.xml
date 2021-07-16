@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="org.csu.carecenter.Persistence.HealthyMapper">
-<select id="getHealthy" resultType="Healthy">
-    SELECT
-        CUSTID AS custId,
-        TEMP,
-        PRESSURE,
-        SUGAR,
-        WEIGHT,
-        PULSE,
-        SELFCARE AS selfCare,
-        DAY
-    FROM HEALTHY
-    WHERE CUSTID =#{id} AND DAY = #{week}
-</select>
+    <select id="getHealthy" resultType="Healthy">
+        SELECT
+            CUSTID AS custId,
+            TEMP,
+            PRESSURE,
+            SUGAR,
+            WEIGHT,
+            PULSE,
+            SELFCARE AS selfCare,
+            DAY
+        FROM HEALTHY
+        WHERE CUSTID =#{id} AND DAY = #{week}
+    </select>
 
     <update id="updateHealthy" parameterType="Healthy">
         UPDATE HEALTHY
@@ -54,5 +54,21 @@
         FROM HEALTHY
     </select>
 
-
+    <select id="getHealthyVO" resultType="HealthyVO">
+        SELECT
+            HEALTHY.CUSTID AS custId,
+            HEALTHY.TEMP,
+            HEALTHY.PRESSURE,
+            HEALTHY.SUGAR,
+            HEALTHY.WEIGHT,
+            HEALTHY.PULSE,
+            HEALTHY.SELFCARE AS selfCare,
+            HEALTHY.DAY,
+            CUSTOMER.HEIGHT,
+            CUSTOMER.SEX,
+            CUSTOMER.NAME,
+            CUSTOMER.ATTENTION
+        FROM HEALTHY, CUSTOMER
+        WHERE HEALTHY.CUSTID = #{custId} AND HEALTHY.CUSTID = CUSTOMER.ID AND DAY = #{week}
+    </select>
 </mapper>

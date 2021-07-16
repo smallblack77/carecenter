@@ -1,6 +1,7 @@
 package org.csu.carecenter.Persistence;
 
 import org.csu.carecenter.entity.Healthy;
+import org.csu.carecenter.entity.VO.HealthyVO;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -19,4 +20,7 @@ public interface HealthyMapper {
 
     //所有
     List<Healthy> getAllList();
+
+    //获取某个客户当天的基本信息和健康信息
+    List<HealthyVO> getHealthyVO(int custId, String week);
 }
