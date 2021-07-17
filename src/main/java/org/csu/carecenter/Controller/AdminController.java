@@ -170,18 +170,21 @@ public class AdminController {
     }
 
     @RequestMapping("/addUser")
-    public String addUser(Model model, String username,String sex,String age,String phoneNumber,String role,String email,
+    public String addUser(Model model, String username,String sex,String age,String phone,String role,String email,
                           String password, String userId,HttpSession session){
-        if(username!= null && sex != null && age != null && password!= null && phoneNumber!= null && email!=null && role!=null ){
+
+        if(username!= null && sex != null && age != null && password!= null && phone!= null && email!=null && role!=null ){
             User newUser = new User();
             newUser.setUserId(Integer.valueOf(userId));
             newUser.setPassword(password);
             newUser.setRole(role);
             newUser.setAge(Integer.valueOf(age));
             newUser.setUsername(username);
-            newUser.setPhoneNumber(phoneNumber);
+            newUser.setPhoneNumber(phone);
             newUser.setEmail(email);
             newUser.setSex(sex);
+
+            System.out.println(newUser);
             userService.updateUser(newUser);
             userService.insertSignon(newUser);
             List<User> userList = userService.getAllUser();

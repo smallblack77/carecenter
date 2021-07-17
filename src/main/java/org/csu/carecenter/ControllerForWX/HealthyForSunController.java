@@ -49,6 +49,8 @@ public class HealthyForSunController {
         String custname = request.getParameter("custname");
         String phone = request.getParameter("phone");
 
+        System.out.println(custname);
+        System.out.println(phone);
 
         int id = customerService.getCustomerId(custname, phone);
         List<Healthy> healthyList = healthyService.getAllHealthy(id);
