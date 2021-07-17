@@ -44,7 +44,7 @@ public class UserController {
         model.addAttribute("count",count);
         model.addAttribute("nurCount",nurCount);
         SimpleDateFormat formatter= new SimpleDateFormat("HH:mm:ss");
-        SimpleDateFormat formatter2= new SimpleDateFormat("yyyy-MM-dd");
+        SimpleDateFormat formatter2= new SimpleDateFormat("yyyyMMdd");
         Date date = new Date(System.currentTimeMillis());
         model.addAttribute("date",formatter.format(date));
         model.addAttribute("calendar",formatter2.format(date));
@@ -56,7 +56,7 @@ public class UserController {
     public String login(Integer userId,String password,Model model,HttpSession session){
         if(String.valueOf(userId) != null && password != null){
             SimpleDateFormat formatter= new SimpleDateFormat("HH:mm:ss");
-            SimpleDateFormat formatter2= new SimpleDateFormat("yyyy-MM-dd");
+            SimpleDateFormat formatter2= new SimpleDateFormat("yyyy:MM:dd");
             Date date = new Date(System.currentTimeMillis());
             User user = userService.getUserByUserIdAndPassword(userId,password);
             int count = customerService.getCount();
