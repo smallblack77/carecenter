@@ -55,5 +55,6 @@
             ORDERDIET.DELSTATUS as deleteStatus
         FROM ORDERDIET
         WHERE ORDERDIET.CUSTID = #{customerId}
+        ORDER BY ORDERDIET.DAY DESC
     </select>
 </mapper>
