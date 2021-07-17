@@ -23,4 +23,10 @@ public interface HealthyMapper {
 
     //获取某个客户当天的基本信息和健康信息
     List<HealthyVO> getHealthyVO(int custId, String week);
+
+    //增加
+    void addHealthy(Healthy healthy);
+
+    //删除
+    void deleteHealthy(int custId);
 }

@@ -71,4 +71,16 @@
         FROM HEALTHY, CUSTOMER
         WHERE HEALTHY.CUSTID = #{custId} AND HEALTHY.CUSTID = CUSTOMER.ID AND DAY = #{week}
     </select>
+
+    <insert id="addHealthy" parameterType="Healthy">
+        INSERT INTO HEALTHY
+        (CUSTID,TEMP,PRESSURE,SUGAR,WEIGHT,PULSE,SELFCARE,DAY)
+        VALUES
+        (#{custId},#{temp},#{pressure},#{sugar},#{weight},#{pulse},#{selfCare},#{day})
+    </insert>
+
+    <delete id="deleteHealthy">
+        DELETE FROM HEALTHY
+        WHERE CUSTID = #{custId}
+    </delete>
 </mapper>
