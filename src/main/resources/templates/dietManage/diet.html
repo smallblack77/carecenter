@@ -217,7 +217,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                                     <th>Description</th>
                                                     <th>Taste</th>
                                                     <th>Price</th>
-                                                    <th>Picture</th>
                                                     <th>Edit</th>
                                                     <th>Delete</th>
                                                 </tr>
@@ -234,7 +233,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                                     <td><th:block name="description" th:text="${diet.description}"></th:block></td>
                                                     <td><th:block name="taste" th:text="${diet.taste}"></th:block></td>
                                                     <td><th:block name="price" th:text="${diet.price}"></th:block></td>
-                                                    <td><th:block name="picture" th:text="${diet.picture}"></th:block></td>
                                                     <td><a th:href="${'/diet/editDietForm?id='}+${diet.id}">Edit</a></td>
                                                     <td><a th:href="${'/diet/deleteDiet?id='}+${diet.id}">Delete</a></td>
                                                 </tr>

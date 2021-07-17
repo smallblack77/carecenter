@@ -7996,7 +7996,7 @@ ol.comment-list {
 .avatar-img img {
     display: block;
     width: 100%;
-    /*height: 238px;*/
+    height: 238px;
     border-radius: 4px 4px 0 0;
     -webkit-border-radius:4px 4px 0 0;
 }

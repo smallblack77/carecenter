@@ -1,21 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://thyneleaf.org">
-<script type="text/javascript" src="js/jquery-1.8.3.js"></script>
-<script type="text/javascript">
-    function deleteOut() {
-        var $id = $("#id").val();
-        $.ajax({
-            url: "",
-            请求方式: "post",
-            data: "id=" + $id,
-            success: function (result){
-                alert("删除成功！");
-            }
-        });
-    }
-</script>
 <head>
-    <title>Visitors an Admin Panel Category Bootstrap Responsive Website Template | Responsive_table :: w3layouts</title>
+    <title>Visitors an Admin Panel Category Bootstrap Responsive Website Template | Home :: w3layouts</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="Visitors Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
@@ -23,7 +9,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
     <!-- bootstrap-css -->
     <link rel="stylesheet" href="../css/bootstrap.min.css" >
-    <link rel="stylesheet" href="../js/data-tables/DT_bootstrap.css" />
     <!-- //bootstrap-css -->
     <!-- Custom CSS -->
     <link href="../css/style.css" rel='stylesheet' type='text/css' />
@@ -33,8 +18,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <!-- font-awesome icons -->
     <link rel="stylesheet" href="../css/font.css" type="text/css"/>
     <link href="../css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/morris.css" type="text/css"/>
+    <!-- calendar -->
+    <link rel="stylesheet" href="../css/monthly.css">
+    <!-- //calendar -->
     <!-- //font-awesome icons -->
     <script src="../js/jquery2.0.3.min.js"></script>
+    <script src="../js/raphael-min.js"></script>
+    <script src="../js/morris.js"></script>
 </head>
 <body>
 <section id="container">
@@ -42,9 +33,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <header class="header fixed-top clearfix">
         <!--logo start-->
         <div class="brand">
-
             <a href="/account/main" class="logo">
-                系统管理
+                梅岭社区
             </a>
             <div class="sidebar-toggle-box">
                 <div class="fa fa-bars"></div>
@@ -160,221 +150,342 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <!--sidebar end-->
     <!--main content start-->
     <section id="main-content">
-        <section class="wrapper">
-            <!--body wrapper start-->
-            <div class="table-agile-info">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <section class="panel">
-                            <header class="panel-heading">
-                                Diet Display
-                                <span class="tools pull-right">
-                            <a href="javascript:;" class="fa fa-chevron-down"></a>
-                            <a href="javascript:;" class="fa fa-times"></a>
-                         </span>
-                            </header>
-                            <div class="panel-body">
-
-                                <ul id="filters" class="media-filter">
-                                    <li><a href="#" data-filter="*"> All</a></li>
-                                    <li><a href="#" data-filter=".images">Images</a></li>
-                                    <li><a href="#" data-filter=".audio">Audio</a></li>
-                                    <li><a href="#" data-filter=".video">Video</a></li>
-                                    <li><a href="#" data-filter=".documents">Documents</a></li>
-                                </ul>
-
-                                <div class="btn-group pull-right">
-                                    <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-check-square-o"></i> Select all</button>
-                                    <button type="button" class="btn btn-primary btn-sm">
-                                        <i class="fa fa-folder-open"></i>
-                                        <a th:href="${'/diet/addDietForm?id='}+${diet.id}" style="color: white;text-decoration: none">
-                                            Add New
-                                        </a>
-                                    </button>
-                                    <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-trash-o"></i> Delete</button>
-                                    <!--<button type="button" class="btn btn-primary btn-sm"><i class="fa fa-upload"></i> Upload New File</button>-->
-                                </div>
-
-
-
-                                <div id="gallery" class="media-gal">
-                                    <table class="table table-striped table-hover table-bordered" id="editable-sample"
-                                           border="1" th:with="colSize=${4}, rowSize=${dietList.size()/colSize}, rowSize=${(dietList.size()%colSize==0 ? rowSize : (rowSize+1))}">
-                                        <tr th:if="${dietList.size() gt 0}" th:each="rowIdx:${#numbers.sequence(1, rowSize)}">
-                                            <td th:each="colIdx:${#numbers.sequence(1,colSize)}">
-                                                <th:block th:with="idx = ${(rowIdx-1)*colSize+colIdx-1}, diet = ${idx<dietList.size() ? dietList[idx] : null}">
-                                                    <div class="images item">
-                                                        <a href="#myModal" data-toggle="modal">
-                                                            <img src="../images/gallery/image1.jpg" alt="" th:utext="${diet.description}"/>
-                                                            <!--<th:block th:utext="${diet.description}"/>-->
-                                                        </a>
-                                                        <p>img01.jpg </p>
-                                                    </div>
-                                                </th:block>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                    <div class=" audio item " >
-                                        <a href="#myModal" data-toggle="modal">
-                                            <img src="../images/gallery/image2.jpg" alt="" />
-                                        </a>
-                                        <p>img02.jpg </p>
-                                    </div>
-
-                                    <div class=" video item " >
-                                        <a href="#myModal" data-toggle="modal">
-                                            <img src="../images/gallery/image3.jpg" alt="" />
-                                        </a>
-                                        <p>img03.jpg </p>
-                                    </div>
-
-                                    <div class=" images audio item " >
-                                        <a href="#myModal" data-toggle="modal">
-                                            <img src="../images/gallery/image4.jpg" alt="" />
-                                        </a>
-                                        <p>img04.jpg </p>
-                                    </div>
-
-                                    <div class=" images documents item " >
-                                        <a href="#myModal" data-toggle="modal">
-                                            <img src="../images/gallery/image5.jpg" alt="" />
-                                        </a>
-                                        <p>img05.jpg </p>
-                                    </div>
-
-                                    <div class=" audio item " >
-                                        <a href="#myModal" data-toggle="modal">
-                                            <img src="../images/gallery/image1.jpg" alt="" />
-                                        </a>
-                                        <p>img01.jpg </p>
-                                    </div>
-
-                                    <div class=" documents item " >
-                                        <a href="#myModal" data-toggle="modal">
-                                            <img src="../images/gallery/image2.jpg" alt="" />
-                                        </a>
-                                        <p>img02.jpg </p>
-                                    </div>
-                                    <div class=" video item " >
-                                        <a href="#myModal" data-toggle="modal">
-                                            <img src="../images/gallery/image3.jpg" alt="" />
-                                        </a>
-                                        <p>img03.jpg </p>
-                                    </div>
-
-                                    <div class=" images item " >
-                                        <a href="#myModal" data-toggle="modal">
-                                            <img src="../images/gallery/image4.jpg" alt="" />
-                                        </a>
-                                        <p>img04.jpg </p>
-                                    </div>
-
-                                    <div class=" documents item " >
-                                        <a href="#myModal" data-toggle="modal">
-                                            <img src="../images/gallery/image5.jpg" alt="" />
-                                        </a>
-                                        <p>img05.jpg </p>
-                                    </div>
-
-                                    <div class=" video item " >
-                                        <a href="#myModal" data-toggle="modal">
-                                            <img src="../images/gallery/image1.jpg" alt="" />
-                                        </a>
-                                        <p>img01.jpg </p>
-                                    </div>
-
-                                    <div class=" audio images item " >
-                                        <a href="#myModal" data-toggle="modal">
-                                            <img src="../images/gallery/image2.jpg" alt="" />
-                                        </a>
-                                        <p>img02.jpg </p>
-                                    </div>
-
-                                </div>
-
-                                <div class="col-md-12 text-center clearfix">
-                                    <ul class="pagination">
-                                        <li><a href="#">«</a></li>
-                                        <li><a href="#">1</a></li>
-                                        <li><a href="#">2</a></li>
-                                        <li><a href="#">3</a></li>
-                                        <li><a href="#">4</a></li>
-                                        <li><a href="#">5</a></li>
-                                        <li><a href="#">»</a></li>
-                                    </ul>
-                                </div>
-
-                                <!-- Modal -->
-                                <form action="/diet/updateDiet" method="post">
-                                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog">
-                                            <!--弹窗内容-->
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                                    <h4 class="modal-title">修改膳食信息</h4>
-                                                </div>
-
-                                                <div class="modal-body row">
-
-                                                    <div class="col-md-5 img-modal">
-                                                        <img src="../images/gallery/image1.jpg" alt="">
-                                                        <a href="#" class="btn btn-white btn-sm"><i class="fa fa-pencil"></i> Edit Image</a>
-                                                        <a href="#" class="btn btn-white btn-sm"><i class="fa fa-eye"></i> View Full Size</a>
-
-                                                        <p class="mtop10"><strong>File Name:</strong> img01.jpg</p>
-                                                        <p><strong>File Type:</strong> jpg</p>
-                                                        <p><strong>Resolution:</strong> 300x200</p>
-                                                        <p><strong>Uploaded By:</strong> <a href="#">ThemeBucket</a></p>
-                                                    </div>
-                                                    <div class="col-md-7">
-                                                        <div class="form-group">
-                                                            <label> Name</label>
-                                                            <input id="name" value="img01.jpg" class="form-control" th:value="${diet.name}">
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label> Tittle Text</label>
-                                                            <input id="title" value="awesome image" class="form-control" th:value="${diet.title}">
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label> Description</label>
-                                                            <textarea rows="2" class="form-control" th:value="${diet.description}"></textarea>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label> Link URL</label>
-                                                            <input id="link" value="../images/gallery/img01.jpg" class="form-control" th:value="${diet.link}">
-                                                        </div>
-                                                        <div class="pull-right">
-                                                            <button class="btn btn-danger btn-sm" type="button"><a th:href="${'/diet/updateDietForm?id='}+${diet.id}" style="color: white;text-decoration: none">Delete</a></button>
-                                                            <button class="btn btn-success btn-sm" type="button">Save changes</button>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
-                                <!-- modal -->
-
-                            </div>
-                        </section>
+        <div class="wrapper widgets">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="panel widget-info-one">
+                        <div class="avatar-img">
+                            <img src="../../images/diet/diet1.jpg" alt=""/>
+                        </div>
+                        <div class="inner">
+<!--                            <div class="avatar"><img alt="" src="../../images/photos/userprofile.png"></div>-->
+                            <h5>营养早餐1</h5>
+                            <span class="subtitle">
+                                    南瓜卷，小米菜粥，素烧鹅
+                                </span>
+                        </div>
+                        <div class="panel-footer">
+                            <ul class="post-view">
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-eye"></i>
+                                    </a>
+                                    109
+                                </li>
+                                <li class="active">
+                                    <a href="#">
+                                        <i class="fa fa-comment"></i>
+                                    </a>
+                                    233
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-heart"></i>
+                                    </a>
+                                    34
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="panel widget-info-one">
+                        <div class="avatar-img">
+                            <img src="../../images/diet/diet2.jpg" alt=""/>
+                        </div>
+                        <div class="inner">
+<!--                            <div class="avatar"><img alt="" src="../../images/photos/userprofile.png"></div>-->
+                            <h5>营养早餐2</h5>
+                            <span class="subtitle">
+                                    紫薯，玉米，纳豆，疙瘩汤
+                                </span>
+                        </div>
+                        <div class="panel-footer">
+                            <ul class="post-view">
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-eye"></i>
+                                    </a>
+                                    109
+                                </li>
+                                <li class="active">
+                                    <a href="#">
+                                        <i class="fa fa-comment"></i>
+                                    </a>
+                                    233
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-heart"></i>
+                                    </a>
+                                    34
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="panel widget-info-one">
+                        <div class="avatar-img">
+                            <img src="../../images/diet/diet3.jpg" alt=""/>
+                        </div>
+                        <div class="inner">
+<!--                            <div class="avatar"><img alt="" src="../../images/photos/userprofile.png"></div>-->
+                            <h5>营养早餐3</h5>
+                            <span class="subtitle">
+                                    百合山药莲，炝拌紫甘蓝，黄金糕，山药蓝莓糕
+                                </span>
+                        </div>
+                        <div class="panel-footer">
+                            <ul class="post-view">
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-eye"></i>
+                                    </a>
+                                    109
+                                </li>
+                                <li class="active">
+                                    <a href="#">
+                                        <i class="fa fa-comment"></i>
+                                    </a>
+                                    233
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-heart"></i>
+                                    </a>
+                                    34
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="panel widget-info-one">
+                        <div class="avatar-img">
+                            <img src="../../images/diet/diet4.jpg" alt=""/>
+                        </div>
+                        <div class="inner">
+<!--                            <div class="avatar"><img alt="" src="../../images/photos/userprofile.png"></div>-->
+                            <h5>美味中餐1</h5>
+                            <span class="subtitle">
+                                    牛肉丸子西红柿丝瓜汤，红烧茄子，冬菜肉稞，土豆泥秋葵
+                                </span>
+                        </div>
+                        <div class="panel-footer">
+                            <ul class="post-view">
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-eye"></i>
+                                    </a>
+                                    109
+                                </li>
+                                <li class="active">
+                                    <a href="#">
+                                        <i class="fa fa-comment"></i>
+                                    </a>
+                                    233
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-heart"></i>
+                                    </a>
+                                    34
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="panel widget-info-one">
+                        <div class="avatar-img">
+                            <img src="../../images/diet/diet5.jpg" alt=""/>
+                        </div>
+                        <div class="inner">
+<!--                            <div class="avatar"><img alt="" src="../../images/photos/userprofile.png"></div>-->
+                            <h5>美味中餐2</h5>
+                            <span class="subtitle">
+                                    生炒牛肉，红烧鱼，爆香鸡蛋，全麦馒头
+                                </span>
+                        </div>
+                        <div class="panel-footer">
+                            <ul class="post-view">
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-eye"></i>
+                                    </a>
+                                    109
+                                </li>
+                                <li class="active">
+                                    <a href="#">
+                                        <i class="fa fa-comment"></i>
+                                    </a>
+                                    233
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-heart"></i>
+                                    </a>
+                                    34
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="panel widget-info-one">
+                        <div class="avatar-img">
+                            <img src="../../images/diet/diet6.jpg" alt=""/>
+                        </div>
+                        <div class="inner">
+<!--                            <div class="avatar"><img alt="" src="../../images/photos/userprofile.png"></div>-->
+                            <h5>美味中餐3</h5>
+                            <span class="subtitle">
+                                    凉拌藕片，排毒烧笋干，鸡胸肉丸子，鸡蛋炒西红柿，紫米饭
+                                </span>
+                        </div>
+                        <div class="panel-footer">
+                            <ul class="post-view">
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-eye"></i>
+                                    </a>
+                                    109
+                                </li>
+                                <li class="active">
+                                    <a href="#">
+                                        <i class="fa fa-comment"></i>
+                                    </a>
+                                    233
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-heart"></i>
+                                    </a>
+                                    34
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="panel widget-info-one">
+                        <div class="avatar-img">
+                            <img src="../../images/diet/diet7.jpg" alt=""/>
+                        </div>
+                        <div class="inner">
+<!--                            <div class="avatar"><img alt="" src="../../images/photos/userprofile.png"></div>-->
+                            <h5>健康晚餐1</h5>
+                            <span class="subtitle">
+                                    茭白胡萝卜炒肉，凉拌西兰花，西红柿巴沙鱼，水果拼盘
+                                </span>
+                        </div>
+                        <div class="panel-footer">
+                            <ul class="post-view">
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-eye"></i>
+                                    </a>
+                                    109
+                                </li>
+                                <li class="active">
+                                    <a href="#">
+                                        <i class="fa fa-comment"></i>
+                                    </a>
+                                    233
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-heart"></i>
+                                    </a>
+                                    34
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="panel widget-info-one">
+                        <div class="avatar-img">
+                            <img src="../../images/diet/diet8.jpg" alt=""/>
+                        </div>
+                        <div class="inner">
+<!--                            <div class="avatar"><img alt="" src="../../images/photos/userprofile.png"></div>-->
+                            <h5>健康晚餐2</h5>
+                            <span class="subtitle">
+                                    鲜虾菌菇汤，西兰花炒胡萝卜，黑米饭，坚果，水果
+                                </span>
+                        </div>
+                        <div class="panel-footer">
+                            <ul class="post-view">
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-eye"></i>
+                                    </a>
+                                    109
+                                </li>
+                                <li class="active">
+                                    <a href="#">
+                                        <i class="fa fa-comment"></i>
+                                    </a>
+                                    233
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-heart"></i>
+                                    </a>
+                                    34
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="panel widget-info-one">
+                        <div class="avatar-img">
+                            <img src="../../images/diet/diet9.jpg" alt=""/>
+                        </div>
+                        <div class="inner">
+<!--                            <div class="avatar"><img alt="" src="../../images/photos/userprofile.png"></div>-->
+                            <h5>健康晚餐3</h5>
+                            <span class="subtitle">
+                                迷迭香烤鸡腿，南瓜派，培根土豆泥沙拉，蜜汁粗粮
+                                </span>
+                        </div>
+                        <div class="panel-footer">
+                            <ul class="post-view">
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-eye"></i>
+                                    </a>
+                                    109
+                                </li>
+                                <li class="active">
+                                    <a href="#">
+                                        <i class="fa fa-comment"></i>
+                                    </a>
+                                    233
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-heart"></i>
+                                    </a>
+                                    34
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-            <!--body wrapper end-->
-        </section>
-
+        </div>
         <!-- footer -->
         <div class="footer">
             <div class="wthree-copyright">
-                <p>© 2021 Visitors. All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
+                <p>© 2017 Visitors. All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
             </div>
         </div>
         <!-- / footer -->
     </section>
-
     <!--main content end-->
 </section>
 <script src="../js/bootstrap.js"></script>
@@ -382,32 +493,39 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script src="../js/scripts.js"></script>
 <script src="../js/jquery.slimscroll.js"></script>
 <script src="../js/jquery.nicescroll.js"></script>
-<script language="javascript" type="text/javascript" src="../js/flot-chart/excanvas.min.js"></script><![endif]-->
+<!--[if lte IE 8]><script language="javascript" type="text/javascript" src="../js/flot-chart/excanvas.min.js"></script><![endif]-->
 <script src="../js/jquery.scrollTo.js"></script>
+<!-- calendar -->
+<script type="text/javascript" src="../js/monthly.js"></script>
+<script type="text/javascript">
+    $(window).load( function() {
 
-<!-- Placed js at the end of the document so the pages load faster -->
-<script src="../js/jquery-1.10.2.min.js"></script>
-<script src="../js/jquery-ui-1.9.2.custom.min.js"></script>
-<script src="../js/jquery-migrate-1.2.1.min.js"></script>
-<script src="../js/bootstrap.min.js"></script>
-<script src="../js/modernizr.min.js"></script>
-<script src="../js/jquery.nicescroll.js"></script>
+        $('#mycalendar').monthly({
+            mode: 'event',
 
-<!--data table-->
-<script type="text/javascript" src="../js/data-tables/jquery.dataTables.js"></script>
-<script type="text/javascript" src="../js/data-tables/DT_bootstrap.js"></script>
+        });
 
-<!--common scripts for all pages-->
-<script src="../js/scripts.js"></script>
+        $('#mycalendar2').monthly({
+            mode: 'picker',
+            target: '#mytarget',
+            setWidth: '250px',
+            startHidden: true,
+            showTrigger: '#mytarget',
+            stylePast: true,
+            disablePast: true
+        });
 
-<!--script for editable table-->
-<script src="../js/editable-table.js"></script>
+        switch(window.location.protocol) {
+            case 'http:':
+            case 'https:':
+                // running on a server, should be good.
+                break;
+            case 'file:':
+                alert('Just a heads-up, events will not work when run locally.');
+        }
 
-<!-- END JAVASCRIPTS -->
-<script>
-    jQuery(document).ready(function() {
-        EditableTable.init();
     });
 </script>
+<!-- //calendar -->
 </body>
 </html>
