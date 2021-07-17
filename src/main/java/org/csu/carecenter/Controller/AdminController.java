@@ -151,7 +151,7 @@ public class AdminController {
             userService.updateSignon(user);
             List<User> userList = userService.getAllUser();
             model.addAttribute("userList",userList);
-            return "manager/managerUser";
+            return "error/success";
         }else {
             String msg = "输入不能为空";
             session.setAttribute("mag",msg);
@@ -189,7 +189,7 @@ public class AdminController {
             userService.insertSignon(newUser);
             List<User> userList = userService.getAllUser();
             model.addAttribute(userList);
-            return "/manager/managerUser";
+            return "error/success";
         }else {
             String msg = "输入不能为空";
             session.setAttribute("msg",msg);
