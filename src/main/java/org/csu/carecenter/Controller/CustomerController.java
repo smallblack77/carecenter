@@ -98,6 +98,7 @@ public class CustomerController {
                                @RequestParam("weight")String weight,
                                @RequestParam("birthday")String birthday,
                                @RequestParam("attention")String attention,
+                               String phone,
                                HttpSession httpSession,
                                Model model){
 //        int id = Integer.parseInt(httpSession.getAttribute("id").toString());
@@ -109,6 +110,7 @@ public class CustomerController {
         customer.setWeight(Double.parseDouble(weight));
         customer.setBirthday(birthday);
         customer.setAttention(attention);
+        customer.setPhone(phone);
         customerService.updateCustomer(customer);
         List<Customer> customers =  customerService.getCustomerLsit();
         model.addAttribute("customerList", customers);
