@@ -5,6 +5,7 @@ import org.csu.carecenter.entity.Customer;
 import org.csu.carecenter.entity.Out;
 import org.csu.carecenter.entity.TimeLine;
 import org.csu.carecenter.service.CustomerService;
+import org.csu.carecenter.service.HealthyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -25,6 +26,8 @@ public class CustomerController {
 
     @Autowired
     private CustomerService customerService;
+    @Autowired
+    private HealthyService healthyService;
 
     //时间线
 //    @GetMapping("/getDay")
@@ -71,6 +74,7 @@ public class CustomerController {
     @GetMapping("/deleteCustomer")
     public String deleteCustomer(@RequestParam("id")String id,Model model){
         customerService.deleteCustomer(Integer.parseInt(id));
+        healthyService.deleteHealthy(Integer.parseInt(id));
         model.addAttribute("customerList",customerService.getCustomerLsit());
         return "custManage/customer";
     }
@@ -94,6 +98,7 @@ public class CustomerController {
                                @RequestParam("weight")String weight,
                                @RequestParam("birthday")String birthday,
                                @RequestParam("attention")String attention,
+                               String phone,
                                HttpSession httpSession,
                                Model model){
 //        int id = Integer.parseInt(httpSession.getAttribute("id").toString());
@@ -105,6 +110,7 @@ public class CustomerController {
         customer.setWeight(Double.parseDouble(weight));
         customer.setBirthday(birthday);
         customer.setAttention(attention);
+        customer.setPhone(phone);
         customerService.updateCustomer(customer);
         List<Customer> customers =  customerService.getCustomerLsit();
         model.addAttribute("customerList", customers);

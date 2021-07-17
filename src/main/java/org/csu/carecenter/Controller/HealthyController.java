@@ -37,7 +37,9 @@ public class HealthyController {
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
         String currengTime = formatter.format(date);
         System.out.println(formatter.format(date));
-        session.setAttribute("today",formatter.format(date));
+
+        model.addAttribute("today",currengTime);
+
         DateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         Date currentDate = sdf.parse(currengTime);
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("EEEE");
@@ -46,9 +48,25 @@ public class HealthyController {
         Customer customer = customerService.getCustomer(Integer.valueOf(id));
         model.addAttribute("customer",customer);
         Healthy healthy = healthyService.getHealthy(Integer.valueOf(id),currentWeek);
-        model.addAttribute("healthy",healthy);
+        if(healthy == null){
+            Healthy healthy1 = new Healthy();
+            healthy1.setCustId(Integer.valueOf(id));
+            healthy1.setPressure("");
+            healthy1.setSelfCare("");
+            healthy1.setSugar(0.0);
+            healthy1.setPulse(0);
+            healthy1.setWeight(0.0);
+            healthy1.setDay(currentWeek);
+            healthy1.setTemp(0.0);
+            model.addAttribute("healthy",healthy1);
+            healthyService.addHealthy(healthy1);
+            return "custManage/healthy";
+        }else {
+            model.addAttribute("healthy",healthy);
 
-        return "custManage/healthy";
+            return "custManage/healthy";
+        }
+
     }
 
     @RequestMapping("/updateHealthy")
@@ -86,13 +104,13 @@ public class HealthyController {
 
             healthyService.updateHealthy(healthy);
 
-            return "redirect:/customer/selectCustomerLsit";
+            return "redirect:/customer/selectCustomerList";
 
 
         }else {
             String msg = "不能输入为空";
             session.setAttribute("msg",msg);
-            return "redirect:/customer/selectCustomerLsit";
+            return "redirect:/customer/selectCustomerList";
         }
 
 
@@ -114,7 +132,7 @@ public class HealthyController {
 
         Healthy mon = healthyService.getHealthy(custId,"星期一");
         Healthy tue = healthyService.getHealthy(custId,"星期二");
-        System.out.println("+++++++++"+tue.getPressure());
+//        System.out.println("+++++++++"+tue.getPressure());
         Healthy wed = healthyService.getHealthy(custId,"星期三");
         Healthy thu = healthyService.getHealthy(custId,"星期四");
         Healthy fri = healthyService.getHealthy(custId,"星期五");

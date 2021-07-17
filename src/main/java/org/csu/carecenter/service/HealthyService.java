@@ -14,6 +14,11 @@ public class HealthyService {
     @Autowired
     private HealthyMapper healthyMapper;
 
+    //增加
+    public void addHealthy(Healthy healthy){
+        healthyMapper.addHealthy(healthy);
+    }
+
     //通过id和日期获取
     public Healthy getHealthy(int id, String week){
         return healthyMapper.getHealthy(id,week);
@@ -37,5 +42,10 @@ public class HealthyService {
     //获取某个客户当天的基本信息和健康信息
     public List<HealthyVO> getHealthyVO(int custId, String week){
         return  healthyMapper.getHealthyVO(custId, week);
+    }
+
+    //删除
+    public void  deleteHealthy(int custId){
+        healthyMapper.deleteHealthy(custId);
     }
 }

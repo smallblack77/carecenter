@@ -173,7 +173,8 @@ public class AdminController {
     public String addUser(Model model, String username,String sex,String age,String phone,String role,String email,
                           String password, String userId,HttpSession session){
 
-        if(username!= null && sex != null && age != null && password!= null && phone!= null && email!=null && role!=null ){
+        if(!(username.equals("")) && !(sex.equals("")) && !(age.equals("")) && !(password.equals("")) && !(phone.equals("")) &&
+                !(email.equals("")) && !(role.equals("")) ){
             User newUser = new User();
             newUser.setUserId(Integer.valueOf(userId));
             newUser.setPassword(password);
