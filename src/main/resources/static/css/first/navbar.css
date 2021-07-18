@@ -141,7 +141,7 @@ nav .search .sput .icon {
 	width: 100%;
 	height: 4.5rem;
 	background: white;
-	box-shadow: 0px 0px 0.8rem 0.3rem rgba(0, 0, 0, 0.137);
+	/*box-shadow: 0px 0px 0.8rem 0.3rem rgba(0, 0, 0, 0.137);*/
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -158,9 +158,9 @@ nav .search .sput .icon {
 	height: 2.5rem;
 	text-decoration: none;
 	color: black;
-	font-size: 0.8rem;
 	padding: 0rem 3rem;
-	text-shadow: 0rem 0rem 0.2rem rgba(24, 24, 24, 0.356);
+	font-size: 15px;
+	/*text-shadow: 0rem 0rem 0.2rem rgba(24, 24, 24, 0.356);*/
 }
 .navbar ul a:hover {
 	/* background: url(../img/btnbg.png) no-repeat 50%; */
@@ -171,9 +171,11 @@ nav .search .sput .icon {
 }
 .active {
 	/* background-color: red; */
-	background: url(../img/btnbg.png) no-repeat 100%;
+	/*background: url(../img/btnbg.png) no-repeat 100%;*/
+	background-color:#bde5c0 ;
 	background-size: cover;
-	color: white !important;
+	font-size: 15px;
+	/*color: white !important;*/
 	/* border-radius: 0.9rem; */
 	box-shadow: -0.2rem 0.2em 0.2rem 0.1rem rgb(170, 170, 170);
 	/* transition: 0.3s ease-in-out; */
