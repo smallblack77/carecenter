@@ -4,6 +4,7 @@ import org.csu.carecenter.Common.ResponseCode;
 import org.csu.carecenter.entity.CustomerAndNurse;
 import org.csu.carecenter.entity.NurseContent;
 import org.csu.carecenter.entity.NurseRecord;
+import org.csu.carecenter.service.CustomerService;
 import org.csu.carecenter.service.NurseContentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -26,6 +27,8 @@ public class NurseForCustomerController {
 
     @Autowired
     private NurseContentService nurseContentService;
+    @Autowired
+    private CustomerService customerService;
 
     @ResponseBody
     @GetMapping("getNurseList")
@@ -73,6 +76,34 @@ public class NurseForCustomerController {
     public NurseContent getNurById(String id){
         NurseContent nurseContent = nurseContentService.getNurById(id);
         return nurseContent;
+    }
+
+    @RequestMapping("/addNurseAndCust")
+    @ResponseBody
+    public CustomerAndNurse addNurseAndCust(String custName,String custPhone,String time,String nurseId){
+        System.out.println(custName);
+        System.out.println(custPhone);
+
+        System.out.println(nurseId);
+        int id = customerService.getCustomerId(custName,custPhone);
+        CustomerAndNurse customerAndNurse = new CustomerAndNurse();
+        SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd");
+        Calendar c = Calendar.getInstance();
+        System.out.println("当前日期:"+sf.format(c.getTime()));
+        customerAndNurse.setStartTime(sf.format(c.getTime()));
+        c.add(Calendar.DAY_OF_MONTH, Integer.valueOf(time));
+        System.out.println("增加一天后日期:"+sf.format(c.getTime()));
+
+
+        customerAndNurse.setCustId(String.valueOf(id));
+
+        customerAndNurse.setNurId(nurseId);
+        customerAndNurse.setEndTime(sf.format(c.getTime()));
+
+        nurseContentService.insertCustAndNur(customerAndNurse);
+
+        return customerAndNurse;
+
     }
 
 
