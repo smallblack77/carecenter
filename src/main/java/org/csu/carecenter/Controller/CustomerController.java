@@ -1,12 +1,11 @@
 package org.csu.carecenter.Controller;
 
-import org.csu.carecenter.entity.BedAndCustomer;
-import org.csu.carecenter.entity.Customer;
-import org.csu.carecenter.entity.Out;
-import org.csu.carecenter.entity.TimeLine;
+import org.csu.carecenter.entity.*;
+import org.csu.carecenter.service.BedService;
 import org.csu.carecenter.service.CustomerService;
 import org.csu.carecenter.service.HealthyService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.origin.SystemEnvironmentOrigin;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -21,13 +20,15 @@ import java.util.*;
 
 @Controller
 @RequestMapping("/customer")
-@SessionAttributes("customer")
+@SessionAttributes({"customer","checkinId"})
 public class CustomerController {
 
     @Autowired
     private CustomerService customerService;
     @Autowired
     private HealthyService healthyService;
+    @Autowired
+    private BedService bedService;
 
     //时间线
 //    @GetMapping("/getDay")
@@ -136,6 +137,7 @@ public class CustomerController {
                             @RequestParam("attention")String attention,
                             Model model){
         if( name != null && sex != null && age != null && height != null && weight != null && birthday != null && attention != null ){
+
             Customer customer = new Customer();
             customer.setName(name);
             customer.setSex(sex);
@@ -197,9 +199,16 @@ public class CustomerController {
     }
 
     @RequestMapping("/editCheckinForm")
-    public String editCheckinForm(HttpServletRequest req,HttpSession session, Model model){
-        int id = Integer.parseInt(req.getParameter("id"));
-        BedAndCustomer checkin = customerService.selectCheckin(id);
+    public String editCheckinForm(String id,HttpSession session, Model model){
+
+        if(id==null){
+         //   System.out.println("mmmmmmmmmmmmmmm");
+         //   System.out.println((String) model.getAttribute("checkinId"));
+            id = (String) model.getAttribute("checkinId");
+            String msg = "修改失败";
+            model.addAttribute("msg",msg);
+        }
+        BedAndCustomer checkin = customerService.selectCheckin(Integer.valueOf(id));
         session.setAttribute("checkin", checkin);
         model.addAttribute("checkin", checkin);
         model.addAttribute("checkinId",id);
@@ -212,15 +221,41 @@ public class CustomerController {
                               @RequestParam("starttime")String starttime,
                               HttpSession httpSession,
                               Model model){
-        BedAndCustomer checkin = (BedAndCustomer) httpSession.getAttribute("checkin");
-        checkin.setCustomerID(Integer.parseInt(custid));
-        checkin.setBedId(Integer.parseInt(bedid));
-        checkin.setStartTime(starttime);
 
-        customerService.updateCheckin(checkin);
-        List<BedAndCustomer> checkinList = customerService.selectCheckinList();
-        model.addAttribute("checkinList", checkinList);
-        return "custManage/checkin";
+
+
+        if(!custid.equals("") && !bedid.equals("") && !starttime.equals("")){
+
+            Bed bed = bedService.getBedByBedId(Integer.valueOf(bedid));
+            Customer customer = customerService.getCustomer(Integer.valueOf(custid));
+
+            if (bed == null) {
+                String msg = "该床位不存在";
+                model.addAttribute("msg", msg);
+                return "redirect:/customer/editCheckinForm";
+            }else if (customer == null){
+                String msg = "该用户不存在";
+                model.addAttribute("msg",msg);
+                return "redirect:/customer/editCheckinForm";
+            }else {
+                BedAndCustomer checkin = (BedAndCustomer) httpSession.getAttribute("checkin");
+                checkin.setCustomerID(Integer.parseInt(custid));
+                checkin.setBedId(Integer.parseInt(bedid));
+                checkin.setStartTime(starttime);
+
+                customerService.updateCheckin(checkin);
+                List<BedAndCustomer> checkinList = customerService.selectCheckinList();
+                model.addAttribute("checkinList", checkinList);
+                return "custManage/checkin";
+            }
+        }else {
+            String msg = "输入不能为空";
+            model.addAttribute("msg",msg);
+            return "redirect:/customer/editCheckinForm";
+        }
+
+
+
     }
 
     @GetMapping("/addCheckinForm")
@@ -234,7 +269,23 @@ public class CustomerController {
                              @RequestParam("starttime")String starttime,
                              HttpSession httpSession,
                              Model model){
-        if(custid != null && bedid != null && starttime != null){
+        if( !custid.equals("")  && !bedid.equals("")  && !starttime.equals("")  ){
+            Customer customer = customerService.getCustomer(Integer.valueOf(custid));
+            Bed bed = bedService.getBedByBedId(Integer.valueOf(bedid));
+            if (customer == null){
+                String addCheckinValue = "该客户不存在";
+                model.addAttribute("addCheckinValue",addCheckinValue);
+                return "custManage/addCheckin";
+            }else if (bed == null){
+                String addCheckinValue ="该床位不存在";
+                model.addAttribute("addCheckinValue",addCheckinValue);
+                return "custManage/addCheckin";
+            }
+            if(bed.isBedStatus() == false){
+                String addCheckinValue ="该床位不可住";
+                model.addAttribute("addCheckinValue",addCheckinValue);
+                return "custManage/addCheckin";
+            }
             BedAndCustomer checkin = new BedAndCustomer();
             checkin.setCustomerID(Integer.parseInt(custid));
             checkin.setBedId(Integer.parseInt(bedid));

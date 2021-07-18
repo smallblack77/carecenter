@@ -1,6 +1,9 @@
 package org.csu.carecenter.Controller;
 
+import org.csu.carecenter.entity.Customer;
 import org.csu.carecenter.entity.Diet;
+import org.csu.carecenter.entity.OrderDiet;
+import org.csu.carecenter.service.CustomerService;
 import org.csu.carecenter.service.DietService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -12,6 +15,8 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 @Controller
@@ -21,6 +26,9 @@ public class DietController {
 
     @Autowired
     private DietService dietService;
+
+    @Autowired
+    private CustomerService customerService;
 
     //跳转到膳食信息展示界面
     @GetMapping("/diets")
@@ -159,6 +167,44 @@ public class DietController {
         List<Diet> dietList = dietService.getAllDiet();
         model.addAttribute(dietList);
         return "dietManage/diet";
+    }
+
+    @RequestMapping("/addCustDiet")
+    public String addCustDiet(Model model,String custId,String bre,String lunch,String dinner){
+        Date date = new Date(); // this object contains the current date value
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+        String currengTime = formatter.format(date);
+     //   System.out.println(formatter.format(date));
+        if(!custId.equals("") && !bre.equals("") && !lunch.equals("") && !dinner.equals("")){
+
+            Customer customer = customerService.getCustomer(Integer.valueOf(custId));
+            if (customer == null){
+                String msg = "该客户不存在";
+                model.addAttribute("msg",msg);
+                return "dietManage/dietCalendar";
+            }
+
+            OrderDiet orderDiet = new OrderDiet();
+            orderDiet.setDay(currengTime);
+            orderDiet.setCustomerId(custId);
+            orderDiet.setBreakfastId(bre);
+            orderDiet.setDeleteStatus("1");
+            orderDiet.setLunchId(lunch);
+            orderDiet.setDinnerId(dinner);
+
+            dietService.addOrderDiet(orderDiet);
+
+            String msg = "添加成功";
+            model.addAttribute("msg",msg);
+
+            return "dietManage/dietCalendar";
+        }else {
+            String msg = "输入不能为空";
+            model.addAttribute("msg",msg);
+            return "dietManage/dietCalendar";
+        }
+
+
     }
 
 }

@@ -57,4 +57,11 @@
         WHERE ORDERDIET.CUSTID = #{customerId}
         ORDER BY ORDERDIET.DAY DESC
     </select>
+
+    <insert id="addOrderDiet" parameterType="OrderDiet">
+        INSERT INTO ORDERDIET
+        (DAY,CUSTID,BREKID,LUNCHID,DINNERID,DELSTATUS)
+        VALUES
+        (#{day},#{customerId},#{breakfastId},#{lunchId},#{dinnerId},#{deleteStatus})
+    </insert>
 </mapper>

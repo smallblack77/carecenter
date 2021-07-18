@@ -186,14 +186,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             Order Diets
                         </header>
                         <div class="notify-w3ls">
-                            <form>
+                            <form action="/diet/addCustDiet">
                                 <div class="alert alert-info clearfix">
                                     <label class="col-md-4">用户编号</label>
                                     <input class="col-md-8" type="text" id="custId" name="custId"/>
                                 </div>
                                 <div class="alert alert-danger">
                                     <label class="col-md-4">早餐</label>
-                                    <select>
+                                    <select name="bre">
                                         <option value="1" selected>营养早餐1</option>
                                         <option value="2">营养早餐2</option>
                                         <option value="3">营养早餐3</option>
@@ -201,7 +201,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 </div>
                                 <div class="alert alert-success ">
                                     <label class="col-md-4">午餐</label>
-                                    <select>
+                                    <select name="lunch">
                                         <option value="1" selected>美味中餐1</option>
                                         <option value="2">美味中餐2</option>
                                         <option value="3">美味中餐3</option>
@@ -209,12 +209,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 </div>
                                 <div class="alert alert-warning ">
                                     <label class="col-md-4">晚餐</label>
-                                    <select>
+                                    <select name="dinner">
                                         <option value="1" selected>健康晚餐1</option>
                                         <option value="2">健康晚餐2</option>
                                         <option value="3">健康晚餐3</option>
                                     </select>
                                 </div>
+                                <div><label th:text="${msg}"></label></div>
                                 <div class="alert alert-info clearfix">
                                     <button type="submit" style="border: none;background-color:transparent;" class="col-md-12">提交</button>
                                 </div>

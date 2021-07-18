@@ -22,4 +22,7 @@ public interface DietMapper {
 
     //点餐信息
     List<OrderDiet> getOrderDietById(int id);
+
+    //点餐
+    void addOrderDiet(OrderDiet orderDiet);
 }

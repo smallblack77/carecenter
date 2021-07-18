@@ -41,4 +41,9 @@ public class DietService {
     public List<OrderDiet> getOrderDietById(int customerId){
         return dietMapper.getOrderDietById(customerId);
     }
+
+    //点餐
+    public void addOrderDiet(OrderDiet orderDiet){
+        dietMapper.addOrderDiet(orderDiet);
+    }
 }
