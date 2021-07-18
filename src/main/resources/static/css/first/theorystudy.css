@@ -90,7 +90,7 @@ nav {
 }
 .theo-container .left-half .list-items .list-item {
 	cursor: pointer;
-	width: 48%;
+	width: 100%;
 	margin: 0.3rem 0rem;
 	border-radius: 0.5rem;
 	overflow: hidden;
@@ -108,11 +108,9 @@ nav {
 .theo-container .left-half .list-items .list-item div {
 	width: 49%;
 	height: 100%;
-	font-size: 1.2rem;
+	font-size: 1.5rem;
 	font-weight: bolder;
 	overflow: hidden;
-	display: flex;
-	align-items: center;
 }
 .theo-container .left-half .list-items .list-item div img {
 	width: 100%;
@@ -126,7 +124,7 @@ nav {
 }
 
 .theo-container .left-half .list-items .li-item {
-	width: 40%;
+	width: 90%;
 	height: auto;
 	padding: 0.8rem 0rem;
 }
@@ -181,6 +179,16 @@ nav {
 	flex-wrap: wrap;
 	justify-content: space-around;
 	align-content: space-around;
+}
+.theo-container .right-half .type .down .head-img{
+	width: 100%;
+	height: auto;
+}
+.theo-container .right-half .type .down .head-img .imgUrl {
+	/*width: 100%;*/
+	height: 100%;
+	overflow: hidden;
+	transition: 0.3s ease-in-out;
 }
 .theo-container .right-half .type .down a {
 	width: 100%;
@@ -271,7 +279,7 @@ footer .information div h3 {
 		width: 100%;
 	}
 	.theo-container .left-half .list-items .list-item {
-		width: 45%;
+		width: 90%;
 		/* background-color: rgb(216, 216, 216); */
 		border: 1px solid rgb(216, 216, 216);
 	}
