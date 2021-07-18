@@ -39,4 +39,25 @@
     <select id="selectMaxId" resultType="int">
         SELECT MAX(NURLEVEL.ID) as maxid FROM NURLEVEL
     </select>
+
+    <select id="getCustAndNur" parameterType="int" resultType="CustomerAndNurse">
+        SELECT
+            NURID,CUSTID,STARTTIME,ENDTIME
+        FROM CUSTANDNUR
+        WHERE CUSTID = #{custId}
+    </select>
+
+    <select id="getNurseContentById" parameterType="int" resultType="NurseContent">
+        SELECT
+            NURCONTENT.NURID as nurseId,
+            NURCONTENT.NAME,
+            NURCONTENT.SEX,
+            NURCONTENT.AGE,
+            NURCONTENT.PRICE,
+            NURCONTENT.DESCRIBE as description,
+            NURCONTENT.LEVELID as levelId,
+            NURLEVEL.LEVELNAME as levelName
+        FROM NURCONTENT,NURLEVEL
+        WHERE NURCONTENT.LEVELID = NURLEVEL.ID AND NURCONTENT.NURID = #{nurId}
+    </select>
 </mapper>

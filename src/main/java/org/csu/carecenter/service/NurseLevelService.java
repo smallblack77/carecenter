@@ -1,6 +1,9 @@
 package org.csu.carecenter.service;
 
+import org.csu.carecenter.Persistence.NurseContentMapper;
 import org.csu.carecenter.Persistence.NurseLevelMapper;
+import org.csu.carecenter.entity.CustomerAndNurse;
+import org.csu.carecenter.entity.NurseContent;
 import org.csu.carecenter.entity.NurseLevel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -35,5 +38,13 @@ public class NurseLevelService {
 
     public int getAddId(){
         return nurseLevelMapper.selectMaxId() + 1;
+    }
+
+    public NurseContent getNurseContentById(int id){
+        return nurseLevelMapper.getNurseContentById(id);
+    }
+
+    public CustomerAndNurse getCustAndNurByCustId(int id){
+        return nurseLevelMapper.getCustAndNur(id);
     }
 }

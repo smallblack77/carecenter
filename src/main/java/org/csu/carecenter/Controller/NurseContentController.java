@@ -1,19 +1,25 @@
 package org.csu.carecenter.Controller;
 
+import org.csu.carecenter.entity.CustomerAndNurse;
 import org.csu.carecenter.entity.NurseContent;
 import org.csu.carecenter.entity.NurseRecord;
+import org.csu.carecenter.entity.VO.NurContentVO;
+import org.csu.carecenter.service.CustomerService;
 import org.csu.carecenter.service.NurseContentService;
 
+import org.csu.carecenter.service.NurseLevelService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.SessionAttributes;
+import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 @Controller
@@ -22,6 +28,12 @@ import java.util.List;
 public class NurseContentController {
     @Autowired
     NurseContentService nurseContentService;
+
+    @Autowired
+    NurseLevelService nurseLevelService;
+
+    @Autowired
+    CustomerService customerService;
 
     //跳转到护工信息页面并显示信息
     @GetMapping("viewList")
@@ -218,4 +230,48 @@ public class NurseContentController {
 
 
 
+    //小程序获取对应护工
+    @RequestMapping("getNurseContent")
+    @ResponseBody
+        public NurContentVO  getNurseContent(HttpServletResponse response, HttpServletRequest request) throws ParseException {
+
+        response.setContentType("text/html;charset=utf-8");
+        /* 设置响应头允许ajax跨域访问 */
+        response.setHeader("Access-Control-Allow-Origin", "*");
+        /* 星号表示所有的异域请求都可以接受， */
+        response.setHeader("Access-Control-Allow-Methods", "GET,POST");
+
+        //获取微信小程序get的参数值
+        String custname = request.getParameter("custname");
+        String phone = request.getParameter("phone");
+        int id = customerService.getCustomerId(custname, phone);
+
+        int nurseId = nurseContentService.getNurId(id);
+        CustomerAndNurse customerAndNurse = nurseLevelService.getCustAndNurByCustId(id);
+        NurseContent nurseContent = nurseLevelService.getNurseContentById(nurseId);
+
+        //计算签约时间和到期时间相隔天数
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        Date startTime = dateFormat.parse(customerAndNurse.getStartTime());
+        Date endTime = dateFormat.parse(customerAndNurse.getEndTime());
+        Date now = new Date();
+        dateFormat.format(now);
+        int allDays = (int) ((endTime.getTime() - startTime.getTime()) / (1000*3600*24));
+        int lastDays = (int) ((endTime.getTime() - now.getTime()) / (1000*3600*24));
+
+        NurContentVO nurContentVO = new NurContentVO();
+        nurContentVO.setNurseId(nurseContent.getNurseId());
+        nurContentVO.setName(nurseContent.getName());
+        nurContentVO.setSex(nurseContent.getSex());
+        nurContentVO.setAge(nurseContent.getAge());
+        nurContentVO.setPrice(nurseContent.getPrice());
+        nurContentVO.setDescription(nurseContent.getDescription());
+        nurContentVO.setLevelId(nurseContent.getLevelId());
+        nurContentVO.setLevelName(nurseContent.getLevelName());
+        nurContentVO.setStartTime(customerAndNurse.getStartTime());
+        nurContentVO.setEndTime(customerAndNurse.getEndTime());
+        nurContentVO.setAllDays(allDays);
+        nurContentVO.setLastDays(lastDays);
+        return nurContentVO;
+    }
 }
