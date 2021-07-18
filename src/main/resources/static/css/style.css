@@ -6498,10 +6498,8 @@ div.tagsinput span.tag a {
     border-collapse: collapse;
     border-spacing: 0;
     display: table;
-    position: relative;
     table-layout: fixed;
     width: 100%;
-    margin-bottom: 50px;
 }
 
 .timeline .time-show {
@@ -6521,7 +6519,7 @@ div.tagsinput span.tag a {
 
 .timeline:before {
     background-color: #d8d9df;
-    bottom: 0px;
+    bottom: 20px;
     content: "";
     left: 50%;
     position: absolute;

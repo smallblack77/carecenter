@@ -55,13 +55,22 @@ public class CustomerController {
         List<TimeLine> leftLine = new ArrayList<>();
         List<TimeLine> rightLine = new ArrayList<>();
 
-        for(int i = 0; i < timeLineList.size(); i = i + 2){
-            leftLine.add(timeLineList.get(i));
 
-            if(timeLineList.get(i) != null){
-                rightLine.add(timeLineList.get(i));
+            if(timeLineList.size() % 2 == 0){
+                for(int i = 0; i < timeLineList.size() / 2.0; i++){
+
+                    leftLine.add(timeLineList.get(i * 2));
+                    rightLine.add(timeLineList.get(i * 2 + 1));
+                }
+            }else{
+                for(int i = 0; i < (timeLineList.size() - 1 )/ 2.0; i++){
+
+                    leftLine.add(timeLineList.get(i * 2));
+                    rightLine.add(timeLineList.get(i * 2 + 1));
+                }
+                leftLine.add(timeLineList.get(timeLineList.size() - 1 ));
             }
-        }
+
 
         model.addAttribute("dayList", dayList);
         model.addAttribute("leftLine", leftLine);
