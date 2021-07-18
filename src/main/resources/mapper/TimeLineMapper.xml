@@ -9,6 +9,7 @@
             TIME as date,
             CONTENT
         FROM TIMELINE
+        ORDER BY DAY DESC
     </select>
 
     <select id="getTimeLineById" parameterType="int" resultType="TimeLine">
@@ -19,6 +20,7 @@
             CONTENT
         FROM TIMELINE
         WHERE CUSTID = #{custId}
+        ORDER BY DAY DESC
     </select>
 <!--    -->
 <!--    <select id="getTimeLineByDay" parameterType="int" resultType="TimeLine">-->
@@ -38,6 +40,7 @@
         FROM TIMELINE
         WHERE CUSTID = #{custId}
         GROUP BY DAY
+        ORDER BY DAY DESC
     </select>
 
     <insert id="insertTimeLime" parameterType="TimeLine">

@@ -170,41 +170,45 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </div>
                     <div class="wrapper">
                         <div class="row">
-                            <div class="col-sm-12">
-                                <div class="timeline" th:each="day : ${dayList}">
+                            <div class="col-sm-12"th:each="day : ${dayList}">
+                                <div class="timeline">
                                     <article class="timeline-item alt">
-                                        <div class="text-right">
+                                        <div class="text-center">
                                             <div class="time-show first">
                                                 <a href="#" class="btn btn-primary" th:text="${day}">Today</a>
                                             </div>
                                         </div>
                                     </article>
-                                    <article class="timeline-item alt" th:each="timeLine : ${timeLineList}">
-                                        <div class="timeline-desk" th:if="${timeLine.getDay() eq day}">
-                                            <div class="panel">
-                                                <div class="panel-body">
-                                                    <span class="arrow-alt"></span>
-                                                    <span class="timeline-icon"></span>
-                                                    <span class="timeline-date" th:text="${timeLine.date}">08:25 am</span>
-                                                    <h1 class="red" th:text="${timeLine.date}">1 hour ago</h1>
-                                                    <p th:text="${timeLine.content}">Purchased new stationary items for head office </p>
+                                </div>
+                                <div class="timeline" th:each="timeLine : ${timeLineList}">
+<!--                                    <div  th:each="timeLine : ${timeLineList}">-->
+                                        <article class="timeline-item alt" th:each="left : ${leftLine}" th:if="${left eq timeLine}">
+                                            <div class="timeline-desk" th:if="${left.getDay() eq day}">
+                                                <div class="panel">
+                                                    <div class="panel-body">
+                                                        <span class="arrow-alt"></span>
+                                                        <span class="timeline-icon"></span>
+                                                        <span class="timeline-date" th:text="${left.date}">08:25 am</span>
+                                                        <h1 class="red" th:text="${left.date}">1 hour ago</h1>
+                                                        <p th:text="${left.content}">Purchased new stationary items for head office </p>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </article>
-<!--                                    <article class="timeline-item alt" th:each="timeLine : ${timeLineList}">-->
-<!--                                        <div class="timeline-desk">-->
-<!--                                            <div class="panel">-->
-<!--                                                <div class="panel-body">-->
-<!--                                                    <span class="arrow-alt"></span>-->
-<!--                                                    <span class="timeline-icon"></span>-->
-<!--                                                    <span class="timeline-date" th:text="${timeLine.id}">08:25 am</span>-->
-<!--                                                    <h1 class="red">1 hour ago</h1>-->
-<!--                                                    <p>Purchased new stationary items for head office </p>-->
-<!--                                                </div>-->
-<!--                                            </div>-->
-<!--                                        </div>-->
-<!--                                    </article>-->
+                                        </article>
+                                        <article class="timeline-item" th:each="right : ${rightLine}" th:if="${right eq timeLine}">
+                                            <div class="timeline-desk" th:if="${right.getDay() eq day}">
+                                                <div class="panel">
+                                                    <div class="panel-body">
+                                                        <span class="arrow"></span>
+                                                        <span class="timeline-icon"></span>
+                                                        <span class="timeline-date" th:text="${right.date}">08:25 am</span>
+                                                        <h1 class="green" th:text="${right.date}">1 hour ago</h1>
+                                                        <p th:text="${right.content}">Purchased new stationary items for head office </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+<!--                                    </div>-->
 <!--                                    <article class="timeline-item ">-->
 <!--                                        <div class="timeline-desk">-->
 <!--                                            <div class="panel">-->

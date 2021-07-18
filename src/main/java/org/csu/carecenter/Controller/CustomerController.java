@@ -51,8 +51,21 @@ public class CustomerController {
         int id = Integer.parseInt(req.getParameter("id"));
         List<String> dayList = customerService.getDayList(id);
         List<TimeLine> timeLineList = customerService.getTimeLineById(id);
-        model.addAttribute("dayList", dayList);
 
+        List<TimeLine> leftLine = new ArrayList<>();
+        List<TimeLine> rightLine = new ArrayList<>();
+
+        for(int i = 0; i < timeLineList.size(); i = i + 2){
+            leftLine.add(timeLineList.get(i));
+
+            if(timeLineList.get(i) != null){
+                rightLine.add(timeLineList.get(i));
+            }
+        }
+
+        model.addAttribute("dayList", dayList);
+        model.addAttribute("leftLine", leftLine);
+        model.addAttribute("rightLine", rightLine);
         model.addAttribute("timeLineList", timeLineList);
         return "custManage/timeLine";
     }

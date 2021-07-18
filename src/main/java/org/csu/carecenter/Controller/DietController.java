@@ -3,6 +3,7 @@ package org.csu.carecenter.Controller;
 import org.csu.carecenter.entity.Customer;
 import org.csu.carecenter.entity.Diet;
 import org.csu.carecenter.entity.OrderDiet;
+import org.csu.carecenter.entity.TimeLine;
 import org.csu.carecenter.service.CustomerService;
 import org.csu.carecenter.service.DietService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +16,9 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
@@ -196,6 +199,50 @@ public class DietController {
 
             String msg = "添加成功";
             model.addAttribute("msg",msg);
+
+            //添加时间线记录
+            //早餐
+            Calendar calendar=Calendar.getInstance();
+            calendar.set(2015, 10, 12,7,30,0);
+            Date breTime = calendar.getTime();
+
+            SimpleDateFormat df1 = new SimpleDateFormat("HH:mm:ss");
+            TimeLine timeLine = new TimeLine();
+            timeLine.setDay(currengTime);
+            timeLine.setDate(df1.format(breTime));
+            timeLine.setCustId(Integer.parseInt(custId));
+
+            Diet diet = dietService.getDietById(Integer.parseInt(bre));
+            timeLine.setContent("早餐时间：" + diet.getName() + "," + diet.getFood1() + "," + diet.getFood2() + "," + diet.getFood3() + "," + diet.getFood4() + "," + diet.getFood5());
+
+            customerService.insertTimeLine(timeLine);
+
+            //中餐
+            calendar.set(2015, 10, 12,12,0,0);
+            Date lunchTime = calendar.getTime();
+
+            TimeLine timeLine1 = new TimeLine();
+            timeLine1.setDay(currengTime);
+            timeLine1.setDate(df1.format(lunchTime));
+            timeLine1.setCustId(Integer.parseInt(custId));
+
+            Diet diet1 = dietService.getDietById(Integer.parseInt(lunch));
+            timeLine1.setContent("中餐时间：" + diet1.getName() + "," + diet1.getFood1() + "," + diet1.getFood2() + "," + diet1.getFood3() + "," + diet1.getFood4() + "," + diet1.getFood5());
+
+            customerService.insertTimeLine(timeLine1);
+
+            //晚餐
+            calendar.set(2015, 10, 12,17,30,0);
+            Date dinnerTime = calendar.getTime();
+            TimeLine timeLine2 = new TimeLine();
+            timeLine2.setDay(currengTime);
+            timeLine2.setDate(df1.format(dinnerTime));
+            timeLine2.setCustId(Integer.parseInt(custId));
+
+            Diet diet2 = dietService.getDietById(Integer.parseInt(dinner));
+            timeLine2.setContent("晚餐时间：" + diet2.getName() + "," + diet2.getFood1() + "," + diet2.getFood2() + "," + diet2.getFood3() + "," + diet2.getFood4() + "," + diet2.getFood5());
+
+            customerService.insertTimeLine(timeLine2);
 
             return "dietManage/dietCalendar";
         }else {
