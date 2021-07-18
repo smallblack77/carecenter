@@ -17,7 +17,7 @@ body {
 	/* padding: ; */
 }
 .to-container .header h3 {
-	color: rgb(148, 17, 17);
+	color: rgb(115, 134, 120);
 	font-size: 1.5rem;
 	font-weight: bold;
 	margin: 2rem 0rem;
@@ -76,7 +76,7 @@ body {
 	font-weight: bolder;
 }
 .to-container .article .infomatrion .state i:hover {
-	color: rgb(148, 17, 17);
+	color: rgb(113, 165, 126);
 }
 .to-container .btnlist {
 	width: 70%;
@@ -92,16 +92,16 @@ body {
 	text-align: center;
 	padding: 0.6rem 0.3rem;
 	margin: 1rem 0rem;
-	border: 1px solid rgb(148, 17, 17);
+	border: 1px solid rgb(100, 177, 149);
 	border-radius: 0.6rem;
-	color: rgb(148, 17, 17);
+	color: rgb(100, 177, 149);
 	background-color: #fff;
 	transition: 0.3s ease-in-out;
 }
 .to-container .btnlist .btn:hover {
 	cursor: pointer;
 	color: white;
-	background-color: rgb(148, 17, 17);
+	background-color: rgb(100, 177, 149);
 	transition: 0.3s ease-in-out;
 }
 
