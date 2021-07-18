@@ -42,7 +42,7 @@ body {
 	padding: 0.2rem 0rem;
 	text-align: center;
 	color: white;
-	background-color: rgb(214, 13, 16);
+	background-color: rgb(148, 215, 181);
 }
 .history-container .left-half .list-bottom {
 	width: 100%;
@@ -50,8 +50,8 @@ body {
 	padding-top: 1px;
 	margin-bottom: 0.8rem;
 	/* background-color: #fff; */
-	border-top: 1px solid rgb(214, 13, 16);
-	border-bottom: 0.2rem solid rgb(214, 13, 16);
+	border-top: 1px solid rgb(148, 215, 181);
+	border-bottom: 0.2rem solid rgb(148, 215, 181);
 }
 .history-container .left-half .list-items .more-item {
 	border: 1px solid rgb(216, 216, 216);
@@ -97,13 +97,13 @@ body {
 	height: auto;
 }
 .history-container .left-half .list-items a:hover {
-	color: rgb(214, 13, 16);
+	color: rgb(110, 151, 114);
 	box-shadow: 0px 0px 5px 5px rgb(216, 216, 216);
 	transition: 0.3s ease-in-out;
 	z-index: 2;
 }
 .history-container .left-half .list-items .more-item:hover {
-	color: rgb(214, 13, 16);
+	color: rgb(110, 151, 114);
 	box-shadow: 0px 0px 7px 4px rgb(216, 216, 216);
 }
 .history-container .right-half {
@@ -118,7 +118,7 @@ body {
 	padding: 0.2rem 0rem;
 	text-align: center;
 	color: white;
-	background-color: rgb(214, 13, 16);
+	background-color: rgb(148, 215, 181);
 }
 .history-container .right-half .list-bottom {
 	width: 100%;
@@ -126,8 +126,8 @@ body {
 	padding-top: 1px;
 	margin-bottom: 0.8rem;
 	/* background-color: #fff; */
-	border-top: 1px solid rgb(214, 13, 16);
-	border-bottom: 0.2rem solid rgb(214, 13, 16);
+	border-top: 1px solid rgb(115, 130, 119);
+	border-bottom: 0.2rem solid rgb(93, 108, 99);
 }
 
 .history-container .right-half .list-items a:nth-child(1) {
@@ -157,7 +157,7 @@ body {
 	word-break: keep-all;
 }
 .history-container .right-half .list-items a:hover {
-	color: rgb(214, 13, 16);
+	color: rgb(123, 151, 135);
 	box-shadow: 0px 0px 5px 5px rgb(216, 216, 216);
 	transition: 0.3s ease-in-out;
 	z-index: 2;

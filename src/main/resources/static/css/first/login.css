@@ -14,7 +14,7 @@ body {
 .header {
 	width: 100%;
 	height: 15vw;
-	background-color: rgb(214, 13, 16);
+	background-color: rgb(143, 180, 163);
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
@@ -104,7 +104,7 @@ body {
 	text-indent: 4rem;
 	font-size: 1.7rem;
 	padding: 1rem 5rem;
-	color: #ffd71f;
+	color: #88ad86;
 }
 
 .logCon .login-input {
@@ -124,7 +124,7 @@ body {
 	padding: 2rem 0rem;
 	text-align: center;
 	font-size: 2rem;
-	color: rgb(214, 13, 16);
+	color: rgb(132, 179, 144);
 	border-bottom: 1px solid rgb(216, 216, 216);
 }
 .logCon .login-input .username {
@@ -141,7 +141,7 @@ body {
 #iconCss {
 	font-size: 1.5rem;
 	padding: 0rem 0.5rem;
-	color: rgb(214, 13, 16);
+	color: rgb(132, 179, 144);
 }
 .logCon .login-input .password {
 	display: flex;
@@ -164,7 +164,7 @@ body {
 }
 input[type="text"]:focus,
 input[type="password"]:focus {
-	border-bottom: 1px solid rgb(214, 13, 16);
+	border-bottom: 1px solid rgb(132, 179, 144);
 }
 /* .logCon .login-input .username,
 .logCon .login-input .password,
@@ -181,7 +181,7 @@ input[type="password"]:focus {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: rgb(214, 13, 16);
+	background-color: rgb(132, 179, 144);
 	transition: 0.3s ease-in-out;
 }
 .logCon .btn:hover {
@@ -199,7 +199,7 @@ input[type="password"]:focus {
 }
 .logCon .forget:hover {
 	cursor: pointer;
-	color: rgb(214, 13, 16);
+	color: rgb(132, 179, 144);
 }
 
 footer {
@@ -279,7 +279,7 @@ footer .information div h3 {
 	justify-content: center;
 	background-color: rgb(253, 246, 236);
 	border: 1px solid rgb(252, 243, 231);
-	color: rgb(232, 160, 60);
+	color: rgb(132, 179, 143);
 	width: 18%;
 	height: auto;
 	border-radius: 0.3rem;

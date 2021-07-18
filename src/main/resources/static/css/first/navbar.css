@@ -18,9 +18,9 @@ nav::before {
 	height: 5.5rem;
 	background-image: linear-gradient(
 		to right,
-		rgb(216, 229, 213) 21%,
-		rgb(205, 226, 205) 40%,
-		rgb(208, 231, 222) 85%
+		rgb(187, 208, 182) 21%,
+		rgb(113, 175, 139) 40%,
+		rgb(169, 205, 213) 85%
 	);
 }
 nav {
