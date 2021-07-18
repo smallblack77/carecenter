@@ -71,7 +71,7 @@ nav {
 	padding: 0.2rem 0rem;
 	text-align: center;
 	color: white;
-	background-color: rgb(214, 13, 16);
+	background-color: rgb(148, 215, 181);
 }
 .theo-container .left-half .list-bottom {
 	width: 100%;
@@ -79,8 +79,8 @@ nav {
 	padding-top: 1px;
 	margin-bottom: 0.8rem;
 	/* background-color: #fff; */
-	border-top: 1px solid rgb(214, 13, 16);
-	border-bottom: 0.2rem solid rgb(214, 13, 16);
+	border-top: 1px solid rgb(143, 182, 161);
+	border-bottom: 0.2rem solid rgb(148, 215, 181);
 }
 .theo-container .left-half .list-items {
 	width: 100%;
@@ -101,7 +101,7 @@ nav {
 	transition: 0.3s ease-in-out;
 }
 .theo-container .left-half .list-items .list-item:hover {
-	color: rgb(214, 13, 16);
+	color: rgb(131, 168, 142);
 	background-color: #fff;
 	transition: 0.3s ease-in-out;
 }
@@ -138,7 +138,7 @@ nav {
 	transition: 0.3s ease-in-out;
 }
 .theo-container .left-half .list-items .li-item a:hover {
-	color: rgb(214, 13, 16);
+	color: rgb(131, 168, 142);
 	transition: 0.3s ease-in-out;
 }
 
@@ -171,7 +171,7 @@ nav {
 	width: 0.3rem;
 	height: 1.3rem;
 	margin-left: 0.7rem;
-	background-color: rgb(214, 13, 16);
+	background-color: rgb(148, 215, 181);
 }
 .theo-container .right-half .type .down {
 	width: 100%;
@@ -194,12 +194,12 @@ nav {
 }
 .theo-container .right-half .type .down a:hover {
 	transform: scale(1.1);
-	color: rgb(214, 13, 16);
+	color: rgb(131, 168, 142);
 	transition: 0.3s ease-in-out;
 }
 .theo-container .right-half .type .down a:hover img {
 	transform: scale(1.1);
-	color: rgb(214, 13, 16);
+	color: rgb(131, 168, 142);
 	transition: 0.3s ease-in-out;
 }
 .theo-container .right-half .type .down .type-icon {
