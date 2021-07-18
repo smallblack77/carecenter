@@ -24,7 +24,7 @@
 	padding: 0.2rem 0rem;
 	text-align: center;
 	color: white;
-	background-color: rgb(214, 13, 16);
+	background-color: rgb(148, 215, 181);
 }
 .or-container .list-items .list-bottom {
 	width: 100%;
@@ -32,8 +32,8 @@
 	padding-top: 1px;
 	margin-bottom: 0.8rem;
 	/* background-color: #fff; */
-	border-top: 1px solid rgb(214, 13, 16);
-	border-bottom: 0.2rem solid rgb(214, 13, 16);
+	border-top: 1px solid rgb(133, 165, 141);
+	border-bottom: 0.2rem solid rgb(133, 165, 141);
 }
 .or-container .list-items .list-item {
 	width: 100%;
