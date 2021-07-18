@@ -88,6 +88,13 @@
             (#{id},#{customerId},#{nurseId},#{content},#{startTime},#{endTime})
     </insert>
 
+    <insert id="newNurseRecord" parameterType="NurseRecord">
+        INSERT INTO NURRECORD
+            (CUSTID,NURID,CONTENT,STARTTIME,ENDTIME)
+        VALUES
+        (#{customerId},#{nurseId},#{content},#{startTime},#{endTime})
+    </insert>
+
     <select id="getNurseRecordMaxId" resultType="int">
         SELECT
             MAX(ID)

@@ -33,6 +33,9 @@ public interface NurseContentMapper {
     //添加护理记录
     void addNurseRecord(NurseRecord nurseRecord);
 
+    //添加护理记录
+    void newNurseRecord(NurseRecord nurseRecord);
+
     //获取最大id
     int getNurseRecordMaxId();
 

@@ -65,17 +65,6 @@ public class NurseForCustomerController {
 
         nurseContentService.insertCustAndNur(customerAndNurse);
         return customerAndNurse;
-
-/*        NurseRecord nurseRecord = new NurseRecord();
-        nurseRecord.setNurseId(nurseId);
-        nurseRecord.setCustomerId(Integer.parseInt(customerId));
-        nurseRecord.setStartTime(df.format(date));
-        nurseRecord.setEndTime(df.format(calendar.getTime()));
-
-        nurseContentService.addNurseRecord(nurseRecord);
-        return nurseRecord;*/
-
-
     }
 
     //通过id获取护工

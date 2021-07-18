@@ -173,7 +173,11 @@ public class DietController {
     }
 
     @RequestMapping("/addCustDiet")
-    public String addCustDiet(Model model,String custId,String bre,String lunch,String dinner){
+    public String addCustDiet(@RequestParam("custId")String custId,
+                              @RequestParam("bre")String bre,
+                              @RequestParam("lunch")String lunch,
+                              @RequestParam("dinner")String dinner,
+                              Model model){
         Date date = new Date(); // this object contains the current date value
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
         String currengTime = formatter.format(date);
@@ -213,7 +217,20 @@ public class DietController {
             timeLine.setCustId(Integer.parseInt(custId));
 
             Diet diet = dietService.getDietById(Integer.parseInt(bre));
-            timeLine.setContent("早餐时间：" + diet.getName() + "," + diet.getFood1() + "," + diet.getFood2() + "," + diet.getFood3() + "," + diet.getFood4() + "," + diet.getFood5());
+            String breContent = "早餐时间：" + diet.getName() + "," + diet.getFood1();
+            if(diet.getFood2() != null){
+                breContent = breContent + "," + diet.getFood2();
+            }
+            if(diet.getFood3() != null){
+                breContent = breContent + "," + diet.getFood3();
+            }
+            if(diet.getFood4() != null){
+                breContent = breContent + "," + diet.getFood4();
+            }
+            if(diet.getFood5() != null){
+                breContent = breContent + "," + diet.getFood5();
+            }
+            timeLine.setContent(breContent);
 
             customerService.insertTimeLine(timeLine);
 
@@ -227,8 +244,20 @@ public class DietController {
             timeLine1.setCustId(Integer.parseInt(custId));
 
             Diet diet1 = dietService.getDietById(Integer.parseInt(lunch));
-            timeLine1.setContent("中餐时间：" + diet1.getName() + "," + diet1.getFood1() + "," + diet1.getFood2() + "," + diet1.getFood3() + "," + diet1.getFood4() + "," + diet1.getFood5());
-
+            String lunchContent = "午餐时间：" + diet1.getName() + "," + diet1.getFood1();
+            if(diet1.getFood2() != null){
+                lunchContent = lunchContent + "," + diet1.getFood2();
+            }
+            if(diet1.getFood3() != null){
+                lunchContent = lunchContent + "," + diet1.getFood3();
+            }
+            if(diet1.getFood4() != null){
+                lunchContent = lunchContent + "," + diet1.getFood4();
+            }
+            if(diet1.getFood5() != null){
+                lunchContent = lunchContent + "," + diet1.getFood5();
+            }
+            timeLine1.setContent(lunchContent);
             customerService.insertTimeLine(timeLine1);
 
             //晚餐
@@ -240,18 +269,27 @@ public class DietController {
             timeLine2.setCustId(Integer.parseInt(custId));
 
             Diet diet2 = dietService.getDietById(Integer.parseInt(dinner));
-            timeLine2.setContent("晚餐时间：" + diet2.getName() + "," + diet2.getFood1() + "," + diet2.getFood2() + "," + diet2.getFood3() + "," + diet2.getFood4() + "," + diet2.getFood5());
-
+            String dinnerContent = "晚餐时间：" + diet2.getName() + "," + diet2.getFood1();
+            if(diet2.getFood2() != null){
+                dinnerContent = dinnerContent + "," + diet2.getFood2();
+            }
+            if(diet2.getFood3() != null){
+                dinnerContent = dinnerContent + "," + diet2.getFood3();
+            }
+            if(diet2.getFood4() != null){
+                dinnerContent = dinnerContent + "," + diet2.getFood4();
+            }
+            if(diet2.getFood5() != null){
+                dinnerContent = dinnerContent + "," + diet2.getFood5();
+            }
+            timeLine2.setContent(dinnerContent);
             customerService.insertTimeLine(timeLine2);
 
-            return "dietManage/dietCalendar";
+            return "account/index";
         }else {
             String msg = "输入不能为空";
             model.addAttribute("msg",msg);
             return "dietManage/dietCalendar";
         }
-
-
     }
-
 }
