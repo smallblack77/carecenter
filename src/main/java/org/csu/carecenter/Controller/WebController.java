@@ -63,15 +63,77 @@ public class WebController {
     {
         return "First/topic";
     }
+
+    @GetMapping("/social")
+    public String social()
+    {
+        return "First/social";
+    }
+
     @GetMapping("/id21")
     public String id21()
     {
         return "First/id21";
     }
-    @GetMapping("/social")
-    public String social()
+    @GetMapping("/id22")
+    public String id22()
     {
-        return "First/social";
+        return "First/id22";
+    }
+    @GetMapping("/id23")
+    public String id23()
+    {
+        return "First/id23";
+    }
+    @GetMapping("/id24")
+    public String id24()
+    {
+        return "First/id24";
+    }
+    @GetMapping("/id31")
+    public String id31()
+    {
+        return "First/id31";
+    }
+    @GetMapping("/id32")
+    public String id32()
+    {
+        return "First/id32";
+    }
+    @GetMapping("/id41")
+    public String id41()
+    {
+        return "First/id41";
+    }
+    @GetMapping("/id42")
+    public String id42()
+    {
+        return "First/id42";
+    }
+    @GetMapping("/id51")
+    public String id51()
+    {
+        return "First/id51";
+    }
+    @GetMapping("/id52")
+    public String id52()
+    {
+        return "First/id52";
+    }
+    @GetMapping("/id53")
+    public String id53()
+    {
+        return "First/id53";
+    }
+    @GetMapping("/id54")
+    public String id54()
+    {
+        return "First/id54";
+    }
+    @GetMapping("/id61")
+    public String id61()
+    {
+        return "First/id61";
     }
 
 }
