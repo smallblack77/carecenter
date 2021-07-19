@@ -158,6 +158,17 @@
         WHERE BEDANDCUST.ID = #{id}
     </select>
 
+    <select id="selectCheckoutByCustId" resultType="BedAndCustomer">
+        SELECT
+            BEDANDCUST.ID,
+            BEDANDCUST.CUSTID as customerID,
+            BEDANDCUST.BEDID,
+            BEDANDCUST.STARTTIME,
+            BEDANDCUST.ENDTIME
+        FROM BEDANDCUST
+        WHERE BEDANDCUST.CUSTID = #{id}
+    </select>
+
     <insert id="insertCheckout" parameterType="BedAndCustomer">
         INSERT INTO BEDANDCUST
         (BEDANDCUST.CUSTID,

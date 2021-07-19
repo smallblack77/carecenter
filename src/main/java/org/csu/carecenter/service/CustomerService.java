@@ -116,6 +116,10 @@ public class CustomerService {
         customerMapper.insertCheckout(bedAndCustomer);
     }
 
+    public BedAndCustomer selectCheckoutByCustId(int id){
+        return customerMapper.selectCheckoutByCustId(id);
+    }
+
 
     //外出信息
     public List<Out> getOutList(int custid){

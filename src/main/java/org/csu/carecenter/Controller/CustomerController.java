@@ -98,6 +98,7 @@ public class CustomerController {
     public String deleteCustomer(@RequestParam("id")String id,Model model){
         customerService.deleteCustomer(Integer.parseInt(id));
         healthyService.deleteHealthy(Integer.parseInt(id));
+        customerService.deleteCheckin(Integer.parseInt(id));
         model.addAttribute("customerList",customerService.getCustomerLsit());
         return "custManage/customer";
     }
@@ -408,14 +409,12 @@ public class CustomerController {
 
     @RequestMapping("/editCheckout")
     public String editCheckout(@RequestParam("custid")String custid,
-                              @RequestParam("bedid")String bedid,
-                              @RequestParam("starttime")String starttime,
+                               @RequestParam("endtime")String endtime,
                               HttpSession httpSession,
                               Model model){
         BedAndCustomer checkout = (BedAndCustomer) httpSession.getAttribute("checkout");
         checkout.setCustomerID(Integer.parseInt(custid));
-        checkout.setBedId(Integer.parseInt(bedid));
-        checkout.setStartTime(starttime);
+        checkout.setStartTime(endtime);
 
         customerService.updateCheckout(checkout);
         List<BedAndCustomer> list = customerService.selectCheckoutList();
@@ -438,15 +437,12 @@ public class CustomerController {
 
     @RequestMapping("/addCheckout")
     public String addCheckout(@RequestParam("custid")String custid,
-                             @RequestParam("bedid")String bedid,
-                             @RequestParam("starttime")String starttime,
+                             @RequestParam("endtime")String endtime,
                              HttpSession httpSession,
                              Model model){
-        if(custid != null && bedid != null && starttime != null){
-            BedAndCustomer checkout = new BedAndCustomer();
-            checkout.setCustomerID(Integer.parseInt(custid));
-            checkout.setBedId(Integer.parseInt(bedid));
-            checkout.setStartTime(starttime);
+        if(custid != null && endtime != null){
+            BedAndCustomer checkout = customerService.selectCheckoutByCustId(Integer.parseInt(custid));
+            checkout.setEndTime(endtime);
 
             List<BedAndCustomer> checkoutList = customerService.selectCheckoutList();
 
@@ -472,10 +468,10 @@ public class CustomerController {
                 timeLine.setDay(df.format(date));
                 timeLine.setDate(df1.format(date));
                 timeLine.setCustId(Integer.parseInt(custid));
-                timeLine.setContent("退住" + bedid + "号房间");
+                timeLine.setContent("退住" + checkout.getBedId() + "号房间");
                 customerService.insertTimeLine(timeLine);
 
-                customerService.addCheckout(checkout);
+                customerService.updateCheckout(checkout);
                 List<BedAndCustomer> list = customerService.selectCheckoutList();
                 List<BedAndCustomer> checkoutList1 = new ArrayList<>();
 

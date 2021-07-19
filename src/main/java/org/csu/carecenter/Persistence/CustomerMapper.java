@@ -30,6 +30,8 @@ public interface CustomerMapper {
 
     BedAndCustomer selectCheckin(int id);
 
+    BedAndCustomer selectCheckoutByCustId(int id);
+
     void updateCheckin(BedAndCustomer bedAndCustomer);
 
     void insertCheckin(BedAndCustomer bedAndCustomer);
