@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -132,5 +133,20 @@ public class UserController {
         return userList;
     }
 
+    @RequestMapping("/ViewIncludeAccountFieldsbyphone")
+    public String ViewIncludeAccountFieldsbyphone(HttpServletRequest req, Model model){
+        String verifyCode = (String) req.getSession().getAttribute("verifyCode");
+        String inputverifyCode = req.getParameter("inputverifyCode");
+        String phonenumber = req.getParameter("phonenumber");
+        HttpSession session = req.getSession();
+        boolean flag = false;
+        if(inputverifyCode.equals(verifyCode))
+            flag=true;
+        if(flag){
+            return "/account/userLogin";
+        }else {
+            return "/account/index";
+        }
+    }
 }
 

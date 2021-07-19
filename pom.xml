@@ -113,6 +113,11 @@
             <version >1.5.4 </version >
         </dependency >
 
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.5.6</version>
+        </dependency>
 
         <!-- springboot整合WebSocket进行全双工通信(1) -->
         <!-- websocket相关依赖 -->
@@ -121,6 +126,7 @@
             <artifactId>fastjson</artifactId>
             <version>1.2.28</version>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-websocket</artifactId>
