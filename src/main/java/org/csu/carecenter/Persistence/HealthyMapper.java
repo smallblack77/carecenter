@@ -9,6 +9,9 @@ import java.util.List;
 @Repository
 public interface HealthyMapper {
 
+    //通过id获取
+    List<Healthy> getHealthyById(int id);
+
     //通过id和日期获取
     Healthy getHealthy(int id,String week);
 

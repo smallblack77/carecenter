@@ -17,6 +17,7 @@ import javax.servlet.http.HttpSession;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -146,14 +147,7 @@ public class HealthyController {
         model.addAttribute("sat",sat);
         model.addAttribute("sun",sun);
 
-
-/*        List<Healthy> healthy = healthyService.getAllHealthy(Integer.valueOf(id));
-
-        model.addAttribute("healthy",healthy);*/
-        List<Healthy> healthyList = healthyService.getAllList();
-        for(int i=0;i<healthyList.size();i++){
-            System.out.println(healthyList.get(i).getDay());
-        }
+        List<Healthy> healthyList = healthyService.getHealthyById(custId);
         model.addAttribute("healthyList",healthyList);
         return "custManage/healthyDisplay";
 

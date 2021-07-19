@@ -15,6 +15,20 @@
         WHERE CUSTID =#{id} AND DAY = #{week}
     </select>
 
+    <select id="getHealthyById" parameterType="int" resultType="Healthy">
+        SELECT
+            CUSTID AS custId,
+            TEMP,
+            PRESSURE,
+            SUGAR,
+            WEIGHT,
+            PULSE,
+            SELFCARE AS selfCare,
+            DAY
+        FROM HEALTHY
+        WHERE CUSTID =#{id}
+    </select>
+
     <update id="updateHealthy" parameterType="Healthy">
         UPDATE HEALTHY
         SET TEMP = #{temp},

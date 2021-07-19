@@ -587,16 +587,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                                 </tr>
                                                 </thead>
                                                 <tbody>
-                                                <tr class="" th:each="ahealthy : ${healthyList}">
-                                                    <td><th:block id="id" name="id" th:text="${ahealthy.custId}" /></td>
+                                                <tr class="" th:each="healthy : ${healthyList}">
+                                                    <td><th:block id="id" name="id" th:text="${healthy.custId}" /></td>
                                                     <td><th:block  name="name" th:text="${customer.name}" /></td>
-                                                    <td><th:block  name="temp" th:text="${ahealthy.temp}" /></td>
-                                                    <td><th:block  name="pressure" th:text="${ahealthy.pressure}" /></td>
-                                                    <td><th:block  name="sugar" th:text="${ahealthy.sugar}" /></td>
-                                                    <td><th:block  name="weight" th:text="${ahealthy.weight}" /></td>
-                                                    <td><th:block  name="pulse" th:text="${ahealthy.pulse}" /></td>
-                                                    <td><th:block  name="selfcare" th:text="${ahealthy.selfCare}"/></td>
-                                                    <td><th:block  name="day" th:text="${ahealthy.day}"/></td>
+                                                    <td><th:block  name="temp" th:text="${healthy.temp}" /></td>
+                                                    <td><th:block  name="pressure" th:text="${healthy.pressure}" /></td>
+                                                    <td><th:block  name="sugar" th:text="${healthy.sugar}" /></td>
+                                                    <td><th:block  name="weight" th:text="${healthy.weight}" /></td>
+                                                    <td><th:block  name="pulse" th:text="${healthy.pulse}" /></td>
+                                                    <td><th:block  name="selfcare" th:text="${healthy.selfCare}"/></td>
+                                                    <td><th:block  name="day" th:text="${healthy.day}"/></td>
                                                     <td><span class="label label-success label-mini">优秀</span></td>
                                                     <td>
                                                         <div class="progress progress-striped progress-xs">

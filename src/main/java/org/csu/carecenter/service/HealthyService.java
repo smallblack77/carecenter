@@ -24,6 +24,11 @@ public class HealthyService {
         return healthyMapper.getHealthy(id,week);
     }
 
+    //通过id获取
+    public List<Healthy> getHealthyById(int id){
+        return healthyMapper.getHealthyById(id);
+    }
+
     //修改
     public void updateHealthy(Healthy healthy){
         healthyMapper.updateHealthy(healthy);
