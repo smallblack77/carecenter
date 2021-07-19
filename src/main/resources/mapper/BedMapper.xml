@@ -84,6 +84,13 @@
 
     </update>
 
+    <update id="updateBedStatus" parameterType="Bed">
+        UPDATE BED
+        SET
+            BEDSTATUS=#{flag}
+        WHERE ID=#{id}
+    </update>
+
     <select id="getMaxId" resultType="int">
         SELECT
             Max(BEDANDCUST.ID)

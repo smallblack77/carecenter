@@ -345,7 +345,7 @@ public class CustomerController {
 //                Calendar calendar = Calendar.getInstance();
 //                //此处setTime为Date类型
 //                calendar.setTime(date);
-
+                bedService.updateBedStatus(0, Integer.parseInt(bedid));
                 customerService.addCheckin(checkin);
                 model.addAttribute("checkinList",customerService.selectCheckinList());
                 return "custManage/checkin";

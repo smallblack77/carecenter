@@ -43,5 +43,6 @@ public interface BedMapper {
     //通过id获取bed
     Bed getBedByBedId(int bedId);
 
-
+    //修改床的状态
+    void updateBedStatus(int flag, int id);
 }
