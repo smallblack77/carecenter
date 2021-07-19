@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -80,29 +81,56 @@ public class NurseForCustomerController {
 
     @RequestMapping("/addNurseAndCust")
     @ResponseBody
-    public CustomerAndNurse addNurseAndCust(String custName,String custPhone,String time,String nurseId){
-        System.out.println(custName);
-        System.out.println(custPhone);
+    public CustomerAndNurse addNurseAndCust(String custName,String custPhone,String time,String nurseId) throws ParseException {
 
-        System.out.println(nurseId);
         int id = customerService.getCustomerId(custName,custPhone);
-        CustomerAndNurse customerAndNurse = new CustomerAndNurse();
-        SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd");
-        Calendar c = Calendar.getInstance();
-        System.out.println("当前日期:"+sf.format(c.getTime()));
-        customerAndNurse.setStartTime(sf.format(c.getTime()));
-        c.add(Calendar.DAY_OF_MONTH, Integer.valueOf(time));
-        System.out.println("增加一天后日期:"+sf.format(c.getTime()));
+
+        CustomerAndNurse customerAndNurse1 = nurseContentService.getCustomerAndNurseById(String.valueOf(id),nurseId);
+
+        if (customerAndNurse1 == null){
+            CustomerAndNurse customerAndNurse = new CustomerAndNurse();
+            SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd");
+            Calendar c = Calendar.getInstance();
+            System.out.println("当前日期:"+sf.format(c.getTime()));
+            customerAndNurse.setStartTime(sf.format(c.getTime()));
+            c.add(Calendar.DAY_OF_MONTH, Integer.valueOf(time));
+            System.out.println("增加一天后日期:"+sf.format(c.getTime()));
 
 
-        customerAndNurse.setCustId(String.valueOf(id));
+            customerAndNurse.setCustId(String.valueOf(id));
 
-        customerAndNurse.setNurId(nurseId);
-        customerAndNurse.setEndTime(sf.format(c.getTime()));
+            customerAndNurse.setNurId(nurseId);
+            customerAndNurse.setEndTime(sf.format(c.getTime()));
 
-        nurseContentService.insertCustAndNur(customerAndNurse);
+            nurseContentService.insertCustAndNur(customerAndNurse);
 
-        return customerAndNurse;
+            return customerAndNurse;
+        }else {
+            String endTime = customerAndNurse1.getEndTime();
+
+            SimpleDateFormat format=new SimpleDateFormat("yyyy-mm-dd");
+            Date date=format.parse(endTime);
+            Calendar calendar=Calendar.getInstance();
+            calendar.setTime(date);
+            calendar.add(Calendar.DAY_OF_MONTH,Integer.valueOf(time));
+
+            customerAndNurse1.setEndTime(format.format(calendar.getTime()));
+
+            System.out.println("增加后日期:"+format.format(calendar.getTime()));
+
+            nurseContentService.updateCustomerAnNurse(format.format(calendar.getTime()),String.valueOf(id),nurseId);
+            return customerAndNurse1;
+
+
+        }
+
+
+//        System.out.println(custName);
+//        System.out.println(custPhone);
+//
+//        System.out.println(nurseId);
+
+
 
     }
 

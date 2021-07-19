@@ -84,4 +84,12 @@ public class NurseContentService {
     public int getNurId(int custId){
         return nurseContentMapper.getNurId(custId);
     }
+
+    public CustomerAndNurse getCustomerAndNurseById(String custId,String nurseId){
+        return nurseContentMapper.getCustomerAndNurseById(custId,nurseId);
+    }
+
+    public void updateCustomerAnNurse(String time,String custId,String nurseId){
+        nurseContentMapper.updateCustomerAnNurse(custId,nurseId,time);
+    }
 }

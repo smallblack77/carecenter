@@ -130,4 +130,25 @@
         FROM CUSTANDNUR
         WHERE CUSTID = #{custId}
     </select>
+
+    <select id="getCustomerAndNurseById" resultType="CustomerAndNurse">
+        SELECT
+            ID,
+            NURID AS nurId,
+            CUSTID AS custId,
+            STARTTIME AS startTime,
+            CONTENT,
+            ENDTIME AS endTime
+        FROM CUSTANDNUR
+        WHERE NURID = #{nurseId}
+        AND CUSTID = #{custId}
+
+    </select>
+
+    <update id="updateCustomerAnNurse" parameterType="String">
+        UPDATE CUSTANDNUR
+        SET ENDTIME=#{time}
+        WHERE CUSTID = #{custId}
+        AND NURID = #{nurseId}
+    </update>
 </mapper>

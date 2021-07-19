@@ -53,4 +53,10 @@ public interface NurseContentMapper {
 
     //获取护工数量
     int getCount();
+
+    //获取护工和客户的关系
+    CustomerAndNurse getCustomerAndNurseById(String custId,String nurseId);
+
+    //修改关系
+    void updateCustomerAnNurse(String custId,String nurseId,String time);
 }
