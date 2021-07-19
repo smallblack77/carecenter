@@ -1,0 +1,1352 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0"
+    />
+    <link rel="stylesheet" href="../../static/css/first/alifont.css" />
+    <link rel="stylesheet" href="../../static/css/first/navbar.css" />
+    <link rel="stylesheet" href="../../static/css/first/index.css" />
+    <link rel="stylesheet" href="../../static/css/first/css.css" />
+    <link rel="stylesheet" href="../../static/css/first/reponse_glo.css" />
+    <link rel="stylesheet" href="../../static/css/first/common.css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="养老信息网(www.yanglaocn.com)是中国最专业养老信息门户网站，集社会新闻信息、老年人生活信息、养老信息及全国养老院查询平台等各类与老人相关的综合信息为一体的综合型门户网站。致力于服务全社会、关爱老人、替天下儿女尽孝的思想，为中国1.3亿的老年人提供丰富的网上服务。"/>
+    <meta name="keywords" content="养老社区,养老院,老人院,老年公寓,敬老院,养老保险查询,医疗保险查询,公积金查询,老年人,养老信息网"/>
+    <meta name="google-site-verification" content="VZfvKdde6Alry1sSTEFUc1HF42ez59f9-miefEe589s" />
+    <meta name="msvalidate.01" content="4CD6792A2C0C5688B02A391EBF6EB0BB" />
+
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="stylesheet" type="text/css" href="https://www.yanglaocn.com/css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="https://www.yanglaocn.com/css/style_20210416.css"/>
+    <link rel="stylesheet" type="text/css" href="https://www.yanglaocn.com/css/Login_20210416.css"/>
+    <link rel="stylesheet" type="text/css" href="https://www.yanglaocn.com/artDialog/skins/default.css"/>
+    <link rel="stylesheet" type="text/css" href="https://www.yanglaocn.com/jnotify/jquery/jNotify.jquery.css"/>
+    <link rel="stylesheet" type="text/css" href="https://www.yanglaocn.com/css/thickbox.css"/>
+    <link rel="stylesheet" type="text/css" href="https://www.yanglaocn.com/poshytipsrc/css/tip-style.css"/>
+    <link rel="stylesheet" type="text/css" href="https://www.yanglaocn.com/css/jquery.fancybox.css"/>
+    <link rel="stylesheet" type="text/css" href="https://www.yanglaocn.com/css/selectcss.css"/>
+    <link rel="stylesheet" type="text/css" href="https://www.yanglaocn.com/css/yl_20210416.css">
+    <link rel="stylesheet" type="text/css" href="https://www.yanglaocn.com/js/layui/css/layui.css">
+    <link rel="stylesheet" type="text/css" href="https://www.yanglaocn.com/js/element/element.min.css">
+    <script type="text/javascript" src="https://www.yanglaocn.com/js/jquery-1.4.js"></script>
+    <script type="text/javascript" src="https://www.yanglaocn.com/js/jquery.cookie.js"></script>
+    <script type="text/javascript">var shop_url ="https://www.yanglaocn.com/";</script>
+    <script type="text/javascript" src="https://www.yanglaocn.com/js/pageajax.js"></script>
+    <script type="text/javascript" src="https://www.yanglaocn.com/poshytipsrc/jquery.poshytip.js"></script>
+    <script type="text/javascript" src="https://www.yanglaocn.com/js/poshytipFun.js"></script>
+    <script type="text/javascript" src="https://www.yanglaocn.com/jnotify/jquery/jNotify.jquery.js"></script>
+    <script type="text/javascript" src="https://www.yanglaocn.com/js/followajax.js"></script><link type="text/css" rel="stylesheet" href="https://www.yanglaocn.com/css/weiboscroll.css" />
+    <title>梅岭社区·颐养中心</title>
+    <style>
+        body {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url(../../static/images/img/水墨3ps.png) no-repeat 100%;
+            background-size: cover;
+            background-attachment: fixed;
+            /* z-index: -1; */
+            transition: 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+<div class="bgimg">
+    <nav>
+        <div class="user">
+            <a href=""><img src="../../static/images/first/logo1.png" alt="" /></a>
+        </div>
+        <!--				<div class="logo"><img src="img/广软_长白.png" alt="" /></div>-->
+        <div class="search">
+            <div class="sput">
+                <input
+                        type="text"
+                        name="search"
+                        placeholder="搜索内容"
+                        id="searchContent"
+                />
+                <a href="#"><div class="icon"></div></a>
+                <img src="icon/搜索.png" alt="" />
+            </div>
+            <!-- 汉堡按钮 -->
+            <div class="burger" id="toggle" onclick="navVisi()">
+                <div class="top-line"></div>
+                <div class="middle-line"></div>
+                <div class="bottom-line"></div>
+            </div>
+        </div>
+    </nav>
+    <div class="navbar">
+        <ul id="visiable" class="nav-menu">
+            <a href="index.html"
+            >
+                <li>
+                    <i class="iconfont icon-shouye"></i>
+                    首页
+                </li>
+            </a
+            >
+            <a href="learn.html"
+            >
+                <li>
+                    <i class="iconfont icon-lishi"></i>
+                    梅岭动态
+                </li>
+            </a
+            >
+            <a href="theorystudy.html"
+            >
+                <li>
+                    <i class="iconfont icon-lilunxuexi"></i>
+                    百科问答
+                </li>
+            </a
+            >
+            <a href="organization.html"
+            >
+                <li>
+                    <i class="iconfont icon-zixun"></i>
+                    健康养生
+                </li>
+            </a
+            >
+            <a class="active" href="javascript:;"
+            >
+                <li>
+                    <i class="iconfont icon-deploymentunit"></i>
+                    养老社区
+                </li>
+            </a
+            >
+            <a href="center.html"
+            >
+                <li>
+                    <i class="iconfont icon-gerenzhongxin"></i>
+                    关于我们
+                </li>
+            </a
+            >
+        </ul>
+    </div>
+</div>
+
+<!--头部文件-->
+<div class="main" id="bbs_vue_id">
+    <div class="bbs_left margin_top_20">
+        <div class="bbs_left_ti"><a href="https://www.yanglaocn.com/bbs/"><i class="el-icon-menu"></i>养老社区</a></div>
+        <div class="bbs_left_menu">
+            <input type="hidden" name="settid" id="settid" value="12">
+            <input type="hidden" name="tid" id="tid" value="13">
+            <el-collapse v-model="Bbs_Index_activeNames">
+                <el-collapse-item name="0">
+                    <template slot="title">
+                        <i class="header-icon el-icon-edit"></i> 创作
+                    </template>
+                    <div class="bbs_left_menu_ul">
+                        <a href="https://www.yanglaocn.com/bbs/">主题推荐</a>
+                        <a href="javascript:void(0);" onclick="javascript:ShowUserBBSchannel();">发布帖子</a>
+                    </div>
+                </el-collapse-item>
+                <el-collapse-item name="2">
+                    <template slot="title">
+                        <i class="header-icon el-icon-s-unfold"></i>社保交流
+                    </template>
+                    <div class="bbs_left_menu_ul">
+                        <a href="https://www.yanglaocn.com/bbs/?tid=4"><i class="el-icon-caret-right" style="display: none;"></i> 社保问题</a>
+                        <a href="https://www.yanglaocn.com/bbs/?tid=3"><i class="el-icon-caret-right" style="display: none;"></i> 社保杂谈</a>
+                        <a href="https://www.yanglaocn.com/bbs/?tid=31"><i class="el-icon-caret-right" style="display: none;"></i> 社保常见问题</a>
+                        <a href="https://www.yanglaocn.com/bbs/?tid=40"><i class="el-icon-caret-right" style="display: none;"></i> 社保案例分析</a>
+                    </div>
+                </el-collapse-item>
+                <!--<el-collapse-item name="19">
+                    <template slot="title">
+                        <i class="header-icon el-icon-s-unfold"></i><a href="https://www.yanglaocn.com/bbs/?tid=19">晚年生活</a>
+                    </template>
+                    <div class="bbs_left_menu_ul">
+                        <a href="https://www.yanglaocn.com/bbs/?tid=20"><i class="el-icon-caret-right" style="display: none;"></i> 社会杂谈</a>
+                        <a href="https://www.yanglaocn.com/bbs/?tid=21"><i class="el-icon-caret-right" style="display: none;"></i> 生活百事</a>
+                        <a href="https://www.yanglaocn.com/bbs/?tid=22"><i class="el-icon-caret-right" style="display: none;"></i> 花鸟鱼虫</a>
+                        <a href="https://www.yanglaocn.com/bbs/?tid=23"><i class="el-icon-caret-right" style="display: none;"></i> 旅游天地</a>
+                        <a href="https://www.yanglaocn.com/bbs/?tid=24"><i class="el-icon-caret-right" style="display: none;"></i> 寻朋问友</a>
+                    </div>
+                </el-collapse-item>-->
+                <el-collapse-item name="12">
+                    <template slot="title">
+                        <i class="header-icon el-icon-s-unfold"></i>文化艺术
+                    </template>
+                    <div class="bbs_left_menu_ul">
+                        <a href="https://www.yanglaocn.com/bbs/?tid=13"><i class="el-icon-caret-right" style="display: none;"></i> 文学创作</a>
+                        <a href="https://www.yanglaocn.com/bbs/?tid=14"><i class="el-icon-caret-right" style="display: none;"></i> 书画艺术</a>
+                    </div>
+                </el-collapse-item>
+                <!--<el-collapse-item name="25">
+                    <template slot="title">
+                        <i class="header-icon el-icon-s-unfold"></i><a href="https://www.yanglaocn.com/bbs/?tid=25">学习天地</a>
+                    </template>
+                    <div class="bbs_left_menu_ul">
+                        <a href="https://www.yanglaocn.com/bbs/?tid=26"><i class="el-icon-caret-right" style="display: none;"></i> 摄影天地</a>
+                        <a href="https://www.yanglaocn.com/bbs/?tid=27"><i class="el-icon-caret-right" style="display: none;"></i> 学习电脑</a>
+                    </div>
+                </el-collapse-item>-->
+                <el-collapse-item name="28">
+                    <template slot="title">
+                        <i class="header-icon el-icon-s-unfold"></i>养老机构交流
+                    </template>
+                    <div class="bbs_left_menu_ul">
+                        <a href="https://www.yanglaocn.com/bbs/?tid=29"><i class="el-icon-caret-right" style="display: none;"></i> 经验交流</a>
+                        <a href="https://www.yanglaocn.com/bbs/?tid=30"><i class="el-icon-caret-right" style="display: none;"></i> 问题探讨</a>
+                    </div>
+                </el-collapse-item>
+                <el-collapse-item name="32">
+                    <template slot="title">
+                        <i class="header-icon el-icon-s-unfold"></i>养老信息
+                    </template>
+                    <div class="bbs_left_menu_ul">
+                        <a href="https://www.yanglaocn.com/bbs/?tid=33"><i class="el-icon-caret-right" style="display: none;"></i> 养老生活信息</a>
+                        <a href="https://www.yanglaocn.com/bbs/?tid=34"><i class="el-icon-caret-right" style="display: none;"></i> 养老机构信息</a>
+                        <a href="https://www.yanglaocn.com/bbs/?tid=35"><i class="el-icon-caret-right" style="display: none;"></i> 社会保险信息</a>
+                        <a href="https://www.yanglaocn.com/bbs/?tid=41"><i class="el-icon-caret-right" style="display: none;"></i> 养老行业广告</a>
+                    </div>
+                </el-collapse-item>
+                <el-collapse-item name="36">
+                    <template slot="title">
+                        <i class="header-icon el-icon-s-unfold"></i>社区事务
+                    </template>
+                    <div class="bbs_left_menu_ul">
+                        <a href="https://www.yanglaocn.com/bbs/?tid=39"><i class="el-icon-caret-right" style="display: none;"></i> 社区公告</a>
+                        <a href="https://www.yanglaocn.com/bbs/?tid=37"><i class="el-icon-caret-right" style="display: none;"></i> 建议意见</a>
+                        <a href="https://www.yanglaocn.com/bbs/?tid=38"><i class="el-icon-caret-right" style="display: none;"></i> 删帖申请</a>
+                    </div>
+                </el-collapse-item>
+            </el-collapse>
+        </div>
+    </div>
+    <div class="bbs_right margin_top_20">
+        <h2><i class="el-icon-s-unfold"></i><label>文学创作</label></h2>
+        <div class="bbs_right_tab">
+            <el-tabs v-model="bbs_right_tab_activeName" @tab-click="bbs_right_tab_handleClick">
+                <el-tab-pane label="最新发布" name="fabu">
+                    <div class="bbs_right_list">
+
+                        <div class="yl_dongtai_img bbs_dongtai_img">
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2021-03/bbs161492931110350.html" target="_blank" title="行香子•为大爱书院养老中心题词"><img src="http://www.yanglaocn.com/images/upload/img/2021/03_05/330cc26867c270ae1f1f076e9935546e.jpg" width="80" height="60"  border="0" alt="行香子•为大爱书院养老中心题词" /></a>
+                            <h3>
+                                <a href="https://www.yanglaocn.com/shtml/bbsxx/2021-03/bbs161492931110350.html" target="_blank" title="行香子•为大爱书院养老中心题词"
+                                >行香子•为大爱书院养老中心题词</a>
+                            </h3>
+                            <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                                <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=13018" target="_blank" title="云迹天涯"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                                <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=13018" target="_blank">云迹天涯</a></label>
+                                <b>▪</b>
+                                <label><i class="el-icon-time"></i> 3月5日</label>
+                                <b>▪</b>
+                                <label><a href="https://www.yanglaocn.com/bbs/?tid=13" target="_blank" title="频道"><i class="el-icon-menu"></i> 文学创作</a></label>
+                                <b>▪</b>
+                                <label title="浏览次数"><i class="el-icon-view"></i> 36</label>
+                                <b>▪</b>
+                                <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                            </div>
+                        </div>
+                        <div class="yl_dongtai_img bbs_dongtai_img">
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-11/bbs160492953310323.html" target="_blank" title="行香子•为大爱书院养老中心题词"><img src="http://www.yanglaocn.com/images/upload/img/2020/11_09/4e6665105dcc04a69329f787eddee197.jpg" width="80" height="60"  border="0" alt="行香子•为大爱书院养老中心题词" /></a>
+                            <h3>
+                                <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-11/bbs160492953310323.html" target="_blank" title="行香子•为大爱书院养老中心题词"
+                                >行香子•为大爱书院养老中心题词</a>
+                            </h3>
+                            <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                                <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=13018" target="_blank" title="云迹天涯"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                                <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=13018" target="_blank">云迹天涯</a></label>
+                                <b>▪</b>
+                                <label><i class="el-icon-time"></i> 20-11-09 21:45</label>
+                                <b>▪</b>
+                                <label><a href="https://www.yanglaocn.com/bbs/?tid=13" target="_blank" title="频道"><i class="el-icon-menu"></i> 文学创作</a></label>
+                                <b>▪</b>
+                                <label title="浏览次数"><i class="el-icon-view"></i> 31</label>
+                                <b>▪</b>
+                                <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                            </div>
+                        </div>
+                        <div class="yl_dongtai_img bbs_dongtai_img">
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-10/bbs160250614710298.html" target="_blank" title="行香子•为大爱书院养老中心题词"><img src="http://www.yanglaocn.com/images/upload/img/2020/10_12/7a517aba157e51e6971604c2b2e2a9c6.jpg" width="80" height="60"  border="0" alt="行香子•为大爱书院养老中心题词" /></a>
+                            <h3>
+                                <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-10/bbs160250614710298.html" target="_blank" title="行香子•为大爱书院养老中心题词"
+                                >行香子•为大爱书院养老中心题词</a>
+                            </h3>
+                            <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                                <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=13018" target="_blank" title="云迹天涯"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                                <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=13018" target="_blank">云迹天涯</a></label>
+                                <b>▪</b>
+                                <label><i class="el-icon-time"></i> 20-10-12 20:35</label>
+                                <b>▪</b>
+                                <label><a href="https://www.yanglaocn.com/bbs/?tid=13" target="_blank" title="频道"><i class="el-icon-menu"></i> 文学创作</a></label>
+                                <b>▪</b>
+                                <label title="浏览次数"><i class="el-icon-view"></i> 22</label>
+                                <b>▪</b>
+                                <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                            </div>
+                        </div>
+                        <div class="yl_dongtai_img bbs_dongtai_img">
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-08/bbs159772262010283.html" target="_blank" title="沁园春•为大爱书院养老中心题词"><img src="http://www.yanglaocn.com/images/upload/img/2020/08_18/a62c59e8b7b34b851996e3710682a2b2.jpg" width="80" height="60"  border="0" alt="沁园春•为大爱书院养老中心题词" /></a>
+                            <h3>
+                                <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-08/bbs159772262010283.html" target="_blank" title="沁园春•为大爱书院养老中心题词"
+                                >沁园春•为大爱书院养老中心题词</a>
+                            </h3>
+                            <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                                <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=13018" target="_blank" title="云迹天涯"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                                <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=13018" target="_blank">云迹天涯</a></label>
+                                <b>▪</b>
+                                <label><i class="el-icon-time"></i> 20-08-18 11:50</label>
+                                <b>▪</b>
+                                <label><a href="https://www.yanglaocn.com/bbs/?tid=13" target="_blank" title="频道"><i class="el-icon-menu"></i> 文学创作</a></label>
+                                <b>▪</b>
+                                <label title="浏览次数"><i class="el-icon-view"></i> 98</label>
+                                <b>▪</b>
+                                <label title="回复"><i class="el-icon-chat-line-round"></i> 2</label>
+                            </div>
+                        </div>
+                        <div class="yl_dongtai_img bbs_dongtai_img">
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-08/bbs159772260910282.html" target="_blank" title="行香子•为大爱书院养老中心题词"><img src="http://www.yanglaocn.com/images/upload/img/2020/08_18/d03b778999e82c11261c998b82cec2f8.jpg" width="80" height="60"  border="0" alt="行香子•为大爱书院养老中心题词" /></a>
+                            <h3>
+                                <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-08/bbs159772260910282.html" target="_blank" title="行香子•为大爱书院养老中心题词"
+                                >行香子•为大爱书院养老中心题词</a>
+                            </h3>
+                            <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                                <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=13018" target="_blank" title="云迹天涯"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                                <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=13018" target="_blank">云迹天涯</a></label>
+                                <b>▪</b>
+                                <label><i class="el-icon-time"></i> 20-08-18 11:50</label>
+                                <b>▪</b>
+                                <label><a href="https://www.yanglaocn.com/bbs/?tid=13" target="_blank" title="频道"><i class="el-icon-menu"></i> 文学创作</a></label>
+                                <b>▪</b>
+                                <label title="浏览次数"><i class="el-icon-view"></i> 47</label>
+                                <b>▪</b>
+                                <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                            </div>
+                        </div>
+                        <div class="yl_dongtai_img bbs_dongtai_img">
+                            <h9>
+                                <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-07/bbs15635147729985.html" target="_blank" title="精心服务喜获赞，一篇诗词暖人心"
+                                >精心服务喜获赞，一篇诗词暖人心</a>
+                            </h9>
+                            <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                                <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=6435" target="_blank" title="孙丹"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                                <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=6435" target="_blank">孙丹</a></label>
+                                <b>▪</b>
+                                <label><i class="el-icon-time"></i> 19-07-19 13:39</label>
+                                <b>▪</b>
+                                <label><a href="https://www.yanglaocn.com/bbs/?tid=13" target="_blank" title="频道"><i class="el-icon-menu"></i> 文学创作</a></label>
+                                <b>▪</b>
+                                <label title="浏览次数"><i class="el-icon-view"></i> 74</label>
+                                <b>▪</b>
+                                <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                            </div>
+                        </div>
+                        <div class="yl_dongtai_img bbs_dongtai_img">
+                            <h9>
+                                <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-06/bbs15597825069885.html" target="_blank" title="养老服务驿站有感"
+                                >养老服务驿站有感</a>
+                            </h9>
+                            <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                                <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=6435" target="_blank" title="孙丹"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                                <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=6435" target="_blank">孙丹</a></label>
+                                <b>▪</b>
+                                <label><i class="el-icon-time"></i> 19-06-06 08:55</label>
+                                <b>▪</b>
+                                <label><a href="https://www.yanglaocn.com/bbs/?tid=13" target="_blank" title="频道"><i class="el-icon-menu"></i> 文学创作</a></label>
+                                <b>▪</b>
+                                <label title="浏览次数"><i class="el-icon-view"></i> 109</label>
+                                <b>▪</b>
+                                <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                            </div>
+                        </div>
+                        <div class="yl_dongtai_img bbs_dongtai_img">
+                            <h9>
+                                <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-05/bbs15584857789859.html" target="_blank" title="易来福万科养老服务驿站智慧老人-何叔叔养生决（2）"
+                                >易来福万科养老服务驿站智慧老人-何叔叔养生决（2）</a>
+                            </h9>
+                            <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                                <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=6435" target="_blank" title="孙丹"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                                <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=6435" target="_blank">孙丹</a></label>
+                                <b>▪</b>
+                                <label><i class="el-icon-time"></i> 19-05-22 08:42</label>
+                                <b>▪</b>
+                                <label><a href="https://www.yanglaocn.com/bbs/?tid=13" target="_blank" title="频道"><i class="el-icon-menu"></i> 文学创作</a></label>
+                                <b>▪</b>
+                                <label title="浏览次数"><i class="el-icon-view"></i> 139</label>
+                                <b>▪</b>
+                                <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                            </div>
+                        </div>
+                        <div class="yl_dongtai_img bbs_dongtai_img">
+                            <h9>
+                                <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-05/bbs15584012799856.html" target="_blank" title="易来福万科养老服务驿站智慧老人-何叔叔养生决（1）"
+                                >易来福万科养老服务驿站智慧老人-何叔叔养生决（1）</a>
+                            </h9>
+                            <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                                <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=6435" target="_blank" title="孙丹"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                                <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=6435" target="_blank">孙丹</a></label>
+                                <b>▪</b>
+                                <label><i class="el-icon-time"></i> 19-05-21 09:14</label>
+                                <b>▪</b>
+                                <label><a href="https://www.yanglaocn.com/bbs/?tid=13" target="_blank" title="频道"><i class="el-icon-menu"></i> 文学创作</a></label>
+                                <b>▪</b>
+                                <label title="浏览次数"><i class="el-icon-view"></i> 105</label>
+                                <b>▪</b>
+                                <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                            </div>
+                        </div>
+                        <div class="yl_dongtai_img bbs_dongtai_img">
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-05/bbs15583181589853.html" target="_blank" title="《可敬的护理员》颐康长者原创诗词欣赏"><img src="http://www.yanglaocn.com/images/upload/img/2019/05_20/7130d2ab4131b38b5e39016d19e1e36c.jpg" width="80" height="60"  border="0" alt="《可敬的护理员》颐康长者原创诗词欣赏" /></a>
+                            <h3>
+                                <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-05/bbs15583181589853.html" target="_blank" title="《可敬的护理员》颐康长者原创诗词欣赏"
+                                >《可敬的护理员》颐康长者原创诗词欣赏</a>
+                            </h3>
+                            <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                                <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=6980" target="_blank" title="颐康84546988"><img src="https://www.yanglaocn.com/images/upload/img/2013/08-04/f7dbb80109006c9e5448c95e9ece23f8.jpg"></a></span>
+                                <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=6980" target="_blank">颐康84546988</a></label>
+                                <b>▪</b>
+                                <label><i class="el-icon-time"></i> 19-05-20 10:09</label>
+                                <b>▪</b>
+                                <label><a href="https://www.yanglaocn.com/bbs/?tid=13" target="_blank" title="频道"><i class="el-icon-menu"></i> 文学创作</a></label>
+                                <b>▪</b>
+                                <label title="浏览次数"><i class="el-icon-view"></i> 159</label>
+                                <b>▪</b>
+                                <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                            </div>
+                        </div>
+                        <div class="yl_dongtai_img bbs_dongtai_img">
+                            <h9>
+                                <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-01/bbs15483120579651.html" target="_blank" title="上海日月星养老院，书法比赛获奖"
+                                >上海日月星养老院，书法比赛获奖</a>
+                            </h9>
+                            <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                                <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8853" target="_blank" title="爱以德日月星"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                                <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8853" target="_blank">爱以德日月星</a></label>
+                                <b>▪</b>
+                                <label><i class="el-icon-time"></i> 19-01-24 14:40</label>
+                                <b>▪</b>
+                                <label><a href="https://www.yanglaocn.com/bbs/?tid=13" target="_blank" title="频道"><i class="el-icon-menu"></i> 文学创作</a></label>
+                                <b>▪</b>
+                                <label title="浏览次数"><i class="el-icon-view"></i> 111</label>
+                                <b>▪</b>
+                                <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                            </div>
+                        </div>
+                        <div class="yl_dongtai_img bbs_dongtai_img">
+                            <h9>
+                                <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-12/bbs15455192769583.html" target="_blank" title="河北队抒情"
+                                >河北队抒情</a>
+                            </h9>
+                            <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                                <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=9201" target="_blank" title="13820192102"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                                <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=9201" target="_blank">13820192102</a></label>
+                                <b>▪</b>
+                                <label><i class="el-icon-time"></i> 18-12-23 06:54</label>
+                                <b>▪</b>
+                                <label><a href="https://www.yanglaocn.com/bbs/?tid=13" target="_blank" title="频道"><i class="el-icon-menu"></i> 文学创作</a></label>
+                                <b>▪</b>
+                                <label title="浏览次数"><i class="el-icon-view"></i> 187</label>
+                                <b>▪</b>
+                                <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                            </div>
+                        </div>
+                        <div class="yl_dongtai_img bbs_dongtai_img">
+                            <h9>
+                                <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-12/bbs15444868749550.html" target="_blank" title="沂蒙儿女少年春亮推母治病的故事"
+                                >沂蒙儿女少年春亮推母治病的故事</a>
+                            </h9>
+                            <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                                <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=9196" target="_blank" title="脏腑点穴正骨"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                                <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=9196" target="_blank">脏腑点穴正骨</a></label>
+                                <b>▪</b>
+                                <label><i class="el-icon-time"></i> 18-12-11 08:07</label>
+                                <b>▪</b>
+                                <label><a href="https://www.yanglaocn.com/bbs/?tid=13" target="_blank" title="频道"><i class="el-icon-menu"></i> 文学创作</a></label>
+                                <b>▪</b>
+                                <label title="浏览次数"><i class="el-icon-view"></i> 243</label>
+                                <b>▪</b>
+                                <label title="回复"><i class="el-icon-chat-line-round"></i> 1</label>
+                            </div>
+                        </div>
+                        <div class="yl_dongtai_img bbs_dongtai_img">
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-12/bbs15441729709542.html" target="_blank" title="上海日月星养老院：“十分上海”纪录片感悟"><img src="http://www.yanglaocn.com/images/upload/img/2018/12_07/2153a528f5ac71e26b40232a8fa8e920.jpg" width="80" height="60"  border="0" alt="上海日月星养老院：“十分上海”纪录片感悟" /></a>
+                            <h3>
+                                <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-12/bbs15441729709542.html" target="_blank" title="上海日月星养老院：“十分上海”纪录片感悟"
+                                >上海日月星养老院：“十分上海”纪录片感悟</a>
+                            </h3>
+                            <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                                <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8853" target="_blank" title="爱以德日月星"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                                <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8853" target="_blank">爱以德日月星</a></label>
+                                <b>▪</b>
+                                <label><i class="el-icon-time"></i> 18-12-07 16:56</label>
+                                <b>▪</b>
+                                <label><a href="https://www.yanglaocn.com/bbs/?tid=13" target="_blank" title="频道"><i class="el-icon-menu"></i> 文学创作</a></label>
+                                <b>▪</b>
+                                <label title="浏览次数"><i class="el-icon-view"></i> 284</label>
+                                <b>▪</b>
+                                <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                            </div>
+                        </div>
+                        <div class="yl_dongtai_img bbs_dongtai_img">
+                            <h9>
+                                <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-09/bbs15367171559333.html" target="_blank" title="十五夜望月"
+                                >十五夜望月</a>
+                            </h9>
+                            <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                                <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8416" target="_blank" title="zzyylzh"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                                <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8416" target="_blank">zzyylzh</a></label>
+                                <b>▪</b>
+                                <label><i class="el-icon-time"></i> 18-09-12 09:52</label>
+                                <b>▪</b>
+                                <label><a href="https://www.yanglaocn.com/bbs/?tid=13" target="_blank" title="频道"><i class="el-icon-menu"></i> 文学创作</a></label>
+                                <b>▪</b>
+                                <label title="浏览次数"><i class="el-icon-view"></i> 284</label>
+                                <b>▪</b>
+                                <label title="回复"><i class="el-icon-chat-line-round"></i> 1</label>
+                            </div>
+                        </div>
+                        <div class="yl_dongtai_img bbs_dongtai_img">
+                            <h9>
+                                <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-09/bbs15361262689305.html" target="_blank" title="逢雪宿芙蓉山"
+                                >逢雪宿芙蓉山</a>
+                            </h9>
+                            <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                                <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8416" target="_blank" title="zzyylzh"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                                <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8416" target="_blank">zzyylzh</a></label>
+                                <b>▪</b>
+                                <label><i class="el-icon-time"></i> 18-09-05 13:44</label>
+                                <b>▪</b>
+                                <label><a href="https://www.yanglaocn.com/bbs/?tid=13" target="_blank" title="频道"><i class="el-icon-menu"></i> 文学创作</a></label>
+                                <b>▪</b>
+                                <label title="浏览次数"><i class="el-icon-view"></i> 173</label>
+                                <b>▪</b>
+                                <label title="回复"><i class="el-icon-chat-line-round"></i> 1</label>
+                            </div>
+                        </div>
+                        <div class="yl_dongtai_img bbs_dongtai_img">
+                            <h9>
+                                <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-09/bbs15360450729299.html" target="_blank" title="饮酒其四"
+                                >饮酒其四</a>
+                            </h9>
+                            <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                                <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8416" target="_blank" title="zzyylzh"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                                <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8416" target="_blank">zzyylzh</a></label>
+                                <b>▪</b>
+                                <label><i class="el-icon-time"></i> 18-09-04 15:11</label>
+                                <b>▪</b>
+                                <label><a href="https://www.yanglaocn.com/bbs/?tid=13" target="_blank" title="频道"><i class="el-icon-menu"></i> 文学创作</a></label>
+                                <b>▪</b>
+                                <label title="浏览次数"><i class="el-icon-view"></i> 308</label>
+                                <b>▪</b>
+                                <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                            </div>
+                        </div>
+                        <div class="yl_dongtai_img bbs_dongtai_img">
+                            <h9>
+                                <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-09/bbs15360450539298.html" target="_blank" title="枫桥夜泊"
+                                >枫桥夜泊</a>
+                            </h9>
+                            <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                                <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8423" target="_blank" title="nngb2018"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                                <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8423" target="_blank">nngb2018</a></label>
+                                <b>▪</b>
+                                <label><i class="el-icon-time"></i> 18-09-04 15:10</label>
+                                <b>▪</b>
+                                <label><a href="https://www.yanglaocn.com/bbs/?tid=13" target="_blank" title="频道"><i class="el-icon-menu"></i> 文学创作</a></label>
+                                <b>▪</b>
+                                <label title="浏览次数"><i class="el-icon-view"></i> 180</label>
+                                <b>▪</b>
+                                <label title="回复"><i class="el-icon-chat-line-round"></i> 2</label>
+                            </div>
+                        </div>
+                        <div class="yl_dongtai_img bbs_dongtai_img">
+                            <h9>
+                                <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-09/bbs15359618329292.html" target="_blank" title="春夜喜雨"
+                                >春夜喜雨</a>
+                            </h9>
+                            <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                                <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8416" target="_blank" title="zzyylzh"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                                <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8416" target="_blank">zzyylzh</a></label>
+                                <b>▪</b>
+                                <label><i class="el-icon-time"></i> 18-09-03 16:03</label>
+                                <b>▪</b>
+                                <label><a href="https://www.yanglaocn.com/bbs/?tid=13" target="_blank" title="频道"><i class="el-icon-menu"></i> 文学创作</a></label>
+                                <b>▪</b>
+                                <label title="浏览次数"><i class="el-icon-view"></i> 71</label>
+                                <b>▪</b>
+                                <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                            </div>
+                        </div>
+                        <div class="yl_dongtai_img bbs_dongtai_img">
+                            <h9>
+                                <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-09/bbs15359604929290.html" target="_blank" title="水槛遣心"
+                                >水槛遣心</a>
+                            </h9>
+                            <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                                <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8423" target="_blank" title="nngb2018"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                                <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8423" target="_blank">nngb2018</a></label>
+                                <b>▪</b>
+                                <label><i class="el-icon-time"></i> 18-09-03 15:41</label>
+                                <b>▪</b>
+                                <label><a href="https://www.yanglaocn.com/bbs/?tid=13" target="_blank" title="频道"><i class="el-icon-menu"></i> 文学创作</a></label>
+                                <b>▪</b>
+                                <label title="浏览次数"><i class="el-icon-view"></i> 84</label>
+                                <b>▪</b>
+                                <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                            </div>
+                        </div><div class="moodload moodloadjiaW LoadmoreJS" page="1" moodtab="fabu" onoff="1" etab="fabu">点击加载更多</div>
+                    </div>
+                </el-tab-pane>
+                <el-tab-pane label="最新回复" name="huifu">
+
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-08/bbs159772262010283.html" target="_blank" title="沁园春•为大爱书院养老中心题词"><img src="http://www.yanglaocn.com/images/upload/img/2020/08_18/a62c59e8b7b34b851996e3710682a2b2.jpg" width="80" height="60"  border="0" alt="沁园春•为大爱书院养老中心题词" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-08/bbs159772262010283.html" target="_blank" title="沁园春•为大爱书院养老中心题词"
+                            >沁园春•为大爱书院养老中心题词</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=13018" target="_blank" title="云迹天涯"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=13018" target="_blank">云迹天涯</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 20-08-18 11:50</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=13" target="_blank" title="频道"><i class="el-icon-menu"></i> 文学创作</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 98</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 2</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-12/bbs15444868749550.html" target="_blank" title="沂蒙儿女少年春亮推母治病的故事"
+                            >沂蒙儿女少年春亮推母治病的故事</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=9196" target="_blank" title="脏腑点穴正骨"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=9196" target="_blank">脏腑点穴正骨</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 18-12-11 08:07</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=13" target="_blank" title="频道"><i class="el-icon-menu"></i> 文学创作</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 243</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 1</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-09/bbs15361262689305.html" target="_blank" title="逢雪宿芙蓉山"
+                            >逢雪宿芙蓉山</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8416" target="_blank" title="zzyylzh"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8416" target="_blank">zzyylzh</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 18-09-05 13:44</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=13" target="_blank" title="频道"><i class="el-icon-menu"></i> 文学创作</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 173</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 1</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-09/bbs15367171559333.html" target="_blank" title="十五夜望月"
+                            >十五夜望月</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8416" target="_blank" title="zzyylzh"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8416" target="_blank">zzyylzh</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 18-09-12 09:52</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=13" target="_blank" title="频道"><i class="el-icon-menu"></i> 文学创作</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 284</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 1</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-08/bbs15356838869281.html" target="_blank" title="野田黄雀行"
+                            >野田黄雀行</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8423" target="_blank" title="nngb2018"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8423" target="_blank">nngb2018</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 18-08-31 10:51</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=13" target="_blank" title="频道"><i class="el-icon-menu"></i> 文学创作</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 70</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 1</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-09/bbs15360450539298.html" target="_blank" title="枫桥夜泊"
+                            >枫桥夜泊</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8423" target="_blank" title="nngb2018"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8423" target="_blank">nngb2018</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 18-09-04 15:10</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=13" target="_blank" title="频道"><i class="el-icon-menu"></i> 文学创作</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 180</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 2</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-08/bbs15350918759236.html" target="_blank" title="春夜洛城闻笛"
+                            >春夜洛城闻笛</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8416" target="_blank" title="zzyylzh"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8416" target="_blank">zzyylzh</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 18-08-24 14:24</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=13" target="_blank" title="频道"><i class="el-icon-menu"></i> 文学创作</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 144</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 1</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-08/bbs15344731109196.html" target="_blank" title="牛郎织女"
+                            >牛郎织女</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8419" target="_blank" title="天下无双good"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8419" target="_blank">天下无双good</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 18-08-17 10:31</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=13" target="_blank" title="频道"><i class="el-icon-menu"></i> 文学创作</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 187</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 1</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-08/bbs15349894059226.html" target="_blank" title="读《山海经》其一"
+                            >读《山海经》其一</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8416" target="_blank" title="zzyylzh"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8416" target="_blank">zzyylzh</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 18-08-23 09:56</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=13" target="_blank" title="频道"><i class="el-icon-menu"></i> 文学创作</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 151</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 1</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-08/bbs15343808449191.html" target="_blank" title="思乡之情"
+                            >思乡之情</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8419" target="_blank" title="天下无双good"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8419" target="_blank">天下无双good</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 18-08-16 08:54</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=13" target="_blank" title="频道"><i class="el-icon-menu"></i> 文学创作</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 116</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 1</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2017-03/bbs14906280787188.html" target="_blank" title="竞志鸟"
+                            >竞志鸟</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=6151" target="_blank" title="wunijuan88"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=6151" target="_blank">wunijuan88</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 17-03-27 23:21</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=13" target="_blank" title="频道"><i class="el-icon-menu"></i> 文学创作</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 161</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 1</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2017-03/bbs14906282387190.html" target="_blank" title="口罩与天使"
+                            >口罩与天使</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=6151" target="_blank" title="wunijuan88"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=6151" target="_blank">wunijuan88</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 17-03-27 23:23</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=13" target="_blank" title="频道"><i class="el-icon-menu"></i> 文学创作</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 305</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 1</label>
+                        </div>
+                    </div><div class="moodload moodloadjiaW LoadmoreJS" page="1" moodtab="huifu" onoff="1" etab="huifu">点击加载更多</div>
+                </el-tab-pane>
+                <el-tab-pane label="热点" name="hot">
+
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-08/bbs15354276959250.html" target="_blank" title="五古吟天井"
+                            >五古吟天井</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8423" target="_blank" title="nngb2018"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8423" target="_blank">nngb2018</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 18-08-28 11:41</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=13" target="_blank" title="频道"><i class="el-icon-menu"></i> 文学创作</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 1140</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div><div class="moodload moodloadjiaW LoadmoreJS" page="1" moodtab="hot" onoff="1" etab="hot">点击加载更多</div>
+                </el-tab-pane>
+                <el-tab-pane label="书画艺术" name="14">
+
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-07/bbs159417326510274.html" target="_blank" title="献礼党的99华诞------《王倩兮中国画展》"><img src="http://www.yanglaocn.com/images/upload/img/2020/07_08/a071fe2df98695bd4ce72a0ec65485e6.jpg" width="80" height="60"  border="0" alt="献礼党的99华诞------《王倩兮中国画展》" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-07/bbs159417326510274.html" target="_blank" title="献礼党的99华诞------《王倩兮中国画展》"
+                            >献礼党的99华诞------《王倩兮中国画展》</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=12820" target="_blank" title="王倩兮"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=12820" target="_blank">王倩兮</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 20-07-08 09:54</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=14" target="_blank" title="频道"><i class="el-icon-menu"></i> 书画艺术</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 51</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-07/bbs159417308510273.html" target="_blank" title="王倩兮画展------献给我深爱的父亲母亲"><img src="http://www.yanglaocn.com/images/upload/img/2020/07_08/7a126e3701b7e3668061e1cc360510cc.png" width="80" height="60"  border="0" alt="王倩兮画展------献给我深爱的父亲母亲" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-07/bbs159417308510273.html" target="_blank" title="王倩兮画展------献给我深爱的父亲母亲"
+                            >王倩兮画展------献给我深爱的父亲母亲</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=12820" target="_blank" title="王倩兮"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=12820" target="_blank">王倩兮</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 20-07-08 09:51</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=14" target="_blank" title="频道"><i class="el-icon-menu"></i> 书画艺术</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 64</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-07/bbs159417301510272.html" target="_blank" title="翰墨丹青战疫情---王倩兮参展作品"><img src="http://www.yanglaocn.com/images/upload/img/2020/07_08/54ea5a47cd3254b48c0ce12d8a10fad6.jpg" width="80" height="60"  border="0" alt="翰墨丹青战疫情---王倩兮参展作品" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-07/bbs159417301510272.html" target="_blank" title="翰墨丹青战疫情---王倩兮参展作品"
+                            >翰墨丹青战疫情---王倩兮参展作品</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=12820" target="_blank" title="王倩兮"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=12820" target="_blank">王倩兮</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 20-07-08 09:50</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=14" target="_blank" title="频道"><i class="el-icon-menu"></i> 书画艺术</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 43</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-07/bbs159417300510271.html" target="_blank" title="庆祝中国共产党成立99周年---王倩兮参展作品《忠魂永驻》"><img src="http://www.yanglaocn.com/images/upload/img/2020/07_08/0f57ba6943be2c1dc71c6ef8b94f0764.jpg" width="80" height="60"  border="0" alt="庆祝中国共产党成立99周年---王倩兮参展作品《忠魂永驻》" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-07/bbs159417300510271.html" target="_blank" title="庆祝中国共产党成立99周年---王倩兮参展作品《忠魂永驻》"
+                            >庆祝中国共产党成立99周年---王倩兮参展作品《忠魂永驻》</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=12820" target="_blank" title="王倩兮"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=12820" target="_blank">王倩兮</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 20-07-08 09:50</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=14" target="_blank" title="频道"><i class="el-icon-menu"></i> 书画艺术</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 34</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-06/bbs15593599279874.html" target="_blank" title="尊老敬老，代代相传慈心恩重，慧行孝本"
+                            >尊老敬老，代代相传慈心恩重，慧行孝本</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=9622" target="_blank" title="15978163192"><img src="https://www.yanglaocn.com/images/upload/individualimages/2019/02-22/be0bdd1eafe3066ade5328d8ea4c94f2.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=9622" target="_blank">15978163192</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 19-06-01 11:32</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=14" target="_blank" title="频道"><i class="el-icon-menu"></i> 书画艺术</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 172</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-05/bbs15590902129869.html" target="_blank" title="美好家园养老院奶奶们的画画日常"><img src="http://www.yanglaocn.com/images/upload/img/2019/05_29/3e1e4de8df7d09e8cce46b8b428010de.jpg" width="80" height="60"  border="0" alt="美好家园养老院奶奶们的画画日常" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-05/bbs15590902129869.html" target="_blank" title="美好家园养老院奶奶们的画画日常"
+                            >美好家园养老院奶奶们的画画日常</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=9622" target="_blank" title="15978163192"><img src="https://www.yanglaocn.com/images/upload/individualimages/2019/02-22/be0bdd1eafe3066ade5328d8ea4c94f2.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=9622" target="_blank">15978163192</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 19-05-29 08:36</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=14" target="_blank" title="频道"><i class="el-icon-menu"></i> 书画艺术</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 162</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 11</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-05/bbs15590044769867.html" target="_blank" title="易来福老人画作，每一位老人都是上天赐给我们的宝物"><img src="http://www.yanglaocn.com/images/upload/img/2019/05_28/8a7ea25011e035abf30b7a60159a2755.jpg" width="80" height="60"  border="0" alt="易来福老人画作，每一位老人都是上天赐给我们的宝物" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-05/bbs15590044769867.html" target="_blank" title="易来福老人画作，每一位老人都是上天赐给我们的宝物"
+                            >易来福老人画作，每一位老人都是上天赐给我们的宝物</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=6435" target="_blank" title="孙丹"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=6435" target="_blank">孙丹</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 19-05-28 08:47</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=14" target="_blank" title="频道"><i class="el-icon-menu"></i> 书画艺术</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 110</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-05/bbs15589617469866.html" target="_blank" title="借字祝全网老人笑口常开"><img src="http://www.yanglaocn.com/images/upload/img/2019/05_27/0e0ff1af7603bd5b2279c2e4235cb0c5.png" width="80" height="60"  border="0" alt="借字祝全网老人笑口常开" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-05/bbs15589617469866.html" target="_blank" title="借字祝全网老人笑口常开"
+                            >借字祝全网老人笑口常开</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=6435" target="_blank" title="孙丹"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=6435" target="_blank">孙丹</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 19-05-27 20:55</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=14" target="_blank" title="频道"><i class="el-icon-menu"></i> 书画艺术</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 133</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-05/bbs15583381159854.html" target="_blank" title="点点滴滴画中情——易来福老人赠送画作"><img src="http://www.yanglaocn.com/images/upload/img/2019/05_20/77c83eb046db7b574dfe91ee060eeb5f.jpg" width="80" height="60"  border="0" alt="点点滴滴画中情——易来福老人赠送画作" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-05/bbs15583381159854.html" target="_blank" title="点点滴滴画中情——易来福老人赠送画作"
+                            >点点滴滴画中情——易来福老人赠送画作</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=6435" target="_blank" title="孙丹"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=6435" target="_blank">孙丹</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 19-05-20 15:41</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=14" target="_blank" title="频道"><i class="el-icon-menu"></i> 书画艺术</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 153</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-05/bbs15573988249834.html" target="_blank" title="泰康养老社区的“艺术人生”"><img src="http://www.yanglaocn.com/images/upload/img/2019/05_09/b80305ba5d619d3f80f670158b1b69ae.jpg" width="80" height="60"  border="0" alt="泰康养老社区的“艺术人生”" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-05/bbs15573988249834.html" target="_blank" title="泰康养老社区的“艺术人生”"
+                            >泰康养老社区的“艺术人生”</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank" title="最爱夕阳红"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank">最爱夕阳红</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 19-05-09 18:47</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=14" target="_blank" title="频道"><i class="el-icon-menu"></i> 书画艺术</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 1028</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-10/bbs15397660539423.html" target="_blank" title="盛泉杯“大美荣成”全国剪纸大展在盛泉开幕"><img src="http://www.yanglaocn.com/images/upload/img/2018/10_17/a004958a1f49bc7a576af42b9834f09b.jpg" width="80" height="60"  border="0" alt="盛泉杯“大美荣成”全国剪纸大展在盛泉开幕" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-10/bbs15397660539423.html" target="_blank" title="盛泉杯“大美荣成”全国剪纸大展在盛泉开幕"
+                            >盛泉杯“大美荣成”全国剪纸大展在盛泉开幕</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=5744" target="_blank" title="想养老来盛泉"><img src="https://www.yanglaocn.com/images/upload/individualimages/2017/01-11/f80e336591a455a57f39931771373bc8.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=5744" target="_blank">想养老来盛泉</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 18-10-17 16:47</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=14" target="_blank" title="频道"><i class="el-icon-menu"></i> 书画艺术</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 1377</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-07/bbs15325067709146.html" target="_blank" title="看看这字怎么样"><img src="http://www.yanglaocn.com/images/upload/img/2018/07_25/a63b2c66e8f4170dc27ab297b81ca950.jpg" width="80" height="60"  border="0" alt="看看这字怎么样" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-07/bbs15325067709146.html" target="_blank" title="看看这字怎么样"
+                            >看看这字怎么样</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8361" target="_blank" title="康健养老"><img src="https://www.yanglaocn.com/images/upload/img/2020/09-09/6f762704dbdaa94e3ef7cc5ea5cdd7a7.png"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8361" target="_blank">康健养老</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 18-07-25 16:19</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=14" target="_blank" title="频道"><i class="el-icon-menu"></i> 书画艺术</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 153</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2017-06/bbs14984402227744.html" target="_blank" title="民间艺术团，社会各界爱心人士来我公寓为老人表演节目"
+                            >民间艺术团，社会各界爱心人士来我公寓为老人表演节目</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=6582" target="_blank" title="丹东宽甸仁泰老年公寓"><img src="https://www.yanglaocn.com/images/upload/individualimages/2017/06-26/668a435d2c0deaaca4ffffc36df59c40.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=6582" target="_blank">丹东宽甸仁泰老年公寓</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 17-06-26 09:23</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=14" target="_blank" title="频道"><i class="el-icon-menu"></i> 书画艺术</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 202</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2017-05/bbs14953349777525.html" target="_blank" title="文化传承是中华民族的灵魂"
+                            >文化传承是中华民族的灵魂</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=5744" target="_blank" title="想养老来盛泉"><img src="https://www.yanglaocn.com/images/upload/individualimages/2017/01-11/f80e336591a455a57f39931771373bc8.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=5744" target="_blank">想养老来盛泉</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 17-05-21 10:49</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=14" target="_blank" title="频道"><i class="el-icon-menu"></i> 书画艺术</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 478</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 1</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2016-06/bbs14662295465379.html" target="_blank" title="长辈的墨宝"><img src="http://www.yanglaocn.com/images/upload/img/2016/06_18/1267905a0d1b609a31731ab064dea13a.jpg" width="80" height="60"  border="0" alt="长辈的墨宝" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2016-06/bbs14662295465379.html" target="_blank" title="长辈的墨宝"
+                            >长辈的墨宝</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=4268" target="_blank" title="秋叶飞霜"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=4268" target="_blank">秋叶飞霜</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 16-06-18 13:59</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=14" target="_blank" title="频道"><i class="el-icon-menu"></i> 书画艺术</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 460</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 3</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2016-04/bbs14619199255095.html" target="_blank" title="翰墨飘香，丹青溢彩，尽在燕达养老春季书画摄影展"
+                            >翰墨飘香，丹青溢彩，尽在燕达养老春季书画摄影展</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=1670" target="_blank" title="yanda2014"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=1670" target="_blank">yanda2014</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 16-04-29 16:56</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=14" target="_blank" title="频道"><i class="el-icon-menu"></i> 书画艺术</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 486</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2016-03/bbs14593336474971.html" target="_blank" title="一身诗意深千瀑，泼墨丹青总关情访燕达吕德康王喜兰夫妇"
+                            >一身诗意深千瀑，泼墨丹青总关情访燕达吕德康王喜兰夫妇</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=1670" target="_blank" title="yanda2014"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=1670" target="_blank">yanda2014</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 16-03-30 18:27</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=14" target="_blank" title="频道"><i class="el-icon-menu"></i> 书画艺术</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 401</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2016-02/bbs14564704714718.html" target="_blank" title="书画赏析"
+                            >书画赏析</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=4064" target="_blank" title="静扬"><img src="https://www.yanglaocn.com/images/upload/img/2011/11-01/03ddb55e49ab9112538b7aadd78dde0f.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=4064" target="_blank">静扬</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 16-02-26 15:08</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=14" target="_blank" title="频道"><i class="el-icon-menu"></i> 书画艺术</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 418</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2015-09/bbs14429991114047.html" target="_blank" title="毕节市小坝镇新场村老龄协会舞蹈队员们"
+                            >毕节市小坝镇新场村老龄协会舞蹈队员们</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=3238" target="_blank" title="徐志友"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=3238" target="_blank">徐志友</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 15-09-23 17:05</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=14" target="_blank" title="频道"><i class="el-icon-menu"></i> 书画艺术</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 258</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2015-04/bbs14286413362773.html" target="_blank" title="春风兰开画法"
+                            >春风兰开画法</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=1012" target="_blank" title="休闲老翁"><img src="https://www.yanglaocn.com/images/upload/img/2013/08-04/6f5a5499ab158cafe5cb4fc67c955017.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=1012" target="_blank">休闲老翁</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 15-04-10 12:51</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=14" target="_blank" title="频道"><i class="el-icon-menu"></i> 书画艺术</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 628</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 3</label>
+                        </div>
+                    </div><div class="moodload moodloadjiaW LoadmoreJS" page="1" moodtab="14" etab="14" onoff="1">点击加载更多</div>
+                </el-tab-pane>
+            </el-tabs>
+        </div>
+    </div>
+</div>
+
+<div class="main_wide">
+    <div id="footer">
+        <ul>
+            <li><a href="https://www.yanglaocn.com/" title="养老信息网" onFocus="this.blur()">网站首页</a></li>
+            <li><a href="https://www.yanglaocn.com/aboutus/" title="关于我们" onFocus="this.blur()">关于我们</a></li>
+            <li><a href="https://www.yanglaocn.com/bbs/" title="养老社区" onFocus="this.blur()">养老社区</a></li>
+            <li><a href="https://www.yanglaocn.com/yanglaoyuan/" title="养老院查询" onFocus="this.blur()">养老院查询</a></li>
+            <li><a href="https://www.yanglaocn.com/webmap/" title="网站地图" onFocus="this.blur()">网站地图</a></li>
+            <li><a href="https://www.yanglaocn.com/contactus/" title="联系我们" onFocus="this.blur()">联系我们</a></li>
+            <li><a href="https://www.yanglaocn.com/disclaimer/" title="免责声明" onFocus="this.blur()">免责声明</a></li>
+        </ul>
+        <ul>
+            <li>版权所有：<a href="https://www.yanglaocn.com" target="_blank" onFocus="this.blur()">养老信息网</a></li>
+            <li>备案号:<a href="https://beian.miit.gov.cn" target="_blank">京ICP备13014276号-1</a></li>
+        </ul>
+        <ul><li>声明：本网站部分信息及图片来源于网络，如侵犯了您的权益或版权，请及时告知我们予以删除！</li></ul>
+        <ul>
+            <li>E-mail:yanglaocn@yanglaocn.com  /  yanglaocn@163.com</li>
+            <li>QQ:159220868&nbsp;/&nbsp;248411521</li>
+            <!--<li><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=159220868&site=qq&menu=yes" onFocus="this.blur()"><img border="0" src="http://wpa.qq.com/pa?p=2:159220868:41 &r=0.7478782087742928" alt="养老信息网(www.yanglaocn.com)欢迎您！" title="养老信息网(www.yanglaocn.com)欢迎您" align="absbottom"></a></li>
+            <li><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=248411521&site=qq&menu=yes" onFocus="this.blur()"><img border="0" src="http://wpa.qq.com/pa?p=2:248411521:41" alt="养老信息网(www.yanglaocn.com)欢迎您！" title="养老信息网(www.yanglaocn.com)欢迎您！" align="absbottom"></a></li>-->
+        </ul>
+    </div>
+</div>
+<!-- 右侧飘浮代码 开始 -->
+<div id="service">
+    <a href="javascript:void(0)" class="elderlyregistration" id="elderlyregistration_tip">长者入住登记</a>
+    <a href="javascript:void(0)" class="weixin" id="weixin_tip" onclick="javascript:PtipWeiXinShow();">公众微信</a>
+    <a href="javascript:void(0)" class="srvLog" onclick="javascript:ShowFeedback();">意见或建议</a>
+    <a class="goTop" id="goTop" title="返回顶部" style="display:none">返回顶部</a>
+</div>
+
+<div id="success" class="success-message" style="display: none">
+    <img src="icon/正确.png" alt="" />
+    <h3 class="success-text">成功消息框</h3>
+</div>
+<div id="warning" class="warning-message" style="display: none">
+    <img src="icon/警告.png" alt="" />
+    <h3 class="warning-text">警告消息框</h3>
+</div>
+
+<script src="../../static/js/response.js"></script>
+<script src="../../static/js/banner.js"></script>
+<script>
+    window.onload = function () {
+        var last = document.referrer;
+        console.log(last);
+        if (
+            last == "http://127.0.0.1:5500/login.html" ||
+            last == "http://172.16.160.43/" ||
+            last == "http://172.16.160.43/login.html"
+        ) {
+            success_message_come(success, "登录成功！");
+        }
+        banner();
+    };
+</script>
+<!-- 代码 结束 -->
+<script type="text/javascript" src="https://www.yanglaocn.com/js/function.js"></script>
+<script type="text/javascript" src="https://www.yanglaocn.com/js/jquery.media.js"></script>
+<script type="text/javascript" src="https://www.yanglaocn.com/artDialog/artDialog.js"></script>
+<script type="text/javascript" src="https://www.yanglaocn.com/js/artDialogFun.js"></script>
+<script type="text/javascript" src="https://www.yanglaocn.com/js/index.js"></script>
+<script type="text/javascript" src="https://www.yanglaocn.com/js/newsleft.js" ></script>
+<script type="text/javascript" src="https://www.yanglaocn.com/js/layui/layui.js"></script>
+<script type="text/javascript" src="https://www.yanglaocn.com/js/vue.min.js" ></script>
+<script type="text/javascript" src="https://www.yanglaocn.com/js/element/element.min.js" ></script>
+<script type="text/javascript" src="https://www.yanglaocn.com/js/index_vue.js"></script>
+<script type="text/javascript" language="javascript">
+    //右下角滑动通知
+    var intervalProcess;
+    GetInstantMessage();
+
+    intervalProcess = window.setInterval(function(){
+        GetInstantMessage();
+    },20000);
+
+    window.onfocus = function() {//当前窗口被激活
+        GetInstantMessage();
+        intervalProcess = window.setInterval(function(){
+            GetInstantMessage();
+        },20000);
+    }
+    window.onblur = function() {//当前窗口没有激活
+        clearInterval(intervalProcess);
+    }
+    <!-- 加入收藏代码 Start -->
+    function AddFavorite(sURL, sTitle) {
+        try {
+            window.external.addFavorite(sURL, sTitle);
+        } catch (e) {
+            try {
+                window.sidebar.addPanel(sTitle, sURL, "");
+            } catch (e) {
+                alert("加入收藏失败,请手动添加.");
+            }
+        }
+    }
+    <!-- 加入收藏代码 End -->
+    <!-- 设为首页代码 Start -->
+    function setHomepage(pageURL) {
+        if (document.all) {
+            document.body.style.behavior='url(#default#homepage)';
+            document.body.setHomePage(pageURL);
+        }
+        else if (window.sidebar) {
+            if(window.netscape) {
+                try {
+                    netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+                }
+                catch (e) {
+                    alert( "该操作被浏览器拒绝，如果想启用该功能，请在地址栏内输入 about:config,然后将项signed.applets.codebase_principal_support 值该为true" );
+                }
+            }
+            var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components. interfaces.nsIPrefBranch);
+            prefs.setCharPref('browser.startup.homepage',pageURL);
+        }
+    }
+    <!-- 设为首页代码 End -->
+    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F6168556b0a921e8d0375330e702bc0fe' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="https://www.yanglaocn.com/js/scrolltopcontrol.js"></script></body>
+</body>
+</html>
