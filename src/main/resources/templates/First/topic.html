@@ -8,13 +8,13 @@
 			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0"
 		/>
 		<meta name="keywords" content="" />
-		<link rel="stylesheet" href="../../static/css/first/alifont.css" />
-		<link rel="stylesheet" href="../../static/css/first/navbar.css" />
-		<link rel="stylesheet" href="../../static/css/first/reponse_glo.css" />
-		<link rel="stylesheet" href="../../static/css/first/topic.css" />
-		<link rel="stylesheet" href="../../static/css/first/index.css" />
-		<link rel="stylesheet" href="../../static/css/first/css.css" />
-		<link rel="stylesheet" href="../../static/css/first/common.css" />
+		<link rel="stylesheet" href="../../css/first/alifont.css" />
+		<link rel="stylesheet" href="../../css/first/navbar.css" />
+		<link rel="stylesheet" href="../../css/first/reponse_glo.css" />
+		<link rel="stylesheet" href="../../css/first/topic.css" />
+		<link rel="stylesheet" href="../../css/first/index.css" />
+		<link rel="stylesheet" href="../../css/first/css.css" />
+		<link rel="stylesheet" href="../../css/first/common.css" />
 		<title>梅岭社区·颐养中心</title>
 		<style>
 			body {
@@ -31,11 +31,7 @@
 		<div class="bgimg">
 			<nav>
 				<div class="user">
-					<div class="userlogin">
-						<!--<a href=""><img src="icon/党建活动.png" alt="" /></a>
-						<a href="center.html">铃酱，欢迎您！</a>
-						<a href="center.html">铃酱</a>-->
-					</div>
+					<a href="/web/index"><img src="../../images/first/logo1.png" alt="" /></a>
 				</div>
 				<!--<div class="logo"><img src="img/广软_长白.png" alt="" /></div>-->
 				<div class="search">
@@ -59,42 +55,54 @@
 			</nav>
 			<div class="navbar">
 				<ul id="visiable" class="nav-menu">
-					<a class="active" href="javascript:;">
+					<a class="active" href="/web/index"
+					>
 						<li>
 							<i class="iconfont icon-shouye"></i>
 							首页
 						</li>
-					</a>
-					<a href="learn.html">
+					</a
+					>
+					<a href="/web/learn"
+					>
 						<li>
 							<i class="iconfont icon-lishi"></i>
 							梅岭动态
 						</li>
-					</a>
-					<a href="theorystudy.html">
+					</a
+					>
+					<a href="/web/theorystudy"
+					>
 						<li>
 							<i class="iconfont icon-lilunxuexi"></i>
 							百科问答
 						</li>
-					</a>
-					<a href="organization.html">
+					</a
+					>
+					<a href="/web/organization"
+					>
 						<li>
 							<i class="iconfont icon-zixun"></i>
 							健康养生
 						</li>
-					</a>
-					<a href="organization.html">
+					</a
+					>
+					<a href="/web/social"
+					>
 						<li>
 							<i class="iconfont icon-deploymentunit"></i>
 							养老社区
 						</li>
-					</a>
-					<a href="center.html">
+					</a
+					>
+					<a href="/web/center"
+					>
 						<li>
 							<i class="iconfont icon-gerenzhongxin"></i>
 							关于我们
 						</li>
-					</a>
+					</a
+					>
 				</ul>
 			</div>
 
@@ -207,7 +215,7 @@
 			<img src="icon/向上.png" alt="" />
 		</div>
 
-		<script src="../../static/js/response.js"></script>
+		<script src="../../js/response.js"></script>
 		<script>
 			function last() {
 				// alert("研发人员紧张开发中!");
@@ -217,7 +225,7 @@
 				alert("研发人员仍在紧张开发中!");
 			}
 			function toIndex() {
-				window.location.href = "index.html";
+				window.location.href = "/web/index";
 			}
 			function closeTab() {
 				if (confirm("确认离开当前页面？")) {
