@@ -10,6 +10,7 @@
 	display: flex;
 	flex-wrap: wrap-reverse;
 	justify-content: space-between;
+	background-color: #FFFFFF;
 }
 .cen-container .cen-left {
 	width: 65%;

@@ -1,4 +1,57 @@
 /*轮播图*/
+.container main .main-nav-p {
+	border-bottom: 1px solid #dfdfdf;
+	background-color:#ffffff;
+}
+
+.container main .main-nav-p li {
+	float:left;
+	justify-content: space-between;
+	display: inline-block;
+	margin: 0 55px
+}
+.container main .main-nav-p li h3 a,
+.container main .main-nav-p li h3 a {
+	color: #60906c;
+	text-decoration:none;
+}
+.container main .main-nav-p li.cur h3 a,
+.container main .main-nav-p li:hover h3 a {
+	background: #60906c;
+	color: #fff;
+	text-decoration:none;
+}
+
+.container main .main-nav-p li.cur h3 a::after,
+.container main .main-nav-p li:hover h3 a::after {
+	opacity: 1
+}
+
+.container main .main-nav-p h3 a {
+	position: relative;
+	padding: 0 15px;
+	height: 35px;
+	border-radius: 20px;
+	font-size: 18px;
+	line-height: 35px;
+	-webkit-transition: all .3s;
+	transition: all .3s
+}
+
+.container main .main-nav-p h3 a::after {
+	position: absolute;
+	bottom: -26px;
+	left: 50%;
+	width: 18px;
+	height: 17px;
+	background: transparent url(../../images/inside/main_nav_icon.png) no-repeat center;
+	content: '';
+	opacity: 0;
+	-webkit-transition: all .3s;
+	transition: all .3s;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%)
+}
 .container .train_banner {
 	width: 100%;
 	height: auto;

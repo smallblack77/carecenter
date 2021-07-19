@@ -256,7 +256,6 @@ footer .information div h3 {
 	color: rgb(104, 104, 104);
 	margin: 0.8rem 0rem;
 }
-
 @media screen and (max-width: 768px) and (min-width: 375px) {
 	.header-img {
 		width: 90%;
