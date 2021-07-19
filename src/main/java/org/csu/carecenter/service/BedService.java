@@ -64,4 +64,8 @@ public class BedService {
     public Bed getBedByBedId(int bedId){
          return bedMapper.getBedByBedId(bedId);
     }
+
+    public void updateBedStatus(int flag, int id){
+        bedMapper.updateBedStatus(flag, id);
+    }
 }
