@@ -1,0 +1,474 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="养老信息网(www.yanglaocn.com)是中国最专业养老信息门户网站，集社会新闻信息、老年人生活信息、养老信息及全国养老院查询平台等各类与老人相关的综合信息为一体的综合型门户网站。致力于服务全社会、关爱老人、替天下儿女尽孝的思想，为中国1.3亿的老年人提供丰富的网上服务。"/>
+    <meta name="keywords" content="养老社区,养老院,老人院,老年公寓,敬老院,养老保险查询,医疗保险查询,公积金查询,老年人,养老信息网"/>
+    <meta name="google-site-verification" content="VZfvKdde6Alry1sSTEFUc1HF42ez59f9-miefEe589s" />
+    <meta name="msvalidate.01" content="4CD6792A2C0C5688B02A391EBF6EB0BB" />
+
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="stylesheet" type="text/css" href="https://www.yanglaocn.com/css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="https://www.yanglaocn.com/css/style_20210416.css"/>
+    <link rel="stylesheet" type="text/css" href="https://www.yanglaocn.com/css/Login_20210416.css"/>
+    <link rel="stylesheet" type="text/css" href="https://www.yanglaocn.com/artDialog/skins/default.css"/>
+    <link rel="stylesheet" type="text/css" href="https://www.yanglaocn.com/jnotify/jquery/jNotify.jquery.css"/>
+    <link rel="stylesheet" type="text/css" href="https://www.yanglaocn.com/css/thickbox.css"/>
+    <link rel="stylesheet" type="text/css" href="https://www.yanglaocn.com/poshytipsrc/css/tip-style.css"/>
+    <link rel="stylesheet" type="text/css" href="https://www.yanglaocn.com/css/jquery.fancybox.css"/>
+    <link rel="stylesheet" type="text/css" href="https://www.yanglaocn.com/css/selectcss.css"/>
+    <link rel="stylesheet" type="text/css" href="https://www.yanglaocn.com/css/yl_20210416.css">
+    <link rel="stylesheet" type="text/css" href="https://www.yanglaocn.com/js/layui/css/layui.css">
+    <link rel="stylesheet" type="text/css" href="https://www.yanglaocn.com/js/element/element.min.css">
+    <script type="text/javascript" src="https://www.yanglaocn.com/js/jquery-1.4.js"></script>
+    <script type="text/javascript" src="https://www.yanglaocn.com/js/jquery.cookie.js"></script>
+    <script type="text/javascript">var shop_url ="https://www.yanglaocn.com/";</script>
+    <script type="text/javascript" src="https://www.yanglaocn.com/js/pageajax.js"></script>
+    <script type="text/javascript" src="https://www.yanglaocn.com/poshytipsrc/jquery.poshytip.js"></script>
+    <script type="text/javascript" src="https://www.yanglaocn.com/js/poshytipFun.js"></script>
+    <script type="text/javascript" src="https://www.yanglaocn.com/jnotify/jquery/jNotify.jquery.js"></script>
+    <script type="text/javascript" src="https://www.yanglaocn.com/js/followajax.js"></script><link type="text/css" rel="stylesheet" href="https://www.yanglaocn.com/css/weiboscroll.css" />
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0"
+    />
+    <link rel="stylesheet" href="../../static/css/first/alifont.css" />
+    <link rel="stylesheet" href="../../static/css/first/navbar.css" />
+    <link rel="stylesheet" href="../../static/css/first/index.css" />
+    <link rel="stylesheet" href="../../static/css/first/css.css" />
+    <link rel="stylesheet" href="../../static/css/first/reponse_glo.css" />
+    <link rel="stylesheet" href="../../static/css/first/common.css" />
+    <title>梅岭社区·颐养中心</title>
+    <style>
+        body {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url(../../static/images/img/水墨3ps.png) no-repeat 100%;
+            background-size: cover;
+            background-attachment: fixed;
+            /* z-index: -1; */
+            transition: 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+<div class="bgimg">
+    <nav>
+        <div class="user">
+            <a href=""><img src="../../static/images/first/logo1.png" alt="" /></a>
+        </div>
+        <!--				<div class="logo"><img src="img/广软_长白.png" alt="" /></div>-->
+        <div class="search">
+            <div class="sput">
+                <input
+                        type="text"
+                        name="search"
+                        placeholder="搜索内容"
+                        id="searchContent"
+                />
+                <a href="#"><div class="icon"></div></a>
+                <img src="icon/搜索.png" alt="" />
+            </div>
+            <!-- 汉堡按钮 -->
+            <div class="burger" id="toggle" onclick="navVisi()">
+                <div class="top-line"></div>
+                <div class="middle-line"></div>
+                <div class="bottom-line"></div>
+            </div>
+        </div>
+    </nav>
+    <div class="navbar">
+        <ul id="visiable" class="nav-menu">
+            <a href="index.html"
+            >
+                <li>
+                    <i class="iconfont icon-shouye"></i>
+                    首页
+                </li>
+            </a
+            >
+            <a href="learn.html"
+            >
+                <li>
+                    <i class="iconfont icon-lishi"></i>
+                    梅岭动态
+                </li>
+            </a
+            >
+            <a href="theorystudy.html"
+            >
+                <li>
+                    <i class="iconfont icon-lilunxuexi"></i>
+                    百科问答
+                </li>
+            </a
+            >
+            <a href="organization.html"
+            >
+                <li>
+                    <i class="iconfont icon-zixun"></i>
+                    健康养生
+                </li>
+            </a
+            >
+            <a class="active" href="javascript:;"
+            >
+                <li>
+                    <i class="iconfont icon-deploymentunit"></i>
+                    养老社区
+                </li>
+            </a
+            >
+            <a href="center.html"
+            >
+                <li>
+                    <i class="iconfont icon-gerenzhongxin"></i>
+                    关于我们
+                </li>
+            </a
+            >
+        </ul>
+    </div>
+</div>
+
+<!--头部文件-->
+<div class="main" id="bbs_vue_id">
+    <div class="bbs_left margin_top_20">
+        <div class="bbs_left_ti"><a href="https://www.yanglaocn.com/bbs/"><i class="el-icon-menu"></i>养老社区</a></div>
+        <div class="bbs_left_menu">
+            <input type="hidden" name="settid" id="settid" value="36">
+            <input type="hidden" name="tid" id="tid" value="39">
+            <el-collapse v-model="Bbs_Index_activeNames">
+                <el-collapse-item name="0">
+                    <template slot="title">
+                        <i class="header-icon el-icon-edit"></i> 创作
+                    </template>
+                    <div class="bbs_left_menu_ul">
+                        <a href="https://www.yanglaocn.com/bbs/">主题推荐</a>
+                        <a href="javascript:void(0);" onclick="javascript:ShowUserBBSchannel();">发布帖子</a>
+                    </div>
+                </el-collapse-item>
+                <el-collapse-item name="2">
+                    <template slot="title">
+                        <i class="header-icon el-icon-s-unfold"></i>社保交流
+                    </template>
+                    <div class="bbs_left_menu_ul">
+                        <a href="https://www.yanglaocn.com/bbs/?tid=4"><i class="el-icon-caret-right" style="display: none;"></i> 社保问题</a>
+                        <a href="https://www.yanglaocn.com/bbs/?tid=3"><i class="el-icon-caret-right" style="display: none;"></i> 社保杂谈</a>
+                        <a href="https://www.yanglaocn.com/bbs/?tid=31"><i class="el-icon-caret-right" style="display: none;"></i> 社保常见问题</a>
+                        <a href="https://www.yanglaocn.com/bbs/?tid=40"><i class="el-icon-caret-right" style="display: none;"></i> 社保案例分析</a>
+                    </div>
+                </el-collapse-item>
+                <!--<el-collapse-item name="19">
+                    <template slot="title">
+                        <i class="header-icon el-icon-s-unfold"></i><a href="https://www.yanglaocn.com/bbs/?tid=19">晚年生活</a>
+                    </template>
+                    <div class="bbs_left_menu_ul">
+                        <a href="https://www.yanglaocn.com/bbs/?tid=20"><i class="el-icon-caret-right" style="display: none;"></i> 社会杂谈</a>
+                        <a href="https://www.yanglaocn.com/bbs/?tid=21"><i class="el-icon-caret-right" style="display: none;"></i> 生活百事</a>
+                        <a href="https://www.yanglaocn.com/bbs/?tid=22"><i class="el-icon-caret-right" style="display: none;"></i> 花鸟鱼虫</a>
+                        <a href="https://www.yanglaocn.com/bbs/?tid=23"><i class="el-icon-caret-right" style="display: none;"></i> 旅游天地</a>
+                        <a href="https://www.yanglaocn.com/bbs/?tid=24"><i class="el-icon-caret-right" style="display: none;"></i> 寻朋问友</a>
+                    </div>
+                </el-collapse-item>-->
+                <el-collapse-item name="12">
+                    <template slot="title">
+                        <i class="header-icon el-icon-s-unfold"></i>文化艺术
+                    </template>
+                    <div class="bbs_left_menu_ul">
+                        <a href="https://www.yanglaocn.com/bbs/?tid=13"><i class="el-icon-caret-right" style="display: none;"></i> 文学创作</a>
+                        <a href="https://www.yanglaocn.com/bbs/?tid=14"><i class="el-icon-caret-right" style="display: none;"></i> 书画艺术</a>
+                    </div>
+                </el-collapse-item>
+                <!--<el-collapse-item name="25">
+                    <template slot="title">
+                        <i class="header-icon el-icon-s-unfold"></i><a href="https://www.yanglaocn.com/bbs/?tid=25">学习天地</a>
+                    </template>
+                    <div class="bbs_left_menu_ul">
+                        <a href="https://www.yanglaocn.com/bbs/?tid=26"><i class="el-icon-caret-right" style="display: none;"></i> 摄影天地</a>
+                        <a href="https://www.yanglaocn.com/bbs/?tid=27"><i class="el-icon-caret-right" style="display: none;"></i> 学习电脑</a>
+                    </div>
+                </el-collapse-item>-->
+                <el-collapse-item name="28">
+                    <template slot="title">
+                        <i class="header-icon el-icon-s-unfold"></i>养老机构交流
+                    </template>
+                    <div class="bbs_left_menu_ul">
+                        <a href="https://www.yanglaocn.com/bbs/?tid=29"><i class="el-icon-caret-right" style="display: none;"></i> 经验交流</a>
+                        <a href="https://www.yanglaocn.com/bbs/?tid=30"><i class="el-icon-caret-right" style="display: none;"></i> 问题探讨</a>
+                    </div>
+                </el-collapse-item>
+                <el-collapse-item name="32">
+                    <template slot="title">
+                        <i class="header-icon el-icon-s-unfold"></i>养老信息
+                    </template>
+                    <div class="bbs_left_menu_ul">
+                        <a href="https://www.yanglaocn.com/bbs/?tid=33"><i class="el-icon-caret-right" style="display: none;"></i> 养老生活信息</a>
+                        <a href="https://www.yanglaocn.com/bbs/?tid=34"><i class="el-icon-caret-right" style="display: none;"></i> 养老机构信息</a>
+                        <a href="https://www.yanglaocn.com/bbs/?tid=35"><i class="el-icon-caret-right" style="display: none;"></i> 社会保险信息</a>
+                        <a href="https://www.yanglaocn.com/bbs/?tid=41"><i class="el-icon-caret-right" style="display: none;"></i> 养老行业广告</a>
+                    </div>
+                </el-collapse-item>
+                <el-collapse-item name="36">
+                    <template slot="title">
+                        <i class="header-icon el-icon-s-unfold"></i>社区事务
+                    </template>
+                    <div class="bbs_left_menu_ul">
+                        <a href="https://www.yanglaocn.com/bbs/?tid=39"><i class="el-icon-caret-right" style="display: none;"></i> 社区公告</a>
+                        <a href="https://www.yanglaocn.com/bbs/?tid=37"><i class="el-icon-caret-right" style="display: none;"></i> 建议意见</a>
+                        <a href="https://www.yanglaocn.com/bbs/?tid=38"><i class="el-icon-caret-right" style="display: none;"></i> 删帖申请</a>
+                    </div>
+                </el-collapse-item>
+            </el-collapse>
+        </div>
+    </div>
+    <div class="bbs_right margin_top_20">
+        <h2><i class="el-icon-s-unfold"></i><label>社区公告</label></h2>
+        <div class="bbs_right_tab">
+            <el-tabs v-model="bbs_right_tab_activeName" @tab-click="bbs_right_tab_handleClick">
+                <el-tab-pane label="最新发布" name="fabu">
+                    <div class="bbs_right_list">
+
+                        <div class="yl_dongtai_img bbs_dongtai_img">
+                            <h9>
+                                <a href="https://www.yanglaocn.com/shtml/bbsxx/2013-04/bbs13654084214.html" target="_blank" title="养老社区总则"
+                                >养老社区总则</a>
+                            </h9>
+                            <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                                <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=1" target="_blank" title="admin"><img src="https://www.yanglaocn.com/images/upload/img/2020/02-07/4ef1605cef55ae2036877efdca501491.png"></a></span>
+                                <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=1" target="_blank">admin</a></label>
+                                <b>▪</b>
+                                <label><i class="el-icon-time"></i> 13-04-08 16:07</label>
+                                <b>▪</b>
+                                <label><a href="https://www.yanglaocn.com/bbs/?tid=39" target="_blank" title="频道"><i class="el-icon-menu"></i> 社区公告</a></label>
+                                <b>▪</b>
+                                <label title="浏览次数"><i class="el-icon-view"></i> 988</label>
+                                <b>▪</b>
+                                <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                            </div>
+                        </div>
+                        <div class="yl_dongtai_img bbs_dongtai_img">
+                            <h9>
+                                <a href="https://www.yanglaocn.com/shtml/bbsxx/2013-04/bbs13653957165.html" target="_blank" title="社区发帖规范"
+                                >社区发帖规范</a>
+                            </h9>
+                            <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                                <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=1" target="_blank" title="admin"><img src="https://www.yanglaocn.com/images/upload/img/2020/02-07/4ef1605cef55ae2036877efdca501491.png"></a></span>
+                                <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=1" target="_blank">admin</a></label>
+                                <b>▪</b>
+                                <label><i class="el-icon-time"></i> 13-04-08 12:35</label>
+                                <b>▪</b>
+                                <label><a href="https://www.yanglaocn.com/bbs/?tid=39" target="_blank" title="频道"><i class="el-icon-menu"></i> 社区公告</a></label>
+                                <b>▪</b>
+                                <label title="浏览次数"><i class="el-icon-view"></i> 1364</label>
+                                <b>▪</b>
+                                <label title="回复"><i class="el-icon-chat-line-round"></i> 1</label>
+                            </div>
+                        </div><div class="moodload moodloadjiaW LoadmoreJS" page="1" moodtab="fabu" onoff="1" etab="fabu">点击加载更多</div>
+                    </div>
+                </el-tab-pane>
+                <el-tab-pane label="最新回复" name="huifu">
+
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2013-04/bbs13653957165.html" target="_blank" title="社区发帖规范"
+                            >社区发帖规范</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=1" target="_blank" title="admin"><img src="https://www.yanglaocn.com/images/upload/img/2020/02-07/4ef1605cef55ae2036877efdca501491.png"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=1" target="_blank">admin</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 13-04-08 12:35</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=39" target="_blank" title="频道"><i class="el-icon-menu"></i> 社区公告</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 1364</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 1</label>
+                        </div>
+                    </div><div class="moodload moodloadjiaW LoadmoreJS" page="1" moodtab="huifu" onoff="1" etab="huifu">点击加载更多</div>
+                </el-tab-pane>
+                <el-tab-pane label="热点" name="hot">
+
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2013-04/bbs13654084214.html" target="_blank" title="养老社区总则"
+                            >养老社区总则</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=1" target="_blank" title="admin"><img src="https://www.yanglaocn.com/images/upload/img/2020/02-07/4ef1605cef55ae2036877efdca501491.png"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=1" target="_blank">admin</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 13-04-08 16:07</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=39" target="_blank" title="频道"><i class="el-icon-menu"></i> 社区公告</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 988</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2013-04/bbs13653957165.html" target="_blank" title="社区发帖规范"
+                            >社区发帖规范</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=1" target="_blank" title="admin"><img src="https://www.yanglaocn.com/images/upload/img/2020/02-07/4ef1605cef55ae2036877efdca501491.png"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=1" target="_blank">admin</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 13-04-08 12:35</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=39" target="_blank" title="频道"><i class="el-icon-menu"></i> 社区公告</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 1364</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 1</label>
+                        </div>
+                    </div><div class="moodload moodloadjiaW LoadmoreJS" page="1" moodtab="hot" onoff="1" etab="hot">点击加载更多</div>
+                </el-tab-pane>
+                <el-tab-pane label="建议意见" name="37">
+                    <div class="moodload moodloadjiaW LoadmoreJS" page="1" moodtab="37" etab="37" onoff="1">点击加载更多</div>
+                </el-tab-pane>
+                <el-tab-pane label="删帖申请" name="38">
+                    <div class="moodload moodloadjiaW LoadmoreJS" page="1" moodtab="38" etab="38" onoff="1">点击加载更多</div>
+                </el-tab-pane>
+            </el-tabs>
+        </div>
+    </div>
+</div>
+
+<div class="main_wide">
+    <div id="footer">
+        <ul>
+            <li><a href="https://www.yanglaocn.com/" title="养老信息网" onFocus="this.blur()">网站首页</a></li>
+            <li><a href="https://www.yanglaocn.com/aboutus/" title="关于我们" onFocus="this.blur()">关于我们</a></li>
+            <li><a href="https://www.yanglaocn.com/bbs/" title="养老社区" onFocus="this.blur()">养老社区</a></li>
+            <li><a href="https://www.yanglaocn.com/yanglaoyuan/" title="养老院查询" onFocus="this.blur()">养老院查询</a></li>
+            <li><a href="https://www.yanglaocn.com/webmap/" title="网站地图" onFocus="this.blur()">网站地图</a></li>
+            <li><a href="https://www.yanglaocn.com/contactus/" title="联系我们" onFocus="this.blur()">联系我们</a></li>
+            <li><a href="https://www.yanglaocn.com/disclaimer/" title="免责声明" onFocus="this.blur()">免责声明</a></li>
+        </ul>
+        <ul>
+            <li>版权所有：<a href="https://www.yanglaocn.com" target="_blank" onFocus="this.blur()">养老信息网</a></li>
+            <li>备案号:<a href="https://beian.miit.gov.cn" target="_blank">京ICP备13014276号-1</a></li>
+        </ul>
+        <ul><li>声明：本网站部分信息及图片来源于网络，如侵犯了您的权益或版权，请及时告知我们予以删除！</li></ul>
+        <ul>
+            <li>E-mail:yanglaocn@yanglaocn.com  /  yanglaocn@163.com</li>
+            <li>QQ:159220868&nbsp;/&nbsp;248411521</li>
+            <!--<li><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=159220868&site=qq&menu=yes" onFocus="this.blur()"><img border="0" src="http://wpa.qq.com/pa?p=2:159220868:41 &r=0.7478782087742928" alt="养老信息网(www.yanglaocn.com)欢迎您！" title="养老信息网(www.yanglaocn.com)欢迎您" align="absbottom"></a></li>
+            <li><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=248411521&site=qq&menu=yes" onFocus="this.blur()"><img border="0" src="http://wpa.qq.com/pa?p=2:248411521:41" alt="养老信息网(www.yanglaocn.com)欢迎您！" title="养老信息网(www.yanglaocn.com)欢迎您！" align="absbottom"></a></li>-->
+        </ul>
+    </div>
+</div>
+<!-- 右侧飘浮代码 开始 -->
+<div id="service">
+    <a href="javascript:void(0)" class="elderlyregistration" id="elderlyregistration_tip">长者入住登记</a>
+    <a href="javascript:void(0)" class="weixin" id="weixin_tip" onclick="javascript:PtipWeiXinShow();">公众微信</a>
+    <a href="javascript:void(0)" class="srvLog" onclick="javascript:ShowFeedback();">意见或建议</a>
+    <a class="goTop" id="goTop" title="返回顶部" style="display:none">返回顶部</a>
+</div>
+
+
+
+<div id="success" class="success-message" style="display: none">
+    <img src="icon/正确.png" alt="" />
+    <h3 class="success-text">成功消息框</h3>
+</div>
+<div id="warning" class="warning-message" style="display: none">
+    <img src="icon/警告.png" alt="" />
+    <h3 class="warning-text">警告消息框</h3>
+</div>
+
+<script src="../../static/js/response.js"></script>
+<script src="../../static/js/banner.js"></script>
+<script>
+    window.onload = function () {
+        var last = document.referrer;
+        console.log(last);
+        if (
+            last == "http://127.0.0.1:5500/login.html" ||
+            last == "http://172.16.160.43/" ||
+            last == "http://172.16.160.43/login.html"
+        ) {
+            success_message_come(success, "登录成功！");
+        }
+        banner();
+    };
+</script>
+<!-- 代码 结束 -->
+<script type="text/javascript" src="https://www.yanglaocn.com/js/function.js"></script>
+<script type="text/javascript" src="https://www.yanglaocn.com/js/jquery.media.js"></script>
+<script type="text/javascript" src="https://www.yanglaocn.com/artDialog/artDialog.js"></script>
+<script type="text/javascript" src="https://www.yanglaocn.com/js/artDialogFun.js"></script>
+<script type="text/javascript" src="https://www.yanglaocn.com/js/index.js"></script>
+<script type="text/javascript" src="https://www.yanglaocn.com/js/newsleft.js" ></script>
+<script type="text/javascript" src="https://www.yanglaocn.com/js/layui/layui.js"></script>
+<script type="text/javascript" src="https://www.yanglaocn.com/js/vue.min.js" ></script>
+<script type="text/javascript" src="https://www.yanglaocn.com/js/element/element.min.js" ></script>
+<script type="text/javascript" src="https://www.yanglaocn.com/js/index_vue.js"></script>
+<script type="text/javascript" language="javascript">
+    //右下角滑动通知
+    var intervalProcess;
+    GetInstantMessage();
+
+    intervalProcess = window.setInterval(function(){
+        GetInstantMessage();
+    },20000);
+
+    window.onfocus = function() {//当前窗口被激活
+        GetInstantMessage();
+        intervalProcess = window.setInterval(function(){
+            GetInstantMessage();
+        },20000);
+    }
+    window.onblur = function() {//当前窗口没有激活
+        clearInterval(intervalProcess);
+    }
+    <!-- 加入收藏代码 Start -->
+    function AddFavorite(sURL, sTitle) {
+        try {
+            window.external.addFavorite(sURL, sTitle);
+        } catch (e) {
+            try {
+                window.sidebar.addPanel(sTitle, sURL, "");
+            } catch (e) {
+                alert("加入收藏失败,请手动添加.");
+            }
+        }
+    }
+    <!-- 加入收藏代码 End -->
+    <!-- 设为首页代码 Start -->
+    function setHomepage(pageURL) {
+        if (document.all) {
+            document.body.style.behavior='url(#default#homepage)';
+            document.body.setHomePage(pageURL);
+        }
+        else if (window.sidebar) {
+            if(window.netscape) {
+                try {
+                    netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+                }
+                catch (e) {
+                    alert( "该操作被浏览器拒绝，如果想启用该功能，请在地址栏内输入 about:config,然后将项signed.applets.codebase_principal_support 值该为true" );
+                }
+            }
+            var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components. interfaces.nsIPrefBranch);
+            prefs.setCharPref('browser.startup.homepage',pageURL);
+        }
+    }
+    <!-- 设为首页代码 End -->
+    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F6168556b0a921e8d0375330e702bc0fe' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="https://www.yanglaocn.com/js/scrolltopcontrol.js"></script>
+</body>
+</html>
