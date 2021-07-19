@@ -1,0 +1,2252 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0"
+    />
+    <link rel="stylesheet" href="../../static/css/first/alifont.css" />
+    <link rel="stylesheet" href="../../static/css/first/navbar.css" />
+    <link rel="stylesheet" href="../../static/css/first/index.css" />
+    <link rel="stylesheet" href="../../static/css/first/css.css" />
+    <link rel="stylesheet" href="../../static/css/first/reponse_glo.css" />
+    <link rel="stylesheet" href="../../static/css/first/common.css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="养老信息网(www.yanglaocn.com)是中国最专业养老信息门户网站，集社会新闻信息、老年人生活信息、养老信息及全国养老院查询平台等各类与老人相关的综合信息为一体的综合型门户网站。致力于服务全社会、关爱老人、替天下儿女尽孝的思想，为中国1.3亿的老年人提供丰富的网上服务。"/>
+    <meta name="keywords" content="养老社区,养老院,老人院,老年公寓,敬老院,养老保险查询,医疗保险查询,公积金查询,老年人,养老信息网"/>
+    <meta name="google-site-verification" content="VZfvKdde6Alry1sSTEFUc1HF42ez59f9-miefEe589s" />
+    <meta name="msvalidate.01" content="4CD6792A2C0C5688B02A391EBF6EB0BB" />
+
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="stylesheet" type="text/css" href="https://www.yanglaocn.com/css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="https://www.yanglaocn.com/css/style_20210416.css"/>
+    <link rel="stylesheet" type="text/css" href="https://www.yanglaocn.com/css/Login_20210416.css"/>
+    <link rel="stylesheet" type="text/css" href="https://www.yanglaocn.com/artDialog/skins/default.css"/>
+    <link rel="stylesheet" type="text/css" href="https://www.yanglaocn.com/jnotify/jquery/jNotify.jquery.css"/>
+    <link rel="stylesheet" type="text/css" href="https://www.yanglaocn.com/css/thickbox.css"/>
+    <link rel="stylesheet" type="text/css" href="https://www.yanglaocn.com/poshytipsrc/css/tip-style.css"/>
+    <link rel="stylesheet" type="text/css" href="https://www.yanglaocn.com/css/jquery.fancybox.css"/>
+    <link rel="stylesheet" type="text/css" href="https://www.yanglaocn.com/css/selectcss.css"/>
+    <link rel="stylesheet" type="text/css" href="https://www.yanglaocn.com/css/yl_20210416.css">
+    <link rel="stylesheet" type="text/css" href="https://www.yanglaocn.com/js/layui/css/layui.css">
+    <link rel="stylesheet" type="text/css" href="https://www.yanglaocn.com/js/element/element.min.css">
+    <script type="text/javascript" src="https://www.yanglaocn.com/js/jquery-1.4.js"></script>
+    <script type="text/javascript" src="https://www.yanglaocn.com/js/jquery.cookie.js"></script>
+    <script type="text/javascript">var shop_url ="https://www.yanglaocn.com/";</script>
+    <script type="text/javascript" src="https://www.yanglaocn.com/js/pageajax.js"></script>
+    <script type="text/javascript" src="https://www.yanglaocn.com/poshytipsrc/jquery.poshytip.js"></script>
+    <script type="text/javascript" src="https://www.yanglaocn.com/js/poshytipFun.js"></script>
+    <script type="text/javascript" src="https://www.yanglaocn.com/jnotify/jquery/jNotify.jquery.js"></script>
+    <script type="text/javascript" src="https://www.yanglaocn.com/js/followajax.js"></script><link type="text/css" rel="stylesheet" href="https://www.yanglaocn.com/css/weiboscroll.css" />
+    <title>梅岭社区·颐养中心</title>
+    <style>
+        body {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url(../../static/images/img/水墨3ps.png) no-repeat 100%;
+            background-size: cover;
+            background-attachment: fixed;
+            /* z-index: -1; */
+            transition: 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+<div class="bgimg">
+    <nav>
+        <div class="user">
+            <a href=""><img src="../../static/images/first/logo1.png" alt="" /></a>
+        </div>
+        <!--				<div class="logo"><img src="img/广软_长白.png" alt="" /></div>-->
+        <div class="search">
+            <div class="sput">
+                <input
+                        type="text"
+                        name="search"
+                        placeholder="搜索内容"
+                        id="searchContent"
+                />
+                <a href="#"><div class="icon"></div></a>
+                <img src="icon/搜索.png" alt="" />
+            </div>
+            <!-- 汉堡按钮 -->
+            <div class="burger" id="toggle" onclick="navVisi()">
+                <div class="top-line"></div>
+                <div class="middle-line"></div>
+                <div class="bottom-line"></div>
+            </div>
+        </div>
+    </nav>
+    <div class="navbar">
+        <ul id="visiable" class="nav-menu">
+            <a href="index.html"
+            >
+                <li>
+                    <i class="iconfont icon-shouye"></i>
+                    首页
+                </li>
+            </a
+            >
+            <a href="learn.html"
+            >
+                <li>
+                    <i class="iconfont icon-lishi"></i>
+                    梅岭动态
+                </li>
+            </a
+            >
+            <a href="theorystudy.html"
+            >
+                <li>
+                    <i class="iconfont icon-lilunxuexi"></i>
+                    百科问答
+                </li>
+            </a
+            >
+            <a href="organization.html"
+            >
+                <li>
+                    <i class="iconfont icon-zixun"></i>
+                    健康养生
+                </li>
+            </a
+            >
+            <a class="active" href="javascript:;"
+            >
+                <li>
+                    <i class="iconfont icon-deploymentunit"></i>
+                    养老社区
+                </li>
+            </a
+            >
+            <a href="center.html"
+            >
+                <li>
+                    <i class="iconfont icon-gerenzhongxin"></i>
+                    关于我们
+                </li>
+            </a
+            >
+        </ul>
+    </div>
+</div>
+<!--头部文件-->
+
+<div class="main" id="bbs_vue_id">
+    <div class="bbs_left margin_top_20">
+        <div class="bbs_left_ti"><a href="https://www.yanglaocn.com/bbs/"><i class="el-icon-menu"></i>养老社区</a></div>
+        <div class="bbs_left_menu">
+            <input type="hidden" name="settid" id="settid" value="2">
+            <input type="hidden" name="tid" id="tid" value="40">
+            <el-collapse v-model="Bbs_Index_activeNames">
+                <el-collapse-item name="0">
+                    <template slot="title">
+                        <i class="header-icon el-icon-edit"></i> 创作
+                    </template>
+                    <div class="bbs_left_menu_ul">
+                        <a href="https://www.yanglaocn.com/bbs/">主题推荐</a>
+                        <a href="javascript:void(0);" onclick="javascript:ShowUserBBSchannel();">发布帖子</a>
+                    </div>
+                </el-collapse-item>
+                <el-collapse-item name="2">
+                    <template slot="title">
+                        <i class="header-icon el-icon-s-unfold"></i><a href="https://www.yanglaocn.com/bbs/?tid=2">社保交流</a>
+                    </template>
+                    <div class="bbs_left_menu_ul">
+                        <a href="https://www.yanglaocn.com/bbs/?tid=4"><i class="el-icon-caret-right" style="display: none;"></i> 社保问题</a>
+                        <a href="https://www.yanglaocn.com/bbs/?tid=3"><i class="el-icon-caret-right" style="display: none;"></i> 社保杂谈</a>
+                        <a href="https://www.yanglaocn.com/bbs/?tid=31"><i class="el-icon-caret-right" style="display: none;"></i> 社保常见问题</a>
+                        <a href="https://www.yanglaocn.com/bbs/?tid=40"><i class="el-icon-caret-right" style="display: none;"></i> 社保案例分析</a>
+                    </div>
+                </el-collapse-item>
+                <el-collapse-item name="19">
+                    <template slot="title">
+                        <i class="header-icon el-icon-s-unfold"></i><a href="https://www.yanglaocn.com/bbs/?tid=19">晚年生活</a>
+                    </template>
+                    <div class="bbs_left_menu_ul">
+                        <a href="https://www.yanglaocn.com/bbs/?tid=20"><i class="el-icon-caret-right" style="display: none;"></i> 社会杂谈</a>
+                        <a href="https://www.yanglaocn.com/bbs/?tid=21"><i class="el-icon-caret-right" style="display: none;"></i> 生活百事</a>
+                        <a href="https://www.yanglaocn.com/bbs/?tid=22"><i class="el-icon-caret-right" style="display: none;"></i> 花鸟鱼虫</a>
+                        <a href="https://www.yanglaocn.com/bbs/?tid=23"><i class="el-icon-caret-right" style="display: none;"></i> 旅游天地</a>
+                        <a href="https://www.yanglaocn.com/bbs/?tid=24"><i class="el-icon-caret-right" style="display: none;"></i> 寻朋问友</a>
+                    </div>
+                </el-collapse-item>
+                <el-collapse-item name="12">
+                    <template slot="title">
+                        <i class="header-icon el-icon-s-unfold"></i><a href="https://www.yanglaocn.com/bbs/?tid=12">文化艺术</a>
+                    </template>
+                    <div class="bbs_left_menu_ul">
+                        <a href="https://www.yanglaocn.com/bbs/?tid=13"><i class="el-icon-caret-right" style="display: none;"></i> 文学创作</a>
+                        <a href="https://www.yanglaocn.com/bbs/?tid=14"><i class="el-icon-caret-right" style="display: none;"></i> 书画艺术</a>
+                    </div>
+                </el-collapse-item>
+                <el-collapse-item name="25">
+                    <template slot="title">
+                        <i class="header-icon el-icon-s-unfold"></i><a href="https://www.yanglaocn.com/bbs/?tid=25">学习天地</a>
+                    </template>
+                    <div class="bbs_left_menu_ul">
+                        <a href="https://www.yanglaocn.com/bbs/?tid=26"><i class="el-icon-caret-right" style="display: none;"></i> 摄影天地</a>
+                        <a href="https://www.yanglaocn.com/bbs/?tid=27"><i class="el-icon-caret-right" style="display: none;"></i> 学习电脑</a>
+                    </div>
+                </el-collapse-item>
+                <el-collapse-item name="28">
+                    <template slot="title">
+                        <i class="header-icon el-icon-s-unfold"></i><a href="https://www.yanglaocn.com/bbs/?tid=28">养老机构交流</a>
+                    </template>
+                    <div class="bbs_left_menu_ul">
+                        <a href="https://www.yanglaocn.com/bbs/?tid=29"><i class="el-icon-caret-right" style="display: none;"></i> 经验交流</a>
+                        <a href="https://www.yanglaocn.com/bbs/?tid=30"><i class="el-icon-caret-right" style="display: none;"></i> 问题探讨</a>
+                    </div>
+                </el-collapse-item>
+                <el-collapse-item name="32">
+                    <template slot="title">
+                        <i class="header-icon el-icon-s-unfold"></i><a href="https://www.yanglaocn.com/bbs/?tid=32">养老信息</a>
+                    </template>
+                    <div class="bbs_left_menu_ul">
+                        <a href="https://www.yanglaocn.com/bbs/?tid=33"><i class="el-icon-caret-right" style="display: none;"></i> 养老生活信息</a>
+                        <a href="https://www.yanglaocn.com/bbs/?tid=34"><i class="el-icon-caret-right" style="display: none;"></i> 养老机构信息</a>
+                        <a href="https://www.yanglaocn.com/bbs/?tid=35"><i class="el-icon-caret-right" style="display: none;"></i> 社会保险信息</a>
+                        <a href="https://www.yanglaocn.com/bbs/?tid=41"><i class="el-icon-caret-right" style="display: none;"></i> 养老行业广告</a>
+                    </div>
+                </el-collapse-item>
+                <el-collapse-item name="36">
+                    <template slot="title">
+                        <i class="header-icon el-icon-s-unfold"></i><a href="https://www.yanglaocn.com/bbs/?tid=36">社区事务</a>
+                    </template>
+                    <div class="bbs_left_menu_ul">
+                        <a href="https://www.yanglaocn.com/bbs/?tid=39"><i class="el-icon-caret-right" style="display: none;"></i> 社区公告</a>
+                        <a href="https://www.yanglaocn.com/bbs/?tid=37"><i class="el-icon-caret-right" style="display: none;"></i> 建议意见</a>
+                        <a href="https://www.yanglaocn.com/bbs/?tid=38"><i class="el-icon-caret-right" style="display: none;"></i> 删帖申请</a>
+                    </div>
+                </el-collapse-item>
+            </el-collapse>
+        </div>
+    </div>
+    <div class="bbs_right margin_top_20">
+        <h2><i class="el-icon-s-unfold"></i><label>社保案例分析</label></h2>
+        <div class="bbs_right_tab">
+            <el-tabs v-model="bbs_right_tab_activeName" @tab-click="bbs_right_tab_handleClick">
+                <el-tab-pane label="最新发布" name="fabu">
+                    <div class="bbs_right_list">
+
+                        <div class="yl_dongtai_img bbs_dongtai_img">
+                            <h9>
+                                <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-12/bbs157657045710160.html" target="_blank" title="【案例】劳动者主动辞职后，能获得未休年休假工资吗？"
+                                >【案例】劳动者主动辞职后，能获得未休年休假工资吗？</a>
+                            </h9>
+                            <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                                <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=16" target="_blank" title="三生石"><img src="https://www.yanglaocn.com/images/upload/img/2020/02-06/5247c6c429897b27c561f715ad1d4c9b.png"></a></span>
+                                <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=16" target="_blank">三生石</a></label>
+                                <b>▪</b>
+                                <label><i class="el-icon-time"></i> 19-12-17 16:14</label>
+                                <b>▪</b>
+                                <label><a href="https://www.yanglaocn.com/bbs/?tid=40" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保案例分析</a></label>
+                                <b>▪</b>
+                                <label title="浏览次数"><i class="el-icon-view"></i> 166</label>
+                                <b>▪</b>
+                                <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                            </div>
+                        </div>
+                        <div class="yl_dongtai_img bbs_dongtai_img">
+                            <h9>
+                                <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-09/bbs156863691310082.html" target="_blank" title="这种情形，公司为离职员工继续缴社保费，可能要受罚！"
+                                >这种情形，公司为离职员工继续缴社保费，可能要受罚！</a>
+                            </h9>
+                            <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                                <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank" title="soosom"><img src="https://www.yanglaocn.com/images/upload/individualimages/2014/06-06/6f0c281b9f2c5c93ff82fbe7e17db6c9.jpg"></a></span>
+                                <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank">soosom</a></label>
+                                <b>▪</b>
+                                <label><i class="el-icon-time"></i> 19-09-16 20:28</label>
+                                <b>▪</b>
+                                <label><a href="https://www.yanglaocn.com/bbs/?tid=40" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保案例分析</a></label>
+                                <b>▪</b>
+                                <label title="浏览次数"><i class="el-icon-view"></i> 55</label>
+                                <b>▪</b>
+                                <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                            </div>
+                        </div>
+                        <div class="yl_dongtai_img bbs_dongtai_img">
+                            <h9>
+                                <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-08/bbs156592116110025.html" target="_blank" title="职工“放长假”期间到其他单位工作时受伤，是否算工伤？"
+                                >职工“放长假”期间到其他单位工作时受伤，是否算工伤？</a>
+                            </h9>
+                            <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                                <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=1" target="_blank" title="admin"><img src="https://www.yanglaocn.com/images/upload/img/2020/02-07/4ef1605cef55ae2036877efdca501491.png"></a></span>
+                                <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=1" target="_blank">admin</a></label>
+                                <b>▪</b>
+                                <label><i class="el-icon-time"></i> 19-08-16 10:06</label>
+                                <b>▪</b>
+                                <label><a href="https://www.yanglaocn.com/bbs/?tid=40" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保案例分析</a></label>
+                                <b>▪</b>
+                                <label title="浏览次数"><i class="el-icon-view"></i> 136</label>
+                                <b>▪</b>
+                                <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                            </div>
+                        </div>
+                        <div class="yl_dongtai_img bbs_dongtai_img">
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-04/bbs15562725249820.html" target="_blank" title="劳动者不辞而别，用人单位该怎么办？"><img src="http://www.yanglaocn.com/images/upload/img/2019/04_26/66fa1a84f5286e08eeebfef815f121e5.jpg" width="80" height="60"  border="0" alt="劳动者不辞而别，用人单位该怎么办？" /></a>
+                            <h3>
+                                <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-04/bbs15562725249820.html" target="_blank" title="劳动者不辞而别，用人单位该怎么办？"
+                                >劳动者不辞而别，用人单位该怎么办？</a>
+                            </h3>
+                            <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                                <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=16" target="_blank" title="三生石"><img src="https://www.yanglaocn.com/images/upload/img/2020/02-06/5247c6c429897b27c561f715ad1d4c9b.png"></a></span>
+                                <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=16" target="_blank">三生石</a></label>
+                                <b>▪</b>
+                                <label><i class="el-icon-time"></i> 19-04-26 17:55</label>
+                                <b>▪</b>
+                                <label><a href="https://www.yanglaocn.com/bbs/?tid=40" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保案例分析</a></label>
+                                <b>▪</b>
+                                <label title="浏览次数"><i class="el-icon-view"></i> 79</label>
+                                <b>▪</b>
+                                <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                            </div>
+                        </div>
+                        <div class="yl_dongtai_img bbs_dongtai_img">
+                            <h9>
+                                <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-04/bbs15562724159818.html" target="_blank" title="在办公室受伤，一定是工伤吗？"
+                                >在办公室受伤，一定是工伤吗？</a>
+                            </h9>
+                            <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                                <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=16" target="_blank" title="三生石"><img src="https://www.yanglaocn.com/images/upload/img/2020/02-06/5247c6c429897b27c561f715ad1d4c9b.png"></a></span>
+                                <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=16" target="_blank">三生石</a></label>
+                                <b>▪</b>
+                                <label><i class="el-icon-time"></i> 19-04-26 17:53</label>
+                                <b>▪</b>
+                                <label><a href="https://www.yanglaocn.com/bbs/?tid=40" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保案例分析</a></label>
+                                <b>▪</b>
+                                <label title="浏览次数"><i class="el-icon-view"></i> 29</label>
+                                <b>▪</b>
+                                <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                            </div>
+                        </div>
+                        <div class="yl_dongtai_img bbs_dongtai_img">
+                            <h9>
+                                <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-04/bbs15561138969814.html" target="_blank" title="企业为职工办理了人身意外伤害保险，可以不再参加工伤保险吗？"
+                                >企业为职工办理了人身意外伤害保险，可以不再参加工伤保险吗？</a>
+                            </h9>
+                            <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                                <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=16" target="_blank" title="三生石"><img src="https://www.yanglaocn.com/images/upload/img/2020/02-06/5247c6c429897b27c561f715ad1d4c9b.png"></a></span>
+                                <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=16" target="_blank">三生石</a></label>
+                                <b>▪</b>
+                                <label><i class="el-icon-time"></i> 19-04-24 21:51</label>
+                                <b>▪</b>
+                                <label><a href="https://www.yanglaocn.com/bbs/?tid=40" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保案例分析</a></label>
+                                <b>▪</b>
+                                <label title="浏览次数"><i class="el-icon-view"></i> 49</label>
+                                <b>▪</b>
+                                <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                            </div>
+                        </div>
+                        <div class="yl_dongtai_img bbs_dongtai_img">
+                            <h9>
+                                <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-04/bbs15561123769812.html" target="_blank" title="【说案】用人单位能否在试用期解雇不符合录用条件的孕期女职工？"
+                                >【说案】用人单位能否在试用期解雇不符合录用条件的孕期女职工？</a>
+                            </h9>
+                            <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                                <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=16" target="_blank" title="三生石"><img src="https://www.yanglaocn.com/images/upload/img/2020/02-06/5247c6c429897b27c561f715ad1d4c9b.png"></a></span>
+                                <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=16" target="_blank">三生石</a></label>
+                                <b>▪</b>
+                                <label><i class="el-icon-time"></i> 19-04-24 21:26</label>
+                                <b>▪</b>
+                                <label><a href="https://www.yanglaocn.com/bbs/?tid=40" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保案例分析</a></label>
+                                <b>▪</b>
+                                <label title="浏览次数"><i class="el-icon-view"></i> 33</label>
+                                <b>▪</b>
+                                <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                            </div>
+                        </div>
+                        <div class="yl_dongtai_img bbs_dongtai_img">
+                            <h9>
+                                <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-04/bbs15547695199778.html" target="_blank" title="用人单位提前解散，与医疗期内劳动者终止劳动合同是否合理？"
+                                >用人单位提前解散，与医疗期内劳动者终止劳动合同是否合理？</a>
+                            </h9>
+                            <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                                <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=15" target="_blank" title="zhanglei411521"><img src="https://www.yanglaocn.com/images/upload/img/2011/11-01/fd20cb22eb4dfa9b039fc5de9a365491.jpg"></a></span>
+                                <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=15" target="_blank">zhanglei411521</a></label>
+                                <b>▪</b>
+                                <label><i class="el-icon-time"></i> 19-04-09 08:25</label>
+                                <b>▪</b>
+                                <label><a href="https://www.yanglaocn.com/bbs/?tid=40" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保案例分析</a></label>
+                                <b>▪</b>
+                                <label title="浏览次数"><i class="el-icon-view"></i> 130</label>
+                                <b>▪</b>
+                                <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                            </div>
+                        </div>
+                        <div class="yl_dongtai_img bbs_dongtai_img">
+                            <h9>
+                                <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-03/bbs15535615229751.html" target="_blank" title="单位没缴纳社保费，试用期员工也可随时“炒”单位！"
+                                >单位没缴纳社保费，试用期员工也可随时“炒”单位！</a>
+                            </h9>
+                            <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                                <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=15" target="_blank" title="zhanglei411521"><img src="https://www.yanglaocn.com/images/upload/img/2011/11-01/fd20cb22eb4dfa9b039fc5de9a365491.jpg"></a></span>
+                                <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=15" target="_blank">zhanglei411521</a></label>
+                                <b>▪</b>
+                                <label><i class="el-icon-time"></i> 19-03-26 08:52</label>
+                                <b>▪</b>
+                                <label><a href="https://www.yanglaocn.com/bbs/?tid=40" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保案例分析</a></label>
+                                <b>▪</b>
+                                <label title="浏览次数"><i class="el-icon-view"></i> 101</label>
+                                <b>▪</b>
+                                <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                            </div>
+                        </div>
+                        <div class="yl_dongtai_img bbs_dongtai_img">
+                            <h9>
+                                <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-03/bbs15532159339743.html" target="_blank" title="未按职工实际工资缴纳社保费，用人单位应补足工伤待遇差额"
+                                >未按职工实际工资缴纳社保费，用人单位应补足工伤待遇差额</a>
+                            </h9>
+                            <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                                <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=16" target="_blank" title="三生石"><img src="https://www.yanglaocn.com/images/upload/img/2020/02-06/5247c6c429897b27c561f715ad1d4c9b.png"></a></span>
+                                <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=16" target="_blank">三生石</a></label>
+                                <b>▪</b>
+                                <label><i class="el-icon-time"></i> 19-03-22 08:52</label>
+                                <b>▪</b>
+                                <label><a href="https://www.yanglaocn.com/bbs/?tid=40" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保案例分析</a></label>
+                                <b>▪</b>
+                                <label title="浏览次数"><i class="el-icon-view"></i> 118</label>
+                                <b>▪</b>
+                                <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                            </div>
+                        </div>
+                        <div class="yl_dongtai_img bbs_dongtai_img">
+                            <h9>
+                                <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-03/bbs15526044629727.html" target="_blank" title="用人单位未按期申请工伤认定，就得“自掏腰包”"
+                                >用人单位未按期申请工伤认定，就得“自掏腰包”</a>
+                            </h9>
+                            <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                                <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=16" target="_blank" title="三生石"><img src="https://www.yanglaocn.com/images/upload/img/2020/02-06/5247c6c429897b27c561f715ad1d4c9b.png"></a></span>
+                                <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=16" target="_blank">三生石</a></label>
+                                <b>▪</b>
+                                <label><i class="el-icon-time"></i> 19-03-15 07:01</label>
+                                <b>▪</b>
+                                <label><a href="https://www.yanglaocn.com/bbs/?tid=40" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保案例分析</a></label>
+                                <b>▪</b>
+                                <label title="浏览次数"><i class="el-icon-view"></i> 110</label>
+                                <b>▪</b>
+                                <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                            </div>
+                        </div>
+                        <div class="yl_dongtai_img bbs_dongtai_img">
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-02/bbs15511377309701.html" target="_blank" title="遭受工伤后用人单位注销，公司出资人应支付待遇吗？"><img src="http://www.yanglaocn.com/images/upload/img/2019/02_26/9e4fc9c1fbc6ee8df5da0d782a648d14.jpg" width="80" height="60"  border="0" alt="遭受工伤后用人单位注销，公司出资人应支付待遇吗？" /></a>
+                            <h3>
+                                <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-02/bbs15511377309701.html" target="_blank" title="遭受工伤后用人单位注销，公司出资人应支付待遇吗？"
+                                >遭受工伤后用人单位注销，公司出资人应支付待遇吗？</a>
+                            </h3>
+                            <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                                <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank" title="soosom"><img src="https://www.yanglaocn.com/images/upload/individualimages/2014/06-06/6f0c281b9f2c5c93ff82fbe7e17db6c9.jpg"></a></span>
+                                <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank">soosom</a></label>
+                                <b>▪</b>
+                                <label><i class="el-icon-time"></i> 19-02-26 07:35</label>
+                                <b>▪</b>
+                                <label><a href="https://www.yanglaocn.com/bbs/?tid=40" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保案例分析</a></label>
+                                <b>▪</b>
+                                <label title="浏览次数"><i class="el-icon-view"></i> 134</label>
+                                <b>▪</b>
+                                <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                            </div>
+                        </div>
+                        <div class="yl_dongtai_img bbs_dongtai_img">
+                            <h9>
+                                <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-02/bbs15507944789693.html" target="_blank" title="一至四级伤残的工伤员工死亡，相关待遇如何支付？"
+                                >一至四级伤残的工伤员工死亡，相关待遇如何支付？</a>
+                            </h9>
+                            <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                                <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=16" target="_blank" title="三生石"><img src="https://www.yanglaocn.com/images/upload/img/2020/02-06/5247c6c429897b27c561f715ad1d4c9b.png"></a></span>
+                                <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=16" target="_blank">三生石</a></label>
+                                <b>▪</b>
+                                <label><i class="el-icon-time"></i> 19-02-22 08:14</label>
+                                <b>▪</b>
+                                <label><a href="https://www.yanglaocn.com/bbs/?tid=40" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保案例分析</a></label>
+                                <b>▪</b>
+                                <label title="浏览次数"><i class="el-icon-view"></i> 96</label>
+                                <b>▪</b>
+                                <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                            </div>
+                        </div>
+                        <div class="yl_dongtai_img bbs_dongtai_img">
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-02/bbs15504905579686.html" target="_blank" title="加班回家途中摔成骨折，能否认定工伤？"><img src="http://www.yanglaocn.com/images/upload/img/2019/02_18/33d3ea19f62d42f178ebad203305dee0.jpg" width="80" height="60"  border="0" alt="加班回家途中摔成骨折，能否认定工伤？" /></a>
+                            <h3>
+                                <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-02/bbs15504905579686.html" target="_blank" title="加班回家途中摔成骨折，能否认定工伤？"
+                                >加班回家途中摔成骨折，能否认定工伤？</a>
+                            </h3>
+                            <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                                <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=16" target="_blank" title="三生石"><img src="https://www.yanglaocn.com/images/upload/img/2020/02-06/5247c6c429897b27c561f715ad1d4c9b.png"></a></span>
+                                <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=16" target="_blank">三生石</a></label>
+                                <b>▪</b>
+                                <label><i class="el-icon-time"></i> 19-02-18 19:49</label>
+                                <b>▪</b>
+                                <label><a href="https://www.yanglaocn.com/bbs/?tid=40" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保案例分析</a></label>
+                                <b>▪</b>
+                                <label title="浏览次数"><i class="el-icon-view"></i> 105</label>
+                                <b>▪</b>
+                                <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                            </div>
+                        </div>
+                        <div class="yl_dongtai_img bbs_dongtai_img">
+                            <h9>
+                                <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-02/bbs15504576869683.html" target="_blank" title="失业人员该怎样享受待遇"
+                                >失业人员该怎样享受待遇</a>
+                            </h9>
+                            <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                                <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=16" target="_blank" title="三生石"><img src="https://www.yanglaocn.com/images/upload/img/2020/02-06/5247c6c429897b27c561f715ad1d4c9b.png"></a></span>
+                                <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=16" target="_blank">三生石</a></label>
+                                <b>▪</b>
+                                <label><i class="el-icon-time"></i> 19-02-18 10:41</label>
+                                <b>▪</b>
+                                <label><a href="https://www.yanglaocn.com/bbs/?tid=40" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保案例分析</a></label>
+                                <b>▪</b>
+                                <label title="浏览次数"><i class="el-icon-view"></i> 200</label>
+                                <b>▪</b>
+                                <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                            </div>
+                        </div>
+                        <div class="yl_dongtai_img bbs_dongtai_img">
+                            <h9>
+                                <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-01/bbs15153776778771.html" target="_blank" title="企业破产，工伤职工还能否享受工伤待遇？"
+                                >企业破产，工伤职工还能否享受工伤待遇？</a>
+                            </h9>
+                            <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                                <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank" title="soosom"><img src="https://www.yanglaocn.com/images/upload/individualimages/2014/06-06/6f0c281b9f2c5c93ff82fbe7e17db6c9.jpg"></a></span>
+                                <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank">soosom</a></label>
+                                <b>▪</b>
+                                <label><i class="el-icon-time"></i> 18-01-08 10:14</label>
+                                <b>▪</b>
+                                <label><a href="https://www.yanglaocn.com/bbs/?tid=40" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保案例分析</a></label>
+                                <b>▪</b>
+                                <label title="浏览次数"><i class="el-icon-view"></i> 405</label>
+                                <b>▪</b>
+                                <label title="回复"><i class="el-icon-chat-line-round"></i> 1</label>
+                            </div>
+                        </div>
+                        <div class="yl_dongtai_img bbs_dongtai_img">
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2017-08/bbs15028758088061.html" target="_blank" title="人社部：职工带薪年休假怎么休？"><img src="http://www.yanglaocn.com/images/upload/img/2017/08_16/db4fac712aa8c2d688c511b69d285bbb.jpg" width="80" height="60"  border="0" alt="人社部：职工带薪年休假怎么休？" /></a>
+                            <h3>
+                                <a href="https://www.yanglaocn.com/shtml/bbsxx/2017-08/bbs15028758088061.html" target="_blank" title="人社部：职工带薪年休假怎么休？"
+                                >人社部：职工带薪年休假怎么休？</a>
+                            </h3>
+                            <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                                <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank" title="soosom"><img src="https://www.yanglaocn.com/images/upload/individualimages/2014/06-06/6f0c281b9f2c5c93ff82fbe7e17db6c9.jpg"></a></span>
+                                <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank">soosom</a></label>
+                                <b>▪</b>
+                                <label><i class="el-icon-time"></i> 17-08-16 17:30</label>
+                                <b>▪</b>
+                                <label><a href="https://www.yanglaocn.com/bbs/?tid=40" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保案例分析</a></label>
+                                <b>▪</b>
+                                <label title="浏览次数"><i class="el-icon-view"></i> 267</label>
+                                <b>▪</b>
+                                <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                            </div>
+                        </div>
+                        <div class="yl_dongtai_img bbs_dongtai_img">
+                            <h9>
+                                <a href="https://www.yanglaocn.com/shtml/bbsxx/2017-08/bbs15028755878060.html" target="_blank" title="职工被借调期间发生工伤事故，应由谁负责？"
+                                >职工被借调期间发生工伤事故，应由谁负责？</a>
+                            </h9>
+                            <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                                <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank" title="soosom"><img src="https://www.yanglaocn.com/images/upload/individualimages/2014/06-06/6f0c281b9f2c5c93ff82fbe7e17db6c9.jpg"></a></span>
+                                <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank">soosom</a></label>
+                                <b>▪</b>
+                                <label><i class="el-icon-time"></i> 17-08-16 17:26</label>
+                                <b>▪</b>
+                                <label><a href="https://www.yanglaocn.com/bbs/?tid=40" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保案例分析</a></label>
+                                <b>▪</b>
+                                <label title="浏览次数"><i class="el-icon-view"></i> 186</label>
+                                <b>▪</b>
+                                <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                            </div>
+                        </div>
+                        <div class="yl_dongtai_img bbs_dongtai_img">
+                            <h9>
+                                <a href="https://www.yanglaocn.com/shtml/bbsxx/2017-05/bbs14950727967512.html" target="_blank" title="员工未休年假，如何计算补偿金额？"
+                                >员工未休年假，如何计算补偿金额？</a>
+                            </h9>
+                            <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                                <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank" title="soosom"><img src="https://www.yanglaocn.com/images/upload/individualimages/2014/06-06/6f0c281b9f2c5c93ff82fbe7e17db6c9.jpg"></a></span>
+                                <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank">soosom</a></label>
+                                <b>▪</b>
+                                <label><i class="el-icon-time"></i> 17-05-18 10:00</label>
+                                <b>▪</b>
+                                <label><a href="https://www.yanglaocn.com/bbs/?tid=40" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保案例分析</a></label>
+                                <b>▪</b>
+                                <label title="浏览次数"><i class="el-icon-view"></i> 184</label>
+                                <b>▪</b>
+                                <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                            </div>
+                        </div>
+                        <div class="yl_dongtai_img bbs_dongtai_img">
+                            <h9>
+                                <a href="https://www.yanglaocn.com/shtml/bbsxx/2017-05/bbs14944265337456.html" target="_blank" title="【人社部】工亡职工近亲属可享受哪些待遇？"
+                                >【人社部】工亡职工近亲属可享受哪些待遇？</a>
+                            </h9>
+                            <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                                <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank" title="soosom"><img src="https://www.yanglaocn.com/images/upload/individualimages/2014/06-06/6f0c281b9f2c5c93ff82fbe7e17db6c9.jpg"></a></span>
+                                <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank">soosom</a></label>
+                                <b>▪</b>
+                                <label><i class="el-icon-time"></i> 17-05-10 22:28</label>
+                                <b>▪</b>
+                                <label><a href="https://www.yanglaocn.com/bbs/?tid=40" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保案例分析</a></label>
+                                <b>▪</b>
+                                <label title="浏览次数"><i class="el-icon-view"></i> 237</label>
+                                <b>▪</b>
+                                <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                            </div>
+                        </div><div class="moodload moodloadjiaW LoadmoreJS" page="1" moodtab="fabu" onoff="1" etab="fabu">点击加载更多</div>
+                    </div>
+                </el-tab-pane>
+                <el-tab-pane label="最新回复" name="huifu">
+
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-01/bbs15153776778771.html" target="_blank" title="企业破产，工伤职工还能否享受工伤待遇？"
+                            >企业破产，工伤职工还能否享受工伤待遇？</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank" title="soosom"><img src="https://www.yanglaocn.com/images/upload/individualimages/2014/06-06/6f0c281b9f2c5c93ff82fbe7e17db6c9.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank">soosom</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 18-01-08 10:14</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=40" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保案例分析</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 405</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 1</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2014-04/bbs1396334672949.html" target="_blank" title="退休调增养老金"
+                            >退休调增养老金</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=1072" target="_blank" title="昆重帅师"><img src="https://www.yanglaocn.com/images/upload/img/2013/08-04/9aff3981e61eb7cf98e26932f2477f9d.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=1072" target="_blank">昆重帅师</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 14-04-01 14:44</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=40" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保案例分析</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 505</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 1</label>
+                        </div>
+                    </div><div class="moodload moodloadjiaW LoadmoreJS" page="1" moodtab="huifu" onoff="1" etab="huifu">点击加载更多</div>
+                </el-tab-pane>
+                <el-tab-pane label="热点" name="hot">
+
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2015-10/bbs14446542374122.html" target="_blank" title="灵活就业人员退休医保需缴多少年"
+                            >灵活就业人员退休医保需缴多少年</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank" title="soosom"><img src="https://www.yanglaocn.com/images/upload/individualimages/2014/06-06/6f0c281b9f2c5c93ff82fbe7e17db6c9.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank">soosom</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 15-10-12 20:51</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=40" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保案例分析</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 542</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2015-03/bbs14276798502663.html" target="_blank" title="劳务派遣企业员工能享受特殊工种退休政策吗？"
+                            >劳务派遣企业员工能享受特殊工种退休政策吗？</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank" title="soosom"><img src="https://www.yanglaocn.com/images/upload/individualimages/2014/06-06/6f0c281b9f2c5c93ff82fbe7e17db6c9.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank">soosom</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 15-03-30 09:44</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=40" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保案例分析</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 552</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2015-03/bbs14273511412640.html" target="_blank" title="退休时医保缴费年限不够 不能享受有关待遇怎么办"
+                            >退休时医保缴费年限不够 不能享受有关待遇怎么办</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank" title="soosom"><img src="https://www.yanglaocn.com/images/upload/individualimages/2014/06-06/6f0c281b9f2c5c93ff82fbe7e17db6c9.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank">soosom</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 15-03-26 14:25</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=40" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保案例分析</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 897</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2015-01/bbs14214852492261.html" target="_blank" title="员工达到退休年龄，缴费年限不满 15 年怎么办"
+                            >员工达到退休年龄，缴费年限不满 15 年怎么办</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank" title="soosom"><img src="https://www.yanglaocn.com/images/upload/individualimages/2014/06-06/6f0c281b9f2c5c93ff82fbe7e17db6c9.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank">soosom</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 15-01-17 17:00</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=40" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保案例分析</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 668</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2014-10/bbs14137863751717.html" target="_blank" title="员工达到退休年龄，缴费年限不满 15 年怎么办？"
+                            >员工达到退休年龄，缴费年限不满 15 年怎么办？</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=21" target="_blank" title="上善若水"><img src="https://www.yanglaocn.com/images/upload/individualimages/2014/10-09/33174b98d79335d10c874c97764c9579.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=21" target="_blank">上善若水</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 14-10-20 14:26</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=40" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保案例分析</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 1205</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2014-04/bbs1396334672949.html" target="_blank" title="退休调增养老金"
+                            >退休调增养老金</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=1072" target="_blank" title="昆重帅师"><img src="https://www.yanglaocn.com/images/upload/img/2013/08-04/9aff3981e61eb7cf98e26932f2477f9d.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=1072" target="_blank">昆重帅师</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 14-04-01 14:44</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=40" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保案例分析</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 505</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 1</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2014-04/bbs1396324536947.html" target="_blank" title="如何将城镇职工养老保险与城乡居民养老保险合并？"
+                            >如何将城镇职工养老保险与城乡居民养老保险合并？</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=677" target="_blank" title="张磊"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=677" target="_blank">张磊</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 14-04-01 11:55</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=40" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保案例分析</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 543</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2014-03/bbs1395902636925.html" target="_blank" title="[天津市]参保人员出现重复参保怎么办？"
+                            >[天津市]参保人员出现重复参保怎么办？</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=957" target="_blank" title="風吹你我散"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=957" target="_blank">風吹你我散</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 14-03-27 14:43</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=40" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保案例分析</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 686</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2014-03/bbs1395888143919.html" target="_blank" title="[天津市]异地安置退休人员回津后如何看病？"
+                            >[天津市]异地安置退休人员回津后如何看病？</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank" title="soosom"><img src="https://www.yanglaocn.com/images/upload/individualimages/2014/06-06/6f0c281b9f2c5c93ff82fbe7e17db6c9.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank">soosom</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 14-03-27 10:42</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=40" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保案例分析</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 545</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2013-11/bbs1384736526704.html" target="_blank" title="用人单位退休人员需要缴纳基本医疗保险费吗？"
+                            >用人单位退休人员需要缴纳基本医疗保险费吗？</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=947" target="_blank" title="慕容千瑞"><img src="https://www.yanglaocn.com/images/upload/individualimages/2016/08-29/cd2feeb5530d6f9224fad2e5c5478665.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=947" target="_blank">慕容千瑞</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 13-11-18 09:02</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=40" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保案例分析</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 978</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2013-11/bbs1384477396698.html" target="_blank" title="劳动者放弃社会保险的，其能否要求用人单位承担医疗费？"
+                            >劳动者放弃社会保险的，其能否要求用人单位承担医疗费？</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=865" target="_blank" title="yly1314"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=865" target="_blank">yly1314</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 13-11-15 09:03</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=40" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保案例分析</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 679</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2013-10/bbs1381885245662.html" target="_blank" title="职工离职后异地就业并参加基本养老保险的，应如何计算和领取基本养老金？"
+                            >职工离职后异地就业并参加基本养老保险的，应如何计算和领取基本养老金？</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=792" target="_blank" title="磊磊"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=792" target="_blank">磊磊</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 13-10-16 09:00</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=40" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保案例分析</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 940</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2013-09/bbs1380076911621.html" target="_blank" title="退休人员下落不明其个人账户中的余额能否继承？"
+                            >退休人员下落不明其个人账户中的余额能否继承？</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=492" target="_blank" title="爱心"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=492" target="_blank">爱心</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 13-09-25 10:41</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=40" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保案例分析</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 565</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2013-09/bbs1380069707619.html" target="_blank" title="退休职工出国定居后应如何领取基本养老金？"
+                            >退休职工出国定居后应如何领取基本养老金？</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=493" target="_blank" title="冰点"><img src="https://www.yanglaocn.com/images/upload/individualimages/2014/06-11/80ad44e31181dc72c2d7df7644f44bd4.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=493" target="_blank">冰点</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 13-09-25 08:41</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=40" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保案例分析</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 1034</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2013-09/bbs1379342134587.html" target="_blank" title="用人单位未及时办理退休手续给职工造成的养老金损失是否应赔偿？"
+                            >用人单位未及时办理退休手续给职工造成的养老金损失是否应赔偿？</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=496" target="_blank" title="珊珊"><img src="https://www.yanglaocn.com/images/upload/img/2011/11-01/f9d8a5987d7f2cc97febe9212e6202a0.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=496" target="_blank">珊珊</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 13-09-16 22:35</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=40" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保案例分析</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 2815</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2013-09/bbs1379342051586.html" target="_blank" title="用人单位欠缴保险费导致劳动者的退休金有所损失是否应赔偿？"
+                            >用人单位欠缴保险费导致劳动者的退休金有所损失是否应赔偿？</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=496" target="_blank" title="珊珊"><img src="https://www.yanglaocn.com/images/upload/img/2011/11-01/f9d8a5987d7f2cc97febe9212e6202a0.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=496" target="_blank">珊珊</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 13-09-16 22:34</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=40" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保案例分析</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 1483</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2013-09/bbs1378906907559.html" target="_blank" title="企业能以亏损为由不为劳动者缴纳养老保险费吗？"
+                            >企业能以亏损为由不为劳动者缴纳养老保险费吗？</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=21" target="_blank" title="上善若水"><img src="https://www.yanglaocn.com/images/upload/individualimages/2014/10-09/33174b98d79335d10c874c97764c9579.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=21" target="_blank">上善若水</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 13-09-11 21:41</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=40" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保案例分析</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 664</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2013-09/bbs1378563742540.html" target="_blank" title="国有企业职工参加基本养老保险的缴费年限如何计算？"
+                            >国有企业职工参加基本养老保险的缴费年限如何计算？</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank" title="soosom"><img src="https://www.yanglaocn.com/images/upload/individualimages/2014/06-06/6f0c281b9f2c5c93ff82fbe7e17db6c9.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank">soosom</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 13-09-07 22:22</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=40" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保案例分析</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 1597</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2013-09/bbs1378563146541.html" target="_blank" title="职工退休时缴费未满1 5年的，能否享受养老保险待遇？"
+                            >职工退休时缴费未满1 5年的，能否享受养老保险待遇？</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank" title="soosom"><img src="https://www.yanglaocn.com/images/upload/individualimages/2014/06-06/6f0c281b9f2c5c93ff82fbe7e17db6c9.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank">soosom</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 13-09-07 22:12</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=40" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保案例分析</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 1025</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2013-09/bbs1378562856539.html" target="_blank" title="个人独资企业员工可以不用参加社会保险吗？"
+                            >个人独资企业员工可以不用参加社会保险吗？</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank" title="soosom"><img src="https://www.yanglaocn.com/images/upload/individualimages/2014/06-06/6f0c281b9f2c5c93ff82fbe7e17db6c9.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank">soosom</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 13-09-07 22:07</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=40" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保案例分析</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 702</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div><div class="moodload moodloadjiaW LoadmoreJS" page="1" moodtab="hot" onoff="1" etab="hot">点击加载更多</div>
+                </el-tab-pane>
+                <el-tab-pane label="社保杂谈" name="3">
+
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-10/bbs160268274110302.html" target="_blank" title="晋城市居民医保慢性病病种及待遇标准"><img src="http://www.yanglaocn.com/images/upload/img/2020/10_14/c3f6cc1a9479531528dd6cc18892d245.jpg" width="80" height="60"  border="0" alt="晋城市居民医保慢性病病种及待遇标准" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-10/bbs160268274110302.html" target="_blank" title="晋城市居民医保慢性病病种及待遇标准"
+                            >晋城市居民医保慢性病病种及待遇标准</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank" title="soosom"><img src="https://www.yanglaocn.com/images/upload/individualimages/2014/06-06/6f0c281b9f2c5c93ff82fbe7e17db6c9.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank">soosom</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 20-10-14 21:39</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=3" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保杂谈</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 61</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-03/bbs158397121110237.html" target="_blank" title="【图说】工时制度小知识"><img src="http://www.yanglaocn.com/images/upload/img/2020/03_12/9202db4a95c409e4d8968b724e996e71.png" width="80" height="60"  border="0" alt="【图说】工时制度小知识" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-03/bbs158397121110237.html" target="_blank" title="【图说】工时制度小知识"
+                            >【图说】工时制度小知识</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank" title="soosom"><img src="https://www.yanglaocn.com/images/upload/individualimages/2014/06-06/6f0c281b9f2c5c93ff82fbe7e17db6c9.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank">soosom</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 20-03-12 08:00</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=3" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保杂谈</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 142</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-02/bbs158259390710227.html" target="_blank" title="疫情期间养老金新政：按时发放，晚办退休手续可补发"><img src="http://www.yanglaocn.com/images/upload/img/2020/02_25/e59c7fa38e5dc1e318072fe0c8d5acf1.jpg" width="80" height="60"  border="0" alt="疫情期间养老金新政：按时发放，晚办退休手续可补发" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-02/bbs158259390710227.html" target="_blank" title="疫情期间养老金新政：按时发放，晚办退休手续可补发"
+                            >疫情期间养老金新政：按时发放，晚办退休手续可补发</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=6980" target="_blank" title="颐康84546988"><img src="https://www.yanglaocn.com/images/upload/img/2013/08-04/f7dbb80109006c9e5448c95e9ece23f8.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=6980" target="_blank">颐康84546988</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 20-02-25 09:25</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=3" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保杂谈</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 189</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-02/bbs158232924210223.html" target="_blank" title="人社部：复工复产中的劳动用工、劳动关系、工资待遇、社保缴费等问题，权威解答来啦！"
+                            >人社部：复工复产中的劳动用工、劳动关系、工资待遇、社保缴费等问题，权威解答来啦！</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank" title="soosom"><img src="https://www.yanglaocn.com/images/upload/individualimages/2014/06-06/6f0c281b9f2c5c93ff82fbe7e17db6c9.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank">soosom</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 20-02-22 07:54</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=3" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保杂谈</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 245</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-01/bbs15477081989635.html" target="_blank" title="你知道2019农村养老金将有哪四个变动吗？"><img src="http://www.yanglaocn.com/images/upload/img/2019/01_17/82d28d30e68c57ea869d36eab3579e71.jpg" width="80" height="60"  border="0" alt="你知道2019农村养老金将有哪四个变动吗？" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-01/bbs15477081989635.html" target="_blank" title="你知道2019农村养老金将有哪四个变动吗？"
+                            >你知道2019农村养老金将有哪四个变动吗？</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=9406" target="_blank" title="益养老"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=9406" target="_blank">益养老</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 19-01-17 14:56</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=3" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保杂谈</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 212</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-01/bbs15475439999630.html" target="_blank" title="台州：全年无休！这些社保卡网点节假日都能办业务！"><img src="http://www.yanglaocn.com/images/upload/img/2019/01_15/75845f38faa4f5efaa8374ae1fae462a.jpg" width="80" height="60"  border="0" alt="台州：全年无休！这些社保卡网点节假日都能办业务！" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-01/bbs15475439999630.html" target="_blank" title="台州：全年无休！这些社保卡网点节假日都能办业务！"
+                            >台州：全年无休！这些社保卡网点节假日都能办业务！</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank" title="soosom"><img src="https://www.yanglaocn.com/images/upload/individualimages/2014/06-06/6f0c281b9f2c5c93ff82fbe7e17db6c9.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank">soosom</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 19-01-15 17:19</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=3" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保杂谈</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 135</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-06/bbs15302376189123.html" target="_blank" title="肇庆市公布2018社保年度医疗保险、工伤保险和生育保险缴费基数"
+                            >肇庆市公布2018社保年度医疗保险、工伤保险和生育保险缴费基数</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank" title="soosom"><img src="https://www.yanglaocn.com/images/upload/individualimages/2014/06-06/6f0c281b9f2c5c93ff82fbe7e17db6c9.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank">soosom</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 18-06-29 10:00</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=3" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保杂谈</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 1103</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 1</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-05/bbs15277336169094.html" target="_blank" title="河南省|大病保险筹资标准提高啦！"><img src="http://www.yanglaocn.com/images/upload/img/2018/05_31/d4fe9351673d6a322f070ce99553ecaf.jpg" width="80" height="60"  border="0" alt="河南省|大病保险筹资标准提高啦！" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-05/bbs15277336169094.html" target="_blank" title="河南省|大病保险筹资标准提高啦！"
+                            >河南省|大病保险筹资标准提高啦！</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank" title="soosom"><img src="https://www.yanglaocn.com/images/upload/individualimages/2014/06-06/6f0c281b9f2c5c93ff82fbe7e17db6c9.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank">soosom</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 18-05-31 10:26</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=3" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保杂谈</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 240</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-05/bbs15274642209089.html" target="_blank" title="热点珠海市医疗、生育保险咨询热点及解答，快来看看吧~"
+                            >热点珠海市医疗、生育保险咨询热点及解答，快来看看吧~</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank" title="soosom"><img src="https://www.yanglaocn.com/images/upload/individualimages/2014/06-06/6f0c281b9f2c5c93ff82fbe7e17db6c9.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank">soosom</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 18-05-28 07:37</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=3" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保杂谈</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 359</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-05/bbs15262514739076.html" target="_blank" title="一图读懂青岛市居民家庭民生综合保险政策"><img src="http://www.yanglaocn.com/images/upload/img/2018/05_14/eff98f4e97df4218815810ec212545ea.jpg" width="80" height="60"  border="0" alt="一图读懂青岛市居民家庭民生综合保险政策" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-05/bbs15262514739076.html" target="_blank" title="一图读懂青岛市居民家庭民生综合保险政策"
+                            >一图读懂青岛市居民家庭民生综合保险政策</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank" title="soosom"><img src="https://www.yanglaocn.com/images/upload/individualimages/2014/06-06/6f0c281b9f2c5c93ff82fbe7e17db6c9.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank">soosom</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 18-05-14 06:44</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=3" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保杂谈</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 224</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-04/bbs15245783949042.html" target="_blank" title="快收藏！电子社保卡来了，你清楚它有哪些功能吗？"><img src="http://www.yanglaocn.com/images/upload/img/2018/04_24/d00c60f1e60467677382ef69ec797c9a.jpg" width="80" height="60"  border="0" alt="快收藏！电子社保卡来了，你清楚它有哪些功能吗？" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-04/bbs15245783949042.html" target="_blank" title="快收藏！电子社保卡来了，你清楚它有哪些功能吗？"
+                            >快收藏！电子社保卡来了，你清楚它有哪些功能吗？</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank" title="soosom"><img src="https://www.yanglaocn.com/images/upload/individualimages/2014/06-06/6f0c281b9f2c5c93ff82fbe7e17db6c9.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank">soosom</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 18-04-24 21:59</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=3" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保杂谈</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 453</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-02/bbs15181610328902.html" target="_blank" title="牵衣送——大家好"
+                            >牵衣送——大家好</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=7484" target="_blank" title="牵衣送"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=7484" target="_blank">牵衣送</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 18-02-09 15:23</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=3" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保杂谈</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 183</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-01/bbs15160651858817.html" target="_blank" title="上海人社：异地就医结算那些事儿"><img src="http://www.yanglaocn.com/images/upload/img/2018/01_16/10e578145077a49e350b93343d20dd72.jpg" width="80" height="60"  border="0" alt="上海人社：异地就医结算那些事儿" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-01/bbs15160651858817.html" target="_blank" title="上海人社：异地就医结算那些事儿"
+                            >上海人社：异地就医结算那些事儿</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank" title="soosom"><img src="https://www.yanglaocn.com/images/upload/individualimages/2014/06-06/6f0c281b9f2c5c93ff82fbe7e17db6c9.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank">soosom</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 18-01-16 09:13</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=3" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保杂谈</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 361</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-01/bbs15156368488800.html" target="_blank" title="你一辈子要交多少五险一金？退休能拿回多少？算完惊呆！"><img src="http://www.yanglaocn.com/images/upload/img/2018/01_11/c8576dbb3668ee4468fa10376eff4e2e.jpg" width="80" height="60"  border="0" alt="你一辈子要交多少五险一金？退休能拿回多少？算完惊呆！" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-01/bbs15156368488800.html" target="_blank" title="你一辈子要交多少五险一金？退休能拿回多少？算完惊呆！"
+                            >你一辈子要交多少五险一金？退休能拿回多少？算完惊呆！</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank" title="soosom"><img src="https://www.yanglaocn.com/images/upload/individualimages/2014/06-06/6f0c281b9f2c5c93ff82fbe7e17db6c9.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank">soosom</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 18-01-11 10:16</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=3" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保杂谈</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 399</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-01/bbs15155460758792.html" target="_blank" title="居保人员生病就医，可享受怎样的医保待遇？"
+                            >居保人员生病就医，可享受怎样的医保待遇？</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=21" target="_blank" title="上善若水"><img src="https://www.yanglaocn.com/images/upload/individualimages/2014/10-09/33174b98d79335d10c874c97764c9579.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=21" target="_blank">上善若水</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 18-01-10 09:01</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=3" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保杂谈</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 189</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-01/bbs15155459908791.html" target="_blank" title="注意啦！这笔钱不按时缴，今年将不能报销医药费！——河北人社"
+                            >注意啦！这笔钱不按时缴，今年将不能报销医药费！——河北人社</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=21" target="_blank" title="上善若水"><img src="https://www.yanglaocn.com/images/upload/individualimages/2014/10-09/33174b98d79335d10c874c97764c9579.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=21" target="_blank">上善若水</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 18-01-10 08:59</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=3" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保杂谈</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 309</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-01/bbs15154617798784.html" target="_blank" title="人社部 | 产假期间工资怎么算？如何领取失业保险金？"
+                            >人社部 | 产假期间工资怎么算？如何领取失业保险金？</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=21" target="_blank" title="上善若水"><img src="https://www.yanglaocn.com/images/upload/individualimages/2014/10-09/33174b98d79335d10c874c97764c9579.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=21" target="_blank">上善若水</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 18-01-09 09:36</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=3" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保杂谈</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 440</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-01/bbs15154578378781.html" target="_blank" title="人社部 | 更方便，更快捷！跨省异地就医住院费用直接结算出新规！"><img src="http://www.yanglaocn.com/images/upload/img/2018/01_09/08076dbbc31c6b8244f871eb32d02cb5.jpg" width="80" height="60"  border="0" alt="人社部 | 更方便，更快捷！跨省异地就医住院费用直接结算出新规！" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-01/bbs15154578378781.html" target="_blank" title="人社部 | 更方便，更快捷！跨省异地就医住院费用直接结算出新规！"
+                            >人社部 | 更方便，更快捷！跨省异地就医住院费用直接结算出新规！</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=21" target="_blank" title="上善若水"><img src="https://www.yanglaocn.com/images/upload/individualimages/2014/10-09/33174b98d79335d10c874c97764c9579.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=21" target="_blank">上善若水</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 18-01-09 08:30</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=3" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保杂谈</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 246</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-01/bbs15153779668772.html" target="_blank" title="人社部|跨省异地就医住院费用直接结算攻略，跨省看病不用愁了！"><img src="http://www.yanglaocn.com/images/upload/img/2018/01_08/3bff328352a1d591f0cf15d1eadde928.jpg" width="80" height="60"  border="0" alt="人社部|跨省异地就医住院费用直接结算攻略，跨省看病不用愁了！" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-01/bbs15153779668772.html" target="_blank" title="人社部|跨省异地就医住院费用直接结算攻略，跨省看病不用愁了！"
+                            >人社部|跨省异地就医住院费用直接结算攻略，跨省看病不用愁了！</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank" title="soosom"><img src="https://www.yanglaocn.com/images/upload/individualimages/2014/06-06/6f0c281b9f2c5c93ff82fbe7e17db6c9.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank">soosom</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 18-01-08 10:19</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=3" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保杂谈</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 275</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2017-12/bbs15120910118598.html" target="_blank" title="五险一金的“小窍门”你还不知道？"><img src="http://www.yanglaocn.com/images/upload/img/2017/12_01/1639b2e79ad1668af96bfaa93f1e82c9.png" width="80" height="60"  border="0" alt="五险一金的“小窍门”你还不知道？" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2017-12/bbs15120910118598.html" target="_blank" title="五险一金的“小窍门”你还不知道？"
+                            >五险一金的“小窍门”你还不知道？</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=6980" target="_blank" title="颐康84546988"><img src="https://www.yanglaocn.com/images/upload/img/2013/08-04/f7dbb80109006c9e5448c95e9ece23f8.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=6980" target="_blank">颐康84546988</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 17-12-01 09:16</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=3" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保杂谈</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 243</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div><div class="moodload moodloadjiaW LoadmoreJS" page="1" moodtab="3" etab="3" onoff="1">点击加载更多</div>
+                </el-tab-pane>
+                <el-tab-pane label="社保问题" name="4">
+
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-10/bbs160268298510303.html" target="_blank" title="准备离职创业了，想了解一下社保断交后有哪些影响？"
+                            >准备离职创业了，想了解一下社保断交后有哪些影响？</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=780" target="_blank" title="难忘的回忆"><img src="https://www.yanglaocn.com/images/upload/img/2013/08-04/c61326f1c7ed240efced574bf8e71b6b.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=780" target="_blank">难忘的回忆</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 20-10-14 21:43</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=4" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保问题</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 91</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 4</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-10/bbs160256308410299.html" target="_blank" title="北京市领取失业保险待遇时，银行卡需要指定的银行，有什么具体的要求吗？"
+                            >北京市领取失业保险待遇时，银行卡需要指定的银行，有什么具体的要求吗？</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=1392" target="_blank" title="梦白如花"><img src="https://www.yanglaocn.com/images/upload/individualimages/2014/06-07/2eda2437c949949bb0f53331044d4e9f.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=1392" target="_blank">梦白如花</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 20-10-13 12:24</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=4" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保问题</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 142</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 1</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-06/bbs159339318110268.html" target="_blank" title="我可以办理病退吗？"
+                            >我可以办理病退吗？</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=12762" target="_blank" title="观音土"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=12762" target="_blank">观音土</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 20-06-29 09:13</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=4" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保问题</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 194</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 6</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-12/bbs157682257810163.html" target="_blank" title="退休工资核定"
+                            >退休工资核定</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=11657" target="_blank" title="sherry8"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=11657" target="_blank">sherry8</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 19-12-20 14:16</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=4" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保问题</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 318</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-08/bbs156593832210026.html" target="_blank" title="户口在浙江上海工作并交社保，迁户口来上海等后续问题"
+                            >户口在浙江上海工作并交社保，迁户口来上海等后续问题</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=10861" target="_blank" title="苏苏123"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=10861" target="_blank">苏苏123</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 19-08-16 14:52</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=4" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保问题</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 213</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-07/bbs15628982499970.html" target="_blank" title="图说全民参保（6）|社保费率怎么降？如何调整缴费基数口径？看图了解！"><img src="http://www.yanglaocn.com/images/upload/img/2019/07_12/49b45c4c6c5cda1655b53eb6d478bf8f.jpg" width="80" height="60"  border="0" alt="图说全民参保（6）|社保费率怎么降？如何调整缴费基数口径？看图了解！" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-07/bbs15628982499970.html" target="_blank" title="图说全民参保（6）|社保费率怎么降？如何调整缴费基数口径？看图了解！"
+                            >图说全民参保（6）|社保费率怎么降？如何调整缴费基数口径？看图了解！</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank" title="soosom"><img src="https://www.yanglaocn.com/images/upload/individualimages/2014/06-06/6f0c281b9f2c5c93ff82fbe7e17db6c9.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank">soosom</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 19-07-12 10:24</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=4" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保问题</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 56</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-07/bbs15628981909969.html" target="_blank" title="图说全民参保（5）|失业保险除了失业金还能申领这些补贴！"><img src="http://www.yanglaocn.com/images/upload/img/2019/07_12/ae2b0d3d5faddd780b98e7a1496a5376.jpg" width="80" height="60"  border="0" alt="图说全民参保（5）|失业保险除了失业金还能申领这些补贴！" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-07/bbs15628981909969.html" target="_blank" title="图说全民参保（5）|失业保险除了失业金还能申领这些补贴！"
+                            >图说全民参保（5）|失业保险除了失业金还能申领这些补贴！</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank" title="soosom"><img src="https://www.yanglaocn.com/images/upload/individualimages/2014/06-06/6f0c281b9f2c5c93ff82fbe7e17db6c9.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank">soosom</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 19-07-12 10:23</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=4" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保问题</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 56</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-07/bbs15628976569968.html" target="_blank" title="图说全民参保（7）|这些骗保“雷区”千万别踩，最高判无期徒刑！"><img src="http://www.yanglaocn.com/images/upload/img/2019/07_12/4e91ab38111d0346543e5df407cdd522.jpg" width="80" height="60"  border="0" alt="图说全民参保（7）|这些骗保“雷区”千万别踩，最高判无期徒刑！" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-07/bbs15628976569968.html" target="_blank" title="图说全民参保（7）|这些骗保“雷区”千万别踩，最高判无期徒刑！"
+                            >图说全民参保（7）|这些骗保“雷区”千万别踩，最高判无期徒刑！</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank" title="soosom"><img src="https://www.yanglaocn.com/images/upload/individualimages/2014/06-06/6f0c281b9f2c5c93ff82fbe7e17db6c9.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank">soosom</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 19-07-12 10:14</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=4" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保问题</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 80</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-10/bbs15409816989465.html" target="_blank" title="企事业医疗补助2009年到2014年之间单位缴费比例各是多少？"
+                            >企事业医疗补助2009年到2014年之间单位缴费比例各是多少？</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8955" target="_blank" title="yellow011"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8955" target="_blank">yellow011</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 18-10-31 18:28</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=4" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保问题</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 186</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-06/bbs15280279459098.html" target="_blank" title="企业没有给员工购买社保而且过了两年的追诉期该怎么办"
+                            >企业没有给员工购买社保而且过了两年的追诉期该怎么办</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8009" target="_blank" title="平凡"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8009" target="_blank">平凡</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 18-06-03 20:12</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=4" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保问题</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 476</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-05/bbs15277639349095.html" target="_blank" title="医疗保险"
+                            >医疗保险</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=7966" target="_blank" title="王云辉"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=7966" target="_blank">王云辉</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 18-05-31 18:52</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=4" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保问题</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 361</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-05/bbs15258197079069.html" target="_blank" title="漫话工伤保险：什么是工伤保险？"><img src="http://www.yanglaocn.com/images/upload/img/2018/05_09/c8cd0478403038df86240e77b12ffe2d.jpg" width="80" height="60"  border="0" alt="漫话工伤保险：什么是工伤保险？" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-05/bbs15258197079069.html" target="_blank" title="漫话工伤保险：什么是工伤保险？"
+                            >漫话工伤保险：什么是工伤保险？</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank" title="soosom"><img src="https://www.yanglaocn.com/images/upload/individualimages/2014/06-06/6f0c281b9f2c5c93ff82fbe7e17db6c9.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank">soosom</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 18-05-09 06:48</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=4" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保问题</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 214</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-05/bbs15256979839067.html" target="_blank" title="求吉林省事业单位中人养老保险待遇落实最新消息"
+                            >求吉林省事业单位中人养老保险待遇落实最新消息</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=7877" target="_blank" title="随风潜入梦"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=7877" target="_blank">随风潜入梦</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 18-05-07 20:59</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=4" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保问题</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 1760</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-02/bbs15197007858941.html" target="_blank" title="我是江西万年县人，二年四次去办社保，未办成"
+                            >我是江西万年县人，二年四次去办社保，未办成</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=6639" target="_blank" title="日落下山"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=6639" target="_blank">日落下山</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 18-02-27 11:06</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=4" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保问题</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 852</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 2</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-02/bbs15196350458938.html" target="_blank" title="在公司工作三年，只交了公积金，社保怎样补？"
+                            >在公司工作三年，只交了公积金，社保怎样补？</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=7529" target="_blank" title="wangyfu_18"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=7529" target="_blank">wangyfu_18</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 18-02-26 16:50</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=4" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保问题</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 1732</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 6</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-01/bbs15168421808860.html" target="_blank" title="关于养老交社保问题"
+                            >关于养老交社保问题</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=7408" target="_blank" title="昆山永悦颐养院"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=7408" target="_blank">昆山永悦颐养院</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 18-01-25 09:03</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=4" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保问题</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 449</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 1</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2017-12/bbs15126505348630.html" target="_blank" title="养老金交足15年后，到规定年龄已领取2年养老金后，被保险人意外身亡，前面所交的个人部分保险金能否退还"
+                            >养老金交足15年后，到规定年龄已领取2年养老金后，被保险人意外身亡，前面所交的个人部分保险金能否退还</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=7268" target="_blank" title="港湾"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=7268" target="_blank">港湾</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 17-12-07 20:42</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=4" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保问题</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 473</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2017-12/bbs15126013148624.html" target="_blank" title="自己拆了人事档案，社保局会不会受理？"><img src="http://www.yanglaocn.com/images/upload/img/2017/12_07/915c92334bc3769c428b4fd9476254ef.gif" width="80" height="60"  border="0" alt="自己拆了人事档案，社保局会不会受理？" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2017-12/bbs15126013148624.html" target="_blank" title="自己拆了人事档案，社保局会不会受理？"
+                            >自己拆了人事档案，社保局会不会受理？</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=7264" target="_blank" title="左脸艹莓印"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=7264" target="_blank">左脸艹莓印</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 17-12-07 07:01</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=4" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保问题</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 1885</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 2</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2017-07/bbs14998368327857.html" target="_blank" title="关于退休时间的确认"
+                            >关于退休时间的确认</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=6747" target="_blank" title="星空2017"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=6747" target="_blank">星空2017</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 17-07-12 13:23</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=4" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保问题</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 477</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2017-06/bbs14981814457728.html" target="_blank" title="养老保险中间间断的需要补缴吗？"
+                            >养老保险中间间断的需要补缴吗？</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=6648" target="_blank" title="就一句话廖"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=6648" target="_blank">就一句话廖</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 17-06-23 09:30</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=4" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保问题</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 8012</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 11</label>
+                        </div>
+                    </div><div class="moodload moodloadjiaW LoadmoreJS" page="1" moodtab="4" etab="4" onoff="1">点击加载更多</div>
+                </el-tab-pane>
+                <el-tab-pane label="社保常见问题" name="31">
+
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-09/bbs160086826310291.html" target="_blank" title="什么情况下事业单位工作人员可以订立聘用至退休的合同？"
+                            >什么情况下事业单位工作人员可以订立聘用至退休的合同？</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank" title="soosom"><img src="https://www.yanglaocn.com/images/upload/individualimages/2014/06-06/6f0c281b9f2c5c93ff82fbe7e17db6c9.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank">soosom</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 20-09-23 21:37</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=31" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保常见问题</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 175</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-02/bbs158242089810226.html" target="_blank" title="防疫期间五险一金10个问题"><img src="http://www.yanglaocn.com/images/upload/img/2020/02_23/3ed7365abbf6900d185f011a4e33cc56.jpg" width="80" height="60"  border="0" alt="防疫期间五险一金10个问题" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-02/bbs158242089810226.html" target="_blank" title="防疫期间五险一金10个问题"
+                            >防疫期间五险一金10个问题</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank" title="soosom"><img src="https://www.yanglaocn.com/images/upload/individualimages/2014/06-06/6f0c281b9f2c5c93ff82fbe7e17db6c9.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank">soosom</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 20-02-23 09:21</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=31" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保常见问题</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 74</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-02/bbs158138245010201.html" target="_blank" title="下班回父母住处发生车祸算工伤吗？个人是否可以参加养老保险？12333告诉你"
+                            >下班回父母住处发生车祸算工伤吗？个人是否可以参加养老保险？12333告诉你</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank" title="soosom"><img src="https://www.yanglaocn.com/images/upload/individualimages/2014/06-06/6f0c281b9f2c5c93ff82fbe7e17db6c9.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank">soosom</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 20-02-11 08:54</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=31" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保常见问题</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 44</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 1</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-07/bbs15632441669979.html" target="_blank" title="提早办理退休申请，会影响退休金吗"
+                            >提早办理退休申请，会影响退休金吗</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=10602" target="_blank" title="豆豆321"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=10602" target="_blank">豆豆321</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 19-07-16 10:29</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=31" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保常见问题</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 199</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 1</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-07/bbs15629007429971.html" target="_blank" title="合同到期、单位关闭、协商解除劳动合同，有经济补偿吗？"
+                            >合同到期、单位关闭、协商解除劳动合同，有经济补偿吗？</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank" title="soosom"><img src="https://www.yanglaocn.com/images/upload/individualimages/2014/06-06/6f0c281b9f2c5c93ff82fbe7e17db6c9.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank">soosom</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 19-07-12 11:05</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=31" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保常见问题</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 33</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-07/bbs15628975849967.html" target="_blank" title="图说全民参保（4）|什么是工伤保险？发生工伤怎么办？看这里全知道"><img src="http://www.yanglaocn.com/images/upload/img/2019/07_12/f5ff2e486d9b8e66f8de45fb6d56e619.jpg" width="80" height="60"  border="0" alt="图说全民参保（4）|什么是工伤保险？发生工伤怎么办？看这里全知道" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-07/bbs15628975849967.html" target="_blank" title="图说全民参保（4）|什么是工伤保险？发生工伤怎么办？看这里全知道"
+                            >图说全民参保（4）|什么是工伤保险？发生工伤怎么办？看这里全知道</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank" title="soosom"><img src="https://www.yanglaocn.com/images/upload/individualimages/2014/06-06/6f0c281b9f2c5c93ff82fbe7e17db6c9.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank">soosom</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 19-07-12 10:13</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=31" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保常见问题</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 112</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-07/bbs15628972989966.html" target="_blank" title="图说全民参保（3）|机关事业养老保险如何缴费？职业年金是什么？这次终于搞懂了！"><img src="http://www.yanglaocn.com/images/upload/img/2019/07_12/5eb5bc1e5edbc3f9eb685acafa760c7d.jpg" width="80" height="60"  border="0" alt="图说全民参保（3）|机关事业养老保险如何缴费？职业年金是什么？这次终于搞懂了！" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-07/bbs15628972989966.html" target="_blank" title="图说全民参保（3）|机关事业养老保险如何缴费？职业年金是什么？这次终于搞懂了！"
+                            >图说全民参保（3）|机关事业养老保险如何缴费？职业年金是什么？这次终于搞懂了！</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank" title="soosom"><img src="https://www.yanglaocn.com/images/upload/individualimages/2014/06-06/6f0c281b9f2c5c93ff82fbe7e17db6c9.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank">soosom</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 19-07-12 10:08</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=31" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保常见问题</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 102</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-07/bbs15628971679965.html" target="_blank" title="图说全民参保（2）|参加城乡居民基本养老保险，这些事你得知道！"><img src="http://www.yanglaocn.com/images/upload/img/2019/07_12/d400de0a9b2b3260acf5412649baf6e7.jpg" width="80" height="60"  border="0" alt="图说全民参保（2）|参加城乡居民基本养老保险，这些事你得知道！" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-07/bbs15628971679965.html" target="_blank" title="图说全民参保（2）|参加城乡居民基本养老保险，这些事你得知道！"
+                            >图说全民参保（2）|参加城乡居民基本养老保险，这些事你得知道！</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank" title="soosom"><img src="https://www.yanglaocn.com/images/upload/individualimages/2014/06-06/6f0c281b9f2c5c93ff82fbe7e17db6c9.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank">soosom</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 19-07-12 10:06</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=31" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保常见问题</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 136</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-07/bbs15628970129964.html" target="_blank" title="图说全民参保（1）|灵活就业人员能交社保吗？参保指南看这里"><img src="http://www.yanglaocn.com/images/upload/img/2019/07_12/511c02c653cece4e4029a1ff2e437de9.jpg" width="80" height="60"  border="0" alt="图说全民参保（1）|灵活就业人员能交社保吗？参保指南看这里" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-07/bbs15628970129964.html" target="_blank" title="图说全民参保（1）|灵活就业人员能交社保吗？参保指南看这里"
+                            >图说全民参保（1）|灵活就业人员能交社保吗？参保指南看这里</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank" title="soosom"><img src="https://www.yanglaocn.com/images/upload/individualimages/2014/06-06/6f0c281b9f2c5c93ff82fbe7e17db6c9.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank">soosom</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 19-07-12 10:03</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=31" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保常见问题</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 123</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-07/bbs15628959599963.html" target="_blank" title="你的“工龄”很重要，和这八大福利有关！"><img src="http://www.yanglaocn.com/images/upload/img/2019/07_12/4ce91eda9884ab43b4b137861f2fa2a8.jpg" width="80" height="60"  border="0" alt="你的“工龄”很重要，和这八大福利有关！" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-07/bbs15628959599963.html" target="_blank" title="你的“工龄”很重要，和这八大福利有关！"
+                            >你的“工龄”很重要，和这八大福利有关！</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank" title="soosom"><img src="https://www.yanglaocn.com/images/upload/individualimages/2014/06-06/6f0c281b9f2c5c93ff82fbe7e17db6c9.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank">soosom</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 19-07-12 09:45</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=31" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保常见问题</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 105</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-06/bbs15603951109900.html" target="_blank" title="跨省转移基本养老保险关系时，基金如何转移？"
+                            >跨省转移基本养老保险关系时，基金如何转移？</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=16" target="_blank" title="三生石"><img src="https://www.yanglaocn.com/images/upload/img/2020/02-06/5247c6c429897b27c561f715ad1d4c9b.png"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=16" target="_blank">三生石</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 19-06-13 11:05</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=31" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保常见问题</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 117</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-06/bbs15602059809896.html" target="_blank" title="人社答疑—个体参保职工退休后因病死亡有哪些补偿"
+                            >人社答疑—个体参保职工退休后因病死亡有哪些补偿</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=16" target="_blank" title="三生石"><img src="https://www.yanglaocn.com/images/upload/img/2020/02-06/5247c6c429897b27c561f715ad1d4c9b.png"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=16" target="_blank">三生石</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 19-06-11 06:33</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=31" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保常见问题</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 173</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-08/bbs15354377439255.html" target="_blank" title="看招！延禧攻略“令妃”戳破5个关于社保的谣言"><img src="http://www.yanglaocn.com/images/upload/img/2018/08_28/2e6fb4d160ffbb044a35204af735c199.jpg" width="80" height="60"  border="0" alt="看招！延禧攻略“令妃”戳破5个关于社保的谣言" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-08/bbs15354377439255.html" target="_blank" title="看招！延禧攻略“令妃”戳破5个关于社保的谣言"
+                            >看招！延禧攻略“令妃”戳破5个关于社保的谣言</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=15" target="_blank" title="zhanglei411521"><img src="https://www.yanglaocn.com/images/upload/img/2011/11-01/fd20cb22eb4dfa9b039fc5de9a365491.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=15" target="_blank">zhanglei411521</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 18-08-28 14:29</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=31" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保常见问题</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 336</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 2</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-07/bbs15323851019144.html" target="_blank" title="十问江西社会保障卡异地就医"
+                            >十问江西社会保障卡异地就医</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=16" target="_blank" title="三生石"><img src="https://www.yanglaocn.com/images/upload/img/2020/02-06/5247c6c429897b27c561f715ad1d4c9b.png"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=16" target="_blank">三生石</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 18-07-24 06:31</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=31" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保常见问题</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 1223</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 2</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-06/bbs15302625929124.html" target="_blank" title="失业保险金如何申领？一图看懂"><img src="http://www.yanglaocn.com/images/upload/img/2018/06_29/55c3ff2ab4d789d617db5f2ac43791f0.jpg" width="80" height="60"  border="0" alt="失业保险金如何申领？一图看懂" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-06/bbs15302625929124.html" target="_blank" title="失业保险金如何申领？一图看懂"
+                            >失业保险金如何申领？一图看懂</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank" title="soosom"><img src="https://www.yanglaocn.com/images/upload/individualimages/2014/06-06/6f0c281b9f2c5c93ff82fbe7e17db6c9.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank">soosom</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 18-06-29 16:56</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=31" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保常见问题</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 337</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 3</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-06/bbs15302358449122.html" target="_blank" title="秦皇岛：灵活就业人员医保缴费基数调整啦！交多少？看这里"><img src="http://www.yanglaocn.com/images/upload/img/2018/06_29/2e915c51d25f8e2aa861ff0d5c2ffc5e.png" width="80" height="60"  border="0" alt="秦皇岛：灵活就业人员医保缴费基数调整啦！交多少？看这里" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-06/bbs15302358449122.html" target="_blank" title="秦皇岛：灵活就业人员医保缴费基数调整啦！交多少？看这里"
+                            >秦皇岛：灵活就业人员医保缴费基数调整啦！交多少？看这里</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank" title="soosom"><img src="https://www.yanglaocn.com/images/upload/individualimages/2014/06-06/6f0c281b9f2c5c93ff82fbe7e17db6c9.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank">soosom</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 18-06-29 09:30</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=31" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保常见问题</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 2623</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-06/bbs15301754579120.html" target="_blank" title="上海|用医保卡在定点药店，怎样购买非处方药？"><img src="http://www.yanglaocn.com/images/upload/img/2018/06_28/100dc1e5466d2f183ac058f8c349d54a.jpg" width="80" height="60"  border="0" alt="上海|用医保卡在定点药店，怎样购买非处方药？" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-06/bbs15301754579120.html" target="_blank" title="上海|用医保卡在定点药店，怎样购买非处方药？"
+                            >上海|用医保卡在定点药店，怎样购买非处方药？</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank" title="soosom"><img src="https://www.yanglaocn.com/images/upload/individualimages/2014/06-06/6f0c281b9f2c5c93ff82fbe7e17db6c9.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank">soosom</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 18-06-28 16:44</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=31" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保常见问题</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 316</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-02/bbs15193767298923.html" target="_blank" title="【社保知识】什么是本人平均月缴费工资指数？"
+                            >【社保知识】什么是本人平均月缴费工资指数？</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank" title="soosom"><img src="https://www.yanglaocn.com/images/upload/individualimages/2014/06-06/6f0c281b9f2c5c93ff82fbe7e17db6c9.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank">soosom</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 18-02-23 17:05</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=31" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保常见问题</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 768</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-01/bbs15157164048804.html" target="_blank" title="拜访客户返回公司途中摔伤，是否属工伤？"
+                            >拜访客户返回公司途中摔伤，是否属工伤？</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=21" target="_blank" title="上善若水"><img src="https://www.yanglaocn.com/images/upload/individualimages/2014/10-09/33174b98d79335d10c874c97764c9579.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=21" target="_blank">上善若水</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 18-01-12 08:20</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=31" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保常见问题</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 234</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-01/bbs15156367188799.html" target="_blank" title="城镇职工基本医疗保险费由谁核定，如何征缴？"
+                            >城镇职工基本医疗保险费由谁核定，如何征缴？</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank" title="soosom"><img src="https://www.yanglaocn.com/images/upload/individualimages/2014/06-06/6f0c281b9f2c5c93ff82fbe7e17db6c9.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank">soosom</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 18-01-11 10:11</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=31" target="_blank" title="频道"><i class="el-icon-menu"></i> 社保常见问题</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 370</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div><div class="moodload moodloadjiaW LoadmoreJS" page="1" moodtab="31" etab="31" onoff="1">点击加载更多</div>
+                </el-tab-pane>
+            </el-tabs>
+        </div>
+    </div>
+</div>
+
+<div class="main_wide">
+    <div id="footer">
+        <ul>
+            <li><a href="https://www.yanglaocn.com/" title="养老信息网" onFocus="this.blur()">网站首页</a></li>
+            <li><a href="https://www.yanglaocn.com/aboutus/" title="关于我们" onFocus="this.blur()">关于我们</a></li>
+            <li><a href="https://www.yanglaocn.com/bbs/" title="养老社区" onFocus="this.blur()">养老社区</a></li>
+            <li><a href="https://www.yanglaocn.com/yanglaoyuan/" title="养老院查询" onFocus="this.blur()">养老院查询</a></li>
+            <li><a href="https://www.yanglaocn.com/webmap/" title="网站地图" onFocus="this.blur()">网站地图</a></li>
+            <li><a href="https://www.yanglaocn.com/contactus/" title="联系我们" onFocus="this.blur()">联系我们</a></li>
+            <li><a href="https://www.yanglaocn.com/disclaimer/" title="免责声明" onFocus="this.blur()">免责声明</a></li>
+        </ul>
+        <ul>
+            <li>版权所有：<a href="https://www.yanglaocn.com" target="_blank" onFocus="this.blur()">养老信息网</a></li>
+            <li>备案号:<a href="https://beian.miit.gov.cn" target="_blank">京ICP备13014276号-1</a></li>
+        </ul>
+        <ul><li>声明：本网站部分信息及图片来源于网络，如侵犯了您的权益或版权，请及时告知我们予以删除！</li></ul>
+        <ul>
+            <li>E-mail:yanglaocn@yanglaocn.com  /  yanglaocn@163.com</li>
+            <li>QQ:159220868&nbsp;/&nbsp;248411521</li>
+            <!--<li><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=159220868&site=qq&menu=yes" onFocus="this.blur()"><img border="0" src="http://wpa.qq.com/pa?p=2:159220868:41 &r=0.7478782087742928" alt="养老信息网(www.yanglaocn.com)欢迎您！" title="养老信息网(www.yanglaocn.com)欢迎您" align="absbottom"></a></li>
+            <li><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=248411521&site=qq&menu=yes" onFocus="this.blur()"><img border="0" src="http://wpa.qq.com/pa?p=2:248411521:41" alt="养老信息网(www.yanglaocn.com)欢迎您！" title="养老信息网(www.yanglaocn.com)欢迎您！" align="absbottom"></a></li>-->
+        </ul>
+    </div>
+</div>
+<!-- 右侧飘浮代码 开始 -->
+<div id="service">
+    <a href="javascript:void(0)" class="elderlyregistration" id="elderlyregistration_tip">长者入住登记</a>
+    <a href="javascript:void(0)" class="weixin" id="weixin_tip" onclick="javascript:PtipWeiXinShow();">公众微信</a>
+    <a href="javascript:void(0)" class="srvLog" onclick="javascript:ShowFeedback();">意见或建议</a>
+    <a class="goTop" id="goTop" title="返回顶部" style="display:none">返回顶部</a>
+</div>
+
+<div id="success" class="success-message" style="display: none">
+    <img src="icon/正确.png" alt="" />
+    <h3 class="success-text">成功消息框</h3>
+</div>
+<div id="warning" class="warning-message" style="display: none">
+    <img src="icon/警告.png" alt="" />
+    <h3 class="warning-text">警告消息框</h3>
+</div>
+
+<script src="../../static/js/response.js"></script>
+<script src="../../static/js/banner.js"></script>
+<script>
+    window.onload = function () {
+        var last = document.referrer;
+        console.log(last);
+        if (
+            last == "http://127.0.0.1:5500/login.html" ||
+            last == "http://172.16.160.43/" ||
+            last == "http://172.16.160.43/login.html"
+        ) {
+            success_message_come(success, "登录成功！");
+        }
+        banner();
+    };
+</script>
+<!-- 代码 结束 -->
+<script type="text/javascript" src="https://www.yanglaocn.com/js/function.js"></script>
+<script type="text/javascript" src="https://www.yanglaocn.com/js/jquery.media.js"></script>
+<script type="text/javascript" src="https://www.yanglaocn.com/artDialog/artDialog.js"></script>
+<script type="text/javascript" src="https://www.yanglaocn.com/js/artDialogFun.js"></script>
+<script type="text/javascript" src="https://www.yanglaocn.com/js/index.js"></script>
+<script type="text/javascript" src="https://www.yanglaocn.com/js/newsleft.js" ></script>
+<script type="text/javascript" src="https://www.yanglaocn.com/js/layui/layui.js"></script>
+<script type="text/javascript" src="https://www.yanglaocn.com/js/vue.min.js" ></script>
+<script type="text/javascript" src="https://www.yanglaocn.com/js/element/element.min.js" ></script>
+<script type="text/javascript" src="https://www.yanglaocn.com/js/index_vue.js"></script>
+<script type="text/javascript" language="javascript">
+    //右下角滑动通知
+    var intervalProcess;
+    GetInstantMessage();
+
+    intervalProcess = window.setInterval(function(){
+        GetInstantMessage();
+    },20000);
+
+    window.onfocus = function() {//当前窗口被激活
+        GetInstantMessage();
+        intervalProcess = window.setInterval(function(){
+            GetInstantMessage();
+        },20000);
+    }
+    window.onblur = function() {//当前窗口没有激活
+        clearInterval(intervalProcess);
+    }
+    <!-- 加入收藏代码 Start -->
+    function AddFavorite(sURL, sTitle) {
+        try {
+            window.external.addFavorite(sURL, sTitle);
+        } catch (e) {
+            try {
+                window.sidebar.addPanel(sTitle, sURL, "");
+            } catch (e) {
+                alert("加入收藏失败,请手动添加.");
+            }
+        }
+    }
+    <!-- 加入收藏代码 End -->
+    <!-- 设为首页代码 Start -->
+    function setHomepage(pageURL) {
+        if (document.all) {
+            document.body.style.behavior='url(#default#homepage)';
+            document.body.setHomePage(pageURL);
+        }
+        else if (window.sidebar) {
+            if(window.netscape) {
+                try {
+                    netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+                }
+                catch (e) {
+                    alert( "该操作被浏览器拒绝，如果想启用该功能，请在地址栏内输入 about:config,然后将项signed.applets.codebase_principal_support 值该为true" );
+                }
+            }
+            var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components. interfaces.nsIPrefBranch);
+            prefs.setCharPref('browser.startup.homepage',pageURL);
+        }
+    }
+    <!-- 设为首页代码 End -->
+    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F6168556b0a921e8d0375330e702bc0fe' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="https://www.yanglaocn.com/js/scrolltopcontrol.js"></script></body>
+</body>
+</html>
