@@ -1,0 +1,1868 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="养老信息网(www.yanglaocn.com)是中国最专业养老信息门户网站，集社会新闻信息、老年人生活信息、养老信息及全国养老院查询平台等各类与老人相关的综合信息为一体的综合型门户网站。致力于服务全社会、关爱老人、替天下儿女尽孝的思想，为中国1.3亿的老年人提供丰富的网上服务。"/>
+    <meta name="keywords" content="养老社区,养老院,老人院,老年公寓,敬老院,养老保险查询,医疗保险查询,公积金查询,老年人,养老信息网"/>
+    <meta name="google-site-verification" content="VZfvKdde6Alry1sSTEFUc1HF42ez59f9-miefEe589s" />
+    <meta name="msvalidate.01" content="4CD6792A2C0C5688B02A391EBF6EB0BB" />
+
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="stylesheet" type="text/css" href="https://www.yanglaocn.com/css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="https://www.yanglaocn.com/css/style_20210416.css"/>
+    <link rel="stylesheet" type="text/css" href="https://www.yanglaocn.com/css/Login_20210416.css"/>
+    <link rel="stylesheet" type="text/css" href="https://www.yanglaocn.com/artDialog/skins/default.css"/>
+    <link rel="stylesheet" type="text/css" href="https://www.yanglaocn.com/jnotify/jquery/jNotify.jquery.css"/>
+    <link rel="stylesheet" type="text/css" href="https://www.yanglaocn.com/css/thickbox.css"/>
+    <link rel="stylesheet" type="text/css" href="https://www.yanglaocn.com/poshytipsrc/css/tip-style.css"/>
+    <link rel="stylesheet" type="text/css" href="https://www.yanglaocn.com/css/jquery.fancybox.css"/>
+    <link rel="stylesheet" type="text/css" href="https://www.yanglaocn.com/css/selectcss.css"/>
+    <link rel="stylesheet" type="text/css" href="https://www.yanglaocn.com/css/yl_20210416.css">
+    <link rel="stylesheet" type="text/css" href="https://www.yanglaocn.com/js/layui/css/layui.css">
+    <link rel="stylesheet" type="text/css" href="https://www.yanglaocn.com/js/element/element.min.css">
+    <script type="text/javascript" src="https://www.yanglaocn.com/js/jquery-1.4.js"></script>
+    <script type="text/javascript" src="https://www.yanglaocn.com/js/jquery.cookie.js"></script>
+    <script type="text/javascript">var shop_url ="https://www.yanglaocn.com/";</script>
+    <script type="text/javascript" src="https://www.yanglaocn.com/js/pageajax.js"></script>
+    <script type="text/javascript" src="https://www.yanglaocn.com/poshytipsrc/jquery.poshytip.js"></script>
+    <script type="text/javascript" src="https://www.yanglaocn.com/js/poshytipFun.js"></script>
+    <script type="text/javascript" src="https://www.yanglaocn.com/jnotify/jquery/jNotify.jquery.js"></script>
+    <script type="text/javascript" src="https://www.yanglaocn.com/js/followajax.js"></script><link type="text/css" rel="stylesheet" href="https://www.yanglaocn.com/css/weiboscroll.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0"
+    />
+    <link rel="stylesheet" href="../../static/css/first/alifont.css" />
+    <link rel="stylesheet" href="../../static/css/first/navbar.css" />
+    <link rel="stylesheet" href="../../static/css/first/index.css" />
+    <link rel="stylesheet" href="../../static/css/first/css.css" />
+    <link rel="stylesheet" href="../../static/css/first/reponse_glo.css" />
+    <link rel="stylesheet" href="../../static/css/first/common.css" />
+    <title>梅岭社区·颐养中心</title>
+    <style>
+        body {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url(../../static/images/img/水墨3ps.png) no-repeat 100%;
+            background-size: cover;
+            background-attachment: fixed;
+            /* z-index: -1; */
+            transition: 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+<div class="bgimg">
+    <nav>
+        <div class="user">
+            <a href=""><img src="../../static/images/first/logo1.png" alt="" /></a>
+        </div>
+        <!--				<div class="logo"><img src="img/广软_长白.png" alt="" /></div>-->
+        <div class="search">
+            <div class="sput">
+                <input
+                        type="text"
+                        name="search"
+                        placeholder="搜索内容"
+                        id="searchContent"
+                />
+                <a href="#"><div class="icon"></div></a>
+                <img src="icon/搜索.png" alt="" />
+            </div>
+            <!-- 汉堡按钮 -->
+            <div class="burger" id="toggle" onclick="navVisi()">
+                <div class="top-line"></div>
+                <div class="middle-line"></div>
+                <div class="bottom-line"></div>
+            </div>
+        </div>
+    </nav>
+    <div class="navbar">
+        <ul id="visiable" class="nav-menu">
+            <a href="index.html"
+            >
+                <li>
+                    <i class="iconfont icon-shouye"></i>
+                    首页
+                </li>
+            </a
+            >
+            <a href="learn.html"
+            >
+                <li>
+                    <i class="iconfont icon-lishi"></i>
+                    梅岭动态
+                </li>
+            </a
+            >
+            <a href="theorystudy.html"
+            >
+                <li>
+                    <i class="iconfont icon-lilunxuexi"></i>
+                    百科问答
+                </li>
+            </a
+            >
+            <a href="organization.html"
+            >
+                <li>
+                    <i class="iconfont icon-zixun"></i>
+                    健康养生
+                </li>
+            </a
+            >
+            <a class="active" href="javascript:;"
+            >
+                <li>
+                    <i class="iconfont icon-deploymentunit"></i>
+                    养老社区
+                </li>
+            </a
+            >
+            <a href="center.html"
+            >
+                <li>
+                    <i class="iconfont icon-gerenzhongxin"></i>
+                    关于我们
+                </li>
+            </a
+            >
+        </ul>
+    </div>
+</div>
+
+<!--头部文件-->
+<div class="main" id="bbs_vue_id">
+    <div class="bbs_left margin_top_20">
+        <div class="bbs_left_ti"><a href="https://www.yanglaocn.com/bbs/"><i class="el-icon-menu"></i>养老社区</a></div>
+        <div class="bbs_left_menu">
+            <input type="hidden" name="settid" id="settid" value="28">
+            <input type="hidden" name="tid" id="tid" value="29">
+            <el-collapse v-model="Bbs_Index_activeNames">
+                <el-collapse-item name="0">
+                    <template slot="title">
+                        <i class="header-icon el-icon-edit"></i> 创作
+                    </template>
+                    <div class="bbs_left_menu_ul">
+                        <a href="https://www.yanglaocn.com/bbs/">主题推荐</a>
+                        <a href="javascript:void(0);" onclick="javascript:ShowUserBBSchannel();">发布帖子</a>
+                    </div>
+                </el-collapse-item>
+                <el-collapse-item name="2">
+                    <template slot="title">
+                        <i class="header-icon el-icon-s-unfold"></i>社保交流
+                    </template>
+                    <div class="bbs_left_menu_ul">
+                        <a href="https://www.yanglaocn.com/bbs/?tid=4"><i class="el-icon-caret-right" style="display: none;"></i> 社保问题</a>
+                        <a href="https://www.yanglaocn.com/bbs/?tid=3"><i class="el-icon-caret-right" style="display: none;"></i> 社保杂谈</a>
+                        <a href="https://www.yanglaocn.com/bbs/?tid=31"><i class="el-icon-caret-right" style="display: none;"></i> 社保常见问题</a>
+                        <a href="https://www.yanglaocn.com/bbs/?tid=40"><i class="el-icon-caret-right" style="display: none;"></i> 社保案例分析</a>
+                    </div>
+                </el-collapse-item>
+                <!--<el-collapse-item name="19">
+                    <template slot="title">
+                        <i class="header-icon el-icon-s-unfold"></i><a href="https://www.yanglaocn.com/bbs/?tid=19">晚年生活</a>
+                    </template>
+                    <div class="bbs_left_menu_ul">
+                        <a href="https://www.yanglaocn.com/bbs/?tid=20"><i class="el-icon-caret-right" style="display: none;"></i> 社会杂谈</a>
+                        <a href="https://www.yanglaocn.com/bbs/?tid=21"><i class="el-icon-caret-right" style="display: none;"></i> 生活百事</a>
+                        <a href="https://www.yanglaocn.com/bbs/?tid=22"><i class="el-icon-caret-right" style="display: none;"></i> 花鸟鱼虫</a>
+                        <a href="https://www.yanglaocn.com/bbs/?tid=23"><i class="el-icon-caret-right" style="display: none;"></i> 旅游天地</a>
+                        <a href="https://www.yanglaocn.com/bbs/?tid=24"><i class="el-icon-caret-right" style="display: none;"></i> 寻朋问友</a>
+                    </div>
+                </el-collapse-item>-->
+                <el-collapse-item name="12">
+                    <template slot="title">
+                        <i class="header-icon el-icon-s-unfold"></i>文化艺术
+                    </template>
+                    <div class="bbs_left_menu_ul">
+                        <a href="https://www.yanglaocn.com/bbs/?tid=13"><i class="el-icon-caret-right" style="display: none;"></i> 文学创作</a>
+                        <a href="https://www.yanglaocn.com/bbs/?tid=14"><i class="el-icon-caret-right" style="display: none;"></i> 书画艺术</a>
+                    </div>
+                </el-collapse-item>
+                <!--<el-collapse-item name="25">
+                    <template slot="title">
+                        <i class="header-icon el-icon-s-unfold"></i><a href="https://www.yanglaocn.com/bbs/?tid=25">学习天地</a>
+                    </template>
+                    <div class="bbs_left_menu_ul">
+                        <a href="https://www.yanglaocn.com/bbs/?tid=26"><i class="el-icon-caret-right" style="display: none;"></i> 摄影天地</a>
+                        <a href="https://www.yanglaocn.com/bbs/?tid=27"><i class="el-icon-caret-right" style="display: none;"></i> 学习电脑</a>
+                    </div>
+                </el-collapse-item>-->
+                <el-collapse-item name="28">
+                    <template slot="title">
+                        <i class="header-icon el-icon-s-unfold"></i>养老机构交流
+                    </template>
+                    <div class="bbs_left_menu_ul">
+                        <a href="https://www.yanglaocn.com/bbs/?tid=29"><i class="el-icon-caret-right" style="display: none;"></i> 经验交流</a>
+                        <a href="https://www.yanglaocn.com/bbs/?tid=30"><i class="el-icon-caret-right" style="display: none;"></i> 问题探讨</a>
+                    </div>
+                </el-collapse-item>
+                <el-collapse-item name="32">
+                    <template slot="title">
+                        <i class="header-icon el-icon-s-unfold"></i>养老信息</a>
+                    </template>
+                    <div class="bbs_left_menu_ul">
+                        <a href="https://www.yanglaocn.com/bbs/?tid=33"><i class="el-icon-caret-right" style="display: none;"></i> 养老生活信息</a>
+                        <a href="https://www.yanglaocn.com/bbs/?tid=34"><i class="el-icon-caret-right" style="display: none;"></i> 养老机构信息</a>
+                        <a href="https://www.yanglaocn.com/bbs/?tid=35"><i class="el-icon-caret-right" style="display: none;"></i> 社会保险信息</a>
+                        <a href="https://www.yanglaocn.com/bbs/?tid=41"><i class="el-icon-caret-right" style="display: none;"></i> 养老行业广告</a>
+                    </div>
+                </el-collapse-item>
+                <el-collapse-item name="36">
+                    <template slot="title">
+                        <i class="header-icon el-icon-s-unfold"></i>社区事务
+                    </template>
+                    <div class="bbs_left_menu_ul">
+                        <a href="https://www.yanglaocn.com/bbs/?tid=39"><i class="el-icon-caret-right" style="display: none;"></i> 社区公告</a>
+                        <a href="https://www.yanglaocn.com/bbs/?tid=37"><i class="el-icon-caret-right" style="display: none;"></i> 建议意见</a>
+                        <a href="https://www.yanglaocn.com/bbs/?tid=38"><i class="el-icon-caret-right" style="display: none;"></i> 删帖申请</a>
+                    </div>
+                </el-collapse-item>
+            </el-collapse>
+        </div>
+    </div>
+    <div class="bbs_right margin_top_20">
+        <h2><i class="el-icon-s-unfold"></i><label>经验交流</label></h2>
+        <div class="bbs_right_tab">
+            <el-tabs v-model="bbs_right_tab_activeName" @tab-click="bbs_right_tab_handleClick">
+                <el-tab-pane label="最新发布" name="fabu">
+                    <div class="bbs_right_list">
+
+                        <div class="yl_dongtai_img bbs_dongtai_img">
+                            <h9>
+                                <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-04/bbs158632784110243.html" target="_blank" title="中小民办养老院怎样找出路？"
+                                >中小民办养老院怎样找出路？</a>
+                            </h9>
+                            <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                                <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=12201" target="_blank" title="蒋生"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                                <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=12201" target="_blank">蒋生</a></label>
+                                <b>▪</b>
+                                <label><i class="el-icon-time"></i> 20-04-08 14:37</label>
+                                <b>▪</b>
+                                <label><a href="https://www.yanglaocn.com/bbs/?tid=29" target="_blank" title="频道"><i class="el-icon-menu"></i> 经验交流</a></label>
+                                <b>▪</b>
+                                <label title="浏览次数"><i class="el-icon-view"></i> 176</label>
+                                <b>▪</b>
+                                <label title="回复"><i class="el-icon-chat-line-round"></i> 1</label>
+                            </div>
+                        </div>
+                        <div class="yl_dongtai_img bbs_dongtai_img">
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-02/bbs158227582610222.html" target="_blank" title="泰康之家战“疫”先锋：社工们为居民穿上心灵的防护服"><img src="http://www.yanglaocn.com/images/upload/img/2020/02_21/97206c019bcbbfa323cace1aa1e2509c.png" width="80" height="60"  border="0" alt="泰康之家战“疫”先锋：社工们为居民穿上心灵的防护服" /></a>
+                            <h3>
+                                <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-02/bbs158227582610222.html" target="_blank" title="泰康之家战“疫”先锋：社工们为居民穿上心灵的防护服"
+                                >泰康之家战“疫”先锋：社工们为居民穿上心灵的防护服</a>
+                            </h3>
+                            <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                                <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank" title="最爱夕阳红"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                                <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank">最爱夕阳红</a></label>
+                                <b>▪</b>
+                                <label><i class="el-icon-time"></i> 20-02-21 17:03</label>
+                                <b>▪</b>
+                                <label><a href="https://www.yanglaocn.com/bbs/?tid=29" target="_blank" title="频道"><i class="el-icon-menu"></i> 经验交流</a></label>
+                                <b>▪</b>
+                                <label title="浏览次数"><i class="el-icon-view"></i> 170</label>
+                                <b>▪</b>
+                                <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                            </div>
+                        </div>
+                        <div class="yl_dongtai_img bbs_dongtai_img">
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-02/bbs158216842910220.html" target="_blank" title="泰康同济（武汉）医院前线手记：因为心怀赤子心，所以充满了勇气"><img src="http://www.yanglaocn.com/images/upload/img/2020/02_20/71f66c35cf0fccf429baef6c163007c0.png" width="80" height="60"  border="0" alt="泰康同济（武汉）医院前线手记：因为心怀赤子心，所以充满了勇气" /></a>
+                            <h3>
+                                <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-02/bbs158216842910220.html" target="_blank" title="泰康同济（武汉）医院前线手记：因为心怀赤子心，所以充满了勇气"
+                                >泰康同济（武汉）医院前线手记：因为心怀赤子心，所以充满了勇气</a>
+                            </h3>
+                            <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                                <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank" title="最爱夕阳红"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                                <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank">最爱夕阳红</a></label>
+                                <b>▪</b>
+                                <label><i class="el-icon-time"></i> 20-02-20 11:13</label>
+                                <b>▪</b>
+                                <label><a href="https://www.yanglaocn.com/bbs/?tid=29" target="_blank" title="频道"><i class="el-icon-menu"></i> 经验交流</a></label>
+                                <b>▪</b>
+                                <label title="浏览次数"><i class="el-icon-view"></i> 135</label>
+                                <b>▪</b>
+                                <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                            </div>
+                        </div>
+                        <div class="yl_dongtai_img bbs_dongtai_img">
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-02/bbs158199865810218.html" target="_blank" title="泰康同济武汉医院：首位患者辜婆婆的儿媳妇说“照顾的太过细了”！"><img src="http://www.yanglaocn.com/images/upload/img/2020/02_18/fad4ad488ba0d4faab102f2ff5906e80.png" width="80" height="60"  border="0" alt="泰康同济武汉医院：首位患者辜婆婆的儿媳妇说“照顾的太过细了”！" /></a>
+                            <h3>
+                                <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-02/bbs158199865810218.html" target="_blank" title="泰康同济武汉医院：首位患者辜婆婆的儿媳妇说“照顾的太过细了”！"
+                                >泰康同济武汉医院：首位患者辜婆婆的儿媳妇说“照顾的太过细了”！</a>
+                            </h3>
+                            <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                                <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank" title="最爱夕阳红"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                                <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank">最爱夕阳红</a></label>
+                                <b>▪</b>
+                                <label><i class="el-icon-time"></i> 20-02-18 12:04</label>
+                                <b>▪</b>
+                                <label><a href="https://www.yanglaocn.com/bbs/?tid=29" target="_blank" title="频道"><i class="el-icon-menu"></i> 经验交流</a></label>
+                                <b>▪</b>
+                                <label title="浏览次数"><i class="el-icon-view"></i> 129</label>
+                                <b>▪</b>
+                                <label title="回复"><i class="el-icon-chat-line-round"></i> 1</label>
+                            </div>
+                        </div>
+                        <div class="yl_dongtai_img bbs_dongtai_img">
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-02/bbs158199859310217.html" target="_blank" title="泰康之家战“疫”先锋：非典时候你们保护90后，今天，让90后保护你们！"><img src="http://www.yanglaocn.com/images/upload/img/2020/02_18/64e24adeb1f69de9b85ff561e59d9641.png" width="80" height="60"  border="0" alt="泰康之家战“疫”先锋：非典时候你们保护90后，今天，让90后保护你们！" /></a>
+                            <h3>
+                                <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-02/bbs158199859310217.html" target="_blank" title="泰康之家战“疫”先锋：非典时候你们保护90后，今天，让90后保护你们！"
+                                >泰康之家战“疫”先锋：非典时候你们保护90后，今天，让90后保护你们！</a>
+                            </h3>
+                            <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                                <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank" title="最爱夕阳红"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                                <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank">最爱夕阳红</a></label>
+                                <b>▪</b>
+                                <label><i class="el-icon-time"></i> 20-02-18 12:03</label>
+                                <b>▪</b>
+                                <label><a href="https://www.yanglaocn.com/bbs/?tid=29" target="_blank" title="频道"><i class="el-icon-menu"></i> 经验交流</a></label>
+                                <b>▪</b>
+                                <label title="浏览次数"><i class="el-icon-view"></i> 174</label>
+                                <b>▪</b>
+                                <label title="回复"><i class="el-icon-chat-line-round"></i> 4</label>
+                            </div>
+                        </div>
+                        <div class="yl_dongtai_img bbs_dongtai_img">
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-02/bbs158183466510213.html" target="_blank" title="泰康之家养老社区：为了1500名老人的“三餐两点”，他连续工作20多天"><img src="http://www.yanglaocn.com/images/upload/img/2020/02_16/392dad5ab2fc6db08a18fe1d5093f7a0.png" width="80" height="60"  border="0" alt="泰康之家养老社区：为了1500名老人的“三餐两点”，他连续工作20多天" /></a>
+                            <h3>
+                                <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-02/bbs158183466510213.html" target="_blank" title="泰康之家养老社区：为了1500名老人的“三餐两点”，他连续工作20多天"
+                                >泰康之家养老社区：为了1500名老人的“三餐两点”，他连续工作20多天</a>
+                            </h3>
+                            <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                                <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank" title="最爱夕阳红"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                                <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank">最爱夕阳红</a></label>
+                                <b>▪</b>
+                                <label><i class="el-icon-time"></i> 20-02-16 14:31</label>
+                                <b>▪</b>
+                                <label><a href="https://www.yanglaocn.com/bbs/?tid=29" target="_blank" title="频道"><i class="el-icon-menu"></i> 经验交流</a></label>
+                                <b>▪</b>
+                                <label title="浏览次数"><i class="el-icon-view"></i> 148</label>
+                                <b>▪</b>
+                                <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                            </div>
+                        </div>
+                        <div class="yl_dongtai_img bbs_dongtai_img">
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-02/bbs158183459610212.html" target="_blank" title="泰康情人节：当爱情遇上疫情，“疫”后余生全都是你"><img src="http://www.yanglaocn.com/images/upload/img/2020/02_16/1220f6f2fe224d82304bc3c487414fb1.png" width="80" height="60"  border="0" alt="泰康情人节：当爱情遇上疫情，“疫”后余生全都是你" /></a>
+                            <h3>
+                                <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-02/bbs158183459610212.html" target="_blank" title="泰康情人节：当爱情遇上疫情，“疫”后余生全都是你"
+                                >泰康情人节：当爱情遇上疫情，“疫”后余生全都是你</a>
+                            </h3>
+                            <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                                <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank" title="最爱夕阳红"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                                <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank">最爱夕阳红</a></label>
+                                <b>▪</b>
+                                <label><i class="el-icon-time"></i> 20-02-16 14:29</label>
+                                <b>▪</b>
+                                <label><a href="https://www.yanglaocn.com/bbs/?tid=29" target="_blank" title="频道"><i class="el-icon-menu"></i> 经验交流</a></label>
+                                <b>▪</b>
+                                <label title="浏览次数"><i class="el-icon-view"></i> 138</label>
+                                <b>▪</b>
+                                <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                            </div>
+                        </div>
+                        <div class="yl_dongtai_img bbs_dongtai_img">
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-02/bbs158183452810211.html" target="_blank" title="泰康同济（武汉）医院在抗疫战地正式揭牌！！！"><img src="http://www.yanglaocn.com/images/upload/img/2020/02_16/ab484adf46846d6b42e8989b07c9965e.png" width="80" height="60"  border="0" alt="泰康同济（武汉）医院在抗疫战地正式揭牌！！！" /></a>
+                            <h3>
+                                <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-02/bbs158183452810211.html" target="_blank" title="泰康同济（武汉）医院在抗疫战地正式揭牌！！！"
+                                >泰康同济（武汉）医院在抗疫战地正式揭牌！！！</a>
+                            </h3>
+                            <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                                <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank" title="最爱夕阳红"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                                <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank">最爱夕阳红</a></label>
+                                <b>▪</b>
+                                <label><i class="el-icon-time"></i> 20-02-16 14:28</label>
+                                <b>▪</b>
+                                <label><a href="https://www.yanglaocn.com/bbs/?tid=29" target="_blank" title="频道"><i class="el-icon-menu"></i> 经验交流</a></label>
+                                <b>▪</b>
+                                <label title="浏览次数"><i class="el-icon-view"></i> 57</label>
+                                <b>▪</b>
+                                <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                            </div>
+                        </div>
+                        <div class="yl_dongtai_img bbs_dongtai_img">
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-02/bbs158176242810209.html" target="_blank" title="泰康战“疫”前线|与时间赛跑只为腾出更多病房"><img src="http://www.yanglaocn.com/images/upload/img/2020/02_15/2fd01ab197c3ff1fd3a1e6a61ffbe7f1.png" width="80" height="60"  border="0" alt="泰康战“疫”前线|与时间赛跑只为腾出更多病房" /></a>
+                            <h3>
+                                <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-02/bbs158176242810209.html" target="_blank" title="泰康战“疫”前线|与时间赛跑只为腾出更多病房"
+                                >泰康战“疫”前线|与时间赛跑只为腾出更多病房</a>
+                            </h3>
+                            <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                                <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank" title="最爱夕阳红"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                                <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank">最爱夕阳红</a></label>
+                                <b>▪</b>
+                                <label><i class="el-icon-time"></i> 20-02-15 18:27</label>
+                                <b>▪</b>
+                                <label><a href="https://www.yanglaocn.com/bbs/?tid=29" target="_blank" title="频道"><i class="el-icon-menu"></i> 经验交流</a></label>
+                                <b>▪</b>
+                                <label title="浏览次数"><i class="el-icon-view"></i> 94</label>
+                                <b>▪</b>
+                                <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                            </div>
+                        </div>
+                        <div class="yl_dongtai_img bbs_dongtai_img">
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-02/bbs158165478110208.html" target="_blank" title="泰康战“疫”先锋|居民的“护心丹”，伙伴的“定心丸”"><img src="http://www.yanglaocn.com/images/upload/img/2020/02_14/8be8a18f8d00f1f3fdb7db37c7397608.png" width="80" height="60"  border="0" alt="泰康战“疫”先锋|居民的“护心丹”，伙伴的“定心丸”" /></a>
+                            <h3>
+                                <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-02/bbs158165478110208.html" target="_blank" title="泰康战“疫”先锋|居民的“护心丹”，伙伴的“定心丸”"
+                                >泰康战“疫”先锋|居民的“护心丹”，伙伴的“定心丸”</a>
+                            </h3>
+                            <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                                <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank" title="最爱夕阳红"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                                <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank">最爱夕阳红</a></label>
+                                <b>▪</b>
+                                <label><i class="el-icon-time"></i> 20-02-14 12:33</label>
+                                <b>▪</b>
+                                <label><a href="https://www.yanglaocn.com/bbs/?tid=29" target="_blank" title="频道"><i class="el-icon-menu"></i> 经验交流</a></label>
+                                <b>▪</b>
+                                <label title="浏览次数"><i class="el-icon-view"></i> 91</label>
+                                <b>▪</b>
+                                <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                            </div>
+                        </div>
+                        <div class="yl_dongtai_img bbs_dongtai_img">
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-02/bbs158164936610207.html" target="_blank" title="泰康同济武汉医院战“疫”前线|“竖个大拇指，让我们一起为武汉加油”！"><img src="http://www.yanglaocn.com/images/upload/img/2020/02_14/ff921512a2b272e9871e66e69f4f05fd.png" width="80" height="60"  border="0" alt="泰康同济武汉医院战“疫”前线|“竖个大拇指，让我们一起为武汉加油”！" /></a>
+                            <h3>
+                                <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-02/bbs158164936610207.html" target="_blank" title="泰康同济武汉医院战“疫”前线|“竖个大拇指，让我们一起为武汉加油”！"
+                                >泰康同济武汉医院战“疫”前线|“竖个大拇指，让我们一起为武汉加油”！</a>
+                            </h3>
+                            <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                                <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank" title="最爱夕阳红"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                                <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank">最爱夕阳红</a></label>
+                                <b>▪</b>
+                                <label><i class="el-icon-time"></i> 20-02-14 11:02</label>
+                                <b>▪</b>
+                                <label><a href="https://www.yanglaocn.com/bbs/?tid=29" target="_blank" title="频道"><i class="el-icon-menu"></i> 经验交流</a></label>
+                                <b>▪</b>
+                                <label title="浏览次数"><i class="el-icon-view"></i> 46</label>
+                                <b>▪</b>
+                                <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                            </div>
+                        </div>
+                        <div class="yl_dongtai_img bbs_dongtai_img">
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-02/bbs158157406210206.html" target="_blank" title="【泰康战“疫”先锋】选择我爱的，坚持我所选择的"><img src="http://www.yanglaocn.com/images/upload/img/2020/02_13/eb756f326983b5d055c1e9da774e55f3.png" width="80" height="60"  border="0" alt="【泰康战“疫”先锋】选择我爱的，坚持我所选择的" /></a>
+                            <h3>
+                                <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-02/bbs158157406210206.html" target="_blank" title="【泰康战“疫”先锋】选择我爱的，坚持我所选择的"
+                                >【泰康战“疫”先锋】选择我爱的，坚持我所选择的</a>
+                            </h3>
+                            <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                                <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank" title="最爱夕阳红"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                                <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank">最爱夕阳红</a></label>
+                                <b>▪</b>
+                                <label><i class="el-icon-time"></i> 20-02-13 14:07</label>
+                                <b>▪</b>
+                                <label><a href="https://www.yanglaocn.com/bbs/?tid=29" target="_blank" title="频道"><i class="el-icon-menu"></i> 经验交流</a></label>
+                                <b>▪</b>
+                                <label title="浏览次数"><i class="el-icon-view"></i> 29</label>
+                                <b>▪</b>
+                                <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                            </div>
+                        </div>
+                        <div class="yl_dongtai_img bbs_dongtai_img">
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-02/bbs158156511210204.html" target="_blank" title="泰康之家战“疫”前线|收治患者第2天，“忙到没有感觉到饿”！！！"><img src="http://www.yanglaocn.com/images/upload/img/2020/02_13/637fac06aec21d78adf954b1123d7131.png" width="80" height="60"  border="0" alt="泰康之家战“疫”前线|收治患者第2天，“忙到没有感觉到饿”！！！" /></a>
+                            <h3>
+                                <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-02/bbs158156511210204.html" target="_blank" title="泰康之家战“疫”前线|收治患者第2天，“忙到没有感觉到饿”！！！"
+                                >泰康之家战“疫”前线|收治患者第2天，“忙到没有感觉到饿”！！！</a>
+                            </h3>
+                            <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                                <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank" title="最爱夕阳红"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                                <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank">最爱夕阳红</a></label>
+                                <b>▪</b>
+                                <label><i class="el-icon-time"></i> 20-02-13 11:38</label>
+                                <b>▪</b>
+                                <label><a href="https://www.yanglaocn.com/bbs/?tid=29" target="_blank" title="频道"><i class="el-icon-menu"></i> 经验交流</a></label>
+                                <b>▪</b>
+                                <label title="浏览次数"><i class="el-icon-view"></i> 97</label>
+                                <b>▪</b>
+                                <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                            </div>
+                        </div>
+                        <div class="yl_dongtai_img bbs_dongtai_img">
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-02/bbs158156511210205.html" target="_blank" title="泰康之家养老社区战“疫”先锋|困难是暂时的，还有更多生命等着我们去守护"><img src="http://www.yanglaocn.com/images/upload/img/2020/02_13/142e3c1c5dd1804661c38d5284bf7e02.png" width="80" height="60"  border="0" alt="泰康之家养老社区战“疫”先锋|困难是暂时的，还有更多生命等着我们去守护" /></a>
+                            <h3>
+                                <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-02/bbs158156511210205.html" target="_blank" title="泰康之家养老社区战“疫”先锋|困难是暂时的，还有更多生命等着我们去守护"
+                                >泰康之家养老社区战“疫”先锋|困难是暂时的，还有更多生命等着我们去守护</a>
+                            </h3>
+                            <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                                <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank" title="最爱夕阳红"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                                <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank">最爱夕阳红</a></label>
+                                <b>▪</b>
+                                <label><i class="el-icon-time"></i> 20-02-13 11:38</label>
+                                <b>▪</b>
+                                <label><a href="https://www.yanglaocn.com/bbs/?tid=29" target="_blank" title="频道"><i class="el-icon-menu"></i> 经验交流</a></label>
+                                <b>▪</b>
+                                <label title="浏览次数"><i class="el-icon-view"></i> 105</label>
+                                <b>▪</b>
+                                <label title="回复"><i class="el-icon-chat-line-round"></i> 1</label>
+                            </div>
+                        </div>
+                        <div class="yl_dongtai_img bbs_dongtai_img">
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-02/bbs158149709410203.html" target="_blank" title="一方有难，八方支援！泰康仙林鼓楼医院援鄂医疗队启程驰援武汉！"><img src="http://www.yanglaocn.com/images/upload/img/2020/02_12/69f077c61aa78b997a072008c31fb4cd.png" width="80" height="60"  border="0" alt="一方有难，八方支援！泰康仙林鼓楼医院援鄂医疗队启程驰援武汉！" /></a>
+                            <h3>
+                                <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-02/bbs158149709410203.html" target="_blank" title="一方有难，八方支援！泰康仙林鼓楼医院援鄂医疗队启程驰援武汉！"
+                                >一方有难，八方支援！泰康仙林鼓楼医院援鄂医疗队启程驰援武汉！</a>
+                            </h3>
+                            <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                                <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank" title="最爱夕阳红"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                                <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank">最爱夕阳红</a></label>
+                                <b>▪</b>
+                                <label><i class="el-icon-time"></i> 20-02-12 16:44</label>
+                                <b>▪</b>
+                                <label><a href="https://www.yanglaocn.com/bbs/?tid=29" target="_blank" title="频道"><i class="el-icon-menu"></i> 经验交流</a></label>
+                                <b>▪</b>
+                                <label title="浏览次数"><i class="el-icon-view"></i> 170</label>
+                                <b>▪</b>
+                                <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                            </div>
+                        </div>
+                        <div class="yl_dongtai_img bbs_dongtai_img">
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-02/bbs158088413410197.html" target="_blank" title="泰康之家养老社区：关于新冠感染，你关心的20个问题，这里都有答案！"><img src="http://www.yanglaocn.com/images/upload/img/2020/02_05/094acdff1be866dd329dfa8caf30b8c8.png" width="80" height="60"  border="0" alt="泰康之家养老社区：关于新冠感染，你关心的20个问题，这里都有答案！" /></a>
+                            <h3>
+                                <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-02/bbs158088413410197.html" target="_blank" title="泰康之家养老社区：关于新冠感染，你关心的20个问题，这里都有答案！"
+                                >泰康之家养老社区：关于新冠感染，你关心的20个问题，这里都有答案！</a>
+                            </h3>
+                            <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                                <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank" title="最爱夕阳红"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                                <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank">最爱夕阳红</a></label>
+                                <b>▪</b>
+                                <label><i class="el-icon-time"></i> 20-02-05 14:28</label>
+                                <b>▪</b>
+                                <label><a href="https://www.yanglaocn.com/bbs/?tid=29" target="_blank" title="频道"><i class="el-icon-menu"></i> 经验交流</a></label>
+                                <b>▪</b>
+                                <label title="浏览次数"><i class="el-icon-view"></i> 135</label>
+                                <b>▪</b>
+                                <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                            </div>
+                        </div>
+                        <div class="yl_dongtai_img bbs_dongtai_img">
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-02/bbs158077902610196.html" target="_blank" title="如何远离病毒？你最关心的问题，泰康之家前排回答→→→"><img src="http://www.yanglaocn.com/images/upload/img/2020/02_04/09da7e87a2241eb98490a0acbde06e23.png" width="80" height="60"  border="0" alt="如何远离病毒？你最关心的问题，泰康之家前排回答→→→" /></a>
+                            <h3>
+                                <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-02/bbs158077902610196.html" target="_blank" title="如何远离病毒？你最关心的问题，泰康之家前排回答→→→"
+                                >如何远离病毒？你最关心的问题，泰康之家前排回答→→→</a>
+                            </h3>
+                            <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                                <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank" title="最爱夕阳红"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                                <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank">最爱夕阳红</a></label>
+                                <b>▪</b>
+                                <label><i class="el-icon-time"></i> 20-02-04 09:17</label>
+                                <b>▪</b>
+                                <label><a href="https://www.yanglaocn.com/bbs/?tid=29" target="_blank" title="频道"><i class="el-icon-menu"></i> 经验交流</a></label>
+                                <b>▪</b>
+                                <label title="浏览次数"><i class="el-icon-view"></i> 17</label>
+                                <b>▪</b>
+                                <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                            </div>
+                        </div>
+                        <div class="yl_dongtai_img bbs_dongtai_img">
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-02/bbs158069691110195.html" target="_blank" title="泰康之家养老社区提示：非常时期，您要吃得非常营养！"><img src="http://www.yanglaocn.com/images/upload/img/2020/02_03/2ab1daaf106dfa7ef3d058d05c8ba1f0.jpg" width="80" height="60"  border="0" alt="泰康之家养老社区提示：非常时期，您要吃得非常营养！" /></a>
+                            <h3>
+                                <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-02/bbs158069691110195.html" target="_blank" title="泰康之家养老社区提示：非常时期，您要吃得非常营养！"
+                                >泰康之家养老社区提示：非常时期，您要吃得非常营养！</a>
+                            </h3>
+                            <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                                <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank" title="最爱夕阳红"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                                <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank">最爱夕阳红</a></label>
+                                <b>▪</b>
+                                <label><i class="el-icon-time"></i> 20-02-03 10:28</label>
+                                <b>▪</b>
+                                <label><a href="https://www.yanglaocn.com/bbs/?tid=29" target="_blank" title="频道"><i class="el-icon-menu"></i> 经验交流</a></label>
+                                <b>▪</b>
+                                <label title="浏览次数"><i class="el-icon-view"></i> 58</label>
+                                <b>▪</b>
+                                <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                            </div>
+                        </div>
+                        <div class="yl_dongtai_img bbs_dongtai_img">
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-01/bbs158043198710194.html" target="_blank" title="泰康之家申园居民现金捐赠，助力武汉抗击疫情！"><img src="http://www.yanglaocn.com/images/upload/img/2020/01_31/5c58bf48d942d5e98612d00f060174d1.png" width="80" height="60"  border="0" alt="泰康之家申园居民现金捐赠，助力武汉抗击疫情！" /></a>
+                            <h3>
+                                <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-01/bbs158043198710194.html" target="_blank" title="泰康之家申园居民现金捐赠，助力武汉抗击疫情！"
+                                >泰康之家申园居民现金捐赠，助力武汉抗击疫情！</a>
+                            </h3>
+                            <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                                <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank" title="最爱夕阳红"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                                <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank">最爱夕阳红</a></label>
+                                <b>▪</b>
+                                <label><i class="el-icon-time"></i> 20-01-31 08:53</label>
+                                <b>▪</b>
+                                <label><a href="https://www.yanglaocn.com/bbs/?tid=29" target="_blank" title="频道"><i class="el-icon-menu"></i> 经验交流</a></label>
+                                <b>▪</b>
+                                <label title="浏览次数"><i class="el-icon-view"></i> 149</label>
+                                <b>▪</b>
+                                <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                            </div>
+                        </div>
+                        <div class="yl_dongtai_img bbs_dongtai_img">
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-01/bbs158043188010193.html" target="_blank" title="抗击疫情，泰康之家养老社区在行动！！！"><img src="http://www.yanglaocn.com/images/upload/img/2020/01_31/ff5b71d3fcd09fee19afeb4f6204489f.png" width="80" height="60"  border="0" alt="抗击疫情，泰康之家养老社区在行动！！！" /></a>
+                            <h3>
+                                <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-01/bbs158043188010193.html" target="_blank" title="抗击疫情，泰康之家养老社区在行动！！！"
+                                >抗击疫情，泰康之家养老社区在行动！！！</a>
+                            </h3>
+                            <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                                <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank" title="最爱夕阳红"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                                <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank">最爱夕阳红</a></label>
+                                <b>▪</b>
+                                <label><i class="el-icon-time"></i> 20-01-31 08:51</label>
+                                <b>▪</b>
+                                <label><a href="https://www.yanglaocn.com/bbs/?tid=29" target="_blank" title="频道"><i class="el-icon-menu"></i> 经验交流</a></label>
+                                <b>▪</b>
+                                <label title="浏览次数"><i class="el-icon-view"></i> 224</label>
+                                <b>▪</b>
+                                <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                            </div>
+                        </div><div class="moodload moodloadjiaW LoadmoreJS" page="1" moodtab="fabu" onoff="1" etab="fabu">点击加载更多</div>
+                    </div>
+                </el-tab-pane>
+                <el-tab-pane label="最新回复" name="huifu">
+
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-10/bbs157049170110101.html" target="_blank" title="父母老了，想为他们买份高额保障的保险养老，求专业人士推荐"
+                            >父母老了，想为他们买份高额保障的保险养老，求专业人士推荐</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=11158" target="_blank" title="黄堂"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=11158" target="_blank">黄堂</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 19-10-08 07:41</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=29" target="_blank" title="频道"><i class="el-icon-menu"></i> 经验交流</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 26</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 1</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2016-07/bbs14677661205477.html" target="_blank" title="失能老人不愿入住养老院的四大原因"><img src="http://www.yanglaocn.com/images/upload/img/2016/07_06/456be257b22b65e58b93d161b6fe882a.jpg" width="80" height="60"  border="0" alt="失能老人不愿入住养老院的四大原因" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2016-07/bbs14677661205477.html" target="_blank" title="失能老人不愿入住养老院的四大原因"
+                            >失能老人不愿入住养老院的四大原因</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=3485" target="_blank" title="青岛新泰康养老院"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=3485" target="_blank">青岛新泰康养老院</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 16-07-06 20:07</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=29" target="_blank" title="频道"><i class="el-icon-menu"></i> 经验交流</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 1788</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 8</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-04/bbs158632784110243.html" target="_blank" title="中小民办养老院怎样找出路？"
+                            >中小民办养老院怎样找出路？</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=12201" target="_blank" title="蒋生"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=12201" target="_blank">蒋生</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 20-04-08 14:37</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=29" target="_blank" title="频道"><i class="el-icon-menu"></i> 经验交流</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 176</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 1</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-02/bbs158199865810218.html" target="_blank" title="泰康同济武汉医院：首位患者辜婆婆的儿媳妇说“照顾的太过细了”！"><img src="http://www.yanglaocn.com/images/upload/img/2020/02_18/fad4ad488ba0d4faab102f2ff5906e80.png" width="80" height="60"  border="0" alt="泰康同济武汉医院：首位患者辜婆婆的儿媳妇说“照顾的太过细了”！" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-02/bbs158199865810218.html" target="_blank" title="泰康同济武汉医院：首位患者辜婆婆的儿媳妇说“照顾的太过细了”！"
+                            >泰康同济武汉医院：首位患者辜婆婆的儿媳妇说“照顾的太过细了”！</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank" title="最爱夕阳红"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank">最爱夕阳红</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 20-02-18 12:04</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=29" target="_blank" title="频道"><i class="el-icon-menu"></i> 经验交流</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 129</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 1</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-02/bbs158156511210205.html" target="_blank" title="泰康之家养老社区战“疫”先锋|困难是暂时的，还有更多生命等着我们去守护"><img src="http://www.yanglaocn.com/images/upload/img/2020/02_13/142e3c1c5dd1804661c38d5284bf7e02.png" width="80" height="60"  border="0" alt="泰康之家养老社区战“疫”先锋|困难是暂时的，还有更多生命等着我们去守护" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-02/bbs158156511210205.html" target="_blank" title="泰康之家养老社区战“疫”先锋|困难是暂时的，还有更多生命等着我们去守护"
+                            >泰康之家养老社区战“疫”先锋|困难是暂时的，还有更多生命等着我们去守护</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank" title="最爱夕阳红"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank">最爱夕阳红</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 20-02-13 11:38</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=29" target="_blank" title="频道"><i class="el-icon-menu"></i> 经验交流</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 105</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 1</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-02/bbs158199859310217.html" target="_blank" title="泰康之家战“疫”先锋：非典时候你们保护90后，今天，让90后保护你们！"><img src="http://www.yanglaocn.com/images/upload/img/2020/02_18/64e24adeb1f69de9b85ff561e59d9641.png" width="80" height="60"  border="0" alt="泰康之家战“疫”先锋：非典时候你们保护90后，今天，让90后保护你们！" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-02/bbs158199859310217.html" target="_blank" title="泰康之家战“疫”先锋：非典时候你们保护90后，今天，让90后保护你们！"
+                            >泰康之家战“疫”先锋：非典时候你们保护90后，今天，让90后保护你们！</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank" title="最爱夕阳红"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank">最爱夕阳红</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 20-02-18 12:03</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=29" target="_blank" title="频道"><i class="el-icon-menu"></i> 经验交流</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 174</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 4</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-11/bbs157343778410134.html" target="_blank" title="干货！泰康之家养老社区老人防跌倒绝招，快转给爸妈"><img src="http://www.yanglaocn.com/images/upload/img/2019/11_11/93bfe39e21fc31269ccfbadf29793659.png" width="80" height="60"  border="0" alt="干货！泰康之家养老社区老人防跌倒绝招，快转给爸妈" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-11/bbs157343778410134.html" target="_blank" title="干货！泰康之家养老社区老人防跌倒绝招，快转给爸妈"
+                            >干货！泰康之家养老社区老人防跌倒绝招，快转给爸妈</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank" title="最爱夕阳红"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank">最爱夕阳红</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 19-11-11 10:03</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=29" target="_blank" title="频道"><i class="el-icon-menu"></i> 经验交流</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 115</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 1</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-07/bbs15622967079950.html" target="_blank" title="“禅修养老”成为安养晚年新模式"
+                            >“禅修养老”成为安养晚年新模式</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8615" target="_blank" title="五谷福硕"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8615" target="_blank">五谷福硕</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 19-07-05 11:18</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=29" target="_blank" title="频道"><i class="el-icon-menu"></i> 经验交流</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 296</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 1</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-08/bbs156635878210033.html" target="_blank" title="护理员如何与长者沟通交流"
+                            >护理员如何与长者沟通交流</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=10886" target="_blank" title="德州康颐养老服务有限公司"><img src="https://www.yanglaocn.com/images/upload/individualimages/2019/08-23/ae30484ce3fb9f2d153c8873fa0fbee4.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=10886" target="_blank">德州康颐养老服务有限公司</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 19-08-21 11:39</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=29" target="_blank" title="频道"><i class="el-icon-menu"></i> 经验交流</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 426</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 1</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-07/bbs15640387659994.html" target="_blank" title="喊话《都挺好》苏大强，五福集团五福原野养老院了解一下"><img src="http://www.yanglaocn.com/images/upload/img/2019/07_25/673031315ae59e2981f7132900e4adaf.jpg" width="80" height="60"  border="0" alt="喊话《都挺好》苏大强，五福集团五福原野养老院了解一下" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-07/bbs15640387659994.html" target="_blank" title="喊话《都挺好》苏大强，五福集团五福原野养老院了解一下"
+                            >喊话《都挺好》苏大强，五福集团五福原野养老院了解一下</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8615" target="_blank" title="五谷福硕"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8615" target="_blank">五谷福硕</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 19-07-25 15:12</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=29" target="_blank" title="频道"><i class="el-icon-menu"></i> 经验交流</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 246</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 1</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-07/bbs15619377459942.html" target="_blank" title="泰康之家燕园开业四周年，喜气洋洋其乐融融，让长者过优雅的老年生活"><img src="http://www.yanglaocn.com/images/upload/img/2019/07_01/7b2cc7affd72cadeabc233c1fe31ac48.png" width="80" height="60"  border="0" alt="泰康之家燕园开业四周年，喜气洋洋其乐融融，让长者过优雅的老年生活" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-07/bbs15619377459942.html" target="_blank" title="泰康之家燕园开业四周年，喜气洋洋其乐融融，让长者过优雅的老年生活"
+                            >泰康之家燕园开业四周年，喜气洋洋其乐融融，让长者过优雅的老年生活</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank" title="最爱夕阳红"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank">最爱夕阳红</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 19-07-01 07:35</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=29" target="_blank" title="频道"><i class="el-icon-menu"></i> 经验交流</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 240</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 1</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-01/bbs15482893549650.html" target="_blank" title="厦门养老院转让（已入住老人90多个）"><img src="http://www.yanglaocn.com/images/upload/img/2019/01_24/f21d002727e3b9a0aabc8986dc4e4bd9.jpg" width="80" height="60"  border="0" alt="厦门养老院转让（已入住老人90多个）" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-01/bbs15482893549650.html" target="_blank" title="厦门养老院转让（已入住老人90多个）"
+                            >厦门养老院转让（已入住老人90多个）</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=9461" target="_blank" title="厦门田洋托养院"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=9461" target="_blank">厦门田洋托养院</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 19-01-24 08:22</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=29" target="_blank" title="频道"><i class="el-icon-menu"></i> 经验交流</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 907</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 2</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-02/bbs15489826079669.html" target="_blank" title="养老院的入住签订同行须知，你造吗？（上）"
+                            >养老院的入住签订同行须知，你造吗？（上）</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=9406" target="_blank" title="益养老"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=9406" target="_blank">益养老</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 19-02-01 08:57</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=29" target="_blank" title="频道"><i class="el-icon-menu"></i> 经验交流</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 470</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 1</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2015-10/bbs14455874984210.html" target="_blank" title="新建养老院都需要哪些设施"
+                            >新建养老院都需要哪些设施</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=1577" target="_blank" title="博锐百舟"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=1577" target="_blank">博锐百舟</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 15-10-23 19:46</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=29" target="_blank" title="频道"><i class="el-icon-menu"></i> 经验交流</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 1488</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 5</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2017-11/bbs15117655098569.html" target="_blank" title="观湖启用“智慧养老”探索老有所养新模式"
+                            >观湖启用“智慧养老”探索老有所养新模式</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=7055" target="_blank" title="社村通智慧养老平台"><img src="https://www.yanglaocn.com/images/upload/individualimages/2017/10-16/8ba788831e1437bab576261e44c08e9d.png"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=7055" target="_blank">社村通智慧养老平台</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 17-11-27 14:51</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=29" target="_blank" title="频道"><i class="el-icon-menu"></i> 经验交流</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 498</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 1</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-09/bbs15367335979336.html" target="_blank" title="防患于未然，中汇爱五福养老院进行火灾消防演练"><img src="http://www.yanglaocn.com/images/upload/img/2018/09_12/9994f7fbc0eb560889bbcff95ae93954.png" width="80" height="60"  border="0" alt="防患于未然，中汇爱五福养老院进行火灾消防演练" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-09/bbs15367335979336.html" target="_blank" title="防患于未然，中汇爱五福养老院进行火灾消防演练"
+                            >防患于未然，中汇爱五福养老院进行火灾消防演练</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8615" target="_blank" title="五谷福硕"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8615" target="_blank">五谷福硕</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 18-09-12 14:26</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=29" target="_blank" title="频道"><i class="el-icon-menu"></i> 经验交流</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 237</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 1</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2017-11/bbs15108872058526.html" target="_blank" title="长春净月颐康医养中心|医养结合，颐养天年"
+                            >长春净月颐康医养中心|医养结合，颐养天年</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=6980" target="_blank" title="颐康84546988"><img src="https://www.yanglaocn.com/images/upload/img/2013/08-04/f7dbb80109006c9e5448c95e9ece23f8.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=6980" target="_blank">颐康84546988</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 17-11-17 10:53</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=29" target="_blank" title="频道"><i class="el-icon-menu"></i> 经验交流</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 761</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 1</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-02/bbs15178205368889.html" target="_blank" title="积极引入第三方养老专业评估--------全市养老院质量安全工作会议"
+                            >积极引入第三方养老专业评估--------全市养老院质量安全工作会议</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=2579" target="_blank" title="山东滕州养老服务中心"><img src="https://www.yanglaocn.com/images/upload/img/2011/11-01/fd20cb22eb4dfa9b039fc5de9a365491.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=2579" target="_blank">山东滕州养老服务中心</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 18-02-05 16:48</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=29" target="_blank" title="频道"><i class="el-icon-menu"></i> 经验交流</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 1077</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 1</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-06/bbs15300192809116.html" target="_blank" title="养老院装修设计应该需要设计哪些内容"><img src="http://www.yanglaocn.com/images/upload/img/2018/06_26/f7cfd5396b055753afd13876e8f8d5e2.jpg" width="80" height="60"  border="0" alt="养老院装修设计应该需要设计哪些内容" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-06/bbs15300192809116.html" target="_blank" title="养老院装修设计应该需要设计哪些内容"
+                            >养老院装修设计应该需要设计哪些内容</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8147" target="_blank" title="anshisheji"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8147" target="_blank">anshisheji</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 18-06-26 21:21</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=29" target="_blank" title="频道"><i class="el-icon-menu"></i> 经验交流</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 1331</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 1</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2017-08/bbs15028762598064.html" target="_blank" title="呵护老年人晚年幸福福建出台养老“双十条”措施"
+                            >呵护老年人晚年幸福福建出台养老“双十条”措施</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank" title="soosom"><img src="https://www.yanglaocn.com/images/upload/individualimages/2014/06-06/6f0c281b9f2c5c93ff82fbe7e17db6c9.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=18" target="_blank">soosom</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 17-08-16 17:37</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=29" target="_blank" title="频道"><i class="el-icon-menu"></i> 经验交流</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 277</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 3</label>
+                        </div>
+                    </div><div class="moodload moodloadjiaW LoadmoreJS" page="1" moodtab="huifu" onoff="1" etab="huifu">点击加载更多</div>
+                </el-tab-pane>
+                <el-tab-pane label="热点" name="hot">
+
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-06/bbs15613383639921.html" target="_blank" title="泰康之家贵不贵？值不值？数学教授来帮你“算笔账”"><img src="http://www.yanglaocn.com/images/upload/img/2019/06_24/ec347f62efd8ebb7be7b9552d3b55389.jpg" width="80" height="60"  border="0" alt="泰康之家贵不贵？值不值？数学教授来帮你“算笔账”" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-06/bbs15613383639921.html" target="_blank" title="泰康之家贵不贵？值不值？数学教授来帮你“算笔账”"
+                            >泰康之家贵不贵？值不值？数学教授来帮你“算笔账”</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank" title="最爱夕阳红"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank">最爱夕阳红</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 19-06-24 09:06</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=29" target="_blank" title="频道"><i class="el-icon-menu"></i> 经验交流</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 645</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-03/bbs15523589049724.html" target="_blank" title="大兴区旧宫镇养老照料中心"><img src="http://www.yanglaocn.com/images/upload/img/2019/03_12/8d4e11e07469c334f47429306315a071.jpg" width="80" height="60"  border="0" alt="大兴区旧宫镇养老照料中心" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-03/bbs15523589049724.html" target="_blank" title="大兴区旧宫镇养老照料中心"
+                            >大兴区旧宫镇养老照料中心</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=9746" target="_blank" title="daxingyanglao"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=9746" target="_blank">daxingyanglao</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 19-03-12 10:48</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=29" target="_blank" title="频道"><i class="el-icon-menu"></i> 经验交流</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 613</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-01/bbs15482893549650.html" target="_blank" title="厦门养老院转让（已入住老人90多个）"><img src="http://www.yanglaocn.com/images/upload/img/2019/01_24/f21d002727e3b9a0aabc8986dc4e4bd9.jpg" width="80" height="60"  border="0" alt="厦门养老院转让（已入住老人90多个）" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-01/bbs15482893549650.html" target="_blank" title="厦门养老院转让（已入住老人90多个）"
+                            >厦门养老院转让（已入住老人90多个）</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=9461" target="_blank" title="厦门田洋托养院"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=9461" target="_blank">厦门田洋托养院</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 19-01-24 08:22</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=29" target="_blank" title="频道"><i class="el-icon-menu"></i> 经验交流</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 907</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 2</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-10/bbs15398202859426.html" target="_blank" title="重阳话养老泰康之家打造“老年迪士尼”满足老人七大需求"><img src="http://www.yanglaocn.com/images/upload/img/2018/10_18/6215dc4db680c5213c2167a9b7b9d1ca.jpg" width="80" height="60"  border="0" alt="重阳话养老泰康之家打造“老年迪士尼”满足老人七大需求" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-10/bbs15398202859426.html" target="_blank" title="重阳话养老泰康之家打造“老年迪士尼”满足老人七大需求"
+                            >重阳话养老泰康之家打造“老年迪士尼”满足老人七大需求</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank" title="最爱夕阳红"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank">最爱夕阳红</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 18-10-18 07:51</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=29" target="_blank" title="频道"><i class="el-icon-menu"></i> 经验交流</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 12967</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-06/bbs15300192809116.html" target="_blank" title="养老院装修设计应该需要设计哪些内容"><img src="http://www.yanglaocn.com/images/upload/img/2018/06_26/f7cfd5396b055753afd13876e8f8d5e2.jpg" width="80" height="60"  border="0" alt="养老院装修设计应该需要设计哪些内容" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-06/bbs15300192809116.html" target="_blank" title="养老院装修设计应该需要设计哪些内容"
+                            >养老院装修设计应该需要设计哪些内容</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8147" target="_blank" title="anshisheji"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8147" target="_blank">anshisheji</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 18-06-26 21:21</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=29" target="_blank" title="频道"><i class="el-icon-menu"></i> 经验交流</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 1331</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 1</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-02/bbs15178205368889.html" target="_blank" title="积极引入第三方养老专业评估--------全市养老院质量安全工作会议"
+                            >积极引入第三方养老专业评估--------全市养老院质量安全工作会议</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=2579" target="_blank" title="山东滕州养老服务中心"><img src="https://www.yanglaocn.com/images/upload/img/2011/11-01/fd20cb22eb4dfa9b039fc5de9a365491.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=2579" target="_blank">山东滕州养老服务中心</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 18-02-05 16:48</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=29" target="_blank" title="频道"><i class="el-icon-menu"></i> 经验交流</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 1077</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 1</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-01/bbs15150480028752.html" target="_blank" title="句容打造立体式多元化养老服务模式"
+                            >句容打造立体式多元化养老服务模式</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=7055" target="_blank" title="社村通智慧养老平台"><img src="https://www.yanglaocn.com/images/upload/individualimages/2017/10-16/8ba788831e1437bab576261e44c08e9d.png"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=7055" target="_blank">社村通智慧养老平台</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 18-01-04 14:40</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=29" target="_blank" title="频道"><i class="el-icon-menu"></i> 经验交流</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 630</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2017-11/bbs15108872058526.html" target="_blank" title="长春净月颐康医养中心|医养结合，颐养天年"
+                            >长春净月颐康医养中心|医养结合，颐养天年</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=6980" target="_blank" title="颐康84546988"><img src="https://www.yanglaocn.com/images/upload/img/2013/08-04/f7dbb80109006c9e5448c95e9ece23f8.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=6980" target="_blank">颐康84546988</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 17-11-17 10:53</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=29" target="_blank" title="频道"><i class="el-icon-menu"></i> 经验交流</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 761</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 1</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2017-02/bbs14880251406995.html" target="_blank" title="日本养老产业商务考察3月20-26日2017年"
+                            >日本养老产业商务考察3月20-26日2017年</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=5949" target="_blank" title="shamo"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=5949" target="_blank">shamo</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 17-02-25 20:19</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=29" target="_blank" title="频道"><i class="el-icon-menu"></i> 经验交流</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 739</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2016-12/bbs14808520996456.html" target="_blank" title="颠覆你99%的养老业观点尚学再论养老：举一反三窥门径，抽丝剥茧辟蹊径"
+                            >颠覆你99%的养老业观点尚学再论养老：举一反三窥门径，抽丝剥茧辟蹊径</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=4579" target="_blank" title="kenkenliu"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=4579" target="_blank">kenkenliu</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 16-12-04 19:48</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=29" target="_blank" title="频道"><i class="el-icon-menu"></i> 经验交流</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 758</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2016-09/bbs14739014525898.html" target="_blank" title="江苏省老年公寓（试运行）收费标准"
+                            >江苏省老年公寓（试运行）收费标准</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=2579" target="_blank" title="山东滕州养老服务中心"><img src="https://www.yanglaocn.com/images/upload/img/2011/11-01/fd20cb22eb4dfa9b039fc5de9a365491.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=2579" target="_blank">山东滕州养老服务中心</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 16-09-15 09:04</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=29" target="_blank" title="频道"><i class="el-icon-menu"></i> 经验交流</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 993</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2016-09/bbs14739010415897.html" target="_blank" title="山东省滕州市养老评估中心"
+                            >山东省滕州市养老评估中心</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=2579" target="_blank" title="山东滕州养老服务中心"><img src="https://www.yanglaocn.com/images/upload/img/2011/11-01/fd20cb22eb4dfa9b039fc5de9a365491.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=2579" target="_blank">山东滕州养老服务中心</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 16-09-15 08:57</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=29" target="_blank" title="频道"><i class="el-icon-menu"></i> 经验交流</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 534</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2016-09/bbs14727101635819.html" target="_blank" title="2016中国养老产业访日交流合作暨国际福祉器械展观摩洽谈会"
+                            >2016中国养老产业访日交流合作暨国际福祉器械展观摩洽谈会</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=5037" target="_blank" title="yingtushen"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=5037" target="_blank">yingtushen</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 16-09-01 14:09</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=29" target="_blank" title="频道"><i class="el-icon-menu"></i> 经验交流</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 530</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2016-08/bbs14702096165646.html" target="_blank" title="白云千逗颐老连锁公寓广州地区性价比最高的全新星级老年公寓"><img src="http://www.yanglaocn.com/images/upload/img/2016/08_03/e2af949bc7132554b6d9c984933d9d2e.jpg" width="80" height="60"  border="0" alt="白云千逗颐老连锁公寓广州地区性价比最高的全新星级老年公寓" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2016-08/bbs14702096165646.html" target="_blank" title="白云千逗颐老连锁公寓广州地区性价比最高的全新星级老年公寓"
+                            >白云千逗颐老连锁公寓广州地区性价比最高的全新星级老年公寓</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=4909" target="_blank" title="longdaozg"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=4909" target="_blank">longdaozg</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 16-08-03 15:33</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=29" target="_blank" title="频道"><i class="el-icon-menu"></i> 经验交流</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 1127</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2016-07/bbs14694283675583.html" target="_blank" title="山东滕州市养老评估（老年人能力）知识第一期培训班开班"
+                            >山东滕州市养老评估（老年人能力）知识第一期培训班开班</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=2579" target="_blank" title="山东滕州养老服务中心"><img src="https://www.yanglaocn.com/images/upload/img/2011/11-01/fd20cb22eb4dfa9b039fc5de9a365491.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=2579" target="_blank">山东滕州养老服务中心</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 16-07-25 14:32</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=29" target="_blank" title="频道"><i class="el-icon-menu"></i> 经验交流</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 745</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2016-07/bbs14694250905580.html" target="_blank" title="山东滕州养老事业老年人能力评估启动"
+                            >山东滕州养老事业老年人能力评估启动</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=2579" target="_blank" title="山东滕州养老服务中心"><img src="https://www.yanglaocn.com/images/upload/img/2011/11-01/fd20cb22eb4dfa9b039fc5de9a365491.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=2579" target="_blank">山东滕州养老服务中心</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 16-07-25 13:38</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=29" target="_blank" title="频道"><i class="el-icon-menu"></i> 经验交流</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 1141</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2016-07/bbs14677661205477.html" target="_blank" title="失能老人不愿入住养老院的四大原因"><img src="http://www.yanglaocn.com/images/upload/img/2016/07_06/456be257b22b65e58b93d161b6fe882a.jpg" width="80" height="60"  border="0" alt="失能老人不愿入住养老院的四大原因" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2016-07/bbs14677661205477.html" target="_blank" title="失能老人不愿入住养老院的四大原因"
+                            >失能老人不愿入住养老院的四大原因</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=3485" target="_blank" title="青岛新泰康养老院"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=3485" target="_blank">青岛新泰康养老院</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 16-07-06 20:07</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=29" target="_blank" title="频道"><i class="el-icon-menu"></i> 经验交流</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 1788</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 8</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2016-05/bbs14629407385150.html" target="_blank" title="现代养老机构应该具有的标准"
+                            >现代养老机构应该具有的标准</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=4512" target="_blank" title="管理顾问"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=4512" target="_blank">管理顾问</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 16-05-11 12:25</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=29" target="_blank" title="频道"><i class="el-icon-menu"></i> 经验交流</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 558</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2016-03/bbs14573329204824.html" target="_blank" title="北京市养老服务机构老年人健康评估服务规范"
+                            >北京市养老服务机构老年人健康评估服务规范</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=2579" target="_blank" title="山东滕州养老服务中心"><img src="https://www.yanglaocn.com/images/upload/img/2011/11-01/fd20cb22eb4dfa9b039fc5de9a365491.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=2579" target="_blank">山东滕州养老服务中心</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 16-03-07 14:42</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=29" target="_blank" title="频道"><i class="el-icon-menu"></i> 经验交流</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 560</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 1</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2016-03/bbs14572355854815.html" target="_blank" title="养老机构国家已发布的相关标准"
+                            >养老机构国家已发布的相关标准</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=2579" target="_blank" title="山东滕州养老服务中心"><img src="https://www.yanglaocn.com/images/upload/img/2011/11-01/fd20cb22eb4dfa9b039fc5de9a365491.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=2579" target="_blank">山东滕州养老服务中心</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 16-03-06 11:39</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=29" target="_blank" title="频道"><i class="el-icon-menu"></i> 经验交流</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 539</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div><div class="moodload moodloadjiaW LoadmoreJS" page="1" moodtab="hot" onoff="1" etab="hot">点击加载更多</div>
+                </el-tab-pane>
+                <el-tab-pane label="问题探讨" name="30">
+
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2021-04/bbs161775067410363.html" target="_blank" title="2021中国山东青岛国际康养产业博览会"><img src="http://www.yanglaocn.com/images/upload/img/2021/04_07/8bd9fd18bb1661fef86e1939d0b0cdbc.jpg" width="80" height="60"  border="0" alt="2021中国山东青岛国际康养产业博览会" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2021-04/bbs161775067410363.html" target="_blank" title="2021中国山东青岛国际康养产业博览会"
+                            >2021中国山东青岛国际康养产业博览会</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=14052" target="_blank" title="makpower97"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=14052" target="_blank">makpower97</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 4月7日</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=30" target="_blank" title="频道"><i class="el-icon-menu"></i> 问题探讨</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 73</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2021-04/bbs161770446310362.html" target="_blank" title="入住率提不高怎么办？"
+                            >入住率提不高怎么办？</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=13931" target="_blank" title="灵武市第二敬老院"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=13931" target="_blank">灵武市第二敬老院</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 4月6日</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=30" target="_blank" title="频道"><i class="el-icon-menu"></i> 问题探讨</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 94</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 1</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-10/bbs160256404510300.html" target="_blank" title="个人是否能够经营养老服务？类似于个体工商户老年公寓，家庭式养老院等形式"
+                            >个人是否能够经营养老服务？类似于个体工商户老年公寓，家庭式养老院等形式</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=1392" target="_blank" title="梦白如花"><img src="https://www.yanglaocn.com/images/upload/individualimages/2014/06-07/2eda2437c949949bb0f53331044d4e9f.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=1392" target="_blank">梦白如花</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 20-10-13 12:40</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=30" target="_blank" title="频道"><i class="el-icon-menu"></i> 问题探讨</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 295</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 2</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2020-09/bbs160100274710292.html" target="_blank" title="入住北京养老院一个月大概多少钱"
+                            >入住北京养老院一个月大概多少钱</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=496" target="_blank" title="珊珊"><img src="https://www.yanglaocn.com/images/upload/img/2011/11-01/f9d8a5987d7f2cc97febe9212e6202a0.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=496" target="_blank">珊珊</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 20-09-25 10:59</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=30" target="_blank" title="频道"><i class="el-icon-menu"></i> 问题探讨</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 102</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-12/bbs157622923710157.html" target="_blank" title="泰康之家，让父母在有爱的地方优雅生活"><img src="http://www.yanglaocn.com/images/upload/img/2019/12_13/82b860ac3b993aab7f18aeabfbfabfdc.jpg" width="80" height="60"  border="0" alt="泰康之家，让父母在有爱的地方优雅生活" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-12/bbs157622923710157.html" target="_blank" title="泰康之家，让父母在有爱的地方优雅生活"
+                            >泰康之家，让父母在有爱的地方优雅生活</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank" title="最爱夕阳红"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank">最爱夕阳红</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 19-12-13 17:27</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=30" target="_blank" title="频道"><i class="el-icon-menu"></i> 问题探讨</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 152</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-10/bbs157084850610108.html" target="_blank" title="养老机构的入住率问题"
+                            >养老机构的入住率问题</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=11184" target="_blank" title="广州泰康之家粤园"><img src="https://www.yanglaocn.com/images/upload/img/2013/08-04/6f5a5499ab158cafe5cb4fc67c955017.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=11184" target="_blank">广州泰康之家粤园</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 19-10-12 10:48</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=30" target="_blank" title="频道"><i class="el-icon-menu"></i> 问题探讨</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 90</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 3</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-09/bbs156957335210093.html" target="_blank" title="打卡泰康之家，见证共和国建设者们的活力养老新生活"><img src="http://www.yanglaocn.com/images/upload/img/2019/09_27/c3d582c05621d7f53645b78b84270fb2.gif" width="80" height="60"  border="0" alt="打卡泰康之家，见证共和国建设者们的活力养老新生活" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-09/bbs156957335210093.html" target="_blank" title="打卡泰康之家，见证共和国建设者们的活力养老新生活"
+                            >打卡泰康之家，见证共和国建设者们的活力养老新生活</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank" title="最爱夕阳红"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank">最爱夕阳红</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 19-09-27 16:35</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=30" target="_blank" title="频道"><i class="el-icon-menu"></i> 问题探讨</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 117</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-08/bbs156714786210060.html" target="_blank" title="爸妈执意要住养老社区的5大理由，看完眼泪流下来"><img src="http://www.yanglaocn.com/images/upload/img/2019/08_30/190b57eba2563c983171bea3c6251c68.png" width="80" height="60"  border="0" alt="爸妈执意要住养老社区的5大理由，看完眼泪流下来" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-08/bbs156714786210060.html" target="_blank" title="爸妈执意要住养老社区的5大理由，看完眼泪流下来"
+                            >爸妈执意要住养老社区的5大理由，看完眼泪流下来</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank" title="最爱夕阳红"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank">最爱夕阳红</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 19-08-30 14:51</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=30" target="_blank" title="频道"><i class="el-icon-menu"></i> 问题探讨</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 198</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-08/bbs156687557810050.html" target="_blank" title="医养融合！国德康养中心打造特色养老机构！"><img src="http://www.yanglaocn.com/images/upload/img/2019/08_27/ff288d63791ba5a0bb6ca3e8dd2e6504.jpg" width="80" height="60"  border="0" alt="医养融合！国德康养中心打造特色养老机构！" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-08/bbs156687557810050.html" target="_blank" title="医养融合！国德康养中心打造特色养老机构！"
+                            >医养融合！国德康养中心打造特色养老机构！</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=10850" target="_blank" title="福州市国德老年康养中心"><img src="https://www.yanglaocn.com/images/upload/individualimages/2019/08-26/a3d455689791fe7b364c362dfc4056c8.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=10850" target="_blank">福州市国德老年康养中心</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 19-08-27 11:12</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=30" target="_blank" title="频道"><i class="el-icon-menu"></i> 问题探讨</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 192</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-08/bbs156680310910044.html" target="_blank" title="广东省民政厅评定：泰康之家粤园为最高级别——五星级养老机构"><img src="http://www.yanglaocn.com/images/upload/img/2019/08_26/f3ec9c10f301288f589a623df8edee4b.png" width="80" height="60"  border="0" alt="广东省民政厅评定：泰康之家粤园为最高级别——五星级养老机构" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-08/bbs156680310910044.html" target="_blank" title="广东省民政厅评定：泰康之家粤园为最高级别——五星级养老机构"
+                            >广东省民政厅评定：泰康之家粤园为最高级别——五星级养老机构</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank" title="最爱夕阳红"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank">最爱夕阳红</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 19-08-26 15:05</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=30" target="_blank" title="频道"><i class="el-icon-menu"></i> 问题探讨</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 171</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-07/bbs156444760910001.html" target="_blank" title="泰康之家·申园开业三周年庆，“养老新生活”征服沪上老人"><img src="http://www.yanglaocn.com/images/upload/img/2019/07_30/36cf3d55ee35343ec1da63176bbb6e98.png" width="80" height="60"  border="0" alt="泰康之家·申园开业三周年庆，“养老新生活”征服沪上老人" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-07/bbs156444760910001.html" target="_blank" title="泰康之家·申园开业三周年庆，“养老新生活”征服沪上老人"
+                            >泰康之家·申园开业三周年庆，“养老新生活”征服沪上老人</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank" title="最爱夕阳红"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank">最爱夕阳红</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 19-07-30 08:46</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=30" target="_blank" title="频道"><i class="el-icon-menu"></i> 问题探讨</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 130</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-07/bbs15638507819990.html" target="_blank" title="健康中国，最好的养老应该是什么样子？"><img src="http://www.yanglaocn.com/images/upload/img/2019/07_23/933c8fff745348add6f5769454aa3aab.jpg" width="80" height="60"  border="0" alt="健康中国，最好的养老应该是什么样子？" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-07/bbs15638507819990.html" target="_blank" title="健康中国，最好的养老应该是什么样子？"
+                            >健康中国，最好的养老应该是什么样子？</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank" title="最爱夕阳红"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank">最爱夕阳红</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 19-07-23 10:59</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=30" target="_blank" title="频道"><i class="el-icon-menu"></i> 问题探讨</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 134</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-07/bbs15625791949955.html" target="_blank" title="养老院星级评定标准出炉，如何提高核心竞争力迎接挑战？"
+                            >养老院星级评定标准出炉，如何提高核心竞争力迎接挑战？</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8855" target="_blank" title="精华隆智慧感知科技"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8855" target="_blank">精华隆智慧感知科技</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 19-07-08 17:46</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=30" target="_blank" title="频道"><i class="el-icon-menu"></i> 问题探讨</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 128</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-06/bbs15607731789907.html" target="_blank" title="父亲节当天，我陪爸爸去了养老社区"><img src="http://www.yanglaocn.com/images/upload/img/2019/06_17/b709ab7b6031fb7793d55a212d249277.png" width="80" height="60"  border="0" alt="父亲节当天，我陪爸爸去了养老社区" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-06/bbs15607731789907.html" target="_blank" title="父亲节当天，我陪爸爸去了养老社区"
+                            >父亲节当天，我陪爸爸去了养老社区</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank" title="最爱夕阳红"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank">最爱夕阳红</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 19-06-17 20:06</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=30" target="_blank" title="频道"><i class="el-icon-menu"></i> 问题探讨</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 239</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-06/bbs15604159769901.html" target="_blank" title="2019成都全球创交会开幕，泰康之家蜀园引关注"><img src="http://www.yanglaocn.com/images/upload/img/2019/06_13/b6779339fa608e910542fa5e1accc4ea.png" width="80" height="60"  border="0" alt="2019成都全球创交会开幕，泰康之家蜀园引关注" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-06/bbs15604159769901.html" target="_blank" title="2019成都全球创交会开幕，泰康之家蜀园引关注"
+                            >2019成都全球创交会开幕，泰康之家蜀园引关注</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank" title="最爱夕阳红"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8849" target="_blank">最爱夕阳红</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 19-06-13 16:52</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=30" target="_blank" title="频道"><i class="el-icon-menu"></i> 问题探讨</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 81</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-04/bbs15542828069766.html" target="_blank" title="国家卫健委老龄健康司副司长蔡菲：医疗+养老，政策更给力！"><img src="http://www.yanglaocn.com/images/upload/img/2019/04_03/a6b96da88468ca29b7342c829c22d458.jpg" width="80" height="60"  border="0" alt="国家卫健委老龄健康司副司长蔡菲：医疗+养老，政策更给力！" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-04/bbs15542828069766.html" target="_blank" title="国家卫健委老龄健康司副司长蔡菲：医疗+养老，政策更给力！"
+                            >国家卫健委老龄健康司副司长蔡菲：医疗+养老，政策更给力！</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=5894" target="_blank" title="乐无忧养老信息平台"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=5894" target="_blank">乐无忧养老信息平台</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 19-04-03 17:13</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=30" target="_blank" title="频道"><i class="el-icon-menu"></i> 问题探讨</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 301</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 2</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-04/bbs15541001999756.html" target="_blank" title="智慧养老服务规范标准来了！"><img src="http://www.yanglaocn.com/images/upload/img/2019/04_01/62246be69bfc3f2d370a609c5fdb2670.jpg" width="80" height="60"  border="0" alt="智慧养老服务规范标准来了！" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2019-04/bbs15541001999756.html" target="_blank" title="智慧养老服务规范标准来了！"
+                            >智慧养老服务规范标准来了！</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=5894" target="_blank" title="乐无忧养老信息平台"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=5894" target="_blank">乐无忧养老信息平台</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 19-04-01 14:29</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=30" target="_blank" title="频道"><i class="el-icon-menu"></i> 问题探讨</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 278</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-12/bbs15449415279563.html" target="_blank" title="亲祥源养老：2019年开办养老机构的市场前景怎样？创业者收藏"><img src="http://www.yanglaocn.com/images/upload/img/2018/12_16/e19e328e3c7fcbcf36e6392dc3dd4202.jpg" width="80" height="60"  border="0" alt="亲祥源养老：2019年开办养老机构的市场前景怎样？创业者收藏" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-12/bbs15449415279563.html" target="_blank" title="亲祥源养老：2019年开办养老机构的市场前景怎样？创业者收藏"
+                            >亲祥源养老：2019年开办养老机构的市场前景怎样？创业者收藏</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=9147" target="_blank" title="亲祥源养老"><img src="https://www.yanglaocn.com/images/upload/individualimages/2018/12-02/27947585a843ecfc9b87823a086e5ab3.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=9147" target="_blank">亲祥源养老</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 18-12-16 14:25</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=30" target="_blank" title="频道"><i class="el-icon-menu"></i> 问题探讨</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 201</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-10/bbs15399095689432.html" target="_blank" title="中汇爱五福集团严正声明-中汇爱五福集团"><img src="http://www.yanglaocn.com/images/upload/img/2018/10_19/bea36241d3c2a32a9c88d3efac4a55b6.jpeg" width="80" height="60"  border="0" alt="中汇爱五福集团严正声明-中汇爱五福集团" /></a>
+                        <h3>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-10/bbs15399095689432.html" target="_blank" title="中汇爱五福集团严正声明-中汇爱五福集团"
+                            >中汇爱五福集团严正声明-中汇爱五福集团</a>
+                        </h3>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8615" target="_blank" title="五谷福硕"><img src="https://www.yanglaocn.com/images/noavatar_middle.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=8615" target="_blank">五谷福硕</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 18-10-19 08:39</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=30" target="_blank" title="频道"><i class="el-icon-menu"></i> 问题探讨</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 953</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div>
+                    <div class="yl_dongtai_img bbs_dongtai_img">
+                        <h9>
+                            <a href="https://www.yanglaocn.com/shtml/bbsxx/2018-08/bbs15342196189182.html" target="_blank" title="规范养老服务评估启动养老服务认证促进养老事业的快速稳固健康发展"
+                            >规范养老服务评估启动养老服务认证促进养老事业的快速稳固健康发展</a>
+                        </h9>
+                        <div class="PageListTitle_P_label PageListTitle_P_label_index">
+                            <span><a href="https://www.yanglaocn.com/bbs/profile.php?uid=2579" target="_blank" title="山东滕州养老服务中心"><img src="https://www.yanglaocn.com/images/upload/img/2011/11-01/fd20cb22eb4dfa9b039fc5de9a365491.jpg"></a></span>
+                            <label><a href="https://www.yanglaocn.com/bbs/profile.php?uid=2579" target="_blank">山东滕州养老服务中心</a></label>
+                            <b>▪</b>
+                            <label><i class="el-icon-time"></i> 18-08-14 12:06</label>
+                            <b>▪</b>
+                            <label><a href="https://www.yanglaocn.com/bbs/?tid=30" target="_blank" title="频道"><i class="el-icon-menu"></i> 问题探讨</a></label>
+                            <b>▪</b>
+                            <label title="浏览次数"><i class="el-icon-view"></i> 1005</label>
+                            <b>▪</b>
+                            <label title="回复"><i class="el-icon-chat-line-round"></i> 0</label>
+                        </div>
+                    </div><div class="moodload moodloadjiaW LoadmoreJS" page="1" moodtab="30" etab="30" onoff="1">点击加载更多</div>
+                </el-tab-pane>
+            </el-tabs>
+        </div>
+    </div>
+</div>
+
+<div class="main_wide">
+    <div id="footer">
+        <ul>
+            <li><a href="https://www.yanglaocn.com/" title="养老信息网" onFocus="this.blur()">网站首页</a></li>
+            <li><a href="https://www.yanglaocn.com/aboutus/" title="关于我们" onFocus="this.blur()">关于我们</a></li>
+            <li><a href="https://www.yanglaocn.com/bbs/" title="养老社区" onFocus="this.blur()">养老社区</a></li>
+            <li><a href="https://www.yanglaocn.com/yanglaoyuan/" title="养老院查询" onFocus="this.blur()">养老院查询</a></li>
+            <li><a href="https://www.yanglaocn.com/webmap/" title="网站地图" onFocus="this.blur()">网站地图</a></li>
+            <li><a href="https://www.yanglaocn.com/contactus/" title="联系我们" onFocus="this.blur()">联系我们</a></li>
+            <li><a href="https://www.yanglaocn.com/disclaimer/" title="免责声明" onFocus="this.blur()">免责声明</a></li>
+        </ul>
+        <ul>
+            <li>版权所有：<a href="https://www.yanglaocn.com" target="_blank" onFocus="this.blur()">养老信息网</a></li>
+            <li>备案号:<a href="https://beian.miit.gov.cn" target="_blank">京ICP备13014276号-1</a></li>
+        </ul>
+        <ul><li>声明：本网站部分信息及图片来源于网络，如侵犯了您的权益或版权，请及时告知我们予以删除！</li></ul>
+        <ul>
+            <li>E-mail:yanglaocn@yanglaocn.com  /  yanglaocn@163.com</li>
+            <li>QQ:159220868&nbsp;/&nbsp;248411521</li>
+            <!--<li><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=159220868&site=qq&menu=yes" onFocus="this.blur()"><img border="0" src="http://wpa.qq.com/pa?p=2:159220868:41 &r=0.7478782087742928" alt="养老信息网(www.yanglaocn.com)欢迎您！" title="养老信息网(www.yanglaocn.com)欢迎您" align="absbottom"></a></li>
+            <li><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=248411521&site=qq&menu=yes" onFocus="this.blur()"><img border="0" src="http://wpa.qq.com/pa?p=2:248411521:41" alt="养老信息网(www.yanglaocn.com)欢迎您！" title="养老信息网(www.yanglaocn.com)欢迎您！" align="absbottom"></a></li>-->
+        </ul>
+    </div>
+</div>
+<!-- 右侧飘浮代码 开始 -->
+<div id="service">
+    <a href="javascript:void(0)" class="elderlyregistration" id="elderlyregistration_tip">长者入住登记</a>
+    <a href="javascript:void(0)" class="weixin" id="weixin_tip" onclick="javascript:PtipWeiXinShow();">公众微信</a>
+    <a href="javascript:void(0)" class="srvLog" onclick="javascript:ShowFeedback();">意见或建议</a>
+    <a class="goTop" id="goTop" title="返回顶部" style="display:none">返回顶部</a>
+</div>
+
+<div id="success" class="success-message" style="display: none">
+    <img src="icon/正确.png" alt="" />
+    <h3 class="success-text">成功消息框</h3>
+</div>
+<div id="warning" class="warning-message" style="display: none">
+    <img src="icon/警告.png" alt="" />
+    <h3 class="warning-text">警告消息框</h3>
+</div>
+
+<script src="../../static/js/response.js"></script>
+<script src="../../static/js/banner.js"></script>
+<script>
+    window.onload = function () {
+        var last = document.referrer;
+        console.log(last);
+        if (
+            last == "http://127.0.0.1:5500/login.html" ||
+            last == "http://172.16.160.43/" ||
+            last == "http://172.16.160.43/login.html"
+        ) {
+            success_message_come(success, "登录成功！");
+        }
+        banner();
+    };
+</script>
+<!-- 代码 结束 -->
+<script type="text/javascript" src="https://www.yanglaocn.com/js/function.js"></script>
+<script type="text/javascript" src="https://www.yanglaocn.com/js/jquery.media.js"></script>
+<script type="text/javascript" src="https://www.yanglaocn.com/artDialog/artDialog.js"></script>
+<script type="text/javascript" src="https://www.yanglaocn.com/js/artDialogFun.js"></script>
+<script type="text/javascript" src="https://www.yanglaocn.com/js/index.js"></script>
+<script type="text/javascript" src="https://www.yanglaocn.com/js/newsleft.js" ></script>
+<script type="text/javascript" src="https://www.yanglaocn.com/js/layui/layui.js"></script>
+<script type="text/javascript" src="https://www.yanglaocn.com/js/vue.min.js" ></script>
+<script type="text/javascript" src="https://www.yanglaocn.com/js/element/element.min.js" ></script>
+<script type="text/javascript" src="https://www.yanglaocn.com/js/index_vue.js"></script>
+<script type="text/javascript" language="javascript">
+    //右下角滑动通知
+    var intervalProcess;
+    GetInstantMessage();
+
+    intervalProcess = window.setInterval(function(){
+        GetInstantMessage();
+    },20000);
+
+    window.onfocus = function() {//当前窗口被激活
+        GetInstantMessage();
+        intervalProcess = window.setInterval(function(){
+            GetInstantMessage();
+        },20000);
+    }
+    window.onblur = function() {//当前窗口没有激活
+        clearInterval(intervalProcess);
+    }
+    <!-- 加入收藏代码 Start -->
+    function AddFavorite(sURL, sTitle) {
+        try {
+            window.external.addFavorite(sURL, sTitle);
+        } catch (e) {
+            try {
+                window.sidebar.addPanel(sTitle, sURL, "");
+            } catch (e) {
+                alert("加入收藏失败,请手动添加.");
+            }
+        }
+    }
+    <!-- 加入收藏代码 End -->
+    <!-- 设为首页代码 Start -->
+    function setHomepage(pageURL) {
+        if (document.all) {
+            document.body.style.behavior='url(#default#homepage)';
+            document.body.setHomePage(pageURL);
+        }
+        else if (window.sidebar) {
+            if(window.netscape) {
+                try {
+                    netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+                }
+                catch (e) {
+                    alert( "该操作被浏览器拒绝，如果想启用该功能，请在地址栏内输入 about:config,然后将项signed.applets.codebase_principal_support 值该为true" );
+                }
+            }
+            var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components. interfaces.nsIPrefBranch);
+            prefs.setCharPref('browser.startup.homepage',pageURL);
+        }
+    }
+    <!-- 设为首页代码 End -->
+    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F6168556b0a921e8d0375330e702bc0fe' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="https://www.yanglaocn.com/js/scrolltopcontrol.js"></script>
+</body>
+</html>
