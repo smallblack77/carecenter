@@ -17,6 +17,22 @@
         WHERE CUSTOMER.ID = #{id}
     </select>
 
+    <select id="getCustomerBy" resultType="Customer">
+        SELECT
+            CUSTOMER.ID,
+            CUSTOMER.NAME,
+            CUSTOMER.SEX,
+            CUSTOMER.PHONE,
+            CUSTOMER.AGE,
+            CUSTOMER.HEIGHT,
+            CUSTOMER.WEIGHT,
+            CUSTOMER.BIRTHDAY,
+            CUSTOMER.ATTENTION
+        FROM CUSTOMER
+        WHERE CUSTOMER.NAME = #{name}
+        AND CUSTOMER.PHONE = #{phone}
+    </select>
+
     <select id="getCustomerIdByNameAndPhone" resultType="int">
         SELECT
             CUSTOMER.ID

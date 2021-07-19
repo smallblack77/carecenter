@@ -68,6 +68,10 @@ public class CustomerService {
         return customerMapper.getCustomerIdByNameAndPhone(name, phone);
     }
 
+    public Customer getCustomerBy(String name,String phone){
+        return customerMapper.getCustomerBy(name,phone);
+    }
+
     //入住信息
     public List<BedAndCustomer> selectCheckinList(){
         return customerMapper.selectCheckinList();
