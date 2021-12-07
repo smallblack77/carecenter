@@ -41,8 +41,6 @@ spring:
 
 alibaba:
   cloud:
-    access-key: LTAI5tPfXxQfBzay2sHfcTLh
-    secret-key: IjJdxuWYuSpQGjrly7SwyttLEmuX2x
     oss:
       endpoint: oss-cn-hangzhou.aliyuncs.com
       bucket: carecenter-1379
