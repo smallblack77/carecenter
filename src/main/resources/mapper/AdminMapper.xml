@@ -2,20 +2,19 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="org.csu.carecenter.Persistence.AdminMapper">
 
-    <select id="selectAdmin" parameterType="Admin" resultType="Admin">
+    <select id="selectAdmin" parameterType="org.csu.carecenter.entity.Admin" resultType="org.csu.carecenter.entity.Admin">
         SELECT
-            ADMIN.NAME as adminName,
-            ADMIN.PASSWORD
-        FROM ADMIN
-        WHERE ADMIN.NAME = #{adminName}
-        AND ADMIN.PASSWORD = #{password}
+            adminName,password
+        FROM `carecenter_admin`
+        WHERE `adminName` = #{adminName}
+        AND `password` = #{password}
     </select>
 
 
     <update id="updateAdmin" >
-        UPDATE ADMIN
-        SET NAME=#{admin.adminName},
-            PASSWORD=#{admin.password}
-        WHERE NAME=#{oldName}
+        UPDATE `carecenter_admin`
+        SET `adminName`=#{admin.adminName},
+            `password`=#{admin.password}
+        WHERE `adminName`=#{oldName}
     </update>
 </mapper>

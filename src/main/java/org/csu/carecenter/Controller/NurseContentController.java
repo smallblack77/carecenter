@@ -1,4 +1,4 @@
-package org.csu.carecenter.Controller;
+package org.csu.carecenter.controller;
 
 import org.csu.carecenter.entity.CustomerAndNurse;
 import org.csu.carecenter.entity.NurseContent;
@@ -49,9 +49,11 @@ public class NurseContentController {
     }
 
     //添加护工信息
+    //NURID,NAME,SEX,AGE,PRICE,DESCRIBE,LEVELID
     @RequestMapping("addNurContent")
-    public String addNurContent(Model model, HttpSession session,String nurId,String name,String sex,String age,
-                                String price,String description,String levelId){
+    public String addNurContent(Model model, HttpSession session,
+                                String nurId,String name,String sex,String age,
+                                String price,String description,Integer levelId){
         if(nurId!=null && name!=null && sex != null && age != null &&description!=null&&price!=null&&levelId!=null){
             NurseContent nurseContent = new NurseContent();
             nurseContent.setNurseId(nurId);
@@ -60,7 +62,7 @@ public class NurseContentController {
             nurseContent.setAge(Integer.valueOf(age));
             nurseContent.setDescription(description);
             nurseContent.setPrice(Integer.valueOf(price));
-            nurseContent.setLevelId(Integer.valueOf(levelId));
+            nurseContent.setLevelId(levelId);
             nurseContentService.addNurseContent(nurseContent);
             List<NurseContent> nurseContentList = nurseContentService.getAllNurseContentList();
             model.addAttribute("nurseList",nurseContentList);
@@ -202,7 +204,6 @@ public class NurseContentController {
                 nurseRecord.setStartTime(startTime);
                 nurseRecord.setEndTime(endTime);
                 NurseRecord nurseRecord1 = (NurseRecord) model.getAttribute("nurseRecord");
-
                 int id = Integer.valueOf(nurseRecord1.getId());
                 nurseRecord.setId(String.valueOf(id));
 

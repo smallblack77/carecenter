@@ -2,14 +2,14 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="org.csu.carecenter.Persistence.NurseLevelMapper">
 
-    <select id="getAllNurseLevel" resultType="NurseLevel">
+    <select id="getAllNurseLevel" resultType="org.csu.carecenter.entity.NurseLevel">
         SELECT
             NURLEVEL.ID as levelId,
             NURLEVEL.LEVELNAME
         FROM NURLEVEL
     </select>
 
-    <select id="getNurseLevelById" resultType="NurseLevel">
+    <select id="getNurseLevelById" resultType="org.csu.carecenter.entity.NurseLevel">
         SELECT
             NURLEVEL.ID as levelId,
             NURLEVEL.LEVELNAME
@@ -17,14 +17,14 @@
         WHERE NURLEVEL.ID = #{levelId}
     </select>
 
-    <update id="updateNurseLevel" parameterType="NurseLevel">
+    <update id="updateNurseLevel" parameterType="org.csu.carecenter.entity.NurseLevel">
         UPDATE NURLEVEL SET
             NURLEVEL.ID = #{levelId},
             NURLEVEL.LEVELNAME = #{levelName}
         WHERE NURLEVEL.ID = #{levelId}
     </update>
 
-    <insert id="insertNurseLevel" parameterType="NurseLevel">
+    <insert id="insertNurseLevel" parameterType="org.csu.carecenter.entity.NurseLevel">
         INSERT INTO NURLEVEL
         (NURLEVEL.ID,
          NURLEVEL.LEVELNAME)
@@ -40,14 +40,14 @@
         SELECT MAX(NURLEVEL.ID) as maxid FROM NURLEVEL
     </select>
 
-    <select id="getCustAndNur" parameterType="int" resultType="CustomerAndNurse">
+    <select id="getCustAndNur" parameterType="int" resultType="org.csu.carecenter.entity.CustomerAndNurse">
         SELECT
             NURID,CUSTID,STARTTIME,ENDTIME
         FROM CUSTANDNUR
         WHERE CUSTID = #{custId}
     </select>
 
-    <select id="getNurseContentById" parameterType="int" resultType="NurseContent">
+    <select id="getNurseContentById" parameterType="int" resultType="org.csu.carecenter.entity.NurseContent">
         SELECT
             NURCONTENT.NURID as nurseId,
             NURCONTENT.NAME,

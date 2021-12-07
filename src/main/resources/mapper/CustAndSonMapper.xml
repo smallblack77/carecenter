@@ -2,14 +2,14 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="org.csu.carecenter.Persistence.CustAndSonMapper">
 
-    <insert id="insertRelation"  parameterType="CustAndSon">
+    <insert id="insertRelation"  parameterType="org.csu.carecenter.entity.CustAndSon">
         INSERT INTO RELATION
         (NAME,PHONE,WECHAT)
         VALUES
         (#{name},#{phone},#{wechat})
     </insert>
     
-    <select id="getCustAndSon" parameterType="CustAndSon" resultType="CustAndSon">
+    <select id="getCustAndSon" parameterType="org.csu.carecenter.entity.CustAndSon" resultType="org.csu.carecenter.entity.CustAndSon">
         SELECT
             NAME,
             PHONE,

@@ -1,9 +1,7 @@
 package org.csu.carecenter.ControllerForWX;
 
-import org.csu.carecenter.Common.ResponseCode;
 import org.csu.carecenter.entity.CustomerAndNurse;
 import org.csu.carecenter.entity.NurseContent;
-import org.csu.carecenter.entity.NurseRecord;
 import org.csu.carecenter.service.CustomerService;
 import org.csu.carecenter.service.NurseContentService;
 import org.springframework.beans.factory.annotation.Autowired;

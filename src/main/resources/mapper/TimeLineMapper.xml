@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="org.csu.carecenter.Persistence.TimeLineMapper">
 
-    <select id="getAllTimeLine" resultType="TimeLine">
+    <select id="getAllTimeLine" resultType="org.csu.carecenter.entity.TimeLine">
         SELECT
             CUSTID,
             DAY,
@@ -12,7 +12,7 @@
         ORDER BY DAY DESC
     </select>
 
-    <select id="getTimeLineById" parameterType="int" resultType="TimeLine">
+    <select id="getTimeLineById" parameterType="int" resultType="org.csu.carecenter.entity.TimeLine">
         SELECT
             CUSTID,
             DAY,
@@ -43,7 +43,7 @@
         ORDER BY DAY DESC
     </select>
 
-    <insert id="insertTimeLime" parameterType="TimeLine">
+    <insert id="insertTimeLime" parameterType="org.csu.carecenter.entity.TimeLine">
         INSERT INTO TIMELINE
             (CUSTID,
              DAY,

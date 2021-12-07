@@ -1,12 +1,9 @@
-package org.csu.carecenter.Controller;
+package org.csu.carecenter.controller;
 
-import org.csu.carecenter.Persistence.NurseLevelMapper;
-import org.csu.carecenter.entity.Customer;
 import org.csu.carecenter.entity.NurseLevel;
 import org.csu.carecenter.service.NurseLevelService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.stereotype.Repository;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 

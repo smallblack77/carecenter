@@ -1,20 +1,17 @@
-package org.csu.carecenter.Controller;
+package org.csu.carecenter.controller;
 
 import org.csu.carecenter.entity.*;
 import org.csu.carecenter.service.BedService;
 import org.csu.carecenter.service.CustomerService;
 import org.csu.carecenter.service.HealthyService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.origin.SystemEnvironmentOrigin;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.io.Writer;
 import java.text.SimpleDateFormat;
 import java.util.*;
 

@@ -1,4 +1,4 @@
-package org.csu.carecenter.Controller;
+package org.csu.carecenter.controller;
 
 import org.csu.carecenter.entity.Bed;
 import org.csu.carecenter.entity.BedAndCustomer;

@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="org.csu.carecenter.Persistence.CustomerMapper">
 
-    <select id="getCustomer"  parameterType="int" resultType="Customer">
+    <select id="getCustomer"  parameterType="int" resultType="org.csu.carecenter.entity.Customer">
         SELECT
             CUSTOMER.ID,
             CUSTOMER.NAME,
@@ -17,7 +17,7 @@
         WHERE CUSTOMER.ID = #{id}
     </select>
 
-    <select id="getCustomerBy" resultType="Customer">
+    <select id="getCustomerBy" resultType="org.csu.carecenter.entity.Customer">
         SELECT
             CUSTOMER.ID,
             CUSTOMER.NAME,
@@ -40,7 +40,7 @@
         WHERE CUSTOMER.NAME = #{custname} AND CUSTOMER.PHONE = #{phone}
     </select>
 
-    <select id="getCustomerList"  resultType="Customer">
+    <select id="getCustomerList"  resultType="org.csu.carecenter.entity.Customer">
         SELECT
             CUSTOMER.ID,
             CUSTOMER.NAME,
@@ -54,7 +54,7 @@
         FROM CUSTOMER
     </select>
 
-    <insert id="addCustomer"  parameterType="Customer">
+    <insert id="addCustomer"  parameterType="org.csu.carecenter.entity.Customer">
         INSERT INTO CUSTOMER
             (CUSTOMER.ID,
             CUSTOMER.NAME,
@@ -69,7 +69,7 @@
             (#{id}, #{name}, #{sex}, #{phone}, #{age}, #{height}, #{weight}, #{birthday}, #{attention})
     </insert>
 
-    <update id="updateCustomer"  parameterType="Customer">
+    <update id="updateCustomer"  parameterType="org.csu.carecenter.entity.Customer">
         UPDATE CUSTOMER SET
          CUSTOMER.NAME = #{name},
          CUSTOMER.SEX = #{sex},
@@ -88,7 +88,7 @@
     </delete>
     
 <!--  客户的入住信息  -->
-    <select id="selectCheckinList" resultType="BedAndCustomer">
+    <select id="selectCheckinList" resultType="org.csu.carecenter.entity.BedAndCustomer">
         SELECT
             BEDANDCUST.ID,
             BEDANDCUST.CUSTID as customerID,
@@ -102,7 +102,7 @@
         SELECT COUNT(*) FROM CUSTOMER
     </select>
 
-    <select id="selectCheckin" resultType="BedAndCustomer">
+    <select id="selectCheckin" resultType="org.csu.carecenter.entity.BedAndCustomer">
         SELECT
             BEDANDCUST.ID,
             BEDANDCUST.CUSTID as customerID,
@@ -113,7 +113,7 @@
         WHERE BEDANDCUST.ID = #{id}
     </select>
 
-    <insert id="insertCheckin" parameterType="BedAndCustomer">
+    <insert id="insertCheckin" parameterType="org.csu.carecenter.entity.BedAndCustomer">
         INSERT INTO BEDANDCUST
            (BEDANDCUST.CUSTID,
             BEDANDCUST.BEDID,
@@ -128,7 +128,7 @@
         WHERE BEDANDCUST.ID = #{id}
     </delete>
 
-    <update id="updateCheckin" parameterType="BedAndCustomer">
+    <update id="updateCheckin" parameterType="org.csu.carecenter.entity.BedAndCustomer">
         UPDATE BEDANDCUST SET
               BEDANDCUST.CUSTID = #{customerID},
               BEDANDCUST.BEDID = #{bedId},
@@ -137,7 +137,7 @@
     </update>
 
 <!--  客户的退住信息  -->
-    <select id="selectCheckoutList" resultType="BedAndCustomer">
+    <select id="selectCheckoutList" resultType="org.csu.carecenter.entity.BedAndCustomer">
         SELECT
             BEDANDCUST.ID,
             BEDANDCUST.CUSTID as customerID,
@@ -147,7 +147,7 @@
         FROM BEDANDCUST
     </select>
 
-    <select id="selectCheckout" resultType="BedAndCustomer">
+    <select id="selectCheckout" resultType="org.csu.carecenter.entity.BedAndCustomer">
         SELECT
             BEDANDCUST.ID,
             BEDANDCUST.CUSTID as customerID,
@@ -158,7 +158,7 @@
         WHERE BEDANDCUST.ID = #{id}
     </select>
 
-    <select id="selectCheckoutByCustId" resultType="BedAndCustomer">
+    <select id="selectCheckoutByCustId" resultType="org.csu.carecenter.entity.BedAndCustomer">
         SELECT
             BEDANDCUST.ID,
             BEDANDCUST.CUSTID as customerID,
@@ -169,7 +169,7 @@
         WHERE BEDANDCUST.CUSTID = #{id}
     </select>
 
-    <insert id="insertCheckout" parameterType="BedAndCustomer">
+    <insert id="insertCheckout" parameterType="org.csu.carecenter.entity.BedAndCustomer">
         INSERT INTO BEDANDCUST
         (BEDANDCUST.CUSTID,
          BEDANDCUST.BEDID,
@@ -179,13 +179,13 @@
         VALUES (#{customerID}, #{bedId}, #{startTime}, #{endTime})
     </insert>
 
-    <update id="deleteCheckout" parameterType="BedAndCustomer">
+    <update id="deleteCheckout" parameterType="org.csu.carecenter.entity.BedAndCustomer">
         UPDATE BEDANDCUST SET
             BEDANDCUST.ENDTIME = NULL
         WHERE BEDANDCUST.ID = #{id}
     </update>
 
-    <update id="updateCheckout" parameterType="BedAndCustomer">
+    <update id="updateCheckout" parameterType="org.csu.carecenter.entity.BedAndCustomer">
         UPDATE BEDANDCUST SET
             BEDANDCUST.CUSTID = #{customerID},
             BEDANDCUST.BEDID = #{bedId},

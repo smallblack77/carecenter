@@ -1,4 +1,4 @@
-package org.csu.carecenter.Controller;
+package org.csu.carecenter.controller;
 
 import com.alibaba.fastjson.JSONObject;
 import org.apache.http.HttpEntity;

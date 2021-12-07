@@ -1,4 +1,4 @@
-package org.csu.carecenter.Common;
+package org.csu.carecenter.common;
 
 import lombok.Getter;
 

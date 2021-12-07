@@ -1,4 +1,4 @@
-package org.csu.carecenter.Controller;
+package org.csu.carecenter.controller;
 
 import org.csu.carecenter.entity.Mail;
 import org.csu.carecenter.service.MailService;
@@ -9,10 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 import javax.mail.MessagingException;
-import javax.servlet.ServletRegistration;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 

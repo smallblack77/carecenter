@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 
 <mapper namespace="org.csu.carecenter.Persistence.UserMapper">
-    <select id="getUserByUserIdAndPassword" parameterType="User" resultType="User">
+    <select id="getUserByUserIdAndPassword" parameterType="org.csu.carecenter.entity.User" resultType="org.csu.carecenter.entity.User">
         SELECT
             USER.USERID as userId,
             USER.USERNAME,
@@ -17,14 +17,14 @@
           AND USER.USERID = SIGNON.USERID
     </select>
 
-    <insert id="insertUser" parameterType="User">
+    <insert id="insertUser" parameterType="org.csu.carecenter.entity.User">
         INSERT INTO USER
         (USERNAME,SEX,EMAIL,AGE,PHONENUMBER,ROLE)
         VALUES
         (#{username},#{sex},#{email},#{age},#{phoneNumber},#{role})
     </insert>
 
-    <insert id="insertSignon" parameterType="User">
+    <insert id="insertSignon" parameterType="org.csu.carecenter.entity.User">
         INSERT INTO SIGNON
         (USERID,PASSWORD)
         VALUES
@@ -37,7 +37,7 @@
         FROM USER
     </select>
 
-    <select id="getAllUser" resultType="User">
+    <select id="getAllUser" resultType="org.csu.carecenter.entity.User">
         SELECT * FROM USER
     </select>
 
@@ -51,7 +51,7 @@
         WHERE USERID=#{userId}
     </delete>
 
-    <update id="updateUser"  parameterType="User">
+    <update id="updateUser"  parameterType="org.csu.carecenter.entity.User">
         UPDATE USER
         SET USERNAME=#{username},
             SEX = #{sex},
@@ -62,13 +62,13 @@
         WHERE USERID=#{userId}
     </update>
 
-    <update id="updateSignon" parameterType="User">
+    <update id="updateSignon" parameterType="org.csu.carecenter.entity.User">
         UPDATE SIGNON
         SET PASSWORD=#{password}
         WHERE USERID=#{userId}
     </update>
 
-    <select id="getUserByUserId" parameterType="int" resultType="User">
+    <select id="getUserByUserId" parameterType="int" resultType="org.csu.carecenter.entity.User">
         SELECT
             USER.USERID as userId,
             SIGNON.PASSWORD,

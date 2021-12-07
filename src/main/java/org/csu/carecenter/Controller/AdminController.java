@@ -1,4 +1,4 @@
-package org.csu.carecenter.Controller;
+package org.csu.carecenter.controller;
 
 import org.csu.carecenter.entity.Admin;
 import org.csu.carecenter.entity.Mail;
@@ -19,7 +19,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
@@ -51,12 +50,12 @@ public class AdminController {
 
         System.out.println(username+":"+password+":"+code);
 
-        if(!code.contentEquals((String)session.getAttribute("checkcode")))
-        {
-            String value = "ValidateCode Wrong";
-            model.addAttribute("value",value);
-            return "manager/login";
-        }else{
+//        if(!code.contentEquals((String)session.getAttribute("checkcode")))
+//        {
+//            String value = "ValidateCode Wrong";
+//            model.addAttribute("value",value);
+//            return "manager/login";
+//        }else{
             Admin admin = adminService.getAdminByNameAndPassword(username, password);
             if(admin == null)
             {
@@ -69,7 +68,7 @@ public class AdminController {
 
                 return "manager/index";
             }
-        }
+
     }
 
     //验证码

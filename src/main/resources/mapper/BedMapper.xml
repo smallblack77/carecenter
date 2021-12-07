@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="org.csu.carecenter.Persistence.BedMapper">
-    <select id="getBedListNotEmpty" resultType="Bed">
+    <select id="getBedListNotEmpty" resultType="org.csu.carecenter.entity.Bed">
         SELECT
             BED.ID,
             BED.ROOMNUM as roomNum,
@@ -15,7 +15,7 @@
         WHERE BED.ID=BEDANCUST.BEDID
     </select>
 
-    <select id="getBedListEmpty" resultType="Bed">
+    <select id="getBedListEmpty" resultType="org.csu.carecenter.entity.Bed">
         SELECT
             BED.ID,
             BED.ROOMNUM as roomNum,
@@ -26,7 +26,7 @@
         WHERE BED.BEDSTATUS=1
     </select>
 
-    <select id="getAllBedList" resultType="Bed">
+    <select id="getAllBedList" resultType="org.csu.carecenter.entity.Bed">
         SELECT
             BED.ID,
             BED.ROOMNUM as roomNum,
@@ -38,7 +38,7 @@
 
 
 
-    <select id="getBedAndCustomer" parameterType="int" resultType="BedAndCustomer">
+    <select id="getBedAndCustomer" parameterType="int" resultType="org.csu.carecenter.entity.BedAndCustomer">
         SELECT
             ID,
             CUSTID as customerID,
@@ -49,7 +49,7 @@
         WHERE BEDANDCUST.BEDID=#{bedId}
     </select>
 
-    <insert id="insertBed" parameterType="Bed">
+    <insert id="insertBed" parameterType="org.csu.carecenter.entity.Bed">
         INSERT INTO BED
         (ID,ROOMNUM,BEDSTATUS,SORT,DESCRIPTION)
         VALUES
@@ -61,7 +61,7 @@
         WHERE ID=#{bedId}
     </delete>
 
-    <insert id="insertBedAndCustomer" parameterType="BedAndCustomer">
+    <insert id="insertBedAndCustomer" parameterType="org.csu.carecenter.entity.BedAndCustomer">
         INSERT INTO BEDANDCUST
         (CUSTID,STARTTIME,ENDTIME)
         VALUES
@@ -73,7 +73,7 @@
         WHERE BEDID = #{bedId}
     </delete>
 
-    <update id="updateBed" parameterType="Bed">
+    <update id="updateBed" parameterType="org.csu.carecenter.entity.Bed">
         UPDATE BED
         SET ID=#{id},
             ROOMNUM=#{roomNum},
@@ -84,7 +84,7 @@
 
     </update>
 
-    <update id="updateBedStatus" parameterType="Bed">
+    <update id="updateBedStatus" parameterType="org.csu.carecenter.entity.Bed">
         UPDATE BED
         SET
             BEDSTATUS=#{flag}
@@ -97,7 +97,7 @@
         FROM BEDANDCUST
     </select>
 
-    <update id="updateBedAndCustomer" parameterType="BedAndCustomer">
+    <update id="updateBedAndCustomer" parameterType="org.csu.carecenter.entity.BedAndCustomer">
         UPDATE BEDANDCUST
         SET CUSTID=#{customerID},
             BEDID=#{bedId},
@@ -106,7 +106,7 @@
         WHERE ID=#{id}
     </update>
 
-    <select id="getBedByBedId" parameterType="int" resultType="Bed">
+    <select id="getBedByBedId" parameterType="int" resultType="org.csu.carecenter.entity.Bed">
         SELECT
             BED.ID,
             BED.ROOMNUM as roomNum,

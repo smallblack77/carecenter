@@ -1,25 +1,34 @@
 package org.csu.carecenter;
 
+import com.aliyun.oss.OSS;
+import com.aliyun.oss.OSSClient;
+import com.aliyun.oss.OSSClientBuilder;
 import org.csu.carecenter.Persistence.OutMapper;
-import org.csu.carecenter.entity.Customer;
-import org.csu.carecenter.entity.Out;
-import org.csu.carecenter.entity.User;
-import org.csu.carecenter.service.CustomerService;
-import org.csu.carecenter.service.UserService;
+import org.csu.carecenter.entity.*;
+import org.csu.carecenter.service.*;
 import org.junit.jupiter.api.Test;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import javax.annotation.Resource;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
 import java.sql.DatabaseMetaData;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
-@SpringBootTest
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @MapperScan("org.csu.carecenter.Persistence")
+
 class CarecenterApplicationTests {
+
+    @Resource
+    MedicationRecordService recordService;
 
     @Autowired
     UserService userService ;
@@ -27,14 +36,37 @@ class CarecenterApplicationTests {
     @Autowired
     CustomerService customerService;
 
+    @Autowired
+    AdminService adminService;
+
+    @Value("${alibaba.cloud.oss.endpoint}")
+    private String endpoint;
+
+    @Value("${alibaba.cloud.access-key}")
+    private String accessId;
+    @Value("${alibaba.cloud.secret-key}")
+    private String accessKeySecret;
+
+    @Value("${alibaba.cloud.oss.bucket}")
+    private String bucket;
     @Test
-    void contextLoads() {
+    void contextLoads() throws FileNotFoundException {
+        InputStream inputStream = new FileInputStream("E:\\log\\1.jpg");
+
+
+        OSS ossClient = new OSSClientBuilder().build(endpoint, accessId, accessKeySecret);
+        ossClient.putObject(bucket,"1.jpg",inputStream);
+
+        ossClient.shutdown();
+
+        System.out.println("上传完成...");
+
     }
 
     @Test
     void testCustomer(){
         //查找客户
-        Customer customer = customerService.getCustomer(1);
+        Customer customer = customerService.getCustomer(2);
         System.out.println(customer.getSex()+" "+customer.getHeight()+" "+customer.getBirthday());
 
 
@@ -88,7 +120,25 @@ class CarecenterApplicationTests {
     }
 
     @Test
-    void testUser(){
+    void tesAdmin(){
+        Admin adminByNameAndPassword = adminService.getAdminByNameAndPassword("admin", "admin");
+        System.out.println(adminByNameAndPassword);
     }
+
+    @Test
+    void testMedi(){
+
+        MedicationRecordEntity entity = new MedicationRecordEntity();
+        entity.setCustId(2);
+        entity.setNurId(2);
+        entity.setMedicine("medicine");
+        entity.setDosage("dosage");
+        entity.setCondit("condition");
+        entity.setTakeTime("takeTime");
+        boolean b = recordService.save(entity);
+        System.out.println(b);
+    }
+
+
 
 }

@@ -145,4 +145,8 @@ public class CustomerService {
     public void updateOut(Out out){
         outMapper.updateOut(out);
     }
+
+    public Customer getById(String custId) {
+       return customerMapper.getCustomer(Integer.parseInt(custId));
+    }
 }

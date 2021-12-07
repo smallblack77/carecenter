@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="org.csu.carecenter.Persistence.DietMapper">
-    <select id="getAllDiet" resultType="Diet">
+    <select id="getAllDiet" resultType="org.csu.carecenter.entity.Diet">
         SELECT * FROM DIETS
     </select>
 
-    <select id="getDietById" resultType="Diet">
+    <select id="getDietById" resultType="org.csu.carecenter.entity.Diet">
         SELECT * FROM DIETS WHERE ID = #{id}
     </select>
 
-    <update id="updateDiet" parameterType="Diet">
+    <update id="updateDiet" parameterType="org.csu.carecenter.entity.Diet">
         UPDATE DIETS SET
             DIETS.NAME = #{name},
             DIETS.FOOD1 = #{food1},
@@ -24,7 +24,7 @@
         WHERE DIETS.ID = #{id}
     </update>
 
-    <insert id="insertDiet" parameterType="Diet">
+    <insert id="insertDiet" parameterType="org.csu.carecenter.entity.Diet">
         INSERT INTO DIETS
             (DIETS.NAME,
              DIETS.FOOD1,
@@ -45,7 +45,7 @@
     </delete>
 
 <!--  客户膳食菜单  -->
-    <select id="getOrderDietById" parameterType="int" resultType="OrderDiet">
+    <select id="getOrderDietById" parameterType="int" resultType="org.csu.carecenter.entity.OrderDiet">
         SELECT
             ORDERDIET.DAY,
             ORDERDIET.CUSTID as customerId,
@@ -58,7 +58,7 @@
         ORDER BY ORDERDIET.DAY DESC
     </select>
 
-    <insert id="addOrderDiet" parameterType="OrderDiet">
+    <insert id="addOrderDiet" parameterType="org.csu.carecenter.entity.OrderDiet">
         INSERT INTO ORDERDIET
         (DAY,CUSTID,BREKID,LUNCHID,DINNERID,DELSTATUS)
         VALUES

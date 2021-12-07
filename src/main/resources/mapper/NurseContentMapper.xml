@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="org.csu.carecenter.Persistence.NurseContentMapper">
-    <select id="getAllNurseContentList" resultType="NurseContent">
+    <select id="getAllNurseContentList" resultType="org.csu.carecenter.entity.NurseContent">
         SELECT
             NURCONTENT.NURID as nurseId,
             NURCONTENT.NAME,
@@ -19,11 +19,11 @@
         SELECT COUNT(*) FROM NURCONTENT
     </select>
 
-    <insert id="addNurseContent" parameterType="NurseContent">
+    <insert id="addNurseContent" parameterType="org.csu.carecenter.entity.NurseContent">
         INSERT INTO NURCONTENT
-        (NURID,NAME,SEX,AGE,PRICE,DESCRIBE,LEVELID)
+        (NURID,NAME,SEX,AGE,PRICE,levelid,`describe`)
         VALUES
-        (#{userId},#{name},#{sex},#{age},#{price},#{description},#{levelId})
+        (#{nurseId},#{name},#{sex},#{age},#{price},#{levelId},#{description})
     </insert>
 
     <delete id="deleteNurContent" parameterType="string">
@@ -31,7 +31,7 @@
         WHERE NURID=#{nurid}
     </delete>
 
-    <select id="getNurById" parameterType="string" resultType="NurseContent">
+    <select id="getNurById" parameterType="string" resultType="org.csu.carecenter.entity.NurseContent">
         SELECT
             NURCONTENT.NURID as nurseId,
             NURCONTENT.NAME,
@@ -58,7 +58,7 @@
         WHERE NURID = #{oldId}
     </update>
 
-    <select id="getAllNurseRecordList" resultType="NurseRecord">
+    <select id="getAllNurseRecordList" resultType="org.csu.carecenter.entity.NurseRecord">
         SELECT
             ID,
             CUSTID as customerId,
@@ -69,7 +69,7 @@
         FROM NURRECORD
     </select>
 
-    <select id="getNurseRecord" resultType="NurseRecord" parameterType="int">
+    <select id="getNurseRecord" resultType="org.csu.carecenter.entity.NurseRecord" parameterType="int">
         SELECT
             ID,
             CUSTID as customerId,
@@ -81,7 +81,7 @@
         WHERE ID = #{id}
     </select>
 
-    <insert id="addNurseRecord" parameterType="NurseRecord">
+    <insert id="addNurseRecord" parameterType="org.csu.carecenter.entity.NurseRecord">
         INSERT INTO NURRECORD
             (ID,CUSTID,NURID,CONTENT,STARTTIME,ENDTIME)
         VALUES
@@ -94,7 +94,7 @@
         FROM NURRECORD
     </select>
 
-    <update id="updateNurRecord" parameterType="NurseRecord">
+    <update id="updateNurRecord" parameterType="org.csu.carecenter.entity.NurseRecord">
         UPDATE NURRECORD
         SET
             CUSTID=#{customerId},
@@ -110,7 +110,7 @@
         WHERE ID = #{id}
     </delete>
 
-    <insert id="insertCustAndNur" parameterType="CustomerAndNurse">
+    <insert id="insertCustAndNur" parameterType="org.csu.carecenter.entity.CustomerAndNurse">
         INSERT INTO CUSTANDNUR
         (NURID,CUSTID,STARTTIME,ENDTIME)
         VALUES
@@ -124,7 +124,7 @@
         WHERE CUSTID = #{custId}
     </select>
 
-    <select id="getCustomerAndNurseById" resultType="CustomerAndNurse">
+    <select id="getCustomerAndNurseById" resultType="org.csu.carecenter.entity.CustomerAndNurse">
         SELECT
             ID,
             NURID AS nurId,

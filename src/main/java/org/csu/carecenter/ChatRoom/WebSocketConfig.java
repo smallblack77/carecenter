@@ -1,4 +1,4 @@
-package org.csu.carecenter.ChatRoom;
+package org.csu.carecenter.chatRoom;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

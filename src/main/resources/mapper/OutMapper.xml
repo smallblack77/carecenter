@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="org.csu.carecenter.Persistence.OutMapper">
-    <select id="getOut" parameterType="int" resultType="Out">
+    <select id="getOut" parameterType="int" resultType="org.csu.carecenter.entity.Out">
         SELECT
             OUT.ID,
             OUT.CUSTID as customerId,
@@ -10,11 +10,11 @@
             OUT.EXPTIME as expectReturnTime,
             OUT.ACTTIME as actualReturnTime,
             OUT.AIDPHONE as airPhone
-        FROM `out`
+        FROM OUT
         WHERE OUT.ID = #{id}
     </select>
 
-    <select id="getOutList" parameterType="int" resultType="Out">
+    <select id="getOutList" parameterType="int" resultType="org.csu.carecenter.entity.Out">
         SELECT
             OUT.ID,
             OUT.CUSTID as customerId,
@@ -23,11 +23,11 @@
             OUT.EXPTIME as expectReturnTime,
             OUT.ACTTIME as actualReturnTime,
             OUT.AIDPHONE as airPhone
-        FROM `out`
+        FROM OUT
         WHERE OUT.CUSTID = #{custid}
     </select>
 
-    <select id="getAllOutList" resultType="Out">
+    <select id="getAllOutList" resultType="org.csu.carecenter.entity.Out">
         SELECT
             OUT.ID,
             OUT.CUSTID as customerId,
@@ -36,11 +36,11 @@
             OUT.EXPTIME as expectReturnTime,
             OUT.ACTTIME as actualReturnTime,
             OUT.AIDPHONE as airPhone
-        FROM `out`
+        FROM OUT
     </select>
 
-    <insert id="insertOut" parameterType="Out">
-        INSERT INTO `out`
+    <insert id="insertOut" parameterType="org.csu.carecenter.entity.Out">
+        INSERT INTO OUT
             (CUSTID,
              REASON,
              STARTTIME,
@@ -51,8 +51,8 @@
             (#{customerId}, #{reason}, #{startTime}, #{expectReturnTime}, #{actualReturnTime}, #{airPhone})
     </insert>
 
-    <update id="updateOut" parameterType="Out">
-        UPDATE `out` SET
+    <update id="updateOut" parameterType="org.csu.carecenter.entity.Out">
+        UPDATE OUT SET
             CUSTID = #{customerId},
             REASON = #{reason},
             STARTTIME = #{startTime},
@@ -64,7 +64,7 @@
     </update>
 
     <delete id="deleteOut" parameterType="int">
-        DELETE FROM `out`
-        WHERE ID = #{id}
+        DELETE FROM OUT
+        WHERE OUT.ID = #{id}
     </delete>
 </mapper>

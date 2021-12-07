@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="org.csu.carecenter.Persistence.HealthyMapper">
-    <select id="getHealthy" resultType="Healthy">
+    <select id="getHealthy" resultType="org.csu.carecenter.entity.Healthy">
         SELECT
             CUSTID AS custId,
             TEMP,
@@ -13,9 +13,10 @@
             DAY
         FROM HEALTHY
         WHERE CUSTID =#{id} AND DAY = #{week}
+        ORDER BY HEALTHY.ID DESC  limit 1
     </select>
 
-    <select id="getHealthyById" parameterType="int" resultType="Healthy">
+    <select id="getHealthyById" parameterType="int" resultType="org.csu.carecenter.entity.Healthy">
         SELECT
             CUSTID AS custId,
             TEMP,
@@ -29,7 +30,7 @@
         WHERE CUSTID =#{id}
     </select>
 
-    <update id="updateHealthy" parameterType="Healthy">
+    <update id="updateHealthy" parameterType="org.csu.carecenter.entity.Healthy">
         UPDATE HEALTHY
         SET TEMP = #{temp},
             PRESSURE = #{pressure},
@@ -40,7 +41,7 @@
         WHERE CUSTID = #{custId} AND DAY = #{day}
     </update>
 
-    <select id="getAllHealthy" parameterType="int" resultType="Healthy">
+    <select id="getAllHealthy" parameterType="int" resultType="org.csu.carecenter.entity.Healthy">
     SELECT
         CUSTID AS custId,
         TEMP,
@@ -52,10 +53,10 @@
         DAY
     FROM HEALTHY
     WHERE CUSTID =#{id}
-    ORDER BY mark ASC
+--     ORDER BY mark ASC
     </select>
 
-    <select id="getAllList" resultType="Healthy">
+    <select id="getAllList" resultType="org.csu.carecenter.entity.Healthy">
         SELECT
             CUSTID AS custId,
             TEMP,
@@ -68,8 +69,9 @@
         FROM HEALTHY
     </select>
 
-    <select id="getHealthyVO" resultType="HealthyVO">
+    <select id="getHealthyVO" resultType="org.csu.carecenter.entity.VO.HealthyVO">
         SELECT
+            HEALTHY.ID
             HEALTHY.CUSTID AS custId,
             HEALTHY.TEMP,
             HEALTHY.PRESSURE,
@@ -86,7 +88,7 @@
         WHERE HEALTHY.CUSTID = #{custId} AND HEALTHY.CUSTID = CUSTOMER.ID AND DAY = #{week}
     </select>
 
-    <insert id="addHealthy" parameterType="Healthy">
+    <insert id="addHealthy" parameterType="org.csu.carecenter.entity.Healthy">
         INSERT INTO HEALTHY
         (CUSTID,TEMP,PRESSURE,SUGAR,WEIGHT,PULSE,SELFCARE,DAY)
         VALUES

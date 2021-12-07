@@ -1,4 +1,4 @@
-package org.csu.carecenter.Controller;
+package org.csu.carecenter.controller;
 
 public class GitHubConstant {
     // 这里填写在GitHub上注册应用时候获得 CLIENT ID
