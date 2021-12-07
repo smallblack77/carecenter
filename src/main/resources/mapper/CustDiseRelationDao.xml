@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.csu.carecenter.Persistence.CustDiseRelationDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="org.csu.carecenter.entity.CustDiseRelationEntity" id="custDiseRelationMap">
+        <result property="id" column="id"/>
+        <result property="diseaseId" column="disease_id"/>
+        <result property="custId" column="cust_id"/>
+        <result property="level" column="level"/>
+        <result property="duration" column="duration"/>
+        <result property="remarks" column="remarks"/>
+    </resultMap>
+    <select id="getDetailList" resultType="org.csu.carecenter.entity.VO.CustDiseRelationVo">
+            SELECT
+                cr.id as id,
+                cust_id,
+                CUSTOMER.`name` as cust_name,
+                disease.`name` as disease_name,
+                disease.`id` as disease_id,
+                cr.`duration`,
+                cr.`level`,
+                cr.`remarks`
+            from `cust_dise_relation` cr
+                left join `disease` on disease.id = cr.disease_id
+                left join  `CUSTOMER` on CUSTOMER.id =  cr.cust_id
+    </select>
+
+
+</mapper>

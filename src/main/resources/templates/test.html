@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>文件上传</title><!--引入CSS-->
+    <script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery/jquery-1.4.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+
+</head>
+<body>
+<input type="file" multiple id="ssi-upload7" name="file"/>
+<script type="text/javascript">
+    $(function(){
+        $('#ssi-upload7').ssi_uploader({
+            url: '/oss/policy',
+            allowed:['jpg', 'jpeg', 'png', 'bmp', 'gif','mp4','txt','flv','pdf','doc','docx','ppt','pptx','xls'],
+            onUpload: function (data) {
+                alert(data);
+            },
+            onEachUpload: function (fileInfo) {
+                console.log(fileInfo);
+                console.log('error', $.extend({}, {
+                    classSize: 'auto',
+                    title: 'onEachUpload',
+                    position: 'bottom center',
+                    content: 'Status: ' + fileInfo.uploadStatus +
+                        '<br>Response: ' + fileInfo.responseMsg +
+                        '<br>name: ' + fileInfo.name +
+                        '<br>size: ' + fileInfo.size +
+                        '<br>type: ' + fileInfo.type
+                }));
+            },
+            beforeUpload: function () {
+                console.log('warning', $.extend({},  {
+                    title: 'onUpload',
+                    icon: false,
+                    position: 'top left'
+                }));
+            },
+            beforeEachUpload: function (fileInfo, xhr) {
+                console.log('success', $.extend({},  {
+                    icon: false,
+                    sizeClass: 'small',
+                    title: 'beforeEachUpload',
+                    content: 'name:' + fileInfo.name +
+                        '<br>size: ' + fileInfo.size +
+                        '<br>type: ' + fileInfo.type
+                }));
+            }
+        });
+    })
+</script>
+</body>
+<link rel="stylesheet" href="../../css/styles/ssi-uploader.css" type='text/css'>
+<script type="text/javascript" src="../../js/ssi-uploader.js"></script>
+
+</html>

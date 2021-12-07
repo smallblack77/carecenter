@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.csu.carecenter.Persistence.MedicationRecordDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="org.csu.carecenter.entity.MedicationRecordEntity" id="medicationRecordMap">
+        <result property="id" column="id"/>
+        <result property="custId" column="cust_id"/>
+        <result property="nurId" column="nur_id"/>
+        <result property="medicine" column="medicine"/>
+        <result property="dosage" column="dosage"/>
+        <result property="condition" column="condit"/>
+        <result property="takeTime" column="take_time"/>
+    </resultMap>
+    <select id="getVoList" resultType="org.csu.carecenter.entity.VO.MediRecdVo">
+--         查找vo,连表
+        SELECT
+            mr.id,mr.cust_id,CUSTOMER.`name` AS cust_name,
+            mr.medicine,mr.dosage,mr.`condit`,
+            mr.take_time,mr.nur_id,NURCONTENT.`name` as nur_name
+            from `medication_record` mr
+            left join CUSTOMER on mr.cust_id = CUSTOMER.id
+            LEFT JOIN NURCONTENT on mr.nur_id = NURCONTENT.nurid
+
+    </select>
+
+
+</mapper>

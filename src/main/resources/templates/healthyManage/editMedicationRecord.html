@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thyneleaf.org">
+<script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+<script type="text/javascript">
+    function deleteUser() {
+        var $id = $("#id").val();
+        $.ajax({
+            url: "",
+            请求方式: "post",
+            data: "id=" + $id,
+            success: function (result){
+                alert("删除成功！");
+            }
+        });
+    }
+</script>
+<head>
+    <title>Visitors an Admin Panel Category Bootstrap Responsive Website Template | Responsive_table :: w3layouts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Visitors Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- bootstrap-css -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" >
+    <!-- //bootstrap-css -->
+    <!-- Custom CSS -->
+    <link href="../css/style.css" rel='stylesheet' type='text/css' />
+    <link href="../css/style-responsive.css" rel="stylesheet"/>
+    <!-- font CSS -->
+    <link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <!-- font-awesome icons -->
+    <link rel="stylesheet" href="../css/font.css" type="text/css"/>
+    <link href="../css/font-awesome.css" rel="stylesheet">
+    <!-- //font-awesome icons -->
+    <script src="../js/jquery2.0.3.min.js"></script>
+</head>
+<body>
+<section id="container">
+    <!--header start-->
+    <header class="header fixed-top clearfix">
+        <!--logo start-->
+        <div class="brand">
+
+            <a href="/account/main" class="logo">
+                系统管理
+            </a>
+            <div class="sidebar-toggle-box">
+                <div class="fa fa-bars"></div>
+            </div>
+        </div>
+        <!--logo end-->
+
+        <div class="nav notify-row" id="top_menu">
+            <!--  notification start -->
+            <ul class="nav top-menu">
+                <!-- settings start -->
+                <li class="dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                        <i class="fa fa-tasks"></i>
+                    </a>
+                </li>
+                <!-- settings end -->
+                <!-- inbox dropdown start-->
+                <li id="header_inbox_bar" class="dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                        <i class="fa fa-envelope-o"></i>
+                    </a>
+                </li>
+                <!-- inbox dropdown end -->
+                <!-- notification dropdown start-->
+                <li id="header_notification_bar" class="dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                        <i class="fa fa-bell-o"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <!--header end-->
+    <!--sidebar start-->
+    <aside>
+        <div id="sidebar" class="nav-collapse">
+            <!-- sidebar menu start-->
+            <div class="leftside-navigation">
+                <ul class="sidebar-menu" id="nav-accordion">
+                    <li>
+                        <a class="active" href="/account/main">
+                            <i class="fa fa-dashboard"></i>
+                            <span>主页</span>
+                        </a>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;">
+                            <i class="fa fa-th"></i>
+                            <span>客户管理</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a class="active" href="/customer/selectCustomerList">客户信息管理</a></li>
+                            <li><a class="active" href="/customer/selectCheckinList">客户入住管理</a></li>
+                            <li><a class="active" href="/customer/selectCheckoutList">客户退住管理</a></li>
+                            <li><a href="/customer/selectAllOutList">客户外出管理</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;">
+                            <i class="fa fa-tasks"></i>
+                            <span>床位管理</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="/bed/bedForm">床位信息管理</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;">
+                            <i class="fa fa-tasks"></i>
+                            <span>合同管理</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="/contract/contractForm">合同信息管理</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;">
+                            <i class=" fa fa-bar-chart-o"></i>
+                            <span>护理管理</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="/nurseContent/viewList">护工信息管理</a></li>
+                        </ul>
+                        <ul class="sub">
+                            <li><a href="/nurseLevel/viewNurseLevelList">护理级别管理</a></li>
+                        </ul>
+                        <ul class="sub">
+                            <li><a href="/nurseContent/viewNurseRecord">护理记录管理</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;">
+                            <i class=" fa fa-bar-chart-o"></i>
+                            <span>健康管理</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="/medicationrecord/viewList">用药记录管理</a></li>
+                        </ul>
+                        <ul class="sub">
+                            <li><a href="/physicalexam/viewList">体检记录管理</a></li>
+                        </ul>
+                        <ul class="sub">
+                            <li><a href="/custdiserelation/viewList">患病情况管理</a></li>
+                        </ul>
+                        <ul class="sub">
+                            <li><a href="/disease/viewList">疾病信息管理</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;">
+                            <i class="fa fa-tasks"></i>
+                            <span>膳食管理</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="/diet/diets">膳食信息管理</a></li>
+                        </ul>
+                        <ul class="sub">
+                            <li><a href="/diet/photo">膳食菜单管理</a></li>
+                        </ul>
+                        <ul class="sub">
+                            <li><a href="/diet/calendar">膳食日历管理</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;">
+                            <i class="fa fa-envelope"></i>
+                            <span>邮件</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="/mail/mailForm">收件箱</a></li>
+                            <li><a href="/mail/composeMailForm">撰写邮件</a></li>
+                            <li><a href="/mail/viewMailForm">查看邮件</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- sidebar menu end-->
+        </div>
+    </aside>
+    <!--sidebar end-->
+    <!--main content start-->
+    <section id="main-content">
+        <section class="wrapper">
+            <div class="table-agile-info">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        修改护理记录
+                    </div>
+                    <form action="/medicationrecord/updateMediRecord" method="post">
+                        <div>
+                            <table class="table" ui-jq="footable" ui-options='{
+                                "paging": {
+                                  "enabled": true
+                                },
+                                "filtering": {
+                                  "enabled": true
+                                },
+                                "sorting": {
+                                  "enabled": true
+                                }}'>
+                                <tr>
+                                    <th style="background: #ddede0 no-repeat;">用户编号:</th>
+                                    <td>
+                                        <input type="text" id="custId"  name="custId" th:value="${MedicationRecord.custId}">
+                                        <input type="hidden" id="id"  name="id" th:value="${MedicationRecord.id}" >
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th style="background: #ddede0 no-repeat;">服用药品:</th>
+                                    <td ><input type="text" id="medicine" name="medicine" th:value="${MedicationRecord.medicine}"></td>
+                                </tr>
+                                <tr>
+                                    <th style="background: #ddede0 no-repeat;">服用剂量:</th>
+                                    <td ><input type="text"  id="dosage" name="dosage" th:value="${MedicationRecord.dosage}"></td>
+                                </tr>
+                                <tr>
+                                    <th style="background: #ddede0 no-repeat;">用药状态:</th>
+                                    <td ><input type="text"  id="condition" name="condition" th:value="${MedicationRecord.condit}"></td>
+                                </tr>
+                                <tr>
+                                    <th style="background: #ddede0 no-repeat;">执行护工编号:</th>
+                                    <td ><input type="text"  id="nurId" name="nurId" th:value="${MedicationRecord.nurId}"></td>
+                                </tr>
+                                <tr>
+                                    <th style="background: #ddede0 no-repeat;">服用时间:</th>
+                                    <td ><input type="text"  id="takeTime" name="takeTime" th:value="${MedicationRecord.takeTime}"></td>
+                                </tr>
+                            </table>
+                            <div class="btn-group-1">
+                                <input type="submit" name="add" value="修改"/>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-- footer -->
+        <div class="footer">
+            <div class="wthree-copyright">
+                <p>© 2021 Visitors. All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
+            </div>
+        </div>
+        <!-- / footer -->
+    </section>
+
+    <!--main content end-->
+</section>
+<script src="../js/bootstrap.js"></script>
+<script src="../js/jquery.dcjqaccordion.2.7.js"></script>
+<script src="../js/scripts.js"></script>
+<script src="../js/jquery.slimscroll.js"></script>
+<script src="../js/jquery.nicescroll.js"></script>
+<script language="javascript" type="text/javascript" src="../js/flot-chart/excanvas.min.js"></script><![endif]-->
+<script src="../js/jquery.scrollTo.js"></script>
+</body>
+</html>
+

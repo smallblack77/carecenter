@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/webjars/layui/2.6.8/css/layui.css}">
+    <link rel="stylesheet" th:href="@{/index.css}">
+
+    <script th:src="@{/webjars/layui/2.6.8/layui.js}"></script>
+</head>
+<body>
+
+<article>
+    <div class="layui-container">
+        <div class="layui-row">
+            <!-- 这里添加一个form表单 -->
+            <form class="layui-form" action="">
+                <!-- 这里设置一个隐藏域，用来存放我们的图片的地址 -->
+                    <div class="layui-input-block">
+                        <button type="button" class="layui-btn" id="test1" name="file">
+                            <i class="layui-icon">&#xe67c;</i>上传图片
+                        </button>
+                    </div>
+            </form>
+        </div>
+    </div>
+    <input name="" placeholder="输入疾病编号" class="layui-input" id="demo1">
+    </button>
+    <script type="text/javascript">
+        layui.use('dropdown', function(){
+            var dropdown = layui.dropdown
+                ,$ = layui.jquery;
+
+            dropdown.render({
+                elem: '#demo1'
+                ,data: [{
+                    title: 'item 1'
+                    ,id: 'aaa'
+                }, {
+                    title: 'item 2'
+                    ,id: 'bbb'
+                }]
+                ,click: function(data, othis){
+                    var elem = $(this.elem)
+                        ,listId = elem.data('id'); //表格列表的预埋数据
+                    layer.msg('得到表格列表的 id：'+ listId +'，下拉菜单 id：'+ data.id);
+                }
+            });
+        });
+    </script>
+</article>
+</body>
+</html>
+<script>
+    layui.use('upload', function(){
+        let upload = layui.upload;
+        let $ = layui.$;
+        //执行实例
+        let uploadInst = upload.render({
+            elem: '#test1' //绑定元素
+            ,url: '/oss/policy' //上传接口
+            ,accept: 'file'
+            ,exts: 'pdf|docx|doc|jpg' //允许的文件格式
+            ,done: function(res){
+                if (res.code == 1){
+                    layer.msg("上传成功");
+                    alert(res.data);
+                }
+            }
+            ,error: function(){
+                //请求异常回调
+            }
+        });
+    });
+
+
+</script>
