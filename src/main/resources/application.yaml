@@ -38,6 +38,20 @@ spring:
     multipart:
       max-request-size: 50MB
       max-file-size: 50MB
+  rabbitmq:
+    host: 192.168.10.110
+    port: 5672
+    virtual-host: /
+    publisher-confirm-type: simple
+    publisher-returns: true
+    template:
+      mandatory: true
+    listener:
+      simple:
+        acknowledge-mode: manual
+
+  redis:
+    host: 192.168.10.200
 
 alibaba:
   cloud:

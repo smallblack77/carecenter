@@ -1,5 +1,8 @@
 package org.csu.carecenter;
 
+import cn.hutool.json.JSONUtil;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.TypeReference;
 import com.aliyun.oss.OSS;
 import com.aliyun.oss.OSSClient;
 import com.aliyun.oss.OSSClientBuilder;
@@ -11,6 +14,9 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.redis.core.BoundZSetOperations;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.StringRedisTemplate;
 
 import javax.annotation.Resource;
 import java.io.FileInputStream;
@@ -18,14 +24,17 @@ import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.sql.DatabaseMetaData;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
+
+import static org.csu.carecenter.constant.RedisConstant.REDIS_RFID_LIST;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @MapperScan("org.csu.carecenter.Persistence")
 
 class CarecenterApplicationTests {
+
+    @Resource(name = "stringRedisTemplate")
+    RedisTemplate redisTemplate;
 
     @Resource
     MedicationRecordService recordService;
@@ -39,14 +48,44 @@ class CarecenterApplicationTests {
     @Autowired
     AdminService adminService;
 
+
+
+    @Test
+    void testRedisZset(){
+        BoundZSetOperations zSetKey = redisTemplate.boundZSetOps(REDIS_RFID_LIST);
+        HashMap<String, String> map = new HashMap<>();
+        map.put("RFID","1QWERTYUIOP");
+        HashMap<String, String> map2 = new HashMap<>();
+        map2.put("RFID","2QWERTYUIOP");
+        String s = JSONUtil.toJsonStr(map);
+        String s2 = JSONUtil.toJsonStr(map2);
+        zSetKey.add(s,System.currentTimeMillis());
+        zSetKey.add(s2,System.currentTimeMillis());
+
+    }
+
+
+//    @Test
+//    void testGetZset(){
+//        //
+//        Set<String> byScore = redisTemplate.boundZSetOps("zSetKey").rangeByScore(0D, System.currentTimeMillis());
+//        assert byScore != null;
+//        String s = byScore.iterator().next();
+//        Map<String, String> map = JSON.parseObject(s, new TypeReference<Map<String, String>>() {
+//        });
+//        //获取最早录入的id号
+//        System.out.println(map.get("RFID"));
+//        //删除成功读取的id
+//        redisTemplate.boundZSetOps("zSetKey").remove(s);
+//    }
+//
+
     @Value("${alibaba.cloud.oss.endpoint}")
     private String endpoint;
-
     @Value("${alibaba.cloud.access-key}")
     private String accessId;
     @Value("${alibaba.cloud.secret-key}")
     private String accessKeySecret;
-
     @Value("${alibaba.cloud.oss.bucket}")
     private String bucket;
     @Test
