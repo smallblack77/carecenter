@@ -40,7 +40,7 @@ public class OssController {
 
     @GetMapping("/test.html")
     public String test() {
-        return "test2";
+        return "test";
     }
 
 

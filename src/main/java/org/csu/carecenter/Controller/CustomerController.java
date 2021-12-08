@@ -112,7 +112,9 @@ public class CustomerController {
 
     //修改客户信息
     @PostMapping("/editCustomer")
-    public String editCustomer(@RequestParam("name")String name,
+    public String editCustomer(
+                               @RequestParam("rfid")String rfid,
+                               @RequestParam("name")String name,
                                @RequestParam("sex")String sex,
                                @RequestParam("age")String age,
                                @RequestParam("height")String height,
@@ -124,6 +126,7 @@ public class CustomerController {
                                Model model){
 //        int id = Integer.parseInt(httpSession.getAttribute("id").toString());
         Customer customer = (Customer) httpSession.getAttribute("customer");
+        customer.setRfid(rfid);
         customer.setName(name);
         customer.setSex(sex);
         customer.setAge(Integer.parseInt(age));
@@ -147,6 +150,7 @@ public class CustomerController {
     //新增客户
     @RequestMapping("/addCustomer")
     public String addCustomer(
+                            @RequestParam("rfid")String rfid,
                             @RequestParam("name")String name,
                             @RequestParam("sex")String sex,
                             @RequestParam("phone")String phone,
@@ -159,6 +163,7 @@ public class CustomerController {
         if( name != null && sex != null && age != null && height != null && weight != null && birthday != null && attention != null ){
 
             Customer customer = new Customer();
+            customer.setRfid(rfid);
             customer.setName(name);
             customer.setSex(sex);
             customer.setPhone(phone);

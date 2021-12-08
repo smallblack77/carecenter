@@ -206,35 +206,42 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                   "enabled": true
                                 }}'>
                             <tr>
-                                <th style="background: #ddede0 no-repeat;">Name:</th>
+                                <th style="background: #ddede0 no-repeat;">用户编号:</th>
+                                <td>
+                                    <input type="text"  name="rfid"  id="rfid" value="">
+                                    <input type="button" id="button" value="读取编号">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th style="background: #ddede0 no-repeat;">用户姓名:</th>
                                 <td><input type="text"  name="name"  id="name"  ></td>
                             </tr>
                             <tr>
-                                <th style="background: #ddede0 no-repeat;">Sex:</th>
+                                <th style="background: #ddede0 no-repeat;">性别:</th>
                                 <td><input type="text" id="sex" name="sex" ></td>
                             </tr>
                             <tr>
-                                <th style="background: #ddede0 no-repeat;">Age:</th>
+                                <th style="background: #ddede0 no-repeat;">年龄:</th>
                                 <td><input type="text"  id="age" name="age" ></td>
                             </tr>
                             <tr>
-                                <th style="background: #ddede0 no-repeat;">Phone:</th>
+                                <th style="background: #ddede0 no-repeat;">联系方式:</th>
                                 <td><input type="text"  id="phone" name="phone" ></td>
                             </tr>
                             <tr>
-                                <th style="background: #ddede0 no-repeat;">Height:</th>
+                                <th style="background: #ddede0 no-repeat;">身高:</th>
                                 <td><input type="text"  id="height" name="height" ></td>
                             </tr>
                             <tr>
-                                <th style="background: #ddede0 no-repeat;">Weight:</th>
+                                <th style="background: #ddede0 no-repeat;">体重:</th>
                                 <td><input type="text"  id="weight" name="weight" ></td>
                             </tr>
                             <tr>
-                                <th style="background: #ddede0 no-repeat;">Birthday:</th>
+                                <th style="background: #ddede0 no-repeat;">出生日期:</th>
                                 <td><input type="text"  id="birthday" name="birthday" ></td>
                             </tr>
                             <tr>
-                                <th style="background: #ddede0 no-repeat;">Attention:</th>
+                                <th style="background: #ddede0 no-repeat;">兴趣爱好:</th>
                                 <td><input type="text"  id="attention" name="attention" ></td>
                             </tr>
                         </table>
@@ -257,6 +264,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
     <!--main content end-->
 </section>
+<script type="text/javascript">
+    $("#button").click(function(){
+        $.ajax({url:"/getRfid",
+            success:function(data){
+                // console.log(data["rfid"]);rfid
+                $("#rfid").val(data["rfid"]);
+            }});
+    });
+</script>
 <script src="../js/bootstrap.js"></script>
 <script src="../js/jquery.dcjqaccordion.2.7.js"></script>
 <script src="../js/scripts.js"></script>

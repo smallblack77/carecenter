@@ -12,7 +12,8 @@
             CUSTOMER.HEIGHT,
             CUSTOMER.WEIGHT,
             CUSTOMER.BIRTHDAY,
-            CUSTOMER.ATTENTION
+            CUSTOMER.ATTENTION,
+            CUSTOMER.RFID
         FROM CUSTOMER
         WHERE CUSTOMER.ID = #{id}
     </select>
@@ -27,7 +28,8 @@
             CUSTOMER.HEIGHT,
             CUSTOMER.WEIGHT,
             CUSTOMER.BIRTHDAY,
-            CUSTOMER.ATTENTION
+            CUSTOMER.ATTENTION,
+            CUSTOMER.RFID
         FROM CUSTOMER
         WHERE CUSTOMER.NAME = #{name}
         AND CUSTOMER.PHONE = #{phone}
@@ -50,7 +52,8 @@
             CUSTOMER.HEIGHT,
             CUSTOMER.WEIGHT,
             CUSTOMER.BIRTHDAY,
-            CUSTOMER.ATTENTION
+            CUSTOMER.ATTENTION,
+            CUSTOMER.RFID
         FROM CUSTOMER
     </select>
 
@@ -64,9 +67,10 @@
             CUSTOMER.HEIGHT,
             CUSTOMER.WEIGHT,
             CUSTOMER.BIRTHDAY,
-            CUSTOMER.ATTENTION)
+            CUSTOMER.ATTENTION,
+            CUSTOMER.RFID)
         VALUES
-            (#{id}, #{name}, #{sex}, #{phone}, #{age}, #{height}, #{weight}, #{birthday}, #{attention})
+            (#{id}, #{name}, #{sex}, #{phone}, #{age}, #{height}, #{weight}, #{birthday}, #{attention}, #{rfid})
     </insert>
 
     <update id="updateCustomer"  parameterType="org.csu.carecenter.entity.Customer">
@@ -78,7 +82,8 @@
          CUSTOMER.HEIGHT = #{height},
          CUSTOMER.WEIGHT = #{weight},
          CUSTOMER.BIRTHDAY = #{birthday},
-         CUSTOMER.ATTENTION = #{attention}
+         CUSTOMER.ATTENTION = #{attention},
+         CUSTOMER.RFID = #{rfid}
         WHERE CUSTOMER.ID = #{id}
     </update>
 
