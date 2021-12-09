@@ -65,20 +65,20 @@ class CarecenterApplicationTests {
     }
 
 
-//    @Test
-//    void testGetZset(){
-//        //
-//        Set<String> byScore = redisTemplate.boundZSetOps("zSetKey").rangeByScore(0D, System.currentTimeMillis());
-//        assert byScore != null;
-//        String s = byScore.iterator().next();
-//        Map<String, String> map = JSON.parseObject(s, new TypeReference<Map<String, String>>() {
-//        });
-//        //获取最早录入的id号
-//        System.out.println(map.get("RFID"));
-//        //删除成功读取的id
+    @Test
+    void testGetZset(){
+        //
+        Set<String> byScore = redisTemplate.boundZSetOps(REDIS_RFID_LIST).reverseRangeByScore(0D, System.currentTimeMillis());
+        assert byScore != null;
+        String s = byScore.iterator().next();
+        Map<String, String> map = JSON.parseObject(s, new TypeReference<Map<String, String>>() {
+        });
+        //获取最后录入的id号
+        System.out.println(map.get("RFID"));
+        //删除成功读取的id
 //        redisTemplate.boundZSetOps("zSetKey").remove(s);
-//    }
-//
+    }
+
 
     @Value("${alibaba.cloud.oss.endpoint}")
     private String endpoint;

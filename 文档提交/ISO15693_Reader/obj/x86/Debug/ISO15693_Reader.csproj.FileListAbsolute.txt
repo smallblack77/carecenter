@@ -1,0 +1,54 @@
+E:\ReaderWork\ISO15693_Reader\ISO15693_Reader\bin\Debug\ISO15693_Reader.exe
+E:\ReaderWork\ISO15693_Reader\ISO15693_Reader\bin\Debug\ISO15693_Reader.pdb
+E:\ReaderWork\ISO15693_Reader\ISO15693_Reader\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\ReaderWork\ISO15693_Reader\ISO15693_Reader\obj\x86\Debug\ISO15693_Reader.Main.resources
+E:\ReaderWork\ISO15693_Reader\ISO15693_Reader\obj\x86\Debug\ISO15693_Reader.Properties.Resources.resources
+E:\ReaderWork\ISO15693_Reader\ISO15693_Reader\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\ReaderWork\ISO15693_Reader\ISO15693_Reader\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\ReaderWork\ISO15693_Reader\ISO15693_Reader\obj\x86\Debug\ISO15693_Reader.exe
+E:\ReaderWork\ISO15693_Reader\ISO15693_Reader\obj\x86\Debug\ISO15693_Reader.pdb
+C:\Users\Administrator\Desktop\JX5XX-rfid\JX5XX PC Software\C#\Experiment_C#\ISO15693_Reader\ISO15693_Reader\obj\x86\Debug\ISO15693_Reader.exe
+C:\Users\Administrator\Desktop\JX5XX-rfid\JX5XX PC Software\C#\Experiment_C#\ISO15693_Reader\ISO15693_Reader\obj\x86\Debug\ISO15693_Reader.pdb
+C:\Users\Administrator\Desktop\JX5XX-rfid\JX5XX PC Software\C#\Experiment_C#\ISO15693_Reader\ISO15693_Reader\obj\x86\Debug\ISO15693_Reader.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\JX5XX-rfid\JX5XX PC Software\C#\Experiment_C#\ISO15693_Reader\ISO15693_Reader\obj\x86\Debug\ISO15693_Reader.Main.resources
+C:\Users\Administrator\Desktop\JX5XX-rfid\JX5XX PC Software\C#\Experiment_C#\ISO15693_Reader\ISO15693_Reader\obj\x86\Debug\ISO15693_Reader.Properties.Resources.resources
+C:\Users\Administrator\Desktop\JX5XX-rfid\JX5XX PC Software\C#\Experiment_C#\ISO15693_Reader\ISO15693_Reader\obj\x86\Debug\ISO15693_Reader.csproj.GenerateResource.Cache
+C:\Users\Administrator\Desktop\JX5XX-rfid\JX5XX PC Software\C#\Experiment_C#\ISO15693_Reader\ISO15693_Reader\bin\Debug\ISO15693_Reader.exe
+C:\Users\Administrator\Desktop\JX5XX-rfid\JX5XX PC Software\C#\Experiment_C#\ISO15693_Reader\ISO15693_Reader\bin\Debug\ISO15693_Reader.pdb
+E:\lyx\RFID\ISO15693_Reader\bin\Debug\ISO15693_Reader.exe.config
+E:\lyx\RFID\ISO15693_Reader\bin\Debug\ISO15693_Reader.exe
+E:\lyx\RFID\ISO15693_Reader\bin\Debug\ISO15693_Reader.pdb
+E:\lyx\RFID\ISO15693_Reader\obj\x86\Debug\ISO15693_Reader.csproj.AssemblyReference.cache
+E:\lyx\RFID\ISO15693_Reader\obj\x86\Debug\ISO15693_Reader.csproj.SuggestedBindingRedirects.cache
+E:\lyx\RFID\ISO15693_Reader\obj\x86\Debug\ISO15693_Reader.Main.resources
+E:\lyx\RFID\ISO15693_Reader\obj\x86\Debug\ISO15693_Reader.Properties.Resources.resources
+E:\lyx\RFID\ISO15693_Reader\obj\x86\Debug\ISO15693_Reader.csproj.GenerateResource.cache
+E:\lyx\RFID\ISO15693_Reader\obj\x86\Debug\ISO15693_Reader.csproj.CoreCompileInputs.cache
+E:\lyx\RFID\ISO15693_Reader\obj\x86\Debug\ISO15693_Reader.csproj.CopyComplete
+E:\lyx\RFID\ISO15693_Reader\obj\x86\Debug\ISO15693_Reader.exe
+E:\lyx\RFID\ISO15693_Reader\obj\x86\Debug\ISO15693_Reader.pdb
+E:\lyx\RFID\ISO15693_Reader\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+E:\lyx\RFID\ISO15693_Reader\bin\Debug\Newtonsoft.Json.dll
+E:\lyx\RFID\ISO15693_Reader\bin\Debug\Pipelines.Sockets.Unofficial.dll
+E:\lyx\RFID\ISO15693_Reader\bin\Debug\StackExchange.Redis.dll
+E:\lyx\RFID\ISO15693_Reader\bin\Debug\System.Buffers.dll
+E:\lyx\RFID\ISO15693_Reader\bin\Debug\System.Diagnostics.PerformanceCounter.dll
+E:\lyx\RFID\ISO15693_Reader\bin\Debug\System.IO.Pipelines.dll
+E:\lyx\RFID\ISO15693_Reader\bin\Debug\System.Memory.dll
+E:\lyx\RFID\ISO15693_Reader\bin\Debug\System.Numerics.Vectors.dll
+E:\lyx\RFID\ISO15693_Reader\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+E:\lyx\RFID\ISO15693_Reader\bin\Debug\System.Threading.Channels.dll
+E:\lyx\RFID\ISO15693_Reader\bin\Debug\System.Threading.Tasks.Extensions.dll
+E:\lyx\RFID\ISO15693_Reader\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+E:\lyx\RFID\ISO15693_Reader\bin\Debug\Newtonsoft.Json.xml
+E:\lyx\RFID\ISO15693_Reader\bin\Debug\Pipelines.Sockets.Unofficial.xml
+E:\lyx\RFID\ISO15693_Reader\bin\Debug\StackExchange.Redis.xml
+E:\lyx\RFID\ISO15693_Reader\bin\Debug\System.Buffers.xml
+E:\lyx\RFID\ISO15693_Reader\bin\Debug\System.Diagnostics.PerformanceCounter.xml
+E:\lyx\RFID\ISO15693_Reader\bin\Debug\System.IO.Pipelines.xml
+E:\lyx\RFID\ISO15693_Reader\bin\Debug\System.Memory.xml
+E:\lyx\RFID\ISO15693_Reader\bin\Debug\System.Numerics.Vectors.xml
+E:\lyx\RFID\ISO15693_Reader\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+E:\lyx\RFID\ISO15693_Reader\bin\Debug\System.Threading.Channels.xml
+E:\lyx\RFID\ISO15693_Reader\bin\Debug\System.Threading.Tasks.Extensions.xml
+E:\lyx\RFID\ISO15693_Reader\obj\x86\Debug\ISO15693_Reader.Form1.resources

@@ -25,7 +25,7 @@ public class ThirdPartServiceImpl implements ThirdPartService {
     @Override
     public String getRfidFromRedis() {
         //根据时间戳从小到大返回
-        Set<String> byScore = redisTemplate.boundZSetOps(REDIS_RFID_LIST).rangeByScore(0D, System.currentTimeMillis());
+        Set<String> byScore = redisTemplate.boundZSetOps(REDIS_RFID_LIST).reverseRangeByScore(0D, System.currentTimeMillis());
 
         String s = byScore.iterator().next();
         Map<String, String> map = JSON.parseObject(s, new TypeReference<Map<String, String>>() {
@@ -33,7 +33,7 @@ public class ThirdPartServiceImpl implements ThirdPartService {
         //删除成功读取的id
         redisTemplate.boundZSetOps(REDIS_RFID_LIST).remove(s);
 
-        //获取最早录入的id号
+        //获取最新录入的id号
         return map.get("RFID");
     }
 
@@ -49,7 +49,7 @@ public class ThirdPartServiceImpl implements ThirdPartService {
                 //有数据
                 break;
             }else {
-                Thread.sleep(1000*1);
+                Thread.sleep(1000);
                 redisTemplate.boundListOps(REDIS_ORDER).leftPush(s);
             }
         }
