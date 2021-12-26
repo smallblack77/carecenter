@@ -53,11 +53,5 @@ spring:
   redis:
     host: 192.168.10.200
 
-alibaba:
-  cloud:
-    access-key: LTAI5tMSyAsS2Z1t39F71ww9
-    secret-key: H0ygQYHo1ZjbWdVEhm2YPqLjw8Qm7y
-    oss:
-      endpoint: oss-cn-hangzhou.aliyuncs.com
-      bucket: carecenter-1379
+
 
