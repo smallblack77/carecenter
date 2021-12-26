@@ -18,13 +18,13 @@ public class ThirdPartController {
     public Map<String,String> getRfid() throws InterruptedException {
 
         HashMap<String, String> data = new HashMap<>();
-        //TODO: 发送命令要求第三方平台读取RFID,并存放到Redis
         while (!Thread.interrupted()){
             Boolean aBoolean = thirdPartService.sendOrder();
             if(aBoolean){
                 break;
             }
         }
+
         //返回读取到得rfid
         data.put("rfid",thirdPartService.getRfidFromRedis());
         return data;
